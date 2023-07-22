@@ -64,17 +64,17 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-    
+
         'staff' => [
             'driver' => 'eloquent',
             'model' => App\Models\Staff::class,
         ],
-    
+
         'auditor' => [
             'driver' => 'eloquent',
             'model' => App\Models\Auditor::class,
         ],
-    
+
         'owner' => [
             'driver' => 'eloquent',
             'model' => App\Models\Owner::class,
@@ -129,6 +129,27 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'staffs' => [
+            'provider' => 'staff',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'auditors' => [
+            'provider' => 'auditor',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'owners' => [
+            'provider' => 'owner',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
