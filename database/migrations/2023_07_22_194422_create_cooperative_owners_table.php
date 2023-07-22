@@ -15,6 +15,10 @@ class CreateCooperativeOwnersTable extends Migration
     {
         Schema::create('cooperative_owners', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('cooperative_id');
+            $table->unsignedBigInteger('owner_id');
+            $table->foreign('cooperative_id')->references('id')->on('cooperatives');
+            $table->foreign('owner_id')->references('id')->on('owners');
             $table->timestamps();
         });
     }
