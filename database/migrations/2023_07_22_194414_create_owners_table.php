@@ -15,6 +15,11 @@ class CreateOwnersTable extends Migration
     {
         Schema::create('owners', function (Blueprint $table) {
             $table->id();
+            $table->string('names');
+            $table->string('telephone');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
             $table->timestamps();
         });
     }
