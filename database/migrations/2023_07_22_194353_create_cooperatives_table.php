@@ -15,6 +15,13 @@ class CreateCooperativesTable extends Migration
     {
         Schema::create('cooperatives', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->text('description');
+            $table->string('address');
+            $table->string('certificate');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
             $table->timestamps();
         });
     }
