@@ -35,12 +35,51 @@ return [
     |
     */
 
+    // config/auth.php
     'guards' => [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'staff' => [
+            'driver' => 'session',
+            'provider' => 'staff',
+        ],
+
+        'auditor' => [
+            'driver' => 'session',
+            'provider' => 'auditor',
+        ],
+
+        'owner' => [
+            'driver' => 'session',
+            'provider' => 'owner',
+        ],
     ],
+
+    'providers' => [
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\User::class,
+        ],
+
+        'staff' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Staff::class,
+        ],
+
+        'auditor' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Auditor::class,
+        ],
+
+        'owner' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Owner::class,
+        ],
+    ],
+
 
     /*
     |--------------------------------------------------------------------------
