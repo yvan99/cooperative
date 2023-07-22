@@ -58,22 +58,23 @@ return [
         ],
     ],
 
+
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-
+    
         'staff' => [
             'driver' => 'eloquent',
             'model' => App\Models\Staff::class,
         ],
-
+    
         'auditor' => [
             'driver' => 'eloquent',
             'model' => App\Models\Auditor::class,
         ],
-
+    
         'owner' => [
             'driver' => 'eloquent',
             'model' => App\Models\Owner::class,
