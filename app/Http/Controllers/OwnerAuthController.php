@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OwnerLoginRequest;
 use App\Models\Owner;
 use App\Http\Requests\OwnerRegisterRequest;
 use Illuminate\Http\Request;
@@ -14,12 +15,9 @@ class OwnerAuthController extends Controller
         return view('owner.login');
     }
 
-    public function login(Request $request)
+    public function login(OwnerLoginRequest $request)
     {
-        $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
+        $credentials = $request->validated();
 
         if (Auth::guard('owner')->attempt($credentials)) {
             return redirect()->intended('/owner/dashboard');
