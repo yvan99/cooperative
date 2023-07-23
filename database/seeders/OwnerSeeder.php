@@ -13,6 +13,6 @@ class OwnerSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Owner::factory()->count(10)->create();
     }
 }
