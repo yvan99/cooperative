@@ -2,19 +2,23 @@
 
 namespace Database\Factories;
 
+use App\Models\Cooperative;
+use App\Models\Owner;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CooperativeOwnerFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array
-     */
+    protected $model = CooperativeOwner::class;
+
     public function definition()
     {
         return [
-            //
+            'cooperative_id' => function () {
+                return Cooperative::factory()->create()->id;
+            },
+            'owner_id' => function () {
+                return Owner::factory()->create()->id;
+            },
         ];
     }
 }
