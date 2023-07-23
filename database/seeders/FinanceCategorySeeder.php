@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\FinanceCategory;
 use Illuminate\Database\Seeder;
 
 class FinanceCategorySeeder extends Seeder
@@ -13,6 +14,6 @@ class FinanceCategorySeeder extends Seeder
      */
     public function run()
     {
-        //
+        FinanceCategory::factory()->count(5)->create();
     }
 }
