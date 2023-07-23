@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\CooperativeOwner;
 use Illuminate\Database\Seeder;
 
 class CooperativeOwnerSeeder extends Seeder
@@ -13,6 +14,6 @@ class CooperativeOwnerSeeder extends Seeder
      */
     public function run()
     {
-        //
+        CooperativeOwner::factory()->count(20)->create();
     }
 }
