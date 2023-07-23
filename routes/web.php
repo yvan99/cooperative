@@ -45,3 +45,25 @@ Route::prefix('owner')->group(function () {
     Route::post('/register', [OwnerAuthController::class, 'register']);
     Route::post('/logout', [OwnerAuthController::class, 'logout'])->name('owner.logout');
 });
+
+
+// Staff dashboard
+Route::middleware('auth:staff')->prefix('staff')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('staff.dashboard');
+    })->name('staff.dashboard');
+});
+
+// Auditor dashboard
+Route::middleware('auth:auditor')->prefix('auditor')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('auditor.dashboard');
+    })->name('auditor.dashboard');
+});
+
+// Owner dashboard
+Route::middleware('auth:owner')->prefix('owner')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('owner.dashboard');
+    })->name('owner.dashboard');
+});
