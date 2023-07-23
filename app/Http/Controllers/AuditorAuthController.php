@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AuditorLoginRequest;
 use App\Models\Auditor;
 use App\Http\Requests\AuditorRegisterRequest;
 use Illuminate\Http\Request;
@@ -14,12 +15,9 @@ class AuditorAuthController extends Controller
         return view('auditor.login');
     }
 
-    public function login(Request $request)
+    public function login(AuditorLoginRequest $request)
     {
-        $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
+        $credentials = $request->validated();
 
         if (Auth::guard('auditor')->attempt($credentials)) {
             return redirect()->intended('/auditor/dashboard');
