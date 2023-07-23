@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class CooperativeOwner extends Model
 {
     use HasFactory;
+    protected $fillable = ['cooperative_id', 'owner_id'];
 }
