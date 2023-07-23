@@ -2,19 +2,24 @@
 
 namespace Database\Factories;
 
+use App\Models\Cooperative;
 use Illuminate\Database\Eloquent\Factories\Factory;
+
 
 class FinanceCategoryFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array
-     */
+    protected $model = FinanceCategory::class;
+
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->word . ' Category',
+            'code' => $this->faker->unique()->numberBetween(1000, 9999),
+            'cooperative_id' => function () {
+                return Cooperative::factory()->create()->id;
+            },
+            'type' => $this->faker->randomElement(['income', 'expense']),
+            'status' => 'active',
         ];
     }
 }
