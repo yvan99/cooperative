@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StaffLoginRequest;
 use App\Models\Staff;
 use App\Http\Requests\StaffRegisterRequest;
 use Illuminate\Http\Request;
@@ -14,12 +15,9 @@ class StaffAuthController extends Controller
         return view('staff.login');
     }
 
-    public function login(Request $request)
+    public function login(StaffLoginRequest $request)
     {
-        $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
+        $credentials = $request->validated();
 
         if (Auth::guard('staff')->attempt($credentials)) {
             return redirect()->intended('/staff/dashboard');
