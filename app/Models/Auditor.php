@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Auditor extends Model
+class Auditor extends Authenticatable
 {
     use HasFactory;
+    protected $fillable = ['names', 'telephone', 'email', 'password'];
+
 }
