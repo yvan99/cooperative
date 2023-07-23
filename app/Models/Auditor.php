@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Auditor extends Authenticatable
 {
     use HasFactory;
+    protected $table ='auditor';
     protected $fillable = ['names', 'telephone', 'email', 'password'];
 
 }

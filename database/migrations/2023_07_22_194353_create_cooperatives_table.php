@@ -20,6 +20,7 @@ class CreateCooperativesTable extends Migration
             $table->string('address');
             $table->string('certificate');
             $table->string('currency');
+            $table->string('members');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
             $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');

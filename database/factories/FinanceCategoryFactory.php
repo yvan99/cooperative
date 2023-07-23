@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Cooperative;
+use App\Models\FinanceCategory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 

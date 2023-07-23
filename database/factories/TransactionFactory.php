@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Cooperative;
 use App\Models\FinanceCategory;
+use App\Models\Transaction;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TransactionFactory extends Factory

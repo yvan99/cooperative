@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Cooperative;
+use App\Models\CooperativeOwner;
 use App\Models\Owner;
 use Illuminate\Database\Eloquent\Factories\Factory;
 

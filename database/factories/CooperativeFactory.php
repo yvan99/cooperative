@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Category;
+use App\Models\Cooperative;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CooperativeFactory extends Factory
@@ -15,6 +16,7 @@ class CooperativeFactory extends Factory
             'name' => $this->faker->company,
             'description' => $this->faker->paragraph,
             'address' => $this->faker->address,
+            'currency' => $this->faker->address,
             'certificate' => $this->faker->word . '.pdf',
             'category_id' => function () {
                 return Category::factory()->create()->id;
