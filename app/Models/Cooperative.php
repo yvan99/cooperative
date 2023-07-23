@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Cooperative extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'description', 'address', 'certificate', 'category_id', 'members', 'status'];
+    protected $fillable = ['name', 'description', 'address', 'certificate', 'category_id', 'members', 'status','currency'];
 
     public function category()
     {
