@@ -15,6 +15,12 @@ class CreateFinanceCategoriesTable extends Migration
     {
         Schema::create('finance_categories', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('code');
+            $table->unsignedBigInteger('cooperative_id');
+            $table->foreign('cooperative_id')->references('id')->on('cooperatives');
+            $table->enum('type', ['income', 'expense']);
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
     }
