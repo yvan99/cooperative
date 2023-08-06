@@ -14,7 +14,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="hero-thumb">
-                    <img src="homepage/images/hero1.png" alt="">
+                    <img src="homepage/images/hero1.png" style="width: 600px !important" alt="">
                 </div>
             </div>
         </div>
