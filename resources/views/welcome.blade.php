@@ -15,25 +15,25 @@
     <title>Corba – App Landing Page Adobe HTML Template</title>
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/png">
+    <link rel="shortcut icon" href="homepage/images/favicon.ico" type="image/png">
 
     <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="homepage/css/bootstrap.min.css">
 
     <!--====== Fontawesome css ======-->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="homepage/css/font-awesome.min.css">
 
     <!--====== Magnific Popup css ======-->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="homepage/css/magnific-popup.css">
 
     <!--====== Slick css ======-->
-    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="homepage/css/slick.css">
 
     <!--====== Default css ======-->
-    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="homepage/css/default.css">
 
     <!--====== Style css ======-->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="homepage/css/style.css">
 
 
 </head>
@@ -107,7 +107,7 @@
                     <div class="col-lg-12">
                         <div class="navigation">
                             <nav class="navbar navbar-expand-lg navbar-light ">
-                                <a class="navbar-brand" href="index-2.html"><img src="assets/images/logo.png" alt=""></a>
+                                <a class="navbar-brand" href="index-2.html"><img src="homepage/images/logo.png" alt=""></a>
                                 <!-- logo -->
                                 <span class="side-menu__toggler canvas_open"><i class="fa fa-bars"></i></span>
                                 <!-- /.side-menu__toggler -->
@@ -157,7 +157,7 @@
 
     <!--====== HERO PART START ======-->
 
-    <section class="hero-area bg_cover" style="background-image: url(assets/images/hero-bg.jpg);">
+    <section class="hero-area bg_cover" style="background-image: url(homepage/images/hero-bg.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -172,7 +172,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-thumb">
-                        <img src="assets/images/hero-thumb.png" alt="">
+                        <img src="homepage/images/hero-thumb.png" alt="">
                     </div>
                 </div>
             </div>
@@ -220,94 +220,6 @@
                         <div class="features-play">
                             <a class="video-popup" href="https://www.youtube.com/watch?v=MAvJ5FyM6cI"><i
                                     class="fas fa-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--====== FEATURES PART ENDS ======-->
-
-    <!--====== CAPTURE PART START ======-->
-
-    <section class="capture-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-title">
-                        <h3 class="title">Capture the moments that mean the most.</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="col-12">
-                <div class="capture-active">
-                    <div class="capture-item mt-30">
-                        <div class="capture-thumb">
-                            <img src="assets/images/capture-1.jpg" alt="">
-                        </div>
-                        <div class="capture-content">
-                            <i class="fal fa-user-headset"></i>
-                            <h4 class="title">Make as many video calls you like</h4>
-                            <p>Make lights us is life all make midst a moveth forth under may cattle moved without seas
-                                first air beast place after.</p>
-                        </div>
-                    </div>
-                    <div class="capture-item mt-30">
-                        <div class="capture-thumb">
-                            <img src="assets/images/capture-2.jpg" alt="">
-                        </div>
-                        <div class="capture-content">
-                            <i class="fal fa-user-headset"></i>
-                            <h4 class="title">Make as many video calls you like</h4>
-                            <p>Make lights us is life all make midst a moveth forth under may cattle moved without seas
-                                first air beast place after.</p>
-                        </div>
-                    </div>
-                    <div class="capture-item mt-30">
-                        <div class="capture-thumb">
-                            <img src="assets/images/capture-3.jpg" alt="">
-                        </div>
-                        <div class="capture-content">
-                            <i class="fal fa-user-headset"></i>
-                            <h4 class="title">Make as many video calls you like</h4>
-                            <p>Make lights us is life all make midst a moveth forth under may cattle moved without seas
-                                first air beast place after.</p>
-                        </div>
-                    </div>
-                    <div class="capture-item mt-30">
-                        <div class="capture-thumb">
-                            <img src="assets/images/capture-2.jpg" alt="">
-                        </div>
-                        <div class="capture-content">
-                            <i class="fal fa-users"></i>
-                            <h4 class="title">Create unlimited private groupse</h4>
-                            <p>Make lights us is life all make midst a moveth forth under may cattle moved without seas
-                                first air beast place after.</p>
-                        </div>
-                    </div>
-                    <div class="capture-item mt-30">
-                        <div class="capture-thumb">
-                            <img src="assets/images/capture-3.jpg" alt="">
-                        </div>
-                        <div class="capture-content">
-                            <i class="fal fa-cloud-download"></i>
-                            <h4 class="title">Get unlimited data cloud storage</h4>
-                            <p>Make lights us is life all make midst a moveth forth under may cattle moved without seas
-                                first air beast place after.</p>
-                        </div>
-                    </div>
-                    <div class="capture-item mt-30">
-                        <div class="capture-thumb">
-                            <img src="assets/images/capture-4.jpg" alt="">
-                        </div>
-                        <div class="capture-content">
-                            <i class="fal fa-images"></i>
-                            <h4 class="title">Send photos, videos and other files</h4>
-                            <p>Make lights us is life all make midst a moveth forth under may cattle moved without seas
-                                first air beast place after.</p>
                         </div>
                     </div>
                 </div>
