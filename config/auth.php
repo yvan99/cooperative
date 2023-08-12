@@ -126,35 +126,35 @@ return [
     |
     */
 
-    'passwords' => [
-        'users' => [
-            'provider' => 'users',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
-
-        'staffs' => [
-            'provider' => 'staff',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
-
-        'auditors' => [
-            'provider' => 'auditor',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
-
-        'owners' => [
-            'provider' => 'owner',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
+ 'passwords' => [
+    'users' => [
+        'provider' => 'users',
+        'table' => 'password_resets',
+        'expire' => 60,
+        'throttle' => 60,
     ],
+
+    'staffs' => [
+        'provider' => 'staff',
+        'table' => 'password_resets',
+        'expire' => 60,
+        'throttle' => 60,
+    ],
+
+    'auditors' => [
+        'provider' => 'auditor',
+        'table' => 'password_resets',
+        'expire' => 60,
+        'throttle' => 60,
+    ],
+
+    'owners' => [
+        'provider' => 'owner',
+        'table' => 'password_resets',
+        'expire' => 60,
+        'throttle' => 60,
+    ],
+],
 
     /*
     |--------------------------------------------------------------------------

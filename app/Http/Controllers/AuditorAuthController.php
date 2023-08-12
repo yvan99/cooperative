@@ -10,6 +10,16 @@ use Illuminate\Support\Facades\Auth;
 
 class AuditorAuthController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
+
+    protected function guard()
+    {
+        return Auth::guard('auditor');
+    }
+
     public function showLoginForm()
     {
         return view('auditor.login');
