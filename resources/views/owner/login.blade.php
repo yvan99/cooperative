@@ -10,8 +10,8 @@
                 <div class="w-lg-500px p-10">
 
 
-                    <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" action="#">
-
+                    <form class="form w-100" novalidate="novalidate" action="{{ route('owner.login') }}" method="POST">
+                        @csrf
                         <div class="text-left mb-11">
 
                             <h1 class="text-dark fw-bolder mb-3">
