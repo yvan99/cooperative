@@ -10,6 +10,20 @@ use Illuminate\Support\Facades\Auth;
 
 class OwnerAuthController extends Controller
 {
+
+    protected $redirectTo = '/owner/dashboard';
+    protected $redirectToLogout = '/owner/login';
+
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
+
+    protected function guard()
+    {
+        return Auth::guard('owner');
+    }
+
     public function showLoginForm()
     {
         return view('owner.login');
