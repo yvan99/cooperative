@@ -65,6 +65,28 @@
     </div>
 </section>
 
+<section class="download-app-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="download-app-content">
+                    <h3 class="title">Download the app with everything for free.</h3>
+                    <ul class="nav">
+                        <li><a class="main-btn main-btn-3" href="#">Get started <i
+                                    class="fas fa-angle-right"></i></a></li>
+                        <li><a class="main-btn main-btn-2 main-btn-4" href="#">Learn more <i
+                                    class="fas fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="download-app-case">
+        <img src="assets/images/download-app-case.png" alt="">
+    </div>
+</section>
+
+
 
 <!--====== HERO PART ENDS ======-->
 
