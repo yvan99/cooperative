@@ -44,6 +44,7 @@ class OwnerAuthController extends Controller
         return view('owner.register');
     }
 
+
     public function register(OwnerRegisterRequest $request)
     {
         $validatedData = $request->validated();
@@ -55,10 +56,15 @@ class OwnerAuthController extends Controller
             'telephone' => $validatedData['telephone'],
         ]);
 
+        $smsApi = new SmsApiController();
+        $message = "Dear " . $validatedData['name'] . " , your registration is successful.  Login to your account to create and manage your cooperatives";
+        $smsApi->sendSms($owner->telephone, $message);
+
         Auth::guard('owner')->login($owner);
 
         return response()->json(['status' => 'success', 'redirectTo' => '/owner/dashboard']);
     }
+
 
     public function logout()
     {
