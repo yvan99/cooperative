@@ -32,12 +32,12 @@ class OwnerAuthController extends Controller
     public function login(OwnerLoginRequest $request)
     {
         $credentials = $request->validated();
-
+    
         if (Auth::guard('owner')->attempt($credentials)) {
-            return redirect()->intended('/owner/dashboard');
+            return response()->json(['status' => 'success', 'redirectTo' => $this->redirectTo]);
         }
-
-        return back()->withErrors(['email' => 'Invalid credentials']);
+    
+        return response()->json(['status' => 'error']);
     }
 
     public function showRegistrationForm()
