@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>Corba – App Landing Page Adobe HTML Template</title>
+    <title> {{env("APP_NAME")}} </title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="homepage/images/favicon.ico" type="image/png">
@@ -50,14 +50,14 @@
                         <div class="canvas_close">
                             <a href="javascript:void(0)"><i class="fal fa-times"></i></a>
                         </div>
-                        <div class="offcanvas-social">
+                        {{-- <div class="offcanvas-social">
                             <ul class="text-center">
                                 <li><a href="%24.html"><i class="fab fa-facebook-square"></i></a></li>
                                 <li><a href="%24.html"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="%24.html"><i class="fab fa-instagram"></i></a></li>
                                 <li><a href="%24.html"><i class="fab fa-dribbble"></i></a></li>
                             </ul>
-                        </div>
+                        </div> --}}
                         <div id="menu" class="text-left ">
                             <ul class="offcanvas_main_menu">
                                 <li class="menu-item-has-children active">
@@ -83,10 +83,10 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="offcanvas_footer">
+                        {{-- <div class="offcanvas_footer">
                             <span><a href="mailto:layerdrop@gmail.com"><i class="fa fa-envelope-o"></i>
                                     gfx.partner@gmail.com</a></span>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -115,31 +115,16 @@
                                         <li class="nav-item active">
                                             <a class="nav-link page-scroll" href="#home">Home</a>
                                         </li>
+
                                         <li class="nav-item">
-                                            <a class="nav-link page-scroll" href="#intro">Intro</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link page-scroll" href="#features">Features</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link page-scroll" href="#faqs">FAQs</a>
+                                            <a class="nav-link page-scroll" href="#feedbacks">Login</a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link page-scroll" href="#feedbacks">Feedbacks</a>
+                                            <a class="nav-link page-scroll" href="#preview">Create Account</a>
                                         </li>
 
-                                        <li class="nav-item">
-                                            <a class="nav-link page-scroll" href="#preview">Preview</a>
-                                        </li>
-
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link page-scroll" href="#blog">Blog</a>
-                                            <ul class="sub-menu dropdown-btn">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog-details.html">Single Blog</a></li>
-                                            </ul>
-                                        </li>
+                                       
                                     </ul>
                                 </div> <!-- navbar collapse -->
                             </nav>
