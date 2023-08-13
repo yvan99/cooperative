@@ -1,3 +1,5 @@
+@include('components.dashboard.css')
+
 <div class="d-flex flex-column flex-root" id="kt_app_root">
     <div class="d-flex flex-column flex-lg-row flex-column-fluid">
         <!--begin::Body-->
@@ -14,7 +16,7 @@
                         <div class="text-center mb-11">
                             <!--begin::Title-->
                             <h1 class="text-dark fw-bolder mb-3">
-                                Sign In
+                                Connect With Your Account
                             </h1>
                             <!--end::Title-->
 
@@ -260,3 +262,4 @@
     </div>
     <!--end::Authentication - Sign-in-->
 </div>
+@include('components.dashboard.js')
