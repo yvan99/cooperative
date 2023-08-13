@@ -28,45 +28,6 @@
                         </div>
 
                         <div class="fv-row mb-3">
-                            <div class="fv-row" data-kt-password-meter="true">
-                                <!--begin::Wrapper-->
-                                <div class="mb-1">
-        
-                                    <!--begin::Input wrapper-->
-                                    <div class="position-relative mb-3">
-                                        <input class="form-control form-control-lg"
-                                            type="password" placeholder="Password" name="password" autocomplete="off" />
-                            
-                                        <!--begin::Visibility toggle-->
-                                        <span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2"
-                                            data-kt-password-meter-control="visibility">
-                                                <i class="ki-duotone ki-eye-slash fs-1"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
-                                                <i class="ki-duotone ki-eye d-none fs-1"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
-                                        </span>
-                                        <!--end::Visibility toggle-->
-                                    </div>
-                                    <!--end::Input wrapper-->
-                            
-                                    <!--begin::Highlight meter-->
-                                    <div class="d-flex align-items-center mb-3" data-kt-password-meter-control="highlight">
-                                        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
-                                        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
-                                        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
-                                        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px"></div>
-                                    </div>
-                                    <!--end::Highlight meter-->
-                                </div>
-                                <!--end::Wrapper-->
-                            
-                                <!--begin::Hint-->
-                                {{-- <div class="text-muted">
-                                    Use 8 or more characters with a mix of letters, numbers & symbols.
-                                </div> --}}
-                                <!--end::Hint-->
-                            </div>
-                        </div>
-
-                        <div class="fv-row mb-3">
                             <input type="text" placeholder="Name" name="names" autocomplete="off"
                                 class="form-control bg-transparent" />
                         </div>
@@ -75,6 +36,55 @@
                             <input type="text" placeholder="Telephone" name="telephone" autocomplete="off"
                                 class="form-control bg-transparent" />
                         </div>
+
+                        <div class="fv-row mb-3">
+                            <div class="fv-row" data-kt-password-meter="true">
+                                <!--begin::Wrapper-->
+                                <div class="mb-1">
+
+                                    <!--begin::Input wrapper-->
+                                    <div class="position-relative mb-3">
+                                        <input class="form-control form-control-lg" type="password"
+                                            placeholder="Password" name="password" autocomplete="off" />
+
+                                        <!--begin::Visibility toggle-->
+                                        <span
+                                            class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2"
+                                            data-kt-password-meter-control="visibility">
+                                            <i class="ki-duotone ki-eye-slash fs-1"><span class="path1"></span><span
+                                                    class="path2"></span><span class="path3"></span><span
+                                                    class="path4"></span></i>
+                                            <i class="ki-duotone ki-eye d-none fs-1"><span class="path1"></span><span
+                                                    class="path2"></span><span class="path3"></span></i>
+                                        </span>
+                                        <!--end::Visibility toggle-->
+                                    </div>
+                                    <!--end::Input wrapper-->
+
+                                    <!--begin::Highlight meter-->
+                                    <div class="d-flex align-items-center mb-3"
+                                        data-kt-password-meter-control="highlight">
+                                        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2">
+                                        </div>
+                                        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2">
+                                        </div>
+                                        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2">
+                                        </div>
+                                        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px"></div>
+                                    </div>
+                                    <!--end::Highlight meter-->
+                                </div>
+                                <!--end::Wrapper-->
+
+                                <!--begin::Hint-->
+                                {{-- <div class="text-muted">
+                                    Use 8 or more characters with a mix of letters, numbers & symbols.
+                                </div> --}}
+                                <!--end::Hint-->
+                            </div>
+                        </div>
+
+
 
                         <div class="d-grid mb-10">
                             <button type="submit" id="kt_sign_up_submit" class="btn btn-primary">
