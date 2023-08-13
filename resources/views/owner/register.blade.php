@@ -20,7 +20,7 @@
                             </h1>
 
                             <div class="text-gray-500 fw-semibold fs-6">
-                               Create an account to manage your cooperative
+                                Create an account to manage your cooperative
                             </div>
 
                         </div>
