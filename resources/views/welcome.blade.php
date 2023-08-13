@@ -1,8 +1,8 @@
 @include('components.homepage.top')
-<section class="hero-area bg_cover mb-5" style="background-image: url(homepage/images/hero-bg.jpg);">
+<section class="hero-area bg_cover mb-2 pb-5" style="background-image: url(homepage/images/hero-bg.jpg);">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <div class="hero-content">
                     <h1 class="title"><span>Communicate</span> with your friends and family.</h1>
                     <ul class="nav">
@@ -12,16 +12,16 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-6">
+            {{-- <div class="col-lg-6">
                 <div class="hero-thumb">
                     <img src="homepage/images/hero1.png" style="width: 600px !important" alt="">
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
 
-<section id="intro" class="features-area">
+<section id="intro" class="features-area mt-3">
     <div class="container custom-container">
         <div class="row">
             <div class="col-lg-12">
