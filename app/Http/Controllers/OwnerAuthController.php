@@ -50,14 +50,14 @@ class OwnerAuthController extends Controller
         $validatedData = $request->validated();
 
         $owner = Owner::create([
-            'name' => $validatedData['name'],
+            'names' => $validatedData['names'],
             'email' => $validatedData['email'],
             'password' => bcrypt($validatedData['password']),
             'telephone' => $validatedData['telephone'],
         ]);
 
         $smsApi = new SmsApiController();
-        $message = "Dear " . $validatedData['name'] . " , your registration is successful.  Login to your account to create and manage your cooperatives";
+        $message = "Dear " . $validatedData['names'] . " , your registration is successful.  Login to your account to create and manage your cooperatives";
         $smsApi->sendSms($owner->telephone, $message);
 
         Auth::guard('owner')->login($owner);

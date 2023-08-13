@@ -29,7 +29,7 @@ class KTRegisterOwner {
                         },
                     },
                 },
-                name: {
+                names: {
                     validators: {
                         notEmpty: {
                             message: "Name is required",
@@ -64,7 +64,7 @@ class KTRegisterOwner {
 
                     axios
                         .post("/owner/register", {
-                            name: this.form.querySelector('[name="name"]')
+                            names: this.form.querySelector('[name="names"]')
                                 .value,
                             email: this.form.querySelector('[name="email"]')
                                 .value,

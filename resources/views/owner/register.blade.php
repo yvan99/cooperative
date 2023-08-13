@@ -33,7 +33,7 @@
                         </div>
 
                         <div class="fv-row mb-3">
-                            <input type="text" placeholder="Name" name="name" autocomplete="off"
+                            <input type="text" placeholder="Name" name="names" autocomplete="off"
                                 class="form-control bg-transparent" />
                         </div>
 
@@ -78,18 +78,6 @@
                     Fast, Efficient and Productive
                 </h1>
                 <!--end::Title-->
-
-                <!--begin::Text-->
-                {{-- <div class="d-none d-lg-block text-white fs-base text-center">
-                    In this kind of post, <a href="#" class="opacity-75-hover text-warning fw-bold me-1">the
-                        blogger</a>
-
-                    introduces a person they’ve interviewed <br /> and provides some background information about
-
-                    <a href="#" class="opacity-75-hover text-warning fw-bold me-1">the interviewee</a>
-                    and their <br /> work following this is a transcript of the interview.
-                </div> --}}
-                <!--end::Text-->
             </div>
             <!--end::Content-->
         </div>
