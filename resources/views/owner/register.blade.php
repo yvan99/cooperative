@@ -16,11 +16,11 @@
                         <div class="text-left mb-11">
 
                             <h1 class="text-dark fw-bolder mb-3">
-                                Connect With Your Account
+                                Register an account
                             </h1>
 
                             <div class="text-gray-500 fw-semibold fs-6">
-                                Sign in to your cooperative account
+                               Create an account to manage your cooperative
                             </div>
 
                         </div>
