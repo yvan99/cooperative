@@ -5762,7 +5762,7 @@
 
 
 
-                    
+                    @include('components.dashboard.foote')
                 </div>
                 <!--end:::Main-->
 
@@ -5776,53 +5776,5 @@
     </div>
     <!--end::Page-->
 </div>
-<!--end::App-->
-
-
-<!--begin::App layout builder-->
-<div id="kt_app_layout_builder" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="app-settings"
-    data-kt-drawer-activate="true" data-kt-drawer-overlay="true"
-    data-kt-drawer-width="{default:'300px', 'lg': '380px'}" data-kt-drawer-direction="end"
-    data-kt-drawer-toggle="#kt_app_layout_builder_toggle" data-kt-drawer-close="#kt_app_layout_builder_close">
-
-    <!--begin::Card-->
-    <div class="card border-0 shadow-none rounded-0 w-100">
-        <!--begin::Card header-->
-        <div class="card-header bgi-position-y-bottom bgi-position-x-end bgi-size-cover bgi-no-repeat rounded-0 border-0 py-4"
-            id="kt_app_layout_builder_header"
-            style="background-image:url('../../../assets/media/misc/layout/customizer-header-bg.jpg')">
-
-            <!--begin::Card title-->
-            <h3 class="card-title fs-3 fw-bold text-white flex-column m-0">
-                Metronic Builder
-
-                <small class="text-white opacity-50 fs-7 fw-semibold pt-1">
-                    Get your product deeply customized
-                </small>
-            </h3>
-            <!--end::Card title-->
-
-            <!--begin::Card toolbar-->
-            <div class="card-toolbar">
-                <button type="button" class="btn btn-sm btn-icon btn-color-white p-0 w-20px h-20px rounded-1"
-                    id="kt_app_layout_builder_close">
-                    <i class="ki-outline ki-cross-square fs-2"></i> </button>
-            </div>
-            <!--end::Card toolbar-->
-        </div>
-        <!--end::Card header-->
-
-    </div>
-    <!--end::Card-->
-</div>
-<!--end::App layout builder-->
-
-
-
-
-<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
-    <i class="ki-outline ki-arrow-up"></i>
-</div>
-<!--end::Scrolltop-->
 
 @include('components.dashboard.dashjs')
