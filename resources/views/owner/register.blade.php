@@ -34,7 +34,7 @@
         
                                     <!--begin::Input wrapper-->
                                     <div class="position-relative mb-3">
-                                        <input class="form-control form-control-lg form-control-solid"
+                                        <input class="form-control form-control-lg"
                                             type="password" placeholder="Password" name="password" autocomplete="off" />
                             
                                         <!--begin::Visibility toggle-->
