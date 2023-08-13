@@ -11,7 +11,7 @@
 
 
                     <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form"
-                        action="{{ route('owner.login') }}" method="POST">
+                        action="{{ route('owner.register') }}" method="POST">
                         @csrf
                         <div class="text-left mb-11">
 
