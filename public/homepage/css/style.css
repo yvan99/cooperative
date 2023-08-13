@@ -931,7 +931,7 @@ p {
 }
 
 .hero-area {
-    position: relative;
+    position: relative
 }
 
 .hero-area.bg_cover {
@@ -961,7 +961,7 @@ p {
 }
 
 .hero-content .title {
-    font-size: 40px;
+    font-size: 60px;
     line-height: 80px;
     color: #f8fbff;
     font-weight: 700;
@@ -1015,6 +1015,7 @@ p {
 .hero-thumb {
     padding-top: 185px;
     text-align: right;
+    margin-bottom: 65px
 }
 
 @media (max-width: 767px) {
@@ -1032,7 +1033,7 @@ p {
 
     .hero-thumb img {
         -webkit-transform: translateY(5px);
-        transform: translateY(5px);
+        transform: translateY(5px)
     }
 }
 

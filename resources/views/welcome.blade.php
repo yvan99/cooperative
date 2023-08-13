@@ -1,5 +1,5 @@
 @include('components.homepage.top')
-<section class="hero-area bg_cover" style="background-image: url(homepage/images/hero-bg.jpg);">
+<section class="hero-area bg_cover mb-5" style="background-image: url(homepage/images/hero-bg.jpg);">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -20,6 +20,51 @@
         </div>
     </div>
 </section>
+
+<section id="intro" class="features-area">
+    <div class="container custom-container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="features-box">
+                    <div class="features-title">
+                        <h3 class="title">Get to know corba’s <br> advanced features.</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="features-item mt-30">
+                                <i class="fal fa-comments"></i>
+                                <h4 class="title">Simple and reliable messaging</h4>
+                                <p>Make. Lights us. Is life all make midst a moveth forth under may Cattle moved
+                                    without seas first air beast place after.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="features-item mt-30">
+                                <i class="fal fa-users-crown"></i>
+                                <h4 class="title">Make private groups for closed ones</h4>
+                                <p>Make. Lights us. Is life all make midst a moveth forth under may Cattle moved
+                                    without seas first air beast place after.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="features-item mt-30">
+                                <i class="fal fa-user-lock"></i>
+                                <h4 class="title">Your data encrypted and 100% secure</h4>
+                                <p>Make. Lights us. Is life all make midst a moveth forth under may Cattle moved
+                                    without seas first air beast place after.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features-play">
+                        <a class="video-popup" href="https://www.youtube.com/watch?v=MAvJ5FyM6cI"><i
+                                class="fas fa-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <!--====== HERO PART ENDS ======-->
 
