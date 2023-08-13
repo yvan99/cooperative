@@ -112,9 +112,6 @@
                                 <div class="collapse navbar-collapse sub-menu-bar main-nav__main-navigation"
                                     id="navbarSupportedContent">
                                     <ul class="navbar-nav ml-auto main-nav__navigation-box">
-                                        <li class="nav-item active">
-                                            <a class="nav-link page-scroll" href="#home">Home</a>
-                                        </li>
 
                                         <li class="nav-item">
                                             <a class="nav-link page-scroll" href="#feedbacks">Login</a>
