@@ -114,11 +114,11 @@
                                     <ul class="navbar-nav ml-auto main-nav__navigation-box">
 
                                         <li class="nav-item">
-                                            <a class="nav-link page-scroll" href="#feedbacks">Login</a>
+                                            <a class="nav-link page-scroll" href="/owner/login">Login</a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link page-scroll" href="#preview">Create Account</a>
+                                            <a class="nav-link page-scroll" href="/owner/signup">Create Account</a>
                                         </li>
 
                                        

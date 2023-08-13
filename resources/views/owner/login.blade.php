@@ -1,6 +1,4 @@
 <div class="d-flex flex-column flex-root" id="kt_app_root">
-
-    <!--begin::Authentication - Sign-in -->
     <div class="d-flex flex-column flex-lg-row flex-column-fluid">
         <!--begin::Body-->
         <div class="d-flex flex-column flex-lg-row-fluid w-lg-50 p-10 order-2 order-lg-1">
@@ -261,7 +259,4 @@
         <!--end::Aside-->
     </div>
     <!--end::Authentication - Sign-in-->
-
-
-
 </div>
