@@ -9,81 +9,13 @@
                                 d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
                         </svg>
                     </button>
-                    <div class="col-auto navbar-brand">
-                        <a href="../dashboard/index.html" class="d-flex">
 
-                            <!--Logo start-->
-                            <div class="logo-main">
-                                <div class="logo-normal">
-                                    <svg class=" icon-30" viewBox="0 0 32 32" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.25333 2H22.0444L29.7244 15.2103L22.0444 28.1333H7.25333L0 15.2103L7.25333 2ZM11.2356 9.32316H18.0622L21.3334 15.2103L18.0622 20.9539H11.2356L8.10669 15.2103L11.2356 9.32316Z"
-                                            fill="currentColor" />
-                                        <path d="M23.751 30L13.2266 15.2103H21.4755L31.9999 30H23.751Z"
-                                            fill="#3FF0B9" />
-                                    </svg>
-                                </div>
-                                <div class="logo-mini">
-                                    <svg class=" icon-30" viewBox="0 0 32 32" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.25333 2H22.0444L29.7244 15.2103L22.0444 28.1333H7.25333L0 15.2103L7.25333 2ZM11.2356 9.32316H18.0622L21.3334 15.2103L18.0622 20.9539H11.2356L8.10669 15.2103L11.2356 9.32316Z"
-                                            fill="currentColor" />
-                                        <path d="M23.751 30L13.2266 15.2103H21.4755L31.9999 30H23.751Z"
-                                            fill="#3FF0B9" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <!--logo End-->
-                            <h4 class="logo-title d-none d-sm-block text-white" data-setting="app_name">Qompac UI</h4>
-                        </a>
-                    </div>
                     <nav id="navbar_main"
                         class="mobile-offcanvas nav navbar navbar-expand-xl  horizontal-nav col-auto bg-dark">
-                        <div class="container-fluid">
-                            <div class="offcanvas-header px-0">
-                                <div class="navbar-brand ms-0">
-
-                                    <!--Logo start-->
-                                    <div class="logo-main">
-                                        <div class="logo-normal">
-                                            <svg class="text-primary icon-30" viewBox="0 0 32 32" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M7.25333 2H22.0444L29.7244 15.2103L22.0444 28.1333H7.25333L0 15.2103L7.25333 2ZM11.2356 9.32316H18.0622L21.3334 15.2103L18.0622 20.9539H11.2356L8.10669 15.2103L11.2356 9.32316Z"
-                                                    fill="currentColor" />
-                                                <path d="M23.751 30L13.2266 15.2103H21.4755L31.9999 30H23.751Z"
-                                                    fill="#3FF0B9" />
-                                            </svg>
-                                        </div>
-                                        <div class="logo-mini">
-                                            <svg class="text-primary icon-30" viewBox="0 0 32 32" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M7.25333 2H22.0444L29.7244 15.2103L22.0444 28.1333H7.25333L0 15.2103L7.25333 2ZM11.2356 9.32316H18.0622L21.3334 15.2103L18.0622 20.9539H11.2356L8.10669 15.2103L11.2356 9.32316Z"
-                                                    fill="currentColor" />
-                                                <path d="M23.751 30L13.2266 15.2103H21.4755L31.9999 30H23.751Z"
-                                                    fill="#3FF0B9" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <!--logo End-->
-                                    <h4 class="logo-title" data-setting="app_name">Qompac UI</h4>
-                                </div>
-                                <button class="btn-close float-end text-white"></button>
-                            </div>
-                            <ul class="iq-nav-menu list-unstyled">
-                                <li class="nav-item "><a class="nav-link " href="../dashboard/index-horizontal.html">
-                                        Horizontal </a></li>
-                                <li class="nav-item active"><a class="nav-link active"
-                                        href="../dashboard/index-dual-compact.html"><span class="item-name">Dual
-                                            Compact</span></a></li>
-                                <li class="nav-item "><a class="nav-link " href="../dashboard/index-boxed.html">
-                                        Boxed Horizontal </a></li>
-                            </ul>
-                        </div>
+                    
                     </nav>
+
+
                     <div class="col-auto">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -96,228 +28,7 @@
                         </button>
                         <div class="collapse navbar-collapse  bg-dark" id="navbarSupportedContent">
                             <ul class="mb-2 navbar-nav ms-auto align-items-center navbar-list mb-xl-0">
-                                <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link" id="search-drop" data-bs-toggle="dropdown">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546"
-                                                height="2" rx="1" transform="rotate(45 17.0365 15.1223)"
-                                                fill="currentColor"></rect>
-                                            <path
-                                                d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z"
-                                                fill="currentColor"></path>
-                                        </svg>
-                                    </a>
-                                    <ul class="p-0 sub-drop dropdown-menu dropdown-menu-end"
-                                        aria-labelledby="search-drop">
-                                        <li class="">
-                                            <div
-                                                class="p-3 card-header justify-content-between border-bottom rounded-top">
-                                                <div class="header-title">
-                                                    <div class="iq-search-bar device-search  position-relative">
-                                                        <form action="#" class="searchbox">
-                                                            <input type="text"
-                                                                class="text search-input form-control bg-soft-primary"
-                                                                placeholder="Search here...">
-                                                            <a class="d-lg-none d-flex" href="javascript:void(0);">
-                                                                <span class="material-symbols-outlined">search</span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="p-0 card-body all-notification">
-                                                <div
-                                                    class="d-flex align-items-center border-bottom search-hover py-2 px-3">
-                                                    <div class="flex-shrink-0">
-                                                        <img src="../assets/images/avatars/01.png"
-                                                            class="align-self-center img-fluid avatar-50 rounded-pill"
-                                                            alt="#">
-                                                    </div>
-                                                    <div class="d-flex flex-column ms-3 w-100">
-                                                        <a href="javascript:void(0);" class="h5">Paige Turner</a>
-                                                        <span>Paige001</span>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="d-flex align-items-center border-bottom search-hover py-2 px-3">
-                                                    <div class="flex-shrink-0">
-                                                        <img src="../assets/images/avatars/02.png"
-                                                            class="align-self-center img-fluid avatar-50 rounded-pill"
-                                                            alt="#">
-                                                    </div>
-                                                    <div class="d-flex flex-column ms-3 w-100">
-                                                        <a href="javascript:void(0);" class="h5">Monty Carlo</a>
-                                                        <span>Carlo.m</span>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="d-flex align-items-center search-hover py-2 px-3 border-bottom">
-                                                    <div class="flex-shrink-0">
-                                                        <img src="../assets/images/avatars/03.png"
-                                                            class="align-self-center img-fluid avatar-50 rounded-pill"
-                                                            alt="#">
-                                                    </div>
-                                                    <div class="d-flex flex-column ms-3 w-100">
-                                                        <a href="javascript:void(0);" class="h5">Paul Molive</a>
-                                                        <span>Paul.45</span>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="d-flex align-items-center border-bottom search-hover py-2 px-3">
-                                                    <div class="flex-shrink-0">
-                                                        <img src="../assets/images/avatars/04.png"
-                                                            class="align-self-center img-fluid avatar-50 rounded-pill"
-                                                            alt="#">
-                                                    </div>
-                                                    <div class="d-flex flex-column ms-3 w-100">
-                                                        <a href="javascript:void(0);" class="h5">Monty Carlo</a>
-                                                        <span>Carlo.m</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link" id="langues-drop" data-bs-toggle="dropdown">
-                                        <svg class="icon-24" width="24" xmlns="http://www.w3.org/2000/svg"
-                                            fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802">
-                                            </path>
-                                        </svg>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-end">
-                                        <li data-setting="attribute">
-                                            <div class="dropdown-item d-flex align-items-center">
-                                                <input type="radio" value="ltr" class="btn-check"
-                                                    name="theme_scheme_direction" data-prop="dir"
-                                                    id="theme-scheme-direction-ltr" checked>
-                                                <label class="d-block" for="theme-scheme-direction-ltr">
-                                                    <svg width="20" viewBox="0 0 24 24" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M18.9702 19.757L15.3502 5.27201C15.1884 4.62224 14.8136 4.04541 14.2856 3.63359C13.7576 3.22177 13.1068 2.99871 12.4372 3.00001H11.5602C10.8911 2.99938 10.2411 3.22275 9.71368 3.63452C9.18629 4.04628 8.81191 4.62274 8.65022 5.27201L5.03022 19.757C4.9679 20.0135 5.00954 20.2843 5.14605 20.5102C5.28257 20.7362 5.50288 20.899 5.75895 20.9631C6.01502 21.0273 6.28606 20.9875 6.51297 20.8527C6.73988 20.7178 6.90424 20.4986 6.97022 20.243L8.28022 15H15.7202L17.0302 20.243C17.0962 20.4986 17.2606 20.7178 17.4875 20.8527C17.7144 20.9875 17.9854 21.0273 18.2415 20.9631C18.4976 20.899 18.7179 20.7362 18.8544 20.5102C18.9909 20.2843 19.0325 20.0135 18.9702 19.757V19.757ZM8.78022 13L10.5912 5.75801C10.6449 5.5414 10.7696 5.34903 10.9454 5.21163C11.1213 5.07423 11.3381 4.99972 11.5612 5.00001H12.4392C12.6624 4.99972 12.8792 5.07423 13.055 5.21163C13.2308 5.34903 13.3556 5.5414 13.4092 5.75801L15.2192 13H8.78022Z"
-                                                            fill="currentColor" />
-                                                    </svg>
-                                                    <span class="ms-2 mb-0"> LTR </span>
-                                                </label>
 
-                                            </div>
-                                        </li>
-                                        <li data-setting="attribute">
-                                            <div class="dropdown-item d-flex align-items-center">
-                                                <input type="radio" value="rtl" class="btn-check"
-                                                    name="theme_scheme_direction" data-prop="dir"
-                                                    id="theme-scheme-direction-rtl">
-                                                <label class=" d-block" for="theme-scheme-direction-rtl">
-                                                    <svg width="20" viewBox="0 0 24 24" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M12 4C10.08 4 8.5 5.58 8.5 7.5C8.5 8.43 8.88 9.28 9.5 9.91C7.97 10.91 7 12.62 7 14.5C7 17.53 9.47 20 12.5 20C14.26 20 16 19.54 17.5 18.66L16.5 16.93C15.28 17.63 13.9 18 12.5 18C10.56 18 9 16.45 9 14.5C8.99823 13.7298 9.2513 12.9806 9.71978 12.3692C10.1883 11.7578 10.8458 11.3186 11.59 11.12L16.8 9.72L16.28 7.79L11.83 9C11.08 8.9 10.5 8.28 10.5 7.5C10.5 6.66 11.16 6 12 6C12.26 6 12.5 6.07 12.75 6.2L13.75 4.47C13.22 4.16 12.61 4 12 4Z"
-                                                            fill="currentColor" />
-                                                    </svg>
-                                                    <span class="ms-2 mb-0"> RTL </span>
-                                                </label>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link" id="notification-drop"
-                                        data-bs-toggle="dropdown">
-                                        <svg class="icon-24" width="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M19.7695 11.6453C19.039 10.7923 18.7071 10.0531 18.7071 8.79716V8.37013C18.7071 6.73354 18.3304 5.67907 17.5115 4.62459C16.2493 2.98699 14.1244 2 12.0442 2H11.9558C9.91935 2 7.86106 2.94167 6.577 4.5128C5.71333 5.58842 5.29293 6.68822 5.29293 8.37013V8.79716C5.29293 10.0531 4.98284 10.7923 4.23049 11.6453C3.67691 12.2738 3.5 13.0815 3.5 13.9557C3.5 14.8309 3.78723 15.6598 4.36367 16.3336C5.11602 17.1413 6.17846 17.6569 7.26375 17.7466C8.83505 17.9258 10.4063 17.9933 12.0005 17.9933C13.5937 17.9933 15.165 17.8805 16.7372 17.7466C17.8215 17.6569 18.884 17.1413 19.6363 16.3336C20.2118 15.6598 20.5 14.8309 20.5 13.9557C20.5 13.0815 20.3231 12.2738 19.7695 11.6453Z"
-                                                fill="currentColor"></path>
-                                            <path opacity="0.4"
-                                                d="M14.0088 19.2283C13.5088 19.1215 10.4627 19.1215 9.96275 19.2283C9.53539 19.327 9.07324 19.5566 9.07324 20.0602C9.09809 20.5406 9.37935 20.9646 9.76895 21.2335L9.76795 21.2345C10.2718 21.6273 10.8632 21.877 11.4824 21.9667C11.8123 22.012 12.1482 22.01 12.4901 21.9667C13.1083 21.877 13.6997 21.6273 14.2036 21.2345L14.2026 21.2335C14.5922 20.9646 14.8734 20.5406 14.8983 20.0602C14.8983 19.5566 14.4361 19.327 14.0088 19.2283Z"
-                                                fill="currentColor"></path>
-                                        </svg>
-                                        <span class="bg-danger dots"></span>
-                                    </a>
-                                    <ul class="p-0 sub-drop dropdown-menu dropdown-menu-end"
-                                        aria-labelledby="notification-drop">
-                                        <li class="">
-                                            <div
-                                                class="p-3 card-header d-flex justify-content-between bg-primary rounded-top">
-                                                <div class="header-title">
-                                                    <h5 class="mb-0 text-white">All Notifications</h5>
-                                                </div>
-                                            </div>
-                                            <div class="p-0 card-body all-notification">
-                                                <a href="#" class="iq-sub-card">
-                                                    <div class="d-flex align-items-center">
-                                                        <img class="p-1 avatar-40 rounded-pill bg-soft-primary"
-                                                            src="../assets/images/shapes/01.png" alt=""
-                                                            loading="lazy">
-                                                        <div class="ms-3 w-100">
-                                                            <h6 class="mb-0 ">Emma Watson Bni</h6>
-                                                            <div
-                                                                class="d-flex justify-content-between align-items-center">
-                                                                <p class="mb-0">95 MB</p>
-                                                                <small class="float-end font-size-12">Just Now</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="#" class="iq-sub-card">
-                                                    <div class="d-flex align-items-center">
-                                                        <div>
-                                                            <img class="p-1 avatar-40 rounded-pill bg-soft-primary"
-                                                                src="../assets/images/shapes/02.png" alt=""
-                                                                loading="lazy">
-                                                        </div>
-                                                        <div class="ms-3 w-100">
-                                                            <h6 class="mb-0 ">New customer is join</h6>
-                                                            <div
-                                                                class="d-flex justify-content-between align-items-center">
-                                                                <p class="mb-0">Cyst Bni</p>
-                                                                <small class="float-end font-size-12">5 days
-                                                                    ago</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="#" class="iq-sub-card">
-                                                    <div class="d-flex align-items-center">
-                                                        <img class="p-1 avatar-40 rounded-pill bg-soft-primary"
-                                                            src="../assets/images/shapes/03.png" alt=""
-                                                            loading="lazy">
-                                                        <div class="ms-3 w-100">
-                                                            <h6 class="mb-0 ">Two customer is left</h6>
-                                                            <div
-                                                                class="d-flex justify-content-between align-items-center">
-                                                                <p class="mb-0">Cyst Bni</p>
-                                                                <small class="float-end font-size-12">2 days
-                                                                    ago</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="#" class="iq-sub-card">
-                                                    <div class="d-flex align-items-center">
-                                                        <img class="p-1 avatar-40 rounded-pill bg-soft-primary"
-                                                            src="../assets/images/shapes/04.png" alt=""
-                                                            loading="lazy">
-                                                        <div class="w-100 ms-3">
-                                                            <h6 class="mb-0 ">New Mail from Fenny</h6>
-                                                            <div
-                                                                class="d-flex justify-content-between align-items-center">
-                                                                <p class="mb-0">Cyst Bni</p>
-                                                                <small class="float-end font-size-12">3 days
-                                                                    ago</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
                                 <li class="nav-item theme-scheme-dropdown">
                                     <a href="#" class="nav-link" id="mode-drop">
                                         <svg class="icon-24" width="24" viewBox="0 0 24 24" fill="none"
@@ -479,22 +190,22 @@
                                     <a class="py-0 nav-link d-flex align-items-center ps-3" href="#"
                                         id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">
-                                        <img src="../assets/images/avatars/01.png" alt="User-Profile"
+                                        <img src="{{asset('dashboarde/images/avatars/01.png')}}" alt="User-Profile"
                                             class="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded"
                                             loading="lazy">
-                                        <img src="../assets/images/avatars/avtar_1.png" alt="User-Profile"
+                                        <img src="{{asset('dashboarde/images/avatars/avtar_1.png')}}" alt="User-Profile"
                                             class="theme-color-purple-img img-fluid avatar avatar-50 avatar-rounded"
                                             loading="lazy">
-                                        <img src="../assets/images/avatars/avtar_2.png" alt="User-Profile"
+                                        <img src="{{asset('dashboarde/images/avatars/avtar_2.png')}}" alt="User-Profile"
                                             class="theme-color-blue-img img-fluid avatar avatar-50 avatar-rounded"
                                             loading="lazy">
-                                        <img src="../assets/images/avatars/avtar_3.png" alt="User-Profile"
+                                        <img src="{{asset('dashboarde/images/avatars/avtar_3.png')}}" alt="User-Profile"
                                             class="theme-color-green-img img-fluid avatar avatar-50 avatar-rounded"
                                             loading="lazy">
-                                        <img src="../assets/images/avatars/avtar_4.png" alt="User-Profile"
+                                        <img src="{{asset('dashboarde/images/avatars/avtar_4.png')}}" alt="User-Profile"
                                             class="theme-color-yellow-img img-fluid avatar avatar-50 avatar-rounded"
                                             loading="lazy">
-                                        <img src="../assets/images/avatars/avtar_5.png" alt="User-Profile"
+                                        <img src="{{asset('dashboarde/images/avatars/avtar_5.png')}}" alt="User-Profile"
                                             class="theme-color-pink-img img-fluid avatar avatar-50 avatar-rounded"
                                             loading="lazy">
                                         <div class="caption ms-3 d-none d-md-block ">
