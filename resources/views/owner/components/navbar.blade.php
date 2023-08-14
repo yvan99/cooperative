@@ -2,9 +2,9 @@
     <div class="container-fluid">
         <nav class="nav nav-underline" aria-label="Secondary navigation">
             <ul class="iq-nav-menu list-unstyled flex-row">
-                <li class="nav-item active"><a class="nav-link " href="../dashboard/index-dual-compact.html">Dashboard</a>
+                <li class="nav-item active"><a class="nav-link " href="">Dashboard</a>
                 </li>
-                <li class="nav-item"><a class="nav-link " href="../dashboard/analytics-dashboard.html">Cooperatives</a>
+                <li class="nav-item"><a class="nav-link " href="/owner/cooperatives">Cooperatives</a>
                 </li>
                 <li class="nav-item"><a class="nav-link " href="../dashboard/ecommerce-dashboard.html">Accounts</a>
                 </li>
