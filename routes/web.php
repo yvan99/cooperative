@@ -66,4 +66,7 @@ Route::middleware('auth:owner')->prefix('owner')->group(function () {
     Route::get('/dashboard', function () {
         return view('owner.dashboard');
     })->name('owner.dashboard');
+
+    Route::get('/cooperatives', [CooperativeController::class, 'index'])->name('cooperatives.index');
+    Route::post('/cooperatives', [CooperativeController::class, 'store'])->name('cooperatives.store');
 });
