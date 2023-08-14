@@ -1,5780 +1,1716 @@
-@include('components.dashboard.css')
-<!--begin::App-->
-<div class="d-flex flex-column flex-root app-root" id="kt_app_root">
-    <!--begin::Page-->
-    <div class="app-page  flex-column flex-column-fluid " id="kt_app_page">
-
-
-        <!--begin::Header-->
-        <div id="kt_app_header" class="app-header " data-kt-sticky="true"
-            data-kt-sticky-activate="{default: false, lg: true}" data-kt-sticky-name="app-header-sticky"
-            data-kt-sticky-offset="{default: false, lg: '300px'}">
-
-            <!--begin::Header container-->
-            <div class="app-container  container-xxl d-flex align-items-stretch justify-content-between "
-                id="kt_app_header_container">
-                <!--begin::Header mobile toggle-->
-                <div class="d-flex align-items-center d-lg-none ms-n2 me-2" title="Show sidebar menu">
-                    <div class="btn btn-icon btn-active-color-primary w-35px h-35px" id="kt_app_header_menu_toggle">
-                        <i class="ki-outline ki-abstract-14 fs-2"></i>
-                    </div>
-                </div>
-                <!--end::Header mobile toggle-->
-
-                <!--begin::Logo-->
-                <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 me-lg-18">
-                    <a href="index.html">
-                        <img alt="Logo" src="../../../assets/media/logos/demo34-small.svg" class="h-25px d-sm-none" />
-                        <img alt="Logo" src="../../../assets/media/logos/demo34.png" class="h-25px d-none d-sm-block" />
-                    </a>
-                </div>
-                <!--end::Logo-->
-
-                <!--begin::Header wrapper-->
-                <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1"
-                    id="kt_app_header_wrapper">
-
-                    <!--begin::Menu wrapper-->
-                    <div class="app-header-menu app-header-mobile-drawer align-items-stretch" data-kt-drawer="true"
-                        data-kt-drawer-name="app-header-menu" data-kt-drawer-activate="{default: true, lg: false}"
-                        data-kt-drawer-overlay="true" data-kt-drawer-width="250px" data-kt-drawer-direction="start"
-                        data-kt-drawer-toggle="#kt_app_header_menu_toggle" data-kt-swapper="true"
-                        data-kt-swapper-mode="{default: 'append', lg: 'prepend'}"
-                        data-kt-swapper-parent="{default: '#kt_app_body', lg: '#kt_app_header_wrapper'}">
-                        <!--begin::Menu-->
-                        <div class=" menu  
-            menu-rounded 
-            menu-active-bg 
-            menu-state-primary 
-            menu-column 
-            menu-lg-row 
-            menu-title-gray-700 
-            menu-icon-gray-500 
-            menu-arrow-gray-500 
-            menu-bullet-gray-500 
-            my-5 my-lg-0 align-items-stretch fw-semibold px-2 px-lg-0
-        "
-                            id="kt_app_header_menu" data-kt-menu="true">
-                            <!--begin:Menu item-->
-                            <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                                data-kt-menu-placement="bottom-start"
-                                class="menu-item here show menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
-                                <!--begin:Menu link--><span class="menu-link"><span
-                                        class="menu-title">Dashboards</span><span
-                                        class="menu-arrow d-lg-none"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                <div
-                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown p-0 w-100 w-lg-850px">
-                                    <!--begin:Dashboards menu-->
-                                    <div class="menu-state-bg menu-extended overflow-hidden overflow-lg-visible"
-                                        data-kt-menu-dismiss="true">
-                                        <!--begin:Row-->
-                                        <div class="row">
-                                            <!--begin:Col-->
-                                            <div class="col-lg-8 mb-3 mb-lg-0  py-3 px-3 py-lg-6 px-lg-6">
-                                                <!--begin:Row-->
-                                                <div class="row">
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-6 mb-3">
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="index.html" class="menu-link active">
-                                                                <span
-                                                                    class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
-                                                                    <i
-                                                                        class="ki-outline ki-element-11 text-primary fs-1"></i>
-                                                                </span>
-
-                                                                <span class="d-flex flex-column">
-                                                                    <span
-                                                                        class="fs-6 fw-bold text-gray-800">Default</span>
-                                                                    <span class="fs-7 fw-semibold text-muted">Reports &
-                                                                        statistics</span>
-                                                                </span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                    </div>
-                                                    <!--end:Col-->
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-6 mb-3">
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="dashboards/ecommerce.html" class="menu-link ">
-                                                                <span
-                                                                    class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
-                                                                    <i
-                                                                        class="ki-outline ki-basket text-danger fs-1"></i>
-                                                                </span>
-
-                                                                <span class="d-flex flex-column">
-                                                                    <span
-                                                                        class="fs-6 fw-bold text-gray-800">eCommerce</span>
-                                                                    <span class="fs-7 fw-semibold text-muted">Sales
-                                                                        reports</span>
-                                                                </span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                    </div>
-                                                    <!--end:Col-->
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-6 mb-3">
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="dashboards/projects.html" class="menu-link ">
-                                                                <span
-                                                                    class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
-                                                                    <i
-                                                                        class="ki-outline ki-abstract-44 text-info fs-1"></i>
-                                                                </span>
-
-                                                                <span class="d-flex flex-column">
-                                                                    <span
-                                                                        class="fs-6 fw-bold text-gray-800">Projects</span>
-                                                                    <span class="fs-7 fw-semibold text-muted">Tasts,
-                                                                        graphs & charts</span>
-                                                                </span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                    </div>
-                                                    <!--end:Col-->
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-6 mb-3">
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="dashboards/online-courses.html" class="menu-link ">
-                                                                <span
-                                                                    class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
-                                                                    <i
-                                                                        class="ki-outline ki-color-swatch text-success fs-1"></i>
-                                                                </span>
-
-                                                                <span class="d-flex flex-column">
-                                                                    <span class="fs-6 fw-bold text-gray-800">Online
-                                                                        Courses</span>
-                                                                    <span class="fs-7 fw-semibold text-muted">Student
-                                                                        progress</span>
-                                                                </span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                    </div>
-                                                    <!--end:Col-->
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-6 mb-3">
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="dashboards/marketing.html" class="menu-link ">
-                                                                <span
-                                                                    class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
-                                                                    <i
-                                                                        class="ki-outline ki-chart-simple text-dark fs-1"></i>
-                                                                </span>
-
-                                                                <span class="d-flex flex-column">
-                                                                    <span
-                                                                        class="fs-6 fw-bold text-gray-800">Marketing</span>
-                                                                    <span class="fs-7 fw-semibold text-muted">Campaings
-                                                                        & conversions</span>
-                                                                </span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                    </div>
-                                                    <!--end:Col-->
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-6 mb-3">
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="dashboards/bidding.html" class="menu-link ">
-                                                                <span
-                                                                    class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
-                                                                    <i
-                                                                        class="ki-outline ki-switch text-warning fs-1"></i>
-                                                                </span>
-
-                                                                <span class="d-flex flex-column">
-                                                                    <span
-                                                                        class="fs-6 fw-bold text-gray-800">Bidding</span>
-                                                                    <span class="fs-7 fw-semibold text-muted">Campaings
-                                                                        & conversions</span>
-                                                                </span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                    </div>
-                                                    <!--end:Col-->
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-6 mb-3">
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="dashboards/pos.html" class="menu-link ">
-                                                                <span
-                                                                    class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
-                                                                    <i
-                                                                        class="ki-outline ki-abstract-42 text-danger fs-1"></i>
-                                                                </span>
-
-                                                                <span class="d-flex flex-column">
-                                                                    <span class="fs-6 fw-bold text-gray-800">POS
-                                                                        System</span>
-                                                                    <span class="fs-7 fw-semibold text-muted">Campaings
-                                                                        & conversions</span>
-                                                                </span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                    </div>
-                                                    <!--end:Col-->
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-6 mb-3">
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="dashboards/call-center.html" class="menu-link ">
-                                                                <span
-                                                                    class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
-                                                                    <i
-                                                                        class="ki-outline ki-call text-primary fs-1"></i>
-                                                                </span>
-
-                                                                <span class="d-flex flex-column">
-                                                                    <span class="fs-6 fw-bold text-gray-800">Call
-                                                                        Center</span>
-                                                                    <span class="fs-7 fw-semibold text-muted">Campaings
-                                                                        & conversions</span>
-                                                                </span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                    </div>
-                                                    <!--end:Col-->
-                                                </div>
-                                                <!--end:Row-->
-
-                                                <div class="separator separator-dashed mx-5 my-5"></div>
-
-                                                <!--begin:Landing-->
-                                                <div class="d-flex flex-stack flex-wrap flex-lg-nowrap gap-2 mx-5">
-                                                    <div class="d-flex flex-column me-5">
-                                                        <div class="fs-6 fw-bold text-gray-800">
-                                                            Landing Page Template
-                                                        </div>
-                                                        <div class="fs-7 fw-semibold text-muted">
-                                                            Onpe page landing template with pricing & others
-                                                        </div>
-                                                    </div>
-
-                                                    <a href="landing.html" class="btn btn-sm btn-primary fw-bold">
-                                                        Explore
-                                                    </a>
-                                                </div>
-                                                <!--end:Landing-->
-                                            </div>
-                                            <!--end:Col-->
-
-                                            <!--begin:Col-->
-                                            <div
-                                                class="menu-more bg-light col-lg-4 py-3 px-3 py-lg-6 px-lg-6 rounded-end">
-                                                <!--begin:Heading-->
-                                                <h4 class="fs-6 fs-lg-4 text-gray-800 fw-bold mt-3 mb-3 ms-4">More
-                                                    Dashboards</h4>
-                                                <!--end:Heading-->
-
-
-                                                <!--begin:Menu item-->
-                                                <div class="menu-item p-0 m-0">
-                                                    <!--begin:Menu link-->
-                                                    <a href="dashboards/logistics.html" class="menu-link py-2 ">
-                                                        <span class="menu-title">
-                                                            Logistics </span>
-                                                    </a>
-                                                    <!--end:Menu link-->
-                                                </div>
-                                                <!--end:Menu item-->
-
-                                                <!--begin:Menu item-->
-                                                <div class="menu-item p-0 m-0">
-                                                    <!--begin:Menu link-->
-                                                    <a href="dashboards/website-analytics.html"
-                                                        class="menu-link py-2 ">
-                                                        <span class="menu-title">
-                                                            Website Analytics </span>
-                                                    </a>
-                                                    <!--end:Menu link-->
-                                                </div>
-                                                <!--end:Menu item-->
-
-                                                <!--begin:Menu item-->
-                                                <div class="menu-item p-0 m-0">
-                                                    <!--begin:Menu link-->
-                                                    <a href="dashboards/finance-performance.html"
-                                                        class="menu-link py-2 ">
-                                                        <span class="menu-title">
-                                                            Finance Performance </span>
-                                                    </a>
-                                                    <!--end:Menu link-->
-                                                </div>
-                                                <!--end:Menu item-->
-
-                                                <!--begin:Menu item-->
-                                                <div class="menu-item p-0 m-0">
-                                                    <!--begin:Menu link-->
-                                                    <a href="dashboards/store-analytics.html" class="menu-link py-2 ">
-                                                        <span class="menu-title">
-                                                            Store Analytics </span>
-                                                    </a>
-                                                    <!--end:Menu link-->
-                                                </div>
-                                                <!--end:Menu item-->
-
-                                                <!--begin:Menu item-->
-                                                <div class="menu-item p-0 m-0">
-                                                    <!--begin:Menu link-->
-                                                    <a href="dashboards/social.html" class="menu-link py-2 ">
-                                                        <span class="menu-title">
-                                                            Social </span>
-                                                    </a>
-                                                    <!--end:Menu link-->
-                                                </div>
-                                                <!--end:Menu item-->
-
-                                                <!--begin:Menu item-->
-                                                <div class="menu-item p-0 m-0">
-                                                    <!--begin:Menu link-->
-                                                    <a href="dashboards/delivery.html" class="menu-link py-2 ">
-                                                        <span class="menu-title">
-                                                            Delivery </span>
-                                                    </a>
-                                                    <!--end:Menu link-->
-                                                </div>
-                                                <!--end:Menu item-->
-
-                                                <!--begin:Menu item-->
-                                                <div class="menu-item p-0 m-0">
-                                                    <!--begin:Menu link-->
-                                                    <a href="dashboards/crypto.html" class="menu-link py-2 ">
-                                                        <span class="menu-title">
-                                                            Crypto </span>
-                                                    </a>
-                                                    <!--end:Menu link-->
-                                                </div>
-                                                <!--end:Menu item-->
-
-                                                <!--begin:Menu item-->
-                                                <div class="menu-item p-0 m-0">
-                                                    <!--begin:Menu link-->
-                                                    <a href="dashboards/school.html" class="menu-link py-2 ">
-                                                        <span class="menu-title">
-                                                            School </span>
-                                                    </a>
-                                                    <!--end:Menu link-->
-                                                </div>
-                                                <!--end:Menu item-->
-
-                                                <!--begin:Menu item-->
-                                                <div class="menu-item p-0 m-0">
-                                                    <!--begin:Menu link-->
-                                                    <a href="dashboards/podcast.html" class="menu-link py-2 ">
-                                                        <span class="menu-title">
-                                                            Podcast </span>
-                                                    </a>
-                                                    <!--end:Menu link-->
-                                                </div>
-                                                <!--end:Menu item-->
-                                            </div>
-                                            <!--end:Col-->
-                                        </div>
-                                        <!--end:Row-->
-                                    </div>
-                                    <!--end:Dashboards menu-->
-                                </div><!--end:Menu sub-->
-                            </div><!--end:Menu item--><!--begin:Menu item-->
-                            <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                                data-kt-menu-placement="bottom-start" data-kt-menu-offset="-200,0"
-                                class="menu-item menu-lg-down-accordion me-0 me-lg-2"><!--begin:Menu link--><span
-                                    class="menu-link"><span class="menu-title">Pages</span><span
-                                        class="menu-arrow d-lg-none"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown p-0">
-                                    <!--begin:Pages menu-->
-                                    <div class="menu-active-bg px-4 px-lg-0">
-                                        <!--begin:Tabs nav-->
-                                        <div class="d-flex w-100 overflow-auto">
-                                            <ul
-                                                class="nav nav-stretch nav-line-tabs fw-bold fs-6 p-0 p-lg-10 flex-nowrap flex-grow-1">
-                                                <!--begin:Nav item-->
-                                                <li class="nav-item mx-lg-1">
-                                                    <a class="nav-link py-3 py-lg-6 active text-active-primary"
-                                                        href="#" data-bs-toggle="tab"
-                                                        data-bs-target="#kt_app_header_menu_pages_pages">
-                                                        General </a>
-                                                </li>
-                                                <!--end:Nav item-->
-                                                <!--begin:Nav item-->
-                                                <li class="nav-item mx-lg-1">
-                                                    <a class="nav-link py-3 py-lg-6  text-active-primary"
-                                                        href="#" data-bs-toggle="tab"
-                                                        data-bs-target="#kt_app_header_menu_pages_account">
-                                                        Account </a>
-                                                </li>
-                                                <!--end:Nav item-->
-                                                <!--begin:Nav item-->
-                                                <li class="nav-item mx-lg-1">
-                                                    <a class="nav-link py-3 py-lg-6  text-active-primary"
-                                                        href="#" data-bs-toggle="tab"
-                                                        data-bs-target="#kt_app_header_menu_pages_authentication">
-                                                        Authentication </a>
-                                                </li>
-                                                <!--end:Nav item-->
-                                                <!--begin:Nav item-->
-                                                <li class="nav-item mx-lg-1">
-                                                    <a class="nav-link py-3 py-lg-6  text-active-primary"
-                                                        href="#" data-bs-toggle="tab"
-                                                        data-bs-target="#kt_app_header_menu_pages_utilities">
-                                                        Utilities </a>
-                                                </li>
-                                                <!--end:Nav item-->
-                                                <!--begin:Nav item-->
-                                                <li class="nav-item mx-lg-1">
-                                                    <a class="nav-link py-3 py-lg-6  text-active-primary"
-                                                        href="#" data-bs-toggle="tab"
-                                                        data-bs-target="#kt_app_header_menu_pages_widgets">
-                                                        Widgets </a>
-                                                </li>
-                                                <!--end:Nav item-->
-                                            </ul>
-                                        </div>
-                                        <!--end:Tabs nav-->
-
-                                        <!--begin:Tab content-->
-                                        <div class="tab-content py-4 py-lg-8 px-lg-7">
-                                            <!--begin:Tab pane-->
-                                            <div class="tab-pane active w-lg-1000px"
-                                                id="kt_app_header_menu_pages_pages">
-                                                <!--begin:Row-->
-                                                <div class="row">
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-8">
-                                                        <!--begin:Row-->
-                                                        <div class="row">
-                                                            <!--begin:Col-->
-                                                            <div class="col-lg-3 mb-6 mb-lg-0">
-                                                                <!--begin:Menu heading-->
-                                                                <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">User Profile
-                                                                </h4>
-                                                                <!--end:Menu heading-->
-
-                                                                <!--begin:Menu item-->
-                                                                <div class="menu-item p-0 m-0">
-                                                                    <!--begin:Menu link-->
-                                                                    <a href="pages/user-profile/overview.html"
-                                                                        class="menu-link ">
-                                                                        <span class="menu-title">Overview</span>
-                                                                    </a>
-                                                                    <!--end:Menu link-->
-                                                                </div>
-                                                                <!--end:Menu item-->
-                                                                <!--begin:Menu item-->
-                                                                <div class="menu-item p-0 m-0">
-                                                                    <!--begin:Menu link-->
-                                                                    <a href="pages/user-profile/projects.html"
-                                                                        class="menu-link ">
-                                                                        <span class="menu-title">Projects</span>
-                                                                    </a>
-                                                                    <!--end:Menu link-->
-                                                                </div>
-                                                                <!--end:Menu item-->
-                                                                <!--begin:Menu item-->
-                                                                <div class="menu-item p-0 m-0">
-                                                                    <!--begin:Menu link-->
-                                                                    <a href="pages/user-profile/campaigns.html"
-                                                                        class="menu-link ">
-                                                                        <span class="menu-title">Campaigns</span>
-                                                                    </a>
-                                                                    <!--end:Menu link-->
-                                                                </div>
-                                                                <!--end:Menu item-->
-                                                                <!--begin:Menu item-->
-                                                                <div class="menu-item p-0 m-0">
-                                                                    <!--begin:Menu link-->
-                                                                    <a href="pages/user-profile/documents.html"
-                                                                        class="menu-link ">
-                                                                        <span class="menu-title">Documents</span>
-                                                                    </a>
-                                                                    <!--end:Menu link-->
-                                                                </div>
-                                                                <!--end:Menu item-->
-                                                                <!--begin:Menu item-->
-                                                                <div class="menu-item p-0 m-0">
-                                                                    <!--begin:Menu link-->
-                                                                    <a href="pages/user-profile/followers.html"
-                                                                        class="menu-link ">
-                                                                        <span class="menu-title">Followers</span>
-                                                                    </a>
-                                                                    <!--end:Menu link-->
-                                                                </div>
-                                                                <!--end:Menu item-->
-                                                                <!--begin:Menu item-->
-                                                                <div class="menu-item p-0 m-0">
-                                                                    <!--begin:Menu link-->
-                                                                    <a href="pages/user-profile/activity.html"
-                                                                        class="menu-link ">
-                                                                        <span class="menu-title">Activity</span>
-                                                                    </a>
-                                                                    <!--end:Menu link-->
-                                                                </div>
-                                                                <!--end:Menu item-->
-                                                            </div>
-                                                            <!--end:Col-->
-
-                                                            <!--begin:Col-->
-                                                            <div class="col-lg-3 mb-6 mb-lg-0">
-                                                                <!--begin:Menu section-->
-                                                                <div class="mb-6">
-                                                                    <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">
-                                                                        Corporate</h4>
-                                                                    <!--end:Menu heading-->
-
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/about.html" class="menu-link ">
-                                                                            <span class="menu-title">About</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/team.html" class="menu-link ">
-                                                                            <span class="menu-title">Our Team</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/contact.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Contact Us</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/licenses.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Licenses</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/sitemap.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Sitemap</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                </div>
-                                                                <!--end:Menu section-->
-
-                                                                <!--begin:Menu section-->
-                                                                <div class="mb-0">
-                                                                    <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Careers
-                                                                    </h4>
-                                                                    <!--end:Menu heading-->
-
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/careers/list.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Careers
-                                                                                List</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/careers/apply.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Careers
-                                                                                Apply</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                </div>
-                                                                <!--end:Menu section-->
-                                                            </div>
-                                                            <!--end:Col-->
-
-                                                            <!--begin:Col-->
-                                                            <div class="col-lg-3 mb-6 mb-lg-0">
-                                                                <!--begin:Menu section-->
-                                                                <div class="mb-6">
-                                                                    <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">FAQ</h4>
-                                                                    <!--end:Menu heading-->
-
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/faq/classic.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">FAQ Classic</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/faq/extended.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">FAQ
-                                                                                Extended</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                </div>
-                                                                <!--end:Menu section-->
-
-                                                                <!--begin:Menu section-->
-                                                                <div class="mb-6">
-                                                                    <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Blog
-                                                                    </h4>
-                                                                    <!--end:Menu heading-->
-
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/blog/home.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Blog Home</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/blog/post.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Blog Post</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                </div>
-                                                                <!--end:Menu section-->
-
-                                                                <!--begin:Menu section-->
-                                                                <div class="mb-0">
-                                                                    <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Pricing
-                                                                    </h4>
-                                                                    <!--end:Menu heading-->
-
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/pricing.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Column
-                                                                                Pricing</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/pricing/table.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Table
-                                                                                Pricing</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                </div>
-                                                                <!--end:Menu section-->
-                                                            </div>
-                                                            <!--end:Col-->
-
-                                                            <!--begin:Col-->
-                                                            <div class="col-lg-3 mb-6 mb-lg-0">
-                                                                <!--begin:Menu section-->
-                                                                <div class="mb-0">
-                                                                    <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Social
-                                                                    </h4>
-                                                                    <!--end:Menu heading-->
-
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/social/feeds.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Feeds</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/social/activity.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Activty</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/social/followers.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Followers</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="pages/social/settings.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Settings</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                </div>
-                                                                <!--end:Menu section-->
-                                                            </div>
-                                                            <!--end:Col-->
-                                                        </div>
-                                                        <!--end:Row-->
-                                                    </div>
-                                                    <!--end:Col-->
-
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-4">
-                                                        <img src="../../../assets/media/stock/600x600/img-82.jpg"
-                                                            class="rounded mw-100" alt="" />
-                                                    </div>
-                                                    <!--end:Col-->
-                                                </div>
-                                                <!--end:Row-->
-                                            </div>
-                                            <!--end:Tab pane-->
-
-                                            <!--begin:Tab pane-->
-                                            <div class="tab-pane  w-lg-600px" id="kt_app_header_menu_pages_account">
-                                                <!--begin:Row-->
-                                                <div class="row">
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-5 mb-6 mb-lg-0">
-                                                        <!--begin:Row-->
-                                                        <div class="row">
-                                                            <!--begin:Col-->
-                                                            <div class="col-lg-6">
-                                                                <!--begin:Menu item-->
-                                                                <div class="menu-item p-0 m-0">
-                                                                    <!--begin:Menu link-->
-                                                                    <a href="account/overview.html"
-                                                                        class="menu-link ">
-                                                                        <span class="menu-title">Overview</span>
-                                                                    </a>
-                                                                    <!--end:Menu link-->
-                                                                </div>
-                                                                <!--end:Menu item-->
-                                                                <!--begin:Menu item-->
-                                                                <div class="menu-item p-0 m-0">
-                                                                    <!--begin:Menu link-->
-                                                                    <a href="account/settings.html"
-                                                                        class="menu-link ">
-                                                                        <span class="menu-title">Settings</span>
-                                                                    </a>
-                                                                    <!--end:Menu link-->
-                                                                </div>
-                                                                <!--end:Menu item-->
-                                                                <!--begin:Menu item-->
-                                                                <div class="menu-item p-0 m-0">
-                                                                    <!--begin:Menu link-->
-                                                                    <a href="account/security.html"
-                                                                        class="menu-link ">
-                                                                        <span class="menu-title">Security</span>
-                                                                    </a>
-                                                                    <!--end:Menu link-->
-                                                                </div>
-                                                                <!--end:Menu item-->
-                                                                <!--begin:Menu item-->
-                                                                <div class="menu-item p-0 m-0">
-                                                                    <!--begin:Menu link-->
-                                                                    <a href="account/activity.html"
-                                                                        class="menu-link ">
-                                                                        <span class="menu-title">Activity</span>
-                                                                    </a>
-                                                                    <!--end:Menu link-->
-                                                                </div>
-                                                                <!--end:Menu item-->
-                                                                <!--begin:Menu item-->
-                                                                <div class="menu-item p-0 m-0">
-                                                                    <!--begin:Menu link-->
-                                                                    <a href="account/billing.html" class="menu-link ">
-                                                                        <span class="menu-title">Billing</span>
-                                                                    </a>
-                                                                    <!--end:Menu link-->
-                                                                </div>
-                                                                <!--end:Menu item-->
-                                                            </div>
-                                                            <!--end:Col-->
-
-                                                            <!--begin:Col-->
-                                                            <div class="col-lg-6">
-                                                                <!--begin:Menu item-->
-                                                                <div class="menu-item p-0 m-0">
-                                                                    <!--begin:Menu link-->
-                                                                    <a href="account/statements.html"
-                                                                        class="menu-link ">
-                                                                        <span class="menu-title">Statements</span>
-                                                                    </a>
-                                                                    <!--end:Menu link-->
-                                                                </div>
-                                                                <!--end:Menu item-->
-                                                                <!--begin:Menu item-->
-                                                                <div class="menu-item p-0 m-0">
-                                                                    <!--begin:Menu link-->
-                                                                    <a href="account/referrals.html"
-                                                                        class="menu-link ">
-                                                                        <span class="menu-title">Referrals</span>
-                                                                    </a>
-                                                                    <!--end:Menu link-->
-                                                                </div>
-                                                                <!--end:Menu item-->
-                                                                <!--begin:Menu item-->
-                                                                <div class="menu-item p-0 m-0">
-                                                                    <!--begin:Menu link-->
-                                                                    <a href="account/api-keys.html"
-                                                                        class="menu-link ">
-                                                                        <span class="menu-title">API Keys</span>
-                                                                    </a>
-                                                                    <!--end:Menu link-->
-                                                                </div>
-                                                                <!--end:Menu item-->
-                                                                <!--begin:Menu item-->
-                                                                <div class="menu-item p-0 m-0">
-                                                                    <!--begin:Menu link-->
-                                                                    <a href="account/logs.html" class="menu-link ">
-                                                                        <span class="menu-title">Logs</span>
-                                                                    </a>
-                                                                    <!--end:Menu link-->
-                                                                </div>
-                                                                <!--end:Menu item-->
-                                                            </div>
-                                                            <!--end:Col-->
-                                                        </div>
-                                                        <!--end:Row-->
-                                                    </div>
-                                                    <!--end:Col-->
-
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-7">
-                                                        <img src="../../../assets/media/stock/900x600/46.jpg"
-                                                            class="rounded mw-100" alt="" />
-                                                    </div>
-                                                    <!--end:Col-->
-                                                </div>
-                                                <!--end:Row-->
-                                            </div>
-                                            <!--end:Tab pane-->
-
-                                            <!--begin:Tab pane-->
-                                            <div class="tab-pane  w-lg-1000px"
-                                                id="kt_app_header_menu_pages_authentication">
-                                                <!--begin:Row-->
-                                                <div class="row">
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-3 mb-6 mb-lg-0">
-                                                        <!--begin:Menu section-->
-                                                        <div class="mb-6">
-                                                            <!--begin:Menu heading-->
-                                                            <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Corporate Layout
-                                                            </h4>
-                                                            <!--end:Menu heading-->
-
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/corporate/sign-in.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Sign-In</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/corporate/sign-up.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Sign-Up</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/corporate/two-factor.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Two-Factor</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/corporate/reset-password.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Reset Password</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/corporate/new-password.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">New Password</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                        </div>
-                                                        <!--end:Menu section-->
-
-                                                        <!--begin:Menu section-->
-                                                        <div class="mb-0">
-                                                            <!--begin:Menu heading-->
-                                                            <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Overlay Layout
-                                                            </h4>
-                                                            <!--end:Menu heading-->
-
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/overlay/sign-in.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Sign-In</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/overlay/sign-up.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Sign-Up</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/overlay/two-factor.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Two-Factor</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/overlay/reset-password.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Reset Password</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/overlay/new-password.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">New Password</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                        </div>
-                                                        <!--end:Menu section-->
-                                                    </div>
-                                                    <!--end:Col-->
-
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-3 mb-6 mb-lg-0">
-                                                        <!--begin:Menu section-->
-                                                        <div class="mb-6">
-                                                            <!--begin:Menu heading-->
-                                                            <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Creative Layout
-                                                            </h4>
-                                                            <!--end:Menu heading-->
-
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/creative/sign-in.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Sign-in</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/creative/sign-up.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Sign-up</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/creative/two-factor.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Two-Factor</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/creative/reset-password.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Reset Password</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/creative/new-password.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">New Password</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                        </div>
-                                                        <!--end:Menu section-->
-
-                                                        <!--begin:Menu section-->
-                                                        <div class="mb-6">
-                                                            <!--begin:Menu heading-->
-                                                            <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Fancy Layout
-                                                            </h4>
-                                                            <!--end:Menu heading-->
-
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/fancy/sign-in.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Sign-In</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/fancy/sign-up.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Sign-Up</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/fancy/two-factor.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Two-Factor</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/fancy/reset-password.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Reset Password</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/layouts/fancy/new-password.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">New Password</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                        </div>
-                                                        <!--end:Menu section-->
-                                                    </div>
-                                                    <!--end:Col-->
-
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-3 mb-6 mb-lg-0">
-                                                        <!--begin:Menu section-->
-                                                        <div class="mb-0">
-                                                            <!--begin:Menu heading-->
-                                                            <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">General</h4>
-                                                            <!--end:Menu heading-->
-
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/extended/multi-steps-sign-up.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Multi-Steps Sign-Up</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/general/welcome.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Welcome Message</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/general/verify-email.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Verify Email</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/general/coming-soon.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Coming Soon</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/general/password-confirmation.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Password
-                                                                        Confirmation</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/general/account-deactivated.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Account
-                                                                        Deactivation</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/general/error-404.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Error 404</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/general/error-500.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Error 500</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                        </div>
-                                                        <!--end:Menu section-->
-                                                    </div>
-                                                    <!--end:Col-->
-
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-3 mb-6 mb-lg-0">
-                                                        <!--begin:Menu section-->
-                                                        <div class="mb-0">
-                                                            <!--begin:Menu heading-->
-                                                            <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Email Templates
-                                                            </h4>
-                                                            <!--end:Menu heading-->
-
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/email/welcome-message.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Welcome Message</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/email/reset-password.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Reset Password</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/email/subscription-confirmed.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Subscription
-                                                                        Confirmed</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/email/card-declined.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Credit Card
-                                                                        Declined</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/email/promo-1.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Promo 1</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/email/promo-2.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Promo 2</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                            <!--begin:Menu item-->
-                                                            <div class="menu-item p-0 m-0">
-                                                                <!--begin:Menu link-->
-                                                                <a href="authentication/email/promo-3.html"
-                                                                    class="menu-link ">
-                                                                    <span class="menu-title">Promo 3</span>
-                                                                </a>
-                                                                <!--end:Menu link-->
-                                                            </div>
-                                                            <!--end:Menu item-->
-                                                        </div>
-                                                        <!--end:Menu section-->
-                                                    </div>
-                                                    <!--end:Col-->
-                                                </div>
-                                                <!--end:Row-->
-                                            </div>
-                                            <!--end:Tab pane-->
-
-                                            <!--begin:Tab pane-->
-                                            <div class="tab-pane  w-lg-1000px"
-                                                id="kt_app_header_menu_pages_utilities">
-                                                <!--begin:Row-->
-                                                <div class="row">
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-7">
-                                                        <!--begin:Row-->
-                                                        <div class="row">
-                                                            <!--begin:Col-->
-                                                            <div class="col-lg-4 mb-6 mb-lg-0">
-                                                                <!--begin:Menu section-->
-                                                                <div class="mb-0">
-                                                                    <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">General
-                                                                        Modals</h4>
-                                                                    <!--end:Menu heading-->
-
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/general/invite-friends.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Invite
-                                                                                Friends</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/general/view-users.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">View Users</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/general/select-users.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Select
-                                                                                Users</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/general/upgrade-plan.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Upgrade
-                                                                                Plan</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/general/share-earn.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Share &
-                                                                                Earn</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/forms/new-target.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">New Target</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/forms/new-card.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">New Card</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/forms/new-address.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">New Address</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/forms/create-api-key.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Create API
-                                                                                Key</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/forms/bidding.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Bidding</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                </div>
-                                                                <!--end:Menu section-->
-                                                            </div>
-                                                            <!--end:Col-->
-
-                                                            <!--begin:Col-->
-                                                            <div class="col-lg-4 mb-6 mb-lg-0">
-                                                                <!--begin:Menu section-->
-                                                                <div class="mb-6">
-                                                                    <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Advanced
-                                                                        Modals</h4>
-                                                                    <!--end:Menu heading-->
-
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/create-app.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Create App</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/create-campaign.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Create
-                                                                                Campaign</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/create-account.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Create Business
-                                                                                Acc</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/create-project.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Create
-                                                                                Project</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/top-up-wallet.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Top Up
-                                                                                Wallet</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/offer-a-deal.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Offer a
-                                                                                Deal</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/two-factor-authentication.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Two Factor
-                                                                                Auth</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                </div>
-                                                                <!--end:Menu section-->
-
-                                                                <!--begin:Menu section-->
-                                                                <div class="mb-0">
-                                                                    <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Search
-                                                                    </h4>
-                                                                    <!--end:Menu heading-->
-
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/search/horizontal.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Horizontal</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/search/vertical.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Vertical</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/search/users.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Users</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/search/select-location.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Select
-                                                                                Location</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                </div>
-                                                                <!--end:Menu section-->
-                                                            </div>
-                                                            <!--end:Col-->
-
-                                                            <!--begin:Col-->
-                                                            <div class="col-lg-4 mb-6 mb-lg-0">
-                                                                <!--begin:Menu section-->
-                                                                <div class="mb-0">
-                                                                    <!--begin:Menu heading-->
-                                                                    <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Wizards
-                                                                    </h4>
-                                                                    <!--end:Menu heading-->
-
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/horizontal.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Horizontal</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/vertical.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Vertical</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/two-factor-authentication.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Two Factor
-                                                                                Auth</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/create-app.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Create App</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/create-campaign.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Create
-                                                                                Campaign</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/create-account.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Create
-                                                                                Account</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/create-project.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Create
-                                                                                Project</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/modals/wizards/top-up-wallet.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Top Up
-                                                                                Wallet</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                    <!--begin:Menu item-->
-                                                                    <div class="menu-item p-0 m-0">
-                                                                        <!--begin:Menu link-->
-                                                                        <a href="utilities/wizards/offer-a-deal.html"
-                                                                            class="menu-link ">
-                                                                            <span class="menu-title">Offer a
-                                                                                Deal</span>
-                                                                        </a>
-                                                                        <!--end:Menu link-->
-                                                                    </div>
-                                                                    <!--end:Menu item-->
-                                                                </div>
-                                                                <!--end:Menu section-->
-                                                            </div>
-                                                            <!--end:Col-->
-                                                        </div>
-                                                        <!--end:Row-->
-                                                    </div>
-                                                    <!--end:Col-->
-
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-5 pe-lg-5">
-                                                        <img src="../../../assets/media/stock/600x600/img-84.jpg"
-                                                            class="rounded mw-100" alt="" />
-                                                    </div>
-                                                    <!--end:Col-->
-                                                </div>
-                                                <!--end:Row-->
-                                            </div>
-                                            <!--end:Tab pane-->
-
-                                            <!--begin:Tab pane-->
-                                            <div class="tab-pane  w-lg-500px" id="kt_app_header_menu_pages_widgets">
-                                                <!--begin:Row-->
-                                                <div class="row">
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-4 mb-6 mb-lg-0">
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="widgets/lists.html" class="menu-link ">
-                                                                <span class="menu-title">Lists</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="widgets/statistics.html" class="menu-link ">
-                                                                <span class="menu-title">Statistics</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="widgets/charts.html" class="menu-link ">
-                                                                <span class="menu-title">Charts</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="widgets/mixed.html" class="menu-link ">
-                                                                <span class="menu-title">Mixed</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="widgets/tables.html" class="menu-link ">
-                                                                <span class="menu-title">Tables</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="widgets/feeds.html" class="menu-link ">
-                                                                <span class="menu-title">Feeds</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                    </div>
-                                                    <!--end:Col-->
-
-                                                    <!--begin:Col-->
-                                                    <div class="col-lg-8">
-                                                        <img src="../../../assets/media/stock/900x600/44.jpg"
-                                                            class="rounded mw-100" alt="" />
-                                                    </div>
-                                                    <!--end:Col-->
-                                                </div>
-                                                <!--end:Row-->
-                                            </div>
-                                            <!--end:Tab pane-->
-                                        </div>
-                                        <!--end:Tab content-->
-                                    </div>
-                                    <!--end:Pages menu-->
-                                </div><!--end:Menu sub-->
-                            </div><!--end:Menu item--><!--begin:Menu item-->
-                            <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                                data-kt-menu-placement="bottom-start"
-                                class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
-                                <!--begin:Menu link--><span class="menu-link"><span
-                                        class="menu-title">Apps</span><span
-                                        class="menu-arrow d-lg-none"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                <div
-                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-250px">
-                                    <!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                        data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
-                                        <!--begin:Menu link--><span class="menu-link"><span class="menu-icon"><i
-                                                    class="ki-outline ki-rocket fs-2"></i></span><span
-                                                class="menu-title">Projects</span><span
-                                                class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                        <div
-                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                            <!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/projects/list.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">My Projects</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/projects/project.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">View Project</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/projects/targets.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Targets</span></a><!--end:Menu link--></div>
-                                            <!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/projects/budget.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Budget</span></a><!--end:Menu link--></div>
-                                            <!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/projects/users.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Users</span></a><!--end:Menu link--></div>
-                                            <!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/projects/files.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Files</span></a><!--end:Menu link--></div>
-                                            <!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/projects/activity.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Activity</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/projects/settings.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Settings</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item-->
-                                        </div><!--end:Menu sub-->
-                                    </div><!--end:Menu item--><!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                        data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
-                                        <!--begin:Menu link--><span class="menu-link"><span class="menu-icon"><i
-                                                    class="ki-outline ki-handcart fs-2"></i></span><span
-                                                class="menu-title">eCommerce</span><span
-                                                class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                        <div
-                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                            <!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                                data-kt-menu-placement="right-start"
-                                                class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
-                                                    class="menu-link"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Catalog</span><span
-                                                        class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                                <div
-                                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                                    <!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/catalog/products.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Products</span></a><!--end:Menu link-->
-                                                    </div><!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/catalog/categories.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Categories</span></a><!--end:Menu link-->
-                                                    </div><!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/catalog/add-product.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Add
-                                                                Product</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/catalog/edit-product.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Edit
-                                                                Product</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/catalog/add-category.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Add
-                                                                Category</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/catalog/edit-category.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Edit
-                                                                Category</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item-->
-                                                </div><!--end:Menu sub-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="click"
-                                                class="menu-item menu-accordion menu-sub-indention">
-                                                <!--begin:Menu link--><span class="menu-link"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Sales</span><span
-                                                        class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                                <div class="menu-sub menu-sub-accordion"><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/sales/listing.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Orders
-                                                                Listing</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/sales/details.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Order
-                                                                Details</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/sales/add-order.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Add
-                                                                Order</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/sales/edit-order.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Edit
-                                                                Order</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item-->
-                                                </div><!--end:Menu sub-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="click"
-                                                class="menu-item menu-accordion menu-sub-indention">
-                                                <!--begin:Menu link--><span class="menu-link"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Customers</span><span
-                                                        class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                                <div class="menu-sub menu-sub-accordion"><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/customers/listing.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Customers
-                                                                Listing</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/customers/details.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Customers
-                                                                Details</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item-->
-                                                </div><!--end:Menu sub-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="click"
-                                                class="menu-item menu-accordion menu-sub-indention">
-                                                <!--begin:Menu link--><span class="menu-link"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Reports</span><span
-                                                        class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                                <div class="menu-sub menu-sub-accordion"><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/reports/view.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Products
-                                                                Viewed</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/reports/sales.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Sales</span></a><!--end:Menu link-->
-                                                    </div><!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/reports/returns.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Returns</span></a><!--end:Menu link-->
-                                                    </div><!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/reports/customer-orders.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Customer
-                                                                Orders</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/ecommerce/reports/shipping.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Shipping</span></a><!--end:Menu link-->
-                                                    </div><!--end:Menu item-->
-                                                </div><!--end:Menu sub-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/ecommerce/settings.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Settings</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item-->
-                                        </div><!--end:Menu sub-->
-                                    </div><!--end:Menu item--><!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                        data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
-                                        <!--begin:Menu link--><span class="menu-link"><span class="menu-icon"><i
-                                                    class="ki-outline ki-chart fs-2"></i></span><span
-                                                class="menu-title">Support Center</span><span
-                                                class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                        <div
-                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                            <!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/support-center/overview.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Overview</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                                data-kt-menu-placement="right-start"
-                                                class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
-                                                    class="menu-link"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Tickets</span><span
-                                                        class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                                <div
-                                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                                    <!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/support-center/tickets/list.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Ticket
-                                                                List</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/support-center/tickets/view.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Ticket
-                                                                View</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item-->
-                                                </div><!--end:Menu sub-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                                data-kt-menu-placement="right-start"
-                                                class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
-                                                    class="menu-link"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Tutorials</span><span
-                                                        class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                                <div
-                                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                                    <!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/support-center/tutorials/list.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Tutorials
-                                                                List</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                            href="apps/support-center/tutorials/post.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Tutorials
-                                                                Post</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item-->
-                                                </div><!--end:Menu sub-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/support-center/faq.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">FAQ</span></a><!--end:Menu link--></div>
-                                            <!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/support-center/licenses.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Licenses</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/support-center/contact.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Contact Us</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item-->
-                                        </div><!--end:Menu sub-->
-                                    </div><!--end:Menu item--><!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                        data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
-                                        <!--begin:Menu link--><span class="menu-link"><span class="menu-icon"><i
-                                                    class="ki-outline ki-shield-tick fs-2"></i></span><span
-                                                class="menu-title">User Management</span><span
-                                                class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                        <div
-                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                            <!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                                data-kt-menu-placement="right-start"
-                                                class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
-                                                    class="menu-link"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Users</span><span
-                                                        class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                                <div
-                                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                                    <!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a
-                                                            class="menu-link"
-                                                            href="apps/user-management/users/list.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Users
-                                                                List</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a
-                                                            class="menu-link"
-                                                            href="apps/user-management/users/view.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">View
-                                                                User</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item-->
-                                                </div><!--end:Menu sub-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                                data-kt-menu-placement="right-start"
-                                                class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
-                                                    class="menu-link"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Roles</span><span
-                                                        class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                                <div
-                                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                                    <!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a
-                                                            class="menu-link"
-                                                            href="apps/user-management/roles/list.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Roles
-                                                                List</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a
-                                                            class="menu-link"
-                                                            href="apps/user-management/roles/view.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">View
-                                                                Roles</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item-->
-                                                </div><!--end:Menu sub-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/user-management/permissions.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Permissions</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item-->
-                                        </div><!--end:Menu sub-->
-                                    </div><!--end:Menu item--><!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                        data-kt-menu-placement="right-start"
-                                        class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
-                                            class="menu-link"><span class="menu-icon"><i
-                                                    class="ki-outline ki-phone fs-2"></i></span><span
-                                                class="menu-title">Contacts</span><span
-                                                class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                        <div
-                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                            <!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/contacts/getting-started.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Getting
-                                                        Started</span></a><!--end:Menu link--></div>
-                                            <!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/contacts/add-contact.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Add Contact</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/contacts/edit-contact.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Edit Contact</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/contacts/view-contact.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">View Contact</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item-->
-                                        </div><!--end:Menu sub-->
-                                    </div><!--end:Menu item--><!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                        data-kt-menu-placement="right-start"
-                                        class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
-                                            class="menu-link"><span class="menu-icon"><i
-                                                    class="ki-outline ki-basket fs-2"></i></span><span
-                                                class="menu-title">Subscriptions</span><span
-                                                class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                        <div
-                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                            <!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/subscriptions/getting-started.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Getting
-                                                        Started</span></a><!--end:Menu link--></div>
-                                            <!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/subscriptions/list.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Subscription
-                                                        List</span></a><!--end:Menu link--></div>
-                                            <!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/subscriptions/add.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Add
-                                                        Subscription</span></a><!--end:Menu link--></div>
-                                            <!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/subscriptions/view.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">View
-                                                        Subscription</span></a><!--end:Menu link--></div>
-                                            <!--end:Menu item-->
-                                        </div><!--end:Menu sub-->
-                                    </div><!--end:Menu item--><!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                        data-kt-menu-placement="right-start"
-                                        class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
-                                            class="menu-link"><span class="menu-icon"><i
-                                                    class="ki-outline ki-briefcase fs-2"></i></span><span
-                                                class="menu-title">Customers</span><span
-                                                class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                        <div
-                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                            <!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/customers/getting-started.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Getting
-                                                        Started</span></a><!--end:Menu link--></div>
-                                            <!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/customers/list.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Customer
-                                                        Listing</span></a><!--end:Menu link--></div>
-                                            <!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/customers/view.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Customer
-                                                        Details</span></a><!--end:Menu link--></div><!--end:Menu item-->
-                                        </div><!--end:Menu sub-->
-                                    </div><!--end:Menu item--><!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                        data-kt-menu-placement="right-start"
-                                        class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
-                                            class="menu-link"><span class="menu-icon"><i
-                                                    class="ki-outline ki-credit-cart fs-2"></i></span><span
-                                                class="menu-title">Invoice Management</span><span
-                                                class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                        <div
-                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                            <!--begin:Menu item-->
-                                            <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                                data-kt-menu-placement="right-start"
-                                                class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
-                                                    class="menu-link"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Profile</span><span
-                                                        class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                                <div
-                                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                                    <!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a
-                                                            class="menu-link"
-                                                            href="apps/invoices/view/invoice-1.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Invoice
-                                                                1</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a
-                                                            class="menu-link"
-                                                            href="apps/invoices/view/invoice-2.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Invoice
-                                                                2</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item--><!--begin:Menu item-->
-                                                    <div class="menu-item"><!--begin:Menu link--><a
-                                                            class="menu-link"
-                                                            href="apps/invoices/view/invoice-3.html"><span
-                                                                class="menu-bullet"><span
-                                                                    class="bullet bullet-dot"></span></span><span
-                                                                class="menu-title">Invoice
-                                                                3</span></a><!--end:Menu link--></div>
-                                                    <!--end:Menu item-->
-                                                </div><!--end:Menu sub-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/invoices/create.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Create
-                                                        Invoice</span></a><!--end:Menu link--></div><!--end:Menu item-->
-                                        </div><!--end:Menu sub-->
-                                    </div><!--end:Menu item--><!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                        data-kt-menu-placement="right-start"
-                                        class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
-                                            class="menu-link"><span class="menu-icon"><i
-                                                    class="ki-outline ki-file-added fs-2"></i></span><span
-                                                class="menu-title">File Manager</span><span
-                                                class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                        <div
-                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                            <!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/file-manager/folders.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Folders</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/file-manager/files.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Files</span></a><!--end:Menu link--></div>
-                                            <!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/file-manager/blank.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Blank
-                                                        Directory</span></a><!--end:Menu link--></div>
-                                            <!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/file-manager/settings.html"><span
-                                                        class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Settings</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item-->
-                                        </div><!--end:Menu sub-->
-                                    </div><!--end:Menu item--><!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                        data-kt-menu-placement="right-start"
-                                        class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
-                                            class="menu-link"><span class="menu-icon"><i
-                                                    class="ki-outline ki-sms fs-2"></i></span><span
-                                                class="menu-title">Inbox</span><span
-                                                class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                        <div
-                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                            <!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/inbox/listing.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Messages</span><span
-                                                        class="menu-badge"><span
-                                                            class="badge badge-light-success">3</span></span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/inbox/compose.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Compose</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/inbox/reply.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">View & Reply</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item-->
-                                        </div><!--end:Menu sub-->
-                                    </div><!--end:Menu item--><!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                        data-kt-menu-placement="right-start"
-                                        class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
-                                            class="menu-link"><span class="menu-icon"><i
-                                                    class="ki-outline ki-message-text-2 fs-2"></i></span><span
-                                                class="menu-title">Chat</span><span
-                                                class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                        <div
-                                            class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                            <!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/chat/private.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Private Chat</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/chat/group.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Group Chat</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item--><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="apps/chat/drawer.html"><span class="menu-bullet"><span
-                                                            class="bullet bullet-dot"></span></span><span
-                                                        class="menu-title">Drawer Chat</span></a><!--end:Menu link-->
-                                            </div><!--end:Menu item-->
-                                        </div><!--end:Menu sub-->
-                                    </div><!--end:Menu item--><!--begin:Menu item-->
-                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                            href="apps/calendar.html"><span class="menu-icon"><i
-                                                    class="ki-outline ki-calendar-8 fs-2"></i></span><span
-                                                class="menu-title">Calendar</span></a><!--end:Menu link--></div>
-                                    <!--end:Menu item-->
-                                </div><!--end:Menu sub-->
-                            </div><!--end:Menu item--><!--begin:Menu item-->
-                            <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                                data-kt-menu-placement="bottom-start"
-                                class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
-                                <!--begin:Menu link--><span class="menu-link"><span
-                                        class="menu-title">Help</span><span
-                                        class="menu-arrow d-lg-none"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                <div
-                                    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
-                                    <!--begin:Menu item-->
-                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                            href="https://preview.keenthemes.com/html/metronic/docs/base/utilities"
-                                            target="_blank"
-                                            title="Check out over 200 in-house components, plugins and ready for use solutions"
-                                            data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                            data-bs-dismiss="click" data-bs-placement="right"><span
-                                                class="menu-icon"><i
-                                                    class="ki-outline ki-rocket fs-2"></i></span><span
-                                                class="menu-title">Components</span></a><!--end:Menu link--></div>
-                                    <!--end:Menu item--><!--begin:Menu item-->
-                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                            href="https://preview.keenthemes.com/html/metronic/docs" target="_blank"
-                                            title="Check out the complete documentation" data-bs-toggle="tooltip"
-                                            data-bs-trigger="hover" data-bs-dismiss="click"
-                                            data-bs-placement="right"><span class="menu-icon"><i
-                                                    class="ki-outline ki-abstract-26 fs-2"></i></span><span
-                                                class="menu-title">Documentation</span></a><!--end:Menu link--></div>
-                                    <!--end:Menu item--><!--begin:Menu item-->
-                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                            href="layout-builder.html"
-                                            title="Build your layout and export HTML for server side integration"
-                                            data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                            data-bs-dismiss="click" data-bs-placement="right"><span
-                                                class="menu-icon"><i
-                                                    class="ki-outline ki-switch fs-2"></i></span><span
-                                                class="menu-title">Layout Builder</span></a><!--end:Menu link--></div>
-                                    <!--end:Menu item--><!--begin:Menu item-->
-                                    <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                            href="https://preview.keenthemes.com/html/metronic/docs/getting-started/changelog"
-                                            target="_blank"><span class="menu-icon"><i
-                                                    class="ki-outline ki-code fs-2"></i></span><span
-                                                class="menu-title">Changelog v8.2.0</span></a><!--end:Menu link-->
-                                    </div><!--end:Menu item-->
-                                </div><!--end:Menu sub-->
-                            </div><!--end:Menu item-->
-                        </div>
-                        <!--end::Menu-->
-                    </div>
-                    <!--end::Menu wrapper-->
-
-
-                    <!--begin::Navbar-->
-                    <div class="app-navbar flex-shrink-0">
-                        <!--begin::Notifications-->
-                        <div class="app-navbar-item ms-1 ms-lg-5">
-                            <!--begin::Menu- wrapper-->
-                            <div class="btn btn-icon btn-custom btn-active-color-primary w-35px h-35px w-md-40px h-md-40px"
-                                data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent"
-                                data-kt-menu-placement="bottom">
-                                <i class="ki-outline ki-calendar fs-1"></i>
+@include('components.dashboard.dashcss')
+
+<body class="  dual-compact">
+    <span class="screen-darken"></span>
+    <main class="main-content">
+        <!--Nav Start-->
+        <nav class="nav navbar navbar-expand-xl fixed-top navbar-dark bg-dark iq-navbar iq-dual-compact ">
+            <div class="container-fluid navbar-inner">
+                <div class="d-flex justify-content-between w-100 align-items-center">
+                    <button data-trigger="navbar_main" class="d-xl-none btn btn-primary rounded-pill p-1 pt-0 col-auto"
+                        type="button">
+                        <svg width="24px" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+                        </svg>
+                    </button>
+                    <div class="col-auto navbar-brand">
+                        <a href="../dashboard/index.html" class="d-flex">
+
+                            <!--Logo start-->
+                            <div class="logo-main">
+                                <div class="logo-normal">
+                                    <svg class=" icon-30" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M7.25333 2H22.0444L29.7244 15.2103L22.0444 28.1333H7.25333L0 15.2103L7.25333 2ZM11.2356 9.32316H18.0622L21.3334 15.2103L18.0622 20.9539H11.2356L8.10669 15.2103L11.2356 9.32316Z"
+                                            fill="currentColor" />
+                                        <path d="M23.751 30L13.2266 15.2103H21.4755L31.9999 30H23.751Z"
+                                            fill="#3FF0B9" />
+                                    </svg>
+                                </div>
+                                <div class="logo-mini">
+                                    <svg class=" icon-30" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M7.25333 2H22.0444L29.7244 15.2103L22.0444 28.1333H7.25333L0 15.2103L7.25333 2ZM11.2356 9.32316H18.0622L21.3334 15.2103L18.0622 20.9539H11.2356L8.10669 15.2103L11.2356 9.32316Z"
+                                            fill="currentColor" />
+                                        <path d="M23.751 30L13.2266 15.2103H21.4755L31.9999 30H23.751Z"
+                                            fill="#3FF0B9" />
+                                    </svg>
+                                </div>
                             </div>
+                            <!--logo End-->
+                            <h4 class="logo-title d-none d-sm-block text-white" data-setting="app_name">Qompac UI</h4>
+                        </a>
+                    </div>
+                    <nav id="navbar_main"
+                        class="mobile-offcanvas nav navbar navbar-expand-xl  horizontal-nav col-auto bg-dark">
+                        <div class="container-fluid">
+                            <div class="offcanvas-header px-0">
+                                <div class="navbar-brand ms-0">
 
-                            <!--begin::Menu-->
-                            <div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px"
-                                data-kt-menu="true" id="kt_menu_notifications">
-                                <!--begin::Heading-->
-                                <div class="d-flex flex-column bgi-no-repeat rounded-top"
-                                    style="background-image:url('../../../assets/media/misc/menu-header-bg.jpg')">
-                                    <!--begin::Title-->
-                                    <h3 class="text-white fw-semibold px-9 mt-10 mb-6">
-                                        Notifications <span class="fs-8 opacity-75 ps-3">24 reports</span>
-                                    </h3>
-                                    <!--end::Title-->
-
-                                    <!--begin::Tabs-->
-                                    <ul class="nav nav-line-tabs nav-line-tabs-2x nav-stretch fw-semibold px-9">
-                                        <li class="nav-item">
-                                            <a class="nav-link text-white opacity-75 opacity-state-100 pb-4"
-                                                data-bs-toggle="tab" href="#kt_topbar_notifications_1">Alerts</a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a class="nav-link text-white opacity-75 opacity-state-100 pb-4 active"
-                                                data-bs-toggle="tab" href="#kt_topbar_notifications_2">Updates</a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a class="nav-link text-white opacity-75 opacity-state-100 pb-4"
-                                                data-bs-toggle="tab" href="#kt_topbar_notifications_3">Logs</a>
+                                    <!--Logo start-->
+                                    <div class="logo-main">
+                                        <div class="logo-normal">
+                                            <svg class="text-primary icon-30" viewBox="0 0 32 32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M7.25333 2H22.0444L29.7244 15.2103L22.0444 28.1333H7.25333L0 15.2103L7.25333 2ZM11.2356 9.32316H18.0622L21.3334 15.2103L18.0622 20.9539H11.2356L8.10669 15.2103L11.2356 9.32316Z"
+                                                    fill="currentColor" />
+                                                <path d="M23.751 30L13.2266 15.2103H21.4755L31.9999 30H23.751Z"
+                                                    fill="#3FF0B9" />
+                                            </svg>
+                                        </div>
+                                        <div class="logo-mini">
+                                            <svg class="text-primary icon-30" viewBox="0 0 32 32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M7.25333 2H22.0444L29.7244 15.2103L22.0444 28.1333H7.25333L0 15.2103L7.25333 2ZM11.2356 9.32316H18.0622L21.3334 15.2103L18.0622 20.9539H11.2356L8.10669 15.2103L11.2356 9.32316Z"
+                                                    fill="currentColor" />
+                                                <path d="M23.751 30L13.2266 15.2103H21.4755L31.9999 30H23.751Z"
+                                                    fill="#3FF0B9" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <!--logo End-->
+                                    <h4 class="logo-title" data-setting="app_name">Qompac UI</h4>
+                                </div>
+                                <button class="btn-close float-end text-white"></button>
+                            </div>
+                            <ul class="iq-nav-menu list-unstyled">
+                                <li class="nav-item "><a class="nav-link " href="../dashboard/index-horizontal.html">
+                                        Horizontal </a></li>
+                                <li class="nav-item active"><a class="nav-link active"
+                                        href="../dashboard/index-dual-compact.html"><span class="item-name">Dual
+                                            Compact</span></a></li>
+                                <li class="nav-item "><a class="nav-link " href="../dashboard/index-boxed.html">
+                                        Boxed Horizontal </a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="col-auto">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                                <span class="navbar-toggler-bar bar1 mt-1"></span>
+                                <span class="navbar-toggler-bar bar2"></span>
+                                <span class="navbar-toggler-bar bar3"></span>
+                            </span>
+                        </button>
+                        <div class="collapse navbar-collapse  bg-dark" id="navbarSupportedContent">
+                            <ul class="mb-2 navbar-nav ms-auto align-items-center navbar-list mb-xl-0">
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link" id="search-drop" data-bs-toggle="dropdown">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546"
+                                                height="2" rx="1" transform="rotate(45 17.0365 15.1223)"
+                                                fill="currentColor"></rect>
+                                            <path
+                                                d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </a>
+                                    <ul class="p-0 sub-drop dropdown-menu dropdown-menu-end"
+                                        aria-labelledby="search-drop">
+                                        <li class="">
+                                            <div
+                                                class="p-3 card-header justify-content-between border-bottom rounded-top">
+                                                <div class="header-title">
+                                                    <div class="iq-search-bar device-search  position-relative">
+                                                        <form action="#" class="searchbox">
+                                                            <input type="text"
+                                                                class="text search-input form-control bg-soft-primary"
+                                                                placeholder="Search here...">
+                                                            <a class="d-lg-none d-flex" href="javascript:void(0);">
+                                                                <span class="material-symbols-outlined">search</span>
+                                                            </a>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p-0 card-body all-notification">
+                                                <div
+                                                    class="d-flex align-items-center border-bottom search-hover py-2 px-3">
+                                                    <div class="flex-shrink-0">
+                                                        <img src="../assets/images/avatars/01.png"
+                                                            class="align-self-center img-fluid avatar-50 rounded-pill"
+                                                            alt="#">
+                                                    </div>
+                                                    <div class="d-flex flex-column ms-3 w-100">
+                                                        <a href="javascript:void(0);" class="h5">Paige Turner</a>
+                                                        <span>Paige001</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-flex align-items-center border-bottom search-hover py-2 px-3">
+                                                    <div class="flex-shrink-0">
+                                                        <img src="../assets/images/avatars/02.png"
+                                                            class="align-self-center img-fluid avatar-50 rounded-pill"
+                                                            alt="#">
+                                                    </div>
+                                                    <div class="d-flex flex-column ms-3 w-100">
+                                                        <a href="javascript:void(0);" class="h5">Monty Carlo</a>
+                                                        <span>Carlo.m</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-flex align-items-center search-hover py-2 px-3 border-bottom">
+                                                    <div class="flex-shrink-0">
+                                                        <img src="../assets/images/avatars/03.png"
+                                                            class="align-self-center img-fluid avatar-50 rounded-pill"
+                                                            alt="#">
+                                                    </div>
+                                                    <div class="d-flex flex-column ms-3 w-100">
+                                                        <a href="javascript:void(0);" class="h5">Paul Molive</a>
+                                                        <span>Paul.45</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-flex align-items-center border-bottom search-hover py-2 px-3">
+                                                    <div class="flex-shrink-0">
+                                                        <img src="../assets/images/avatars/04.png"
+                                                            class="align-self-center img-fluid avatar-50 rounded-pill"
+                                                            alt="#">
+                                                    </div>
+                                                    <div class="d-flex flex-column ms-3 w-100">
+                                                        <a href="javascript:void(0);" class="h5">Monty Carlo</a>
+                                                        <span>Carlo.m</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </li>
                                     </ul>
-                                    <!--end::Tabs-->
-                                </div>
-                                <!--end::Heading-->
-
-                                <!--begin::Tab content-->
-                                <div class="tab-content">
-                                    <!--begin::Tab panel-->
-                                    <div class="tab-pane fade" id="kt_topbar_notifications_1" role="tabpanel">
-                                        <!--begin::Items-->
-                                        <div class="scroll-y mh-325px my-5 px-8">
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center">
-                                                    <!--begin::Symbol-->
-                                                    <div class="symbol symbol-35px me-4">
-                                                        <span class="symbol-label bg-light-primary">
-                                                            <i
-                                                                class="ki-outline ki-abstract-28 fs-2 text-primary"></i>
-                                                        </span>
-                                                    </div>
-                                                    <!--end::Symbol-->
-
-                                                    <!--begin::Title-->
-                                                    <div class="mb-0 me-2">
-                                                        <a href="#"
-                                                            class="fs-6 text-gray-800 text-hover-primary fw-bold">Project
-                                                            Alice</a>
-                                                        <div class="text-gray-400 fs-7">Phase 1 development</div>
-                                                    </div>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">1 hr</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center">
-                                                    <!--begin::Symbol-->
-                                                    <div class="symbol symbol-35px me-4">
-                                                        <span class="symbol-label bg-light-danger">
-                                                            <i class="ki-outline ki-information fs-2 text-danger"></i>
-                                                        </span>
-                                                    </div>
-                                                    <!--end::Symbol-->
-
-                                                    <!--begin::Title-->
-                                                    <div class="mb-0 me-2">
-                                                        <a href="#"
-                                                            class="fs-6 text-gray-800 text-hover-primary fw-bold">HR
-                                                            Confidential</a>
-                                                        <div class="text-gray-400 fs-7">Confidential staff documents
-                                                        </div>
-                                                    </div>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">2 hrs</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center">
-                                                    <!--begin::Symbol-->
-                                                    <div class="symbol symbol-35px me-4">
-                                                        <span class="symbol-label bg-light-warning">
-                                                            <i class="ki-outline ki-briefcase fs-2 text-warning"></i>
-                                                        </span>
-                                                    </div>
-                                                    <!--end::Symbol-->
-
-                                                    <!--begin::Title-->
-                                                    <div class="mb-0 me-2">
-                                                        <a href="#"
-                                                            class="fs-6 text-gray-800 text-hover-primary fw-bold">Company
-                                                            HR</a>
-                                                        <div class="text-gray-400 fs-7">Corporeate staff profiles
-                                                        </div>
-                                                    </div>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">5 hrs</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center">
-                                                    <!--begin::Symbol-->
-                                                    <div class="symbol symbol-35px me-4">
-                                                        <span class="symbol-label bg-light-success">
-                                                            <i
-                                                                class="ki-outline ki-abstract-12 fs-2 text-success"></i>
-                                                        </span>
-                                                    </div>
-                                                    <!--end::Symbol-->
-
-                                                    <!--begin::Title-->
-                                                    <div class="mb-0 me-2">
-                                                        <a href="#"
-                                                            class="fs-6 text-gray-800 text-hover-primary fw-bold">Project
-                                                            Redux</a>
-                                                        <div class="text-gray-400 fs-7">New frontend admin theme</div>
-                                                    </div>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">2 days</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center">
-                                                    <!--begin::Symbol-->
-                                                    <div class="symbol symbol-35px me-4">
-                                                        <span class="symbol-label bg-light-primary">
-                                                            <i
-                                                                class="ki-outline ki-colors-square fs-2 text-primary"></i>
-                                                        </span>
-                                                    </div>
-                                                    <!--end::Symbol-->
-
-                                                    <!--begin::Title-->
-                                                    <div class="mb-0 me-2">
-                                                        <a href="#"
-                                                            class="fs-6 text-gray-800 text-hover-primary fw-bold">Project
-                                                            Breafing</a>
-                                                        <div class="text-gray-400 fs-7">Product launch status update
-                                                        </div>
-                                                    </div>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">21 Jan</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center">
-                                                    <!--begin::Symbol-->
-                                                    <div class="symbol symbol-35px me-4">
-                                                        <span class="symbol-label bg-light-info">
-                                                            <i class="ki-outline ki-picture
- fs-2 text-info"></i>
-                                                        </span>
-                                                    </div>
-                                                    <!--end::Symbol-->
-
-                                                    <!--begin::Title-->
-                                                    <div class="mb-0 me-2">
-                                                        <a href="#"
-                                                            class="fs-6 text-gray-800 text-hover-primary fw-bold">Banner
-                                                            Assets</a>
-                                                        <div class="text-gray-400 fs-7">Collection of banner images
-                                                        </div>
-                                                    </div>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">21 Jan</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center">
-                                                    <!--begin::Symbol-->
-                                                    <div class="symbol symbol-35px me-4">
-                                                        <span class="symbol-label bg-light-warning">
-                                                            <i
-                                                                class="ki-outline ki-color-swatch fs-2 text-warning"></i>
-                                                        </span>
-                                                    </div>
-                                                    <!--end::Symbol-->
-
-                                                    <!--begin::Title-->
-                                                    <div class="mb-0 me-2">
-                                                        <a href="#"
-                                                            class="fs-6 text-gray-800 text-hover-primary fw-bold">Icon
-                                                            Assets</a>
-                                                        <div class="text-gray-400 fs-7">Collection of SVG icons</div>
-                                                    </div>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">20 March</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-
-                                        </div>
-                                        <!--end::Items-->
-
-                                        <!--begin::View more-->
-                                        <div class="py-3 text-center border-top">
-                                            <a href="pages/user-profile/activity.html"
-                                                class="btn btn-color-gray-600 btn-active-color-primary">
-                                                View All
-                                                <i class="ki-outline ki-arrow-right fs-5"></i> </a>
-                                        </div>
-                                        <!--end::View more-->
-                                    </div>
-                                    <!--end::Tab panel-->
-
-                                    <!--begin::Tab panel-->
-                                    <div class="tab-pane fade show active" id="kt_topbar_notifications_2"
-                                        role="tabpanel">
-                                        <!--begin::Wrapper-->
-                                        <div class="d-flex flex-column px-9">
-                                            <!--begin::Section-->
-                                            <div class="pt-10 pb-0">
-                                                <!--begin::Title-->
-                                                <h3 class="text-dark text-center fw-bold">
-                                                    Get Pro Access
-                                                </h3>
-                                                <!--end::Title-->
-
-                                                <!--begin::Text-->
-                                                <div class="text-center text-gray-600 fw-semibold pt-1">
-                                                    Outlines keep you honest. They stoping you from amazing poorly about
-                                                    drive
-                                                </div>
-                                                <!--end::Text-->
-
-                                                <!--begin::Action-->
-                                                <div class="text-center mt-5 mb-9">
-                                                    <a href="#" class="btn btn-sm btn-primary px-6"
-                                                        data-bs-toggle="modal"
-                                                        data-bs-target="#kt_modal_upgrade_plan">Upgrade</a>
-                                                </div>
-                                                <!--end::Action-->
-                                            </div>
-                                            <!--end::Section-->
-
-                                            <!--begin::Illustration-->
-                                            <div class="text-center px-4">
-                                                <img class="mw-100 mh-200px" alt="image"
-                                                    src="../../../assets/media/illustrations/sketchy-1/1.png" />
-                                            </div>
-                                            <!--end::Illustration-->
-                                        </div>
-                                        <!--end::Wrapper-->
-                                    </div>
-                                    <!--end::Tab panel-->
-
-                                    <!--begin::Tab panel-->
-                                    <div class="tab-pane fade" id="kt_topbar_notifications_3" role="tabpanel">
-                                        <!--begin::Items-->
-                                        <div class="scroll-y mh-325px my-5 px-8">
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center me-2">
-                                                    <!--begin::Code-->
-                                                    <span class="w-70px badge badge-light-success me-4">200 OK</span>
-                                                    <!--end::Code-->
-
-                                                    <!--begin::Title-->
-                                                    <a href="#"
-                                                        class="text-gray-800 text-hover-primary fw-semibold">New
-                                                        order</a>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">Just now</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center me-2">
-                                                    <!--begin::Code-->
-                                                    <span class="w-70px badge badge-light-danger me-4">500 ERR</span>
-                                                    <!--end::Code-->
-
-                                                    <!--begin::Title-->
-                                                    <a href="#"
-                                                        class="text-gray-800 text-hover-primary fw-semibold">New
-                                                        customer</a>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">2 hrs</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center me-2">
-                                                    <!--begin::Code-->
-                                                    <span class="w-70px badge badge-light-success me-4">200 OK</span>
-                                                    <!--end::Code-->
-
-                                                    <!--begin::Title-->
-                                                    <a href="#"
-                                                        class="text-gray-800 text-hover-primary fw-semibold">Payment
-                                                        process</a>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">5 hrs</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center me-2">
-                                                    <!--begin::Code-->
-                                                    <span class="w-70px badge badge-light-warning me-4">300 WRN</span>
-                                                    <!--end::Code-->
-
-                                                    <!--begin::Title-->
-                                                    <a href="#"
-                                                        class="text-gray-800 text-hover-primary fw-semibold">Search
-                                                        query</a>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">2 days</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center me-2">
-                                                    <!--begin::Code-->
-                                                    <span class="w-70px badge badge-light-success me-4">200 OK</span>
-                                                    <!--end::Code-->
-
-                                                    <!--begin::Title-->
-                                                    <a href="#"
-                                                        class="text-gray-800 text-hover-primary fw-semibold">API
-                                                        connection</a>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">1 week</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center me-2">
-                                                    <!--begin::Code-->
-                                                    <span class="w-70px badge badge-light-success me-4">200 OK</span>
-                                                    <!--end::Code-->
-
-                                                    <!--begin::Title-->
-                                                    <a href="#"
-                                                        class="text-gray-800 text-hover-primary fw-semibold">Database
-                                                        restore</a>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">Mar 5</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center me-2">
-                                                    <!--begin::Code-->
-                                                    <span class="w-70px badge badge-light-warning me-4">300 WRN</span>
-                                                    <!--end::Code-->
-
-                                                    <!--begin::Title-->
-                                                    <a href="#"
-                                                        class="text-gray-800 text-hover-primary fw-semibold">System
-                                                        update</a>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">May 15</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center me-2">
-                                                    <!--begin::Code-->
-                                                    <span class="w-70px badge badge-light-warning me-4">300 WRN</span>
-                                                    <!--end::Code-->
-
-                                                    <!--begin::Title-->
-                                                    <a href="#"
-                                                        class="text-gray-800 text-hover-primary fw-semibold">Server OS
-                                                        update</a>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">Apr 3</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center me-2">
-                                                    <!--begin::Code-->
-                                                    <span class="w-70px badge badge-light-warning me-4">300 WRN</span>
-                                                    <!--end::Code-->
-
-                                                    <!--begin::Title-->
-                                                    <a href="#"
-                                                        class="text-gray-800 text-hover-primary fw-semibold">API
-                                                        rollback</a>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">Jun 30</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center me-2">
-                                                    <!--begin::Code-->
-                                                    <span class="w-70px badge badge-light-danger me-4">500 ERR</span>
-                                                    <!--end::Code-->
-
-                                                    <!--begin::Title-->
-                                                    <a href="#"
-                                                        class="text-gray-800 text-hover-primary fw-semibold">Refund
-                                                        process</a>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">Jul 10</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center me-2">
-                                                    <!--begin::Code-->
-                                                    <span class="w-70px badge badge-light-danger me-4">500 ERR</span>
-                                                    <!--end::Code-->
-
-                                                    <!--begin::Title-->
-                                                    <a href="#"
-                                                        class="text-gray-800 text-hover-primary fw-semibold">Withdrawal
-                                                        process</a>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">Sep 10</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Item-->
-                                            <div class="d-flex flex-stack py-4">
-                                                <!--begin::Section-->
-                                                <div class="d-flex align-items-center me-2">
-                                                    <!--begin::Code-->
-                                                    <span class="w-70px badge badge-light-danger me-4">500 ERR</span>
-                                                    <!--end::Code-->
-
-                                                    <!--begin::Title-->
-                                                    <a href="#"
-                                                        class="text-gray-800 text-hover-primary fw-semibold">Mail
-                                                        tasks</a>
-                                                    <!--end::Title-->
-                                                </div>
-                                                <!--end::Section-->
-
-                                                <!--begin::Label-->
-                                                <span class="badge badge-light fs-8">Dec 10</span>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Item-->
-
-                                        </div>
-                                        <!--end::Items-->
-
-                                        <!--begin::View more-->
-                                        <div class="py-3 text-center border-top">
-                                            <a href="pages/user-profile/activity.html"
-                                                class="btn btn-color-gray-600 btn-active-color-primary">
-                                                View All
-                                                <i class="ki-outline ki-arrow-right fs-5"></i> </a>
-                                        </div>
-                                        <!--end::View more-->
-                                    </div>
-                                    <!--end::Tab panel-->
-                                </div>
-                                <!--end::Tab content-->
-                            </div>
-                            <!--end::Menu--> <!--end::Menu wrapper-->
-                        </div>
-                        <!--end::Notifications-->
-
-                        <!--begin::Quick links-->
-                        <div class="app-navbar-item ms-1 ms-lg-5">
-                            <!--begin::Menu- wrapper-->
-                            <div class="btn btn-icon btn-custom btn-active-color-primary w-35px h-35px w-md-40px h-md-40px"
-                                data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent"
-                                data-kt-menu-placement="bottom">
-                                <i class="ki-outline ki-abstract-26 fs-1"></i>
-                            </div>
-
-                            <!--begin::Menu-->
-                            <div class="menu menu-sub menu-sub-dropdown menu-column w-250px w-lg-325px"
-                                data-kt-menu="true">
-                                <!--begin::Heading-->
-                                <div class="d-flex flex-column flex-center bgi-no-repeat rounded-top px-9 py-10"
-                                    style="background-image:url('../../../assets/media/misc/menu-header-bg.jpg')">
-                                    <!--begin::Title-->
-                                    <h3 class="text-white fw-semibold mb-3">
-                                        Quick Links
-                                    </h3>
-                                    <!--end::Title-->
-
-                                    <!--begin::Status-->
-                                    <span class="badge bg-primary text-inverse-primary py-2 px-3">25 pending
-                                        tasks</span>
-                                    <!--end::Status-->
-                                </div>
-                                <!--end::Heading-->
-
-                                <!--begin:Nav-->
-                                <div class="row g-0">
-                                    <!--begin:Item-->
-                                    <div class="col-6">
-                                        <a href="apps/projects/budget.html"
-                                            class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end border-bottom">
-                                            <i class="ki-outline ki-dollar fs-3x text-primary mb-2"></i> <span
-                                                class="fs-5 fw-semibold text-gray-800 mb-0">Accounting</span>
-                                            <span class="fs-7 text-gray-400">eCommerce</span>
-                                        </a>
-                                    </div>
-                                    <!--end:Item-->
-
-                                    <!--begin:Item-->
-                                    <div class="col-6">
-                                        <a href="apps/projects/settings.html"
-                                            class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-bottom">
-                                            <i class="ki-outline ki-sms fs-3x text-primary mb-2"></i> <span
-                                                class="fs-5 fw-semibold text-gray-800 mb-0">Administration</span>
-                                            <span class="fs-7 text-gray-400">Console</span>
-                                        </a>
-                                    </div>
-                                    <!--end:Item-->
-
-                                    <!--begin:Item-->
-                                    <div class="col-6">
-                                        <a href="apps/projects/list.html"
-                                            class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end">
-                                            <i class="ki-outline ki-abstract-41 fs-3x text-primary mb-2"></i> <span
-                                                class="fs-5 fw-semibold text-gray-800 mb-0">Projects</span>
-                                            <span class="fs-7 text-gray-400">Pending Tasks</span>
-                                        </a>
-                                    </div>
-                                    <!--end:Item-->
-
-                                    <!--begin:Item-->
-                                    <div class="col-6">
-                                        <a href="apps/projects/users.html"
-                                            class="d-flex flex-column flex-center h-100 p-6 bg-hover-light">
-                                            <i class="ki-outline ki-briefcase fs-3x text-primary mb-2"></i> <span
-                                                class="fs-5 fw-semibold text-gray-800 mb-0">Customers</span>
-                                            <span class="fs-7 text-gray-400">Latest cases</span>
-                                        </a>
-                                    </div>
-                                    <!--end:Item-->
-                                </div>
-                                <!--end:Nav-->
-
-                                <!--begin::View more-->
-                                <div class="py-2 text-center border-top">
-                                    <a href="pages/user-profile/activity.html"
-                                        class="btn btn-color-gray-600 btn-active-color-primary">
-                                        View All
-                                        <i class="ki-outline ki-arrow-right fs-5"></i> </a>
-                                </div>
-                                <!--end::View more-->
-                            </div>
-                            <!--end::Menu-->
-                            <!--end::Menu wrapper-->
-                        </div>
-                        <!--end::Quick links-->
-
-                        <!--begin::Chat-->
-                        <div class="app-navbar-item ms-1 ms-lg-5">
-                            <!--begin::Menu wrapper-->
-                            <div class="btn btn-icon btn-custom btn-active-color-primary w-35px h-35px w-md-40px h-md-40px position-relative"
-                                id="kt_drawer_chat_toggle">
-                                <i class="ki-outline ki-notification-on fs-1"></i>
-                            </div>
-                            <!--end::Menu wrapper-->
-                        </div>
-                        <!--end::Chat-->
-
-                        <!--begin::User menu-->
-                        <div class="app-navbar-item ms-5" id="kt_header_user_menu_toggle">
-                            <!--begin::Menu wrapper-->
-                            <div class="cursor-pointer symbol symbol-35px symbol-md-40px"
-                                data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent"
-                                data-kt-menu-placement="bottom-end">
-                                <img class="symbol symbol-circle symbol-35px symbol-md-40px"
-                                    src="../../../assets/media/avatars/300-13.jpg" alt="user" />
-                            </div>
-
-                            <!--begin::User account menu-->
-                            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px"
-                                data-kt-menu="true">
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <div class="menu-content d-flex align-items-center px-3">
-                                        <!--begin::Avatar-->
-                                        <div class="symbol symbol-50px me-5">
-                                            <img alt="Logo" src="../../../assets/media/avatars/300-13.jpg" />
-                                        </div>
-                                        <!--end::Avatar-->
-
-                                        <!--begin::Username-->
-                                        <div class="d-flex flex-column">
-                                            <div class="fw-bold d-flex align-items-center fs-5">
-                                                Max Smith <span
-                                                    class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span>
-                                            </div>
-
-                                            <a href="#"
-                                                class="fw-semibold text-muted text-hover-primary fs-7">
-                                                max@kt.com </a>
-                                        </div>
-                                        <!--end::Username-->
-                                    </div>
-                                </div>
-                                <!--end::Menu item-->
-
-                                <!--begin::Menu separator-->
-                                <div class="separator my-2"></div>
-                                <!--end::Menu separator-->
-
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-5">
-                                    <a href="account/overview.html" class="menu-link px-5">
-                                        My Profile
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link" id="langues-drop" data-bs-toggle="dropdown">
+                                        <svg class="icon-24" width="24" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802">
+                                            </path>
+                                        </svg>
                                     </a>
-                                </div>
-                                <!--end::Menu item-->
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li data-setting="attribute">
+                                            <div class="dropdown-item d-flex align-items-center">
+                                                <input type="radio" value="ltr" class="btn-check"
+                                                    name="theme_scheme_direction" data-prop="dir"
+                                                    id="theme-scheme-direction-ltr" checked>
+                                                <label class="d-block" for="theme-scheme-direction-ltr">
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M18.9702 19.757L15.3502 5.27201C15.1884 4.62224 14.8136 4.04541 14.2856 3.63359C13.7576 3.22177 13.1068 2.99871 12.4372 3.00001H11.5602C10.8911 2.99938 10.2411 3.22275 9.71368 3.63452C9.18629 4.04628 8.81191 4.62274 8.65022 5.27201L5.03022 19.757C4.9679 20.0135 5.00954 20.2843 5.14605 20.5102C5.28257 20.7362 5.50288 20.899 5.75895 20.9631C6.01502 21.0273 6.28606 20.9875 6.51297 20.8527C6.73988 20.7178 6.90424 20.4986 6.97022 20.243L8.28022 15H15.7202L17.0302 20.243C17.0962 20.4986 17.2606 20.7178 17.4875 20.8527C17.7144 20.9875 17.9854 21.0273 18.2415 20.9631C18.4976 20.899 18.7179 20.7362 18.8544 20.5102C18.9909 20.2843 19.0325 20.0135 18.9702 19.757V19.757ZM8.78022 13L10.5912 5.75801C10.6449 5.5414 10.7696 5.34903 10.9454 5.21163C11.1213 5.07423 11.3381 4.99972 11.5612 5.00001H12.4392C12.6624 4.99972 12.8792 5.07423 13.055 5.21163C13.2308 5.34903 13.3556 5.5414 13.4092 5.75801L15.2192 13H8.78022Z"
+                                                            fill="currentColor" />
+                                                    </svg>
+                                                    <span class="ms-2 mb-0"> LTR </span>
+                                                </label>
 
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-5">
-                                    <a href="apps/projects/list.html" class="menu-link px-5">
-                                        <span class="menu-text">My Projects</span>
-                                        <span class="menu-badge">
-                                            <span class="badge badge-light-danger badge-circle fw-bold fs-7">3</span>
-                                        </span>
-                                    </a>
-                                </div>
-                                <!--end::Menu item-->
-
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                                    data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-                                    <a href="#" class="menu-link px-5">
-                                        <span class="menu-title">My Subscription</span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-
-                                    <!--begin::Menu sub-->
-                                    <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="account/referrals.html" class="menu-link px-5">
-                                                Referrals
-                                            </a>
-                                        </div>
-                                        <!--end::Menu item-->
-
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="account/billing.html" class="menu-link px-5">
-                                                Billing
-                                            </a>
-                                        </div>
-                                        <!--end::Menu item-->
-
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="account/statements.html" class="menu-link px-5">
-                                                Payments
-                                            </a>
-                                        </div>
-                                        <!--end::Menu item-->
-
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="account/statements.html"
-                                                class="menu-link d-flex flex-stack px-5">
-                                                Statements
-
-                                                <span class="ms-2 lh-0" data-bs-toggle="tooltip"
-                                                    title="View your statements">
-                                                    <i class="ki-outline ki-information-5 fs-5"></i> </span>
-                                            </a>
-                                        </div>
-                                        <!--end::Menu item-->
-
-                                        <!--begin::Menu separator-->
-                                        <div class="separator my-2"></div>
-                                        <!--end::Menu separator-->
-
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <div class="menu-content px-3">
-                                                <label
-                                                    class="form-check form-switch form-check-custom form-check-solid">
-                                                    <input class="form-check-input w-30px h-20px" type="checkbox"
-                                                        value="1" checked="checked" name="notifications" />
-                                                    <span class="form-check-label text-muted fs-7">
-                                                        Notifications
-                                                    </span>
+                                            </div>
+                                        </li>
+                                        <li data-setting="attribute">
+                                            <div class="dropdown-item d-flex align-items-center">
+                                                <input type="radio" value="rtl" class="btn-check"
+                                                    name="theme_scheme_direction" data-prop="dir"
+                                                    id="theme-scheme-direction-rtl">
+                                                <label class=" d-block" for="theme-scheme-direction-rtl">
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M12 4C10.08 4 8.5 5.58 8.5 7.5C8.5 8.43 8.88 9.28 9.5 9.91C7.97 10.91 7 12.62 7 14.5C7 17.53 9.47 20 12.5 20C14.26 20 16 19.54 17.5 18.66L16.5 16.93C15.28 17.63 13.9 18 12.5 18C10.56 18 9 16.45 9 14.5C8.99823 13.7298 9.2513 12.9806 9.71978 12.3692C10.1883 11.7578 10.8458 11.3186 11.59 11.12L16.8 9.72L16.28 7.79L11.83 9C11.08 8.9 10.5 8.28 10.5 7.5C10.5 6.66 11.16 6 12 6C12.26 6 12.5 6.07 12.75 6.2L13.75 4.47C13.22 4.16 12.61 4 12 4Z"
+                                                            fill="currentColor" />
+                                                    </svg>
+                                                    <span class="ms-2 mb-0"> RTL </span>
                                                 </label>
                                             </div>
-                                        </div>
-                                        <!--end::Menu item-->
-                                    </div>
-                                    <!--end::Menu sub-->
-                                </div>
-                                <!--end::Menu item-->
-
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-5">
-                                    <a href="account/statements.html" class="menu-link px-5">
-                                        My Statements
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link" id="notification-drop"
+                                        data-bs-toggle="dropdown">
+                                        <svg class="icon-24" width="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.7695 11.6453C19.039 10.7923 18.7071 10.0531 18.7071 8.79716V8.37013C18.7071 6.73354 18.3304 5.67907 17.5115 4.62459C16.2493 2.98699 14.1244 2 12.0442 2H11.9558C9.91935 2 7.86106 2.94167 6.577 4.5128C5.71333 5.58842 5.29293 6.68822 5.29293 8.37013V8.79716C5.29293 10.0531 4.98284 10.7923 4.23049 11.6453C3.67691 12.2738 3.5 13.0815 3.5 13.9557C3.5 14.8309 3.78723 15.6598 4.36367 16.3336C5.11602 17.1413 6.17846 17.6569 7.26375 17.7466C8.83505 17.9258 10.4063 17.9933 12.0005 17.9933C13.5937 17.9933 15.165 17.8805 16.7372 17.7466C17.8215 17.6569 18.884 17.1413 19.6363 16.3336C20.2118 15.6598 20.5 14.8309 20.5 13.9557C20.5 13.0815 20.3231 12.2738 19.7695 11.6453Z"
+                                                fill="currentColor"></path>
+                                            <path opacity="0.4"
+                                                d="M14.0088 19.2283C13.5088 19.1215 10.4627 19.1215 9.96275 19.2283C9.53539 19.327 9.07324 19.5566 9.07324 20.0602C9.09809 20.5406 9.37935 20.9646 9.76895 21.2335L9.76795 21.2345C10.2718 21.6273 10.8632 21.877 11.4824 21.9667C11.8123 22.012 12.1482 22.01 12.4901 21.9667C13.1083 21.877 13.6997 21.6273 14.2036 21.2345L14.2026 21.2335C14.5922 20.9646 14.8734 20.5406 14.8983 20.0602C14.8983 19.5566 14.4361 19.327 14.0088 19.2283Z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                        <span class="bg-danger dots"></span>
                                     </a>
-                                </div>
-                                <!--end::Menu item-->
-
-                                <!--begin::Menu separator-->
-                                <div class="separator my-2"></div>
-                                <!--end::Menu separator-->
-
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                                    data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-                                    <a href="#" class="menu-link px-5">
-                                        <span class="menu-title position-relative">
-                                            Mode
-
-                                            <span class="ms-5 position-absolute translate-middle-y top-50 end-0">
-                                                <i class="ki-outline ki-night-day theme-light-show fs-2"></i> <i
-                                                    class="ki-outline ki-moon theme-dark-show fs-2"></i> </span>
+                                    <ul class="p-0 sub-drop dropdown-menu dropdown-menu-end"
+                                        aria-labelledby="notification-drop">
+                                        <li class="">
+                                            <div
+                                                class="p-3 card-header d-flex justify-content-between bg-primary rounded-top">
+                                                <div class="header-title">
+                                                    <h5 class="mb-0 text-white">All Notifications</h5>
+                                                </div>
+                                            </div>
+                                            <div class="p-0 card-body all-notification">
+                                                <a href="#" class="iq-sub-card">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="p-1 avatar-40 rounded-pill bg-soft-primary"
+                                                            src="../assets/images/shapes/01.png" alt=""
+                                                            loading="lazy">
+                                                        <div class="ms-3 w-100">
+                                                            <h6 class="mb-0 ">Emma Watson Bni</h6>
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <p class="mb-0">95 MB</p>
+                                                                <small class="float-end font-size-12">Just Now</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="iq-sub-card">
+                                                    <div class="d-flex align-items-center">
+                                                        <div>
+                                                            <img class="p-1 avatar-40 rounded-pill bg-soft-primary"
+                                                                src="../assets/images/shapes/02.png" alt=""
+                                                                loading="lazy">
+                                                        </div>
+                                                        <div class="ms-3 w-100">
+                                                            <h6 class="mb-0 ">New customer is join</h6>
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <p class="mb-0">Cyst Bni</p>
+                                                                <small class="float-end font-size-12">5 days
+                                                                    ago</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="iq-sub-card">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="p-1 avatar-40 rounded-pill bg-soft-primary"
+                                                            src="../assets/images/shapes/03.png" alt=""
+                                                            loading="lazy">
+                                                        <div class="ms-3 w-100">
+                                                            <h6 class="mb-0 ">Two customer is left</h6>
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <p class="mb-0">Cyst Bni</p>
+                                                                <small class="float-end font-size-12">2 days
+                                                                    ago</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="iq-sub-card">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="p-1 avatar-40 rounded-pill bg-soft-primary"
+                                                            src="../assets/images/shapes/04.png" alt=""
+                                                            loading="lazy">
+                                                        <div class="w-100 ms-3">
+                                                            <h6 class="mb-0 ">New Mail from Fenny</h6>
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <p class="mb-0">Cyst Bni</p>
+                                                                <small class="float-end font-size-12">3 days
+                                                                    ago</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item theme-scheme-dropdown">
+                                    <a href="#" class="nav-link" id="mode-drop">
+                                        <svg class="icon-24" width="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.9905 5.62598C10.7293 5.62574 9.49646 5.9995 8.44775 6.69997C7.39903 7.40045 6.58159 8.39619 6.09881 9.56126C5.61603 10.7263 5.48958 12.0084 5.73547 13.2453C5.98135 14.4823 6.58852 15.6185 7.48019 16.5104C8.37186 17.4022 9.50798 18.0096 10.7449 18.2557C11.9818 18.5019 13.2639 18.3757 14.429 17.8931C15.5942 17.4106 16.5901 16.5933 17.2908 15.5448C17.9915 14.4962 18.3655 13.2634 18.3655 12.0023C18.3637 10.3119 17.6916 8.69129 16.4964 7.49593C15.3013 6.30056 13.6808 5.62806 11.9905 5.62598Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M22.1258 10.8771H20.627C20.3286 10.8771 20.0424 10.9956 19.8314 11.2066C19.6204 11.4176 19.5018 11.7038 19.5018 12.0023C19.5018 12.3007 19.6204 12.5869 19.8314 12.7979C20.0424 13.0089 20.3286 13.1274 20.627 13.1274H22.1258C22.4242 13.1274 22.7104 13.0089 22.9214 12.7979C23.1324 12.5869 23.2509 12.3007 23.2509 12.0023C23.2509 11.7038 23.1324 11.4176 22.9214 11.2066C22.7104 10.9956 22.4242 10.8771 22.1258 10.8771Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M11.9905 19.4995C11.6923 19.5 11.4064 19.6187 11.1956 19.8296C10.9848 20.0405 10.8663 20.3265 10.866 20.6247V22.1249C10.866 22.4231 10.9845 22.7091 11.1953 22.9199C11.4062 23.1308 11.6922 23.2492 11.9904 23.2492C12.2886 23.2492 12.5746 23.1308 12.7854 22.9199C12.9963 22.7091 13.1147 22.4231 13.1147 22.1249V20.6247C13.1145 20.3265 12.996 20.0406 12.7853 19.8296C12.5745 19.6187 12.2887 19.5 11.9905 19.4995Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M4.49743 12.0023C4.49718 11.704 4.37865 11.4181 4.16785 11.2072C3.95705 10.9962 3.67119 10.8775 3.37298 10.8771H1.87445C1.57603 10.8771 1.28984 10.9956 1.07883 11.2066C0.867812 11.4176 0.749266 11.7038 0.749266 12.0023C0.749266 12.3007 0.867812 12.5869 1.07883 12.7979C1.28984 13.0089 1.57603 13.1274 1.87445 13.1274H3.37299C3.6712 13.127 3.95706 13.0083 4.16785 12.7973C4.37865 12.5864 4.49718 12.3005 4.49743 12.0023Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M11.9905 4.50058C12.2887 4.50012 12.5745 4.38141 12.7853 4.17048C12.9961 3.95954 13.1147 3.67361 13.1149 3.3754V1.87521C13.1149 1.57701 12.9965 1.29103 12.7856 1.08017C12.5748 0.869313 12.2888 0.750854 11.9906 0.750854C11.6924 0.750854 11.4064 0.869313 11.1955 1.08017C10.9847 1.29103 10.8662 1.57701 10.8662 1.87521V3.3754C10.8664 3.67359 10.9849 3.95952 11.1957 4.17046C11.4065 4.3814 11.6923 4.50012 11.9905 4.50058Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M18.8857 6.6972L19.9465 5.63642C20.0512 5.53209 20.1343 5.40813 20.1911 5.27163C20.2479 5.13513 20.2772 4.98877 20.2774 4.84093C20.2775 4.69309 20.2485 4.54667 20.192 4.41006C20.1355 4.27344 20.0526 4.14932 19.948 4.04478C19.8435 3.94024 19.7194 3.85734 19.5828 3.80083C19.4462 3.74432 19.2997 3.71531 19.1519 3.71545C19.0041 3.7156 18.8577 3.7449 18.7212 3.80167C18.5847 3.85845 18.4607 3.94159 18.3564 4.04633L17.2956 5.10714C17.1909 5.21147 17.1077 5.33543 17.0509 5.47194C16.9942 5.60844 16.9649 5.7548 16.9647 5.90264C16.9646 6.05048 16.9936 6.19689 17.0501 6.33351C17.1066 6.47012 17.1895 6.59425 17.294 6.69878C17.3986 6.80332 17.5227 6.88621 17.6593 6.94272C17.7959 6.99923 17.9424 7.02824 18.0902 7.02809C18.238 7.02795 18.3844 6.99865 18.5209 6.94187C18.6574 6.88509 18.7814 6.80195 18.8857 6.6972Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M18.8855 17.3073C18.7812 17.2026 18.6572 17.1195 18.5207 17.0627C18.3843 17.006 18.2379 16.9767 18.0901 16.9766C17.9423 16.9764 17.7959 17.0055 17.6593 17.062C17.5227 17.1185 17.3986 17.2014 17.2941 17.3059C17.1895 17.4104 17.1067 17.5345 17.0501 17.6711C16.9936 17.8077 16.9646 17.9541 16.9648 18.1019C16.9649 18.2497 16.9942 18.3961 17.0509 18.5326C17.1077 18.6691 17.1908 18.793 17.2955 18.8974L18.3563 19.9582C18.4606 20.0629 18.5846 20.146 18.721 20.2027C18.8575 20.2595 19.0039 20.2887 19.1517 20.2889C19.2995 20.289 19.4459 20.26 19.5825 20.2035C19.7191 20.147 19.8432 20.0641 19.9477 19.9595C20.0523 19.855 20.1351 19.7309 20.1916 19.5943C20.2482 19.4577 20.2772 19.3113 20.277 19.1635C20.2769 19.0157 20.2476 18.8694 20.1909 18.7329C20.1341 18.5964 20.051 18.4724 19.9463 18.3681L18.8855 17.3073Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M5.09528 17.3072L4.0345 18.368C3.92972 18.4723 3.84655 18.5963 3.78974 18.7328C3.73294 18.8693 3.70362 19.0156 3.70346 19.1635C3.7033 19.3114 3.7323 19.4578 3.78881 19.5944C3.84532 19.7311 3.92822 19.8552 4.03277 19.9598C4.13732 20.0643 4.26147 20.1472 4.3981 20.2037C4.53473 20.2602 4.68117 20.2892 4.82902 20.2891C4.97688 20.2889 5.12325 20.2596 5.25976 20.2028C5.39627 20.146 5.52024 20.0628 5.62456 19.958L6.68536 18.8973C6.79007 18.7929 6.87318 18.6689 6.92993 18.5325C6.98667 18.396 7.01595 18.2496 7.01608 18.1018C7.01621 17.954 6.98719 17.8076 6.93068 17.671C6.87417 17.5344 6.79129 17.4103 6.68676 17.3058C6.58224 17.2012 6.45813 17.1183 6.32153 17.0618C6.18494 17.0053 6.03855 16.9763 5.89073 16.9764C5.74291 16.9766 5.59657 17.0058 5.46007 17.0626C5.32358 17.1193 5.19962 17.2024 5.09528 17.3072Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M5.09541 6.69715C5.19979 6.8017 5.32374 6.88466 5.4602 6.94128C5.59665 6.9979 5.74292 7.02708 5.89065 7.02714C6.03839 7.0272 6.18469 6.99815 6.32119 6.94164C6.45769 6.88514 6.58171 6.80228 6.68618 6.69782C6.79064 6.59336 6.87349 6.46933 6.93 6.33283C6.9865 6.19633 7.01556 6.05003 7.01549 5.9023C7.01543 5.75457 6.98625 5.60829 6.92963 5.47184C6.87301 5.33539 6.79005 5.21143 6.6855 5.10706L5.6247 4.04626C5.5204 3.94137 5.39643 3.8581 5.25989 3.80121C5.12335 3.74432 4.97692 3.71493 4.82901 3.71472C4.68109 3.71452 4.53458 3.7435 4.39789 3.80001C4.26119 3.85652 4.13699 3.93945 4.03239 4.04404C3.9278 4.14864 3.84487 4.27284 3.78836 4.40954C3.73185 4.54624 3.70287 4.69274 3.70308 4.84066C3.70329 4.98858 3.73268 5.135 3.78957 5.27154C3.84646 5.40808 3.92974 5.53205 4.03462 5.63635L5.09541 6.69715Z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </a>
+                                    <ul class="list-unstyled dropdown-menu dropdown-content">
+                                        <li data-setting="radio">
+                                            <div class="dropdown-item d-flex align-items-center">
+                                                <input type="radio" value="light" class="btn-check"
+                                                    name="theme_scheme" id="color-mode-light">
+                                                <label class="d-block" for="color-mode-light">
+                                                    <svg class="icon-24" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11.9905 5.62598C10.7293 5.62574 9.49646 5.9995 8.44775 6.69997C7.39903 7.40045 6.58159 8.39619 6.09881 9.56126C5.61603 10.7263 5.48958 12.0084 5.73547 13.2453C5.98135 14.4823 6.58852 15.6185 7.48019 16.5104C8.37186 17.4022 9.50798 18.0096 10.7449 18.2557C11.9818 18.5019 13.2639 18.3757 14.429 17.8931C15.5942 17.4106 16.5901 16.5933 17.2908 15.5448C17.9915 14.4962 18.3655 13.2634 18.3655 12.0023C18.3637 10.3119 17.6916 8.69129 16.4964 7.49593C15.3013 6.30056 13.6808 5.62806 11.9905 5.62598Z"
+                                                            fill="currentColor"></path>
+                                                        <path
+                                                            d="M22.1258 10.8771H20.627C20.3286 10.8771 20.0424 10.9956 19.8314 11.2066C19.6204 11.4176 19.5018 11.7038 19.5018 12.0023C19.5018 12.3007 19.6204 12.5869 19.8314 12.7979C20.0424 13.0089 20.3286 13.1274 20.627 13.1274H22.1258C22.4242 13.1274 22.7104 13.0089 22.9214 12.7979C23.1324 12.5869 23.2509 12.3007 23.2509 12.0023C23.2509 11.7038 23.1324 11.4176 22.9214 11.2066C22.7104 10.9956 22.4242 10.8771 22.1258 10.8771Z"
+                                                            fill="currentColor"></path>
+                                                        <path
+                                                            d="M11.9905 19.4995C11.6923 19.5 11.4064 19.6187 11.1956 19.8296C10.9848 20.0405 10.8663 20.3265 10.866 20.6247V22.1249C10.866 22.4231 10.9845 22.7091 11.1953 22.9199C11.4062 23.1308 11.6922 23.2492 11.9904 23.2492C12.2886 23.2492 12.5746 23.1308 12.7854 22.9199C12.9963 22.7091 13.1147 22.4231 13.1147 22.1249V20.6247C13.1145 20.3265 12.996 20.0406 12.7853 19.8296C12.5745 19.6187 12.2887 19.5 11.9905 19.4995Z"
+                                                            fill="currentColor"></path>
+                                                        <path
+                                                            d="M4.49743 12.0023C4.49718 11.704 4.37865 11.4181 4.16785 11.2072C3.95705 10.9962 3.67119 10.8775 3.37298 10.8771H1.87445C1.57603 10.8771 1.28984 10.9956 1.07883 11.2066C0.867812 11.4176 0.749266 11.7038 0.749266 12.0023C0.749266 12.3007 0.867812 12.5869 1.07883 12.7979C1.28984 13.0089 1.57603 13.1274 1.87445 13.1274H3.37299C3.6712 13.127 3.95706 13.0083 4.16785 12.7973C4.37865 12.5864 4.49718 12.3005 4.49743 12.0023Z"
+                                                            fill="currentColor"></path>
+                                                        <path
+                                                            d="M11.9905 4.50058C12.2887 4.50012 12.5745 4.38141 12.7853 4.17048C12.9961 3.95954 13.1147 3.67361 13.1149 3.3754V1.87521C13.1149 1.57701 12.9965 1.29103 12.7856 1.08017C12.5748 0.869313 12.2888 0.750854 11.9906 0.750854C11.6924 0.750854 11.4064 0.869313 11.1955 1.08017C10.9847 1.29103 10.8662 1.57701 10.8662 1.87521V3.3754C10.8664 3.67359 10.9849 3.95952 11.1957 4.17046C11.4065 4.3814 11.6923 4.50012 11.9905 4.50058Z"
+                                                            fill="currentColor"></path>
+                                                        <path
+                                                            d="M18.8857 6.6972L19.9465 5.63642C20.0512 5.53209 20.1343 5.40813 20.1911 5.27163C20.2479 5.13513 20.2772 4.98877 20.2774 4.84093C20.2775 4.69309 20.2485 4.54667 20.192 4.41006C20.1355 4.27344 20.0526 4.14932 19.948 4.04478C19.8435 3.94024 19.7194 3.85734 19.5828 3.80083C19.4462 3.74432 19.2997 3.71531 19.1519 3.71545C19.0041 3.7156 18.8577 3.7449 18.7212 3.80167C18.5847 3.85845 18.4607 3.94159 18.3564 4.04633L17.2956 5.10714C17.1909 5.21147 17.1077 5.33543 17.0509 5.47194C16.9942 5.60844 16.9649 5.7548 16.9647 5.90264C16.9646 6.05048 16.9936 6.19689 17.0501 6.33351C17.1066 6.47012 17.1895 6.59425 17.294 6.69878C17.3986 6.80332 17.5227 6.88621 17.6593 6.94272C17.7959 6.99923 17.9424 7.02824 18.0902 7.02809C18.238 7.02795 18.3844 6.99865 18.5209 6.94187C18.6574 6.88509 18.7814 6.80195 18.8857 6.6972Z"
+                                                            fill="currentColor"></path>
+                                                        <path
+                                                            d="M18.8855 17.3073C18.7812 17.2026 18.6572 17.1195 18.5207 17.0627C18.3843 17.006 18.2379 16.9767 18.0901 16.9766C17.9423 16.9764 17.7959 17.0055 17.6593 17.062C17.5227 17.1185 17.3986 17.2014 17.2941 17.3059C17.1895 17.4104 17.1067 17.5345 17.0501 17.6711C16.9936 17.8077 16.9646 17.9541 16.9648 18.1019C16.9649 18.2497 16.9942 18.3961 17.0509 18.5326C17.1077 18.6691 17.1908 18.793 17.2955 18.8974L18.3563 19.9582C18.4606 20.0629 18.5846 20.146 18.721 20.2027C18.8575 20.2595 19.0039 20.2887 19.1517 20.2889C19.2995 20.289 19.4459 20.26 19.5825 20.2035C19.7191 20.147 19.8432 20.0641 19.9477 19.9595C20.0523 19.855 20.1351 19.7309 20.1916 19.5943C20.2482 19.4577 20.2772 19.3113 20.277 19.1635C20.2769 19.0157 20.2476 18.8694 20.1909 18.7329C20.1341 18.5964 20.051 18.4724 19.9463 18.3681L18.8855 17.3073Z"
+                                                            fill="currentColor"></path>
+                                                        <path
+                                                            d="M5.09528 17.3072L4.0345 18.368C3.92972 18.4723 3.84655 18.5963 3.78974 18.7328C3.73294 18.8693 3.70362 19.0156 3.70346 19.1635C3.7033 19.3114 3.7323 19.4578 3.78881 19.5944C3.84532 19.7311 3.92822 19.8552 4.03277 19.9598C4.13732 20.0643 4.26147 20.1472 4.3981 20.2037C4.53473 20.2602 4.68117 20.2892 4.82902 20.2891C4.97688 20.2889 5.12325 20.2596 5.25976 20.2028C5.39627 20.146 5.52024 20.0628 5.62456 19.958L6.68536 18.8973C6.79007 18.7929 6.87318 18.6689 6.92993 18.5325C6.98667 18.396 7.01595 18.2496 7.01608 18.1018C7.01621 17.954 6.98719 17.8076 6.93068 17.671C6.87417 17.5344 6.79129 17.4103 6.68676 17.3058C6.58224 17.2012 6.45813 17.1183 6.32153 17.0618C6.18494 17.0053 6.03855 16.9763 5.89073 16.9764C5.74291 16.9766 5.59657 17.0058 5.46007 17.0626C5.32358 17.1193 5.19962 17.2024 5.09528 17.3072Z"
+                                                            fill="currentColor"></path>
+                                                        <path
+                                                            d="M5.09541 6.69715C5.19979 6.8017 5.32374 6.88466 5.4602 6.94128C5.59665 6.9979 5.74292 7.02708 5.89065 7.02714C6.03839 7.0272 6.18469 6.99815 6.32119 6.94164C6.45769 6.88514 6.58171 6.80228 6.68618 6.69782C6.79064 6.59336 6.87349 6.46933 6.93 6.33283C6.9865 6.19633 7.01556 6.05003 7.01549 5.9023C7.01543 5.75457 6.98625 5.60829 6.92963 5.47184C6.87301 5.33539 6.79005 5.21143 6.6855 5.10706L5.6247 4.04626C5.5204 3.94137 5.39643 3.8581 5.25989 3.80121C5.12335 3.74432 4.97692 3.71493 4.82901 3.71472C4.68109 3.71452 4.53458 3.7435 4.39789 3.80001C4.26119 3.85652 4.13699 3.93945 4.03239 4.04404C3.9278 4.14864 3.84487 4.27284 3.78836 4.40954C3.73185 4.54624 3.70287 4.69274 3.70308 4.84066C3.70329 4.98858 3.73268 5.135 3.78957 5.27154C3.84646 5.40808 3.92974 5.53205 4.03462 5.63635L5.09541 6.69715Z"
+                                                            fill="currentColor"></path>
+                                                    </svg>
+                                                    <span class="ms-3 mb-0">Light</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li data-setting="radio">
+                                            <div class="dropdown-item d-flex align-items-center">
+                                                <input type="radio" value="dark" class="btn-check"
+                                                    name="theme_scheme" id="color-mode-dark">
+                                                <label class="d-block" for="color-mode-dark">
+                                                    <svg class="icon-24" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M19.0647 5.43757C19.3421 5.43757 19.567 5.21271 19.567 4.93534C19.567 4.65796 19.3421 4.43311 19.0647 4.43311C18.7874 4.43311 18.5625 4.65796 18.5625 4.93534C18.5625 5.21271 18.7874 5.43757 19.0647 5.43757Z"
+                                                            fill="currentColor"></path>
+                                                        <path
+                                                            d="M20.0692 9.48884C20.3466 9.48884 20.5714 9.26398 20.5714 8.98661C20.5714 8.70923 20.3466 8.48438 20.0692 8.48438C19.7918 8.48438 19.567 8.70923 19.567 8.98661C19.567 9.26398 19.7918 9.48884 20.0692 9.48884Z"
+                                                            fill="currentColor"></path>
+                                                        <path
+                                                            d="M12.0335 20.5714C15.6943 20.5714 18.9426 18.2053 20.1168 14.7338C20.1884 14.5225 20.1114 14.289 19.9284 14.161C19.746 14.034 19.5003 14.0418 19.3257 14.1821C18.2432 15.0546 16.9371 15.5156 15.5491 15.5156C12.2257 15.5156 9.48884 12.8122 9.48884 9.48886C9.48884 7.41079 10.5773 5.47137 12.3449 4.35752C12.5342 4.23832 12.6 4.00733 12.5377 3.79251C12.4759 3.57768 12.2571 3.42859 12.0335 3.42859C7.32556 3.42859 3.42857 7.29209 3.42857 12C3.42857 16.7079 7.32556 20.5714 12.0335 20.5714Z"
+                                                            fill="currentColor"></path>
+                                                        <path
+                                                            d="M13.0379 7.47998C13.8688 7.47998 14.5446 8.15585 14.5446 8.98668C14.5446 9.26428 14.7693 9.48891 15.0469 9.48891C15.3245 9.48891 15.5491 9.26428 15.5491 8.98668C15.5491 8.15585 16.225 7.47998 17.0558 7.47998C17.3334 7.47998 17.558 7.25535 17.558 6.97775C17.558 6.70015 17.3334 6.47552 17.0558 6.47552C16.225 6.47552 15.5491 5.76616 15.5491 4.93534C15.5491 4.65774 15.3245 4.43311 15.0469 4.43311C14.7693 4.43311 14.5446 4.65774 14.5446 4.93534C14.5446 5.76616 13.8688 6.47552 13.0379 6.47552C12.7603 6.47552 12.5357 6.70015 12.5357 6.97775C12.5357 7.25535 12.7603 7.47998 13.0379 7.47998Z"
+                                                            fill="currentColor"></path>
+                                                    </svg>
+                                                    <span class="ms-3 mb-0">Dark</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li data-setting="radio">
+                                            <div class="dropdown-item d-flex align-items-center">
+                                                <input type="radio" value="auto" class="btn-check"
+                                                    name="theme_scheme" id="color-mode-auto" checked>
+                                                <label class="d-block" for="color-mode-auto">
+                                                    <svg class="icon-24" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M1.34375 3.9463V15.2178C1.34375 16.119 2.08105 16.8563 2.98219 16.8563H8.65093V19.4594H6.15702C5.38853 19.4594 4.75981 19.9617 4.75981 20.5757V21.6921H19.2403V20.5757C19.2403 19.9617 18.6116 19.4594 17.8431 19.4594H15.3492V16.8563H21.0179C21.919 16.8563 22.6562 16.119 22.6562 15.2178V3.9463C22.6562 3.04516 21.9189 2.30786 21.0179 2.30786H2.98219C2.08105 2.30786 1.34375 3.04516 1.34375 3.9463ZM12.9034 9.9016C13.241 9.98792 13.5597 10.1216 13.852 10.2949L15.0393 9.4353L15.9893 10.3853L15.1297 11.5727C15.303 11.865 15.4366 12.1837 15.523 12.5212L16.97 12.7528V13.4089H13.9851C13.9766 12.3198 13.0912 11.4394 12 11.4394C10.9089 11.4394 10.0235 12.3198 10.015 13.4089H7.03006V12.7528L8.47712 12.5211C8.56345 12.1836 8.69703 11.8649 8.87037 11.5727L8.0107 10.3853L8.96078 9.4353L10.148 10.2949C10.4404 10.1215 10.759 9.98788 11.0966 9.9016L11.3282 8.45467H12.6718L12.9034 9.9016ZM16.1353 7.93758C15.6779 7.93758 15.3071 7.56681 15.3071 7.1094C15.3071 6.652 15.6779 6.28122 16.1353 6.28122C16.5926 6.28122 16.9634 6.652 16.9634 7.1094C16.9634 7.56681 16.5926 7.93758 16.1353 7.93758ZM2.71385 14.0964V3.90518C2.71385 3.78023 2.81612 3.67796 2.94107 3.67796H21.0589C21.1839 3.67796 21.2861 3.78023 21.2861 3.90518V14.0964C15.0954 14.0964 8.90462 14.0964 2.71385 14.0964Z"
+                                                            fill="currentColor"></path>
+                                                    </svg>
+                                                    <span class="ms-3 mb-0">Auto</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item iq-full-screen d-none  d-xl-block border-end"
+                                    id="fullscreen-item">
+                                    <a href="#" class="nav-link pe-3" id="btnFullscreen"
+                                        data-bs-toggle="dropdown">
+                                        <span class="btn-inner">
+                                            <svg class="normal-screen icon-24" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M18.5528 5.99656L13.8595 10.8961" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path d="M14.8016 5.97618L18.5524 5.99629L18.5176 9.96906"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path d="M5.8574 18.896L10.5507 13.9964" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path d="M9.60852 18.9164L5.85775 18.8963L5.89258 14.9235"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </svg>
+                                            <svg class="full-normal-screen icon-32 d-none" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.7542 10.1932L18.1867 5.79319" stroke="white"
+                                                    stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path d="M17.2976 10.212L13.7547 10.1934L13.7871 6.62518"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path d="M10.4224 13.5726L5.82149 18.1398" stroke="white"
+                                                    stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path d="M6.74391 13.5535L10.4209 13.5723L10.3867 17.2755"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </svg>
                                         </span>
                                     </a>
-
-                                    <!--begin::Menu-->
-                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-title-gray-700 menu-icon-gray-500 menu-active-bg menu-state-color fw-semibold py-4 fs-base w-150px"
-                                        data-kt-menu="true" data-kt-element="theme-mode-menu">
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3 my-0">
-                                            <a href="#" class="menu-link px-3 py-2" data-kt-element="mode"
-                                                data-kt-value="light">
-                                                <span class="menu-icon" data-kt-element="icon">
-                                                    <i class="ki-outline ki-night-day fs-2"></i> </span>
-                                                <span class="menu-title">
-                                                    Light
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!--end::Menu item-->
-
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3 my-0">
-                                            <a href="#" class="menu-link px-3 py-2" data-kt-element="mode"
-                                                data-kt-value="dark">
-                                                <span class="menu-icon" data-kt-element="icon">
-                                                    <i class="ki-outline ki-moon fs-2"></i> </span>
-                                                <span class="menu-title">
-                                                    Dark
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!--end::Menu item-->
-
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3 my-0">
-                                            <a href="#" class="menu-link px-3 py-2" data-kt-element="mode"
-                                                data-kt-value="system">
-                                                <span class="menu-icon" data-kt-element="icon">
-                                                    <i class="ki-outline ki-screen fs-2"></i> </span>
-                                                <span class="menu-title">
-                                                    System
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!--end::Menu item-->
-                                    </div>
-                                    <!--end::Menu-->
-
-                                </div>
-                                <!--end::Menu item-->
-
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                                    data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-                                    <a href="#" class="menu-link px-5">
-                                        <span class="menu-title position-relative">
-                                            Language
-
-                                            <span
-                                                class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">
-                                                English <img class="w-15px h-15px rounded-1 ms-2"
-                                                    src="../../../assets/media/flags/united-states.svg" alt="" />
-                                            </span>
-                                        </span>
-                                    </a>
-
-                                    <!--begin::Menu sub-->
-                                    <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="account/settings.html" class="menu-link d-flex px-5 active">
-                                                <span class="symbol symbol-20px me-4">
-                                                    <img class="rounded-1"
-                                                        src="../../../assets/media/flags/united-states.svg" alt="" />
-                                                </span>
-                                                English
-                                            </a>
-                                        </div>
-                                        <!--end::Menu item-->
-
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="account/settings.html" class="menu-link d-flex px-5">
-                                                <span class="symbol symbol-20px me-4">
-                                                    <img class="rounded-1" src="../../../assets/media/flags/spain.svg"
-                                                        alt="" />
-                                                </span>
-                                                Spanish
-                                            </a>
-                                        </div>
-                                        <!--end::Menu item-->
-
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="account/settings.html" class="menu-link d-flex px-5">
-                                                <span class="symbol symbol-20px me-4">
-                                                    <img class="rounded-1" src="../../../assets/media/flags/germany.svg"
-                                                        alt="" />
-                                                </span>
-                                                German
-                                            </a>
-                                        </div>
-                                        <!--end::Menu item-->
-
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="account/settings.html" class="menu-link d-flex px-5">
-                                                <span class="symbol symbol-20px me-4">
-                                                    <img class="rounded-1" src="../../../assets/media/flags/japan.svg"
-                                                        alt="" />
-                                                </span>
-                                                Japanese
-                                            </a>
-                                        </div>
-                                        <!--end::Menu item-->
-
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="account/settings.html" class="menu-link d-flex px-5">
-                                                <span class="symbol symbol-20px me-4">
-                                                    <img class="rounded-1" src="../../../assets/media/flags/france.svg"
-                                                        alt="" />
-                                                </span>
-                                                French
-                                            </a>
-                                        </div>
-                                        <!--end::Menu item-->
-                                    </div>
-                                    <!--end::Menu sub-->
-                                </div>
-                                <!--end::Menu item-->
-
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-5 my-1">
-                                    <a href="account/settings.html" class="menu-link px-5">
-                                        Account Settings
-                                    </a>
-                                </div>
-                                <!--end::Menu item-->
-
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-5">
-                                    <a href="authentication/layouts/corporate/sign-in.html" class="menu-link px-5">
-                                        Sign Out
-                                    </a>
-                                </div>
-                                <!--end::Menu item-->
-                            </div>
-                            <!--end::User account menu-->
-
-                            <!--end::Menu wrapper-->
-                        </div>
-                        <!--end::User menu-->
-                    </div>
-                    <!--end::Navbar-->
-                </div>
-                <!--end::Header wrapper-->
-            </div>
-            <!--end::Header container-->
-        </div>
-        <!--end::Header-->
-        <!--begin::Wrapper-->
-        <div class="app-wrapper  flex-column flex-row-fluid " id="kt_app_wrapper">
-
-
-            <!--begin::Toolbar-->
-            <div id="kt_app_toolbar" class="app-toolbar  py-6 ">
-
-                <!--begin::Toolbar container-->
-                <div id="kt_app_toolbar_container" class="app-container  container-xxl d-flex align-items-start ">
-                    <!--begin::Toolbar container-->
-                    <div class="d-flex flex-column flex-row-fluid">
-                        <!--begin::Toolbar wrapper-->
-                        <div class="d-flex align-items-center pt-1">
-
-                            <!--begin::Breadcrumb-->
-                            <ul class="breadcrumb breadcrumb-separatorless fw-semibold">
-
-                                <!--begin::Item-->
-                                <li class="breadcrumb-item text-white fw-bold lh-1">
-                                    <a href="index.html" class="text-white text-hover-primary">
-                                        <i class="ki-outline ki-home text-gray-700 fs-6"></i> </a>
                                 </li>
-                                <!--end::Item-->
-
-                                <!--begin::Item-->
-                                <li class="breadcrumb-item">
-                                    <i class="ki-outline ki-right fs-7 text-gray-700 mx-n1"></i>
+                                <li class="nav-item dropdown">
+                                    <a class="py-0 nav-link d-flex align-items-center ps-3" href="#"
+                                        id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <img src="../assets/images/avatars/01.png" alt="User-Profile"
+                                            class="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded"
+                                            loading="lazy">
+                                        <img src="../assets/images/avatars/avtar_1.png" alt="User-Profile"
+                                            class="theme-color-purple-img img-fluid avatar avatar-50 avatar-rounded"
+                                            loading="lazy">
+                                        <img src="../assets/images/avatars/avtar_2.png" alt="User-Profile"
+                                            class="theme-color-blue-img img-fluid avatar avatar-50 avatar-rounded"
+                                            loading="lazy">
+                                        <img src="../assets/images/avatars/avtar_3.png" alt="User-Profile"
+                                            class="theme-color-green-img img-fluid avatar avatar-50 avatar-rounded"
+                                            loading="lazy">
+                                        <img src="../assets/images/avatars/avtar_4.png" alt="User-Profile"
+                                            class="theme-color-yellow-img img-fluid avatar avatar-50 avatar-rounded"
+                                            loading="lazy">
+                                        <img src="../assets/images/avatars/avtar_5.png" alt="User-Profile"
+                                            class="theme-color-pink-img img-fluid avatar avatar-50 avatar-rounded"
+                                            loading="lazy">
+                                        <div class="caption ms-3 d-none d-md-block ">
+                                            <h6 class="mb-0 caption-title text-white">Austin Robertson</h6>
+                                            <p class="mb-0 caption-sub-title">Marketing Administrator</p>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item"
+                                                href="../dashboard/app/user-profile.html">Profile</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="../dashboard/app/user-privacy-setting.html">Privacy Setting</a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="../dashboard/auth/sign-in.html">Logout</a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <!--end::Item-->
-
-
-                                <!--begin::Item-->
-                                <li class="breadcrumb-item text-white fw-bold lh-1">
-                                    Dashboards </li>
-                                <!--end::Item-->
-
-
                             </ul>
-                            <!--end::Breadcrumb-->
-
                         </div>
-                        <!--end::Toolbar wrapper--->
-
-                        <!--begin::Toolbar wrapper--->
-                        <div class="d-flex flex-stack flex-wrap flex-lg-nowrap gap-4 gap-lg-10 pt-13 pb-6">
-
-                            <!--begin::Page title-->
-                            <div class="page-title me-5">
-                                <!--begin::Title-->
-                                <h1
-                                    class="page-heading d-flex text-white fw-bold fs-2 flex-column justify-content-center my-0">
-                                    Welcome back, Amanda
-                                    <!--begin::Description-->
-                                    <span class="page-desc text-gray-700 fw-semibold fs-6 pt-3">
-                                        Your are #1 seller across market’s Marketing Category </span>
-                                    <!--end::Description-->
-                                </h1>
-                                <!--end::Title-->
-                            </div>
-                            <!--end::Page title-->
-                            <!--begin::Stats-->
-                            <div class="d-flex align-self-center flex-center flex-shrink-0">
-                                <a href="#"
-                                    class="btn btn-flex btn-sm btn-outline btn-active-color-primary btn-custom px-4"
-                                    data-bs-toggle="modal" data-bs-target="#kt_modal_invite_friends">
-                                    <i class="ki-outline ki-plus-square fs-4 me-2"></i> Invite
-                                </a>
-
-                                <a href="#"
-                                    class="btn btn-sm btn-active-color-primary btn-outline btn-custom ms-3 px-4"
-                                    data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">
-                                    Set Your Target
-                                </a>
-                            </div>
-                            <!--end::Stats-->
-                        </div>
-                        <!--end::Toolbar wrapper--->
                     </div>
-                    <!--end::Toolbar container--->
                 </div>
-                <!--end::Toolbar container-->
             </div>
-            <!--end::Toolbar-->
-
-
-            <!--begin::Wrapper container-->
-            <div class="app-container  container-xxl ">
-
-
-
-                <!--begin::Main-->
-                <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
-                    <!--begin::Content wrapper-->
-                    <div class="d-flex flex-column flex-column-fluid">
-
-
-                        <!--begin::Content-->
-                        <div id="kt_app_content" class="app-content  flex-column-fluid ">
-
-                            <!--begin::Row-->
-                            <div class="row g-5 g-xl-8">
-                                <!--begin::Col-->
-                                <div class="col-xl-4">
-
-                                    <!--begin::Misc Widget 1-->
-                                    <div class="row mb-5 mb-xl-8 g-5 g-xl-8">
-
-                                        <!--begin::Col-->
-                                        <div class="col-6">
-                                            <!--begin::Card-->
-                                            <div class="card card-stretch">
-                                                <!--begin::Link-->
-                                                <a href="account/overview.html"
-                                                    class="btn btn-flex btn-text-gray-800 btn-icon-gray-400 btn-active-color-primary bg-body flex-column justfiy-content-start align-items-start text-start w-100 p-10">
-                                                    <i class="ki-outline ki-gift fs-2tx mb-5 ms-n1"></i>
-                                                    <span class="fs-4 fw-bold">
-                                                        User Profile </span>
-                                                </a>
-                                                <!--end::Link-->
-                                            </div>
-                                            <!--end::Card-->
-                                        </div>
-                                        <!--end::Col-->
-
-                                        <!--begin::Col-->
-                                        <div class="col-6">
-                                            <!--begin::Card-->
-                                            <div class="card card-stretch">
-                                                <!--begin::Link-->
-                                                <a href="account/statements.html"
-                                                    class="btn btn-flex btn-text-gray-800 btn-icon-gray-400 btn-active-color-primary bg-body flex-column justfiy-content-start align-items-start text-start w-100 p-10">
-                                                    <i class="ki-outline ki-technology-2 fs-2tx mb-5 ms-n1"></i>
-                                                    <span class="fs-4 fw-bold">
-                                                        Statements </span>
-                                                </a>
-                                                <!--end::Link-->
-                                            </div>
-                                            <!--end::Card-->
-                                        </div>
-                                        <!--end::Col-->
-
-                                        <!--begin::Col-->
-                                        <div class="col-6">
-                                            <!--begin::Card-->
-                                            <div class="card card-stretch">
-                                                <!--begin::Link-->
-                                                <a href="account/referrals.html"
-                                                    class="btn btn-flex btn-text-gray-800 btn-icon-gray-400 btn-active-color-primary bg-body flex-column justfiy-content-start align-items-start text-start w-100 p-10">
-                                                    <i
-                                                        class="ki-outline ki-fingerprint-scanning fs-2tx mb-5 ms-n1"></i>
-                                                    <span class="fs-4 fw-bold">
-                                                        Best Referrals </span>
-                                                </a>
-                                                <!--end::Link-->
-                                            </div>
-                                            <!--end::Card-->
-                                        </div>
-                                        <!--end::Col-->
-
-                                        <!--begin::Col-->
-                                        <div class="col-6">
-                                            <!--begin::Card-->
-                                            <div class="card card-stretch">
-                                                <!--begin::Link-->
-                                                <a href="apps/customers/view.html"
-                                                    class="btn btn-flex btn-text-gray-800 btn-icon-gray-400 btn-active-color-primary bg-body flex-column justfiy-content-start align-items-start text-start w-100 p-10">
-                                                    <i class="ki-outline ki-abstract-26 fs-2tx mb-5 ms-n1"></i>
-                                                    <span class="fs-4 fw-bold">
-                                                        Hot Picks </span>
-                                                </a>
-                                                <!--end::Link-->
-                                            </div>
-                                            <!--end::Card-->
-                                        </div>
-                                        <!--end::Col-->
-
-                                        <!--begin::Col-->
-                                        <div class="col-6">
-                                            <!--begin::Card-->
-                                            <div class="card card-stretch">
-                                                <!--begin::Link-->
-                                                <a href="apps/projects/project.html"
-                                                    class="btn btn-flex btn-text-gray-800 btn-icon-gray-400 btn-active-color-primary bg-body flex-column justfiy-content-start align-items-start text-start w-100 p-10">
-                                                    <i class="ki-outline ki-basket fs-2tx mb-5 ms-n1"></i>
-                                                    <span class="fs-4 fw-bold">
-                                                        Latest Trands </span>
-                                                </a>
-                                                <!--end::Link-->
-                                            </div>
-                                            <!--end::Card-->
-                                        </div>
-                                        <!--end::Col-->
-
-                                        <!--begin::Col-->
-                                        <div class="col-6">
-                                            <!--begin::Card-->
-                                            <div class="card card-stretch">
-                                                <!--begin::Link-->
-                                                <a href="apps/projects/users.html"
-                                                    class="btn btn-flex btn-text-gray-800 btn-icon-gray-400 btn-active-color-primary bg-body flex-column justfiy-content-start align-items-start text-start w-100 p-10">
-                                                    <i class="ki-outline ki-rocket fs-2tx mb-5 ms-n1"></i>
-                                                    <span class="fs-4 fw-bold">
-                                                        New Arrivals </span>
-                                                </a>
-                                                <!--end::Link-->
-                                            </div>
-                                            <!--end::Card-->
-                                        </div>
-                                        <!--end::Col-->
-                                    </div>
-                                    <!--end::Misc Widget 1-->
-                                    <!--begin::List Widget 5-->
-                                    <div class="card mb-5 mb-xl-8">
-                                        <!--begin::Header-->
-                                        <div class="card-header align-items-center border-0 mt-4">
-                                            <h3 class="card-title align-items-start flex-column">
-                                                <span class="fw-bold mb-2 text-dark">Activities</span>
-                                                <span class="text-muted fw-semibold fs-7">890,344 Sales</span>
-                                            </h3>
-
-                                            <div class="card-toolbar">
-                                                <!--begin::Menu-->
-                                                <button type="button"
-                                                    class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-                                                    data-kt-menu-trigger="click"
-                                                    data-kt-menu-placement="bottom-end">
-                                                    <i class="ki-outline ki-category fs-6"></i> </button>
-
-
-                                                <!--begin::Menu 1-->
-                                                <div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px"
-                                                    data-kt-menu="true" id="kt_menu_64d8a07202622">
-                                                    <!--begin::Header-->
-                                                    <div class="px-7 py-5">
-                                                        <div class="fs-5 text-dark fw-bold">Filter Options</div>
-                                                    </div>
-                                                    <!--end::Header-->
-
-                                                    <!--begin::Menu separator-->
-                                                    <div class="separator border-gray-200"></div>
-                                                    <!--end::Menu separator-->
-
-
-                                                    <!--begin::Form-->
-                                                    <div class="px-7 py-5">
-                                                        <!--begin::Input group-->
-                                                        <div class="mb-10">
-                                                            <!--begin::Label-->
-                                                            <label class="form-label fw-semibold">Status:</label>
-                                                            <!--end::Label-->
-
-                                                            <!--begin::Input-->
-                                                            <div>
-                                                                <select class="form-select form-select-solid" multiple
-                                                                    data-kt-select2="true"
-                                                                    data-close-on-select="false"
-                                                                    data-placeholder="Select option"
-                                                                    data-dropdown-parent="#kt_menu_64d8a07202622"
-                                                                    data-allow-clear="true">
-                                                                    <option></option>
-                                                                    <option value="1">Approved</option>
-                                                                    <option value="2">Pending</option>
-                                                                    <option value="2">In Process</option>
-                                                                    <option value="2">Rejected</option>
-                                                                </select>
-                                                            </div>
-                                                            <!--end::Input-->
-                                                        </div>
-                                                        <!--end::Input group-->
-
-                                                        <!--begin::Input group-->
-                                                        <div class="mb-10">
-                                                            <!--begin::Label-->
-                                                            <label class="form-label fw-semibold">Member Type:</label>
-                                                            <!--end::Label-->
-
-                                                            <!--begin::Options-->
-                                                            <div class="d-flex">
-                                                                <!--begin::Options-->
-                                                                <label
-                                                                    class="form-check form-check-sm form-check-custom form-check-solid me-5">
-                                                                    <input class="form-check-input" type="checkbox"
-                                                                        value="1" />
-                                                                    <span class="form-check-label">
-                                                                        Author
-                                                                    </span>
-                                                                </label>
-                                                                <!--end::Options-->
-
-                                                                <!--begin::Options-->
-                                                                <label
-                                                                    class="form-check form-check-sm form-check-custom form-check-solid">
-                                                                    <input class="form-check-input" type="checkbox"
-                                                                        value="2" checked="checked" />
-                                                                    <span class="form-check-label">
-                                                                        Customer
-                                                                    </span>
-                                                                </label>
-                                                                <!--end::Options-->
-                                                            </div>
-                                                            <!--end::Options-->
-                                                        </div>
-                                                        <!--end::Input group-->
-
-                                                        <!--begin::Input group-->
-                                                        <div class="mb-10">
-                                                            <!--begin::Label-->
-                                                            <label
-                                                                class="form-label fw-semibold">Notifications:</label>
-                                                            <!--end::Label-->
-
-                                                            <!--begin::Switch-->
-                                                            <div
-                                                                class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    value="" name="notifications" checked />
-                                                                <label class="form-check-label">
-                                                                    Enabled
-                                                                </label>
-                                                            </div>
-                                                            <!--end::Switch-->
-                                                        </div>
-                                                        <!--end::Input group-->
-
-                                                        <!--begin::Actions-->
-                                                        <div class="d-flex justify-content-end">
-                                                            <button type="reset"
-                                                                class="btn btn-sm btn-light btn-active-light-primary me-2"
-                                                                data-kt-menu-dismiss="true">Reset</button>
-
-                                                            <button type="submit" class="btn btn-sm btn-primary"
-                                                                data-kt-menu-dismiss="true">Apply</button>
-                                                        </div>
-                                                        <!--end::Actions-->
-                                                    </div>
-                                                    <!--end::Form-->
-                                                </div>
-                                                <!--end::Menu 1--> <!--end::Menu-->
-                                            </div>
-                                        </div>
-                                        <!--end::Header-->
-
-                                        <!--begin::Body-->
-                                        <div class="card-body pt-5">
-                                            <!--begin::Timeline-->
-                                            <div class="timeline-label">
-                                                <!--begin::Item-->
-                                                <div class="timeline-item">
-                                                    <!--begin::Label-->
-                                                    <div class="timeline-label fw-bold text-gray-800 fs-6">08:42</div>
-                                                    <!--end::Label-->
-
-                                                    <!--begin::Badge-->
-                                                    <div class="timeline-badge">
-                                                        <i class="fa fa-genderless text-warning fs-1"></i>
-                                                    </div>
-                                                    <!--end::Badge-->
-
-                                                    <!--begin::Text-->
-                                                    <div class="fw-mormal timeline-content text-muted ps-3">
-                                                        Outlines keep you honest. And keep structure
-                                                    </div>
-                                                    <!--end::Text-->
-                                                </div>
-                                                <!--end::Item-->
-
-                                                <!--begin::Item-->
-                                                <div class="timeline-item">
-                                                    <!--begin::Label-->
-                                                    <div class="timeline-label fw-bold text-gray-800 fs-6">10:00</div>
-                                                    <!--end::Label-->
-
-                                                    <!--begin::Badge-->
-                                                    <div class="timeline-badge">
-                                                        <i class="fa fa-genderless text-success fs-1"></i>
-                                                    </div>
-                                                    <!--end::Badge-->
-
-                                                    <!--begin::Content-->
-                                                    <div class="timeline-content d-flex">
-                                                        <span class="fw-bold text-gray-800 ps-3">AEOL meeting</span>
-                                                    </div>
-                                                    <!--end::Content-->
-                                                </div>
-                                                <!--end::Item-->
-
-                                                <!--begin::Item-->
-                                                <div class="timeline-item">
-                                                    <!--begin::Label-->
-                                                    <div class="timeline-label fw-bold text-gray-800 fs-6">14:37</div>
-                                                    <!--end::Label-->
-
-                                                    <!--begin::Badge-->
-                                                    <div class="timeline-badge">
-                                                        <i class="fa fa-genderless text-danger fs-1"></i>
-                                                    </div>
-                                                    <!--end::Badge-->
-
-                                                    <!--begin::Desc-->
-                                                    <div class="timeline-content fw-bold text-gray-800 ps-3">
-                                                        Make deposit
-                                                        <a href="#" class="text-primary">USD 700</a>.
-                                                        to ESL
-                                                    </div>
-                                                    <!--end::Desc-->
-                                                </div>
-                                                <!--end::Item-->
-
-                                                <!--begin::Item-->
-                                                <div class="timeline-item">
-                                                    <!--begin::Label-->
-                                                    <div class="timeline-label fw-bold text-gray-800 fs-6">16:50</div>
-                                                    <!--end::Label-->
-
-                                                    <!--begin::Badge-->
-                                                    <div class="timeline-badge">
-                                                        <i class="fa fa-genderless text-primary fs-1"></i>
-                                                    </div>
-                                                    <!--end::Badge-->
-
-                                                    <!--begin::Text-->
-                                                    <div class="timeline-content fw-mormal text-muted ps-3">
-                                                        Indulging in poorly driving and keep structure keep great
-                                                    </div>
-                                                    <!--end::Text-->
-                                                </div>
-                                                <!--end::Item-->
-
-                                                <!--begin::Item-->
-                                                <div class="timeline-item">
-                                                    <!--begin::Label-->
-                                                    <div class="timeline-label fw-bold text-gray-800 fs-6">21:03</div>
-                                                    <!--end::Label-->
-
-                                                    <!--begin::Badge-->
-                                                    <div class="timeline-badge">
-                                                        <i class="fa fa-genderless text-danger fs-1"></i>
-                                                    </div>
-                                                    <!--end::Badge-->
-
-                                                    <!--begin::Desc-->
-                                                    <div class="timeline-content fw-semibold text-gray-800 ps-3">
-                                                        New order placed <a href="#"
-                                                            class="text-primary">#XF-2356</a>.
-                                                    </div>
-                                                    <!--end::Desc-->
-                                                </div>
-                                                <!--end::Item-->
-
-                                                <!--begin::Item-->
-                                                <div class="timeline-item">
-                                                    <!--begin::Label-->
-                                                    <div class="timeline-label fw-bold text-gray-800 fs-6">16:50</div>
-                                                    <!--end::Label-->
-
-                                                    <!--begin::Badge-->
-                                                    <div class="timeline-badge">
-                                                        <i class="fa fa-genderless text-primary fs-1"></i>
-                                                    </div>
-                                                    <!--end::Badge-->
-
-                                                    <!--begin::Text-->
-                                                    <div class="timeline-content fw-mormal text-muted ps-3">
-                                                        Indulging in poorly driving and keep structure keep great
-                                                    </div>
-                                                    <!--end::Text-->
-                                                </div>
-                                                <!--end::Item-->
-
-                                                <!--begin::Item-->
-                                                <div class="timeline-item">
-                                                    <!--begin::Label-->
-                                                    <div class="timeline-label fw-bold text-gray-800 fs-6">21:03</div>
-                                                    <!--end::Label-->
-
-                                                    <!--begin::Badge-->
-                                                    <div class="timeline-badge">
-                                                        <i class="fa fa-genderless text-danger fs-1"></i>
-                                                    </div>
-                                                    <!--end::Badge-->
-
-                                                    <!--begin::Desc-->
-                                                    <div class="timeline-content fw-semibold text-gray-800 ps-3">
-                                                        New order placed <a href="#"
-                                                            class="text-primary">#XF-2356</a>.
-                                                    </div>
-                                                    <!--end::Desc-->
-                                                </div>
-                                                <!--end::Item-->
-
-                                                <!--begin::Item-->
-                                                <div class="timeline-item">
-                                                    <!--begin::Label-->
-                                                    <div class="timeline-label fw-bold text-gray-800 fs-6">10:30</div>
-                                                    <!--end::Label-->
-
-                                                    <!--begin::Badge-->
-                                                    <div class="timeline-badge">
-                                                        <i class="fa fa-genderless text-success fs-1"></i>
-                                                    </div>
-                                                    <!--end::Badge-->
-
-                                                    <!--begin::Text-->
-                                                    <div class="timeline-content fw-mormal text-muted ps-3">
-                                                        Finance KPI Mobile app launch preparion meeting
-                                                    </div>
-                                                    <!--end::Text-->
-                                                </div>
-                                                <!--end::Item-->
-                                            </div>
-                                            <!--end::Timeline-->
-                                        </div>
-                                        <!--end: Card Body-->
-                                    </div>
-                                    <!--end: List Widget 5-->
-
-
-                                    <!--begin::List widget 7-->
-                                    <div class="card card-flush mb-xl-8">
-                                        <!--begin::Header-->
-                                        <div class="card-header py-7">
-                                            <!--begin::Statistics-->
-                                            <div class="m-0">
-                                                <!--begin::Heading-->
-                                                <div class="d-flex align-items-center mb-2">
-                                                    <!--begin::Title-->
-                                                    <span
-                                                        class="fs-2hx fw-bold text-gray-800 me-2 lh-1 ls-n2">0.37%</span>
-                                                    <!--end::Title-->
-
-                                                    <!--begin::Badge-->
-                                                    <span class="badge badge-light-danger fs-base">
-                                                        <i class="ki-outline ki-arrow-up fs-5 text-danger ms-n1"></i>
-                                                        8.02%
-                                                    </span>
-                                                    <!--end::Badge-->
-                                                </div>
-                                                <!--end::Heading-->
-
-                                                <!--begin::Description-->
-                                                <span class="fs-6 fw-semibold text-gray-400">Online store convertion
-                                                    rate</span>
-                                                <!--end::Description-->
-                                            </div>
-                                            <!--end::Statistics-->
-
-                                            <!--begin::Toolbar-->
-                                            <div class="card-toolbar">
-                                                <!--begin::Menu-->
-                                                <button
-                                                    class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
-                                                    data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end"
-                                                    data-kt-menu-overflow="true">
-                                                    <i class="ki-outline ki-dots-square fs-1 text-gray-400 me-n1"></i>
-                                                </button>
-
-
-                                                <!--begin::Menu 2-->
-                                                <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
-                                                    data-kt-menu="true">
-                                                    <!--begin::Menu item-->
-                                                    <div class="menu-item px-3">
-                                                        <div class="menu-content fs-6 text-dark fw-bold px-3 py-4">
-                                                            Quick Actions</div>
-                                                    </div>
-                                                    <!--end::Menu item-->
-
-                                                    <!--begin::Menu separator-->
-                                                    <div class="separator mb-3 opacity-75"></div>
-                                                    <!--end::Menu separator-->
-
-                                                    <!--begin::Menu item-->
-                                                    <div class="menu-item px-3">
-                                                        <a href="#" class="menu-link px-3">
-                                                            New Ticket
-                                                        </a>
-                                                    </div>
-                                                    <!--end::Menu item-->
-
-                                                    <!--begin::Menu item-->
-                                                    <div class="menu-item px-3">
-                                                        <a href="#" class="menu-link px-3">
-                                                            New Customer
-                                                        </a>
-                                                    </div>
-                                                    <!--end::Menu item-->
-
-                                                    <!--begin::Menu item-->
-                                                    <div class="menu-item px-3" data-kt-menu-trigger="hover"
-                                                        data-kt-menu-placement="right-start">
-                                                        <!--begin::Menu item-->
-                                                        <a href="#" class="menu-link px-3">
-                                                            <span class="menu-title">New Group</span>
-                                                            <span class="menu-arrow"></span>
-                                                        </a>
-                                                        <!--end::Menu item-->
-
-                                                        <!--begin::Menu sub-->
-                                                        <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                                            <!--begin::Menu item-->
-                                                            <div class="menu-item px-3">
-                                                                <a href="#" class="menu-link px-3">
-                                                                    Admin Group
-                                                                </a>
-                                                            </div>
-                                                            <!--end::Menu item-->
-
-                                                            <!--begin::Menu item-->
-                                                            <div class="menu-item px-3">
-                                                                <a href="#" class="menu-link px-3">
-                                                                    Staff Group
-                                                                </a>
-                                                            </div>
-                                                            <!--end::Menu item-->
-
-                                                            <!--begin::Menu item-->
-                                                            <div class="menu-item px-3">
-                                                                <a href="#" class="menu-link px-3">
-                                                                    Member Group
-                                                                </a>
-                                                            </div>
-                                                            <!--end::Menu item-->
-                                                        </div>
-                                                        <!--end::Menu sub-->
-                                                    </div>
-                                                    <!--end::Menu item-->
-
-                                                    <!--begin::Menu item-->
-                                                    <div class="menu-item px-3">
-                                                        <a href="#" class="menu-link px-3">
-                                                            New Contact
-                                                        </a>
-                                                    </div>
-                                                    <!--end::Menu item-->
-
-                                                    <!--begin::Menu separator-->
-                                                    <div class="separator mt-3 opacity-75"></div>
-                                                    <!--end::Menu separator-->
-
-                                                    <!--begin::Menu item-->
-                                                    <div class="menu-item px-3">
-                                                        <div class="menu-content px-3 py-3">
-                                                            <a class="btn btn-primary  btn-sm px-4" href="#">
-                                                                Generate Reports
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <!--end::Menu item-->
-                                                </div>
-                                                <!--end::Menu 2-->
-
-                                                <!--end::Menu-->
-                                            </div>
-                                            <!--end::Toolbar-->
-                                        </div>
-                                        <!--end::Header-->
-
-                                        <!--begin::Body-->
-                                        <div class="card-body pt-0">
-                                            <!--begin::Items-->
-                                            <div class="mb-0">
-                                                <!--begin::Item-->
-                                                <div class="d-flex flex-stack">
-                                                    <!--begin::Section-->
-                                                    <div class="d-flex align-items-center me-5">
-                                                        <!--begin::Symbol-->
-                                                        <div class="symbol symbol-30px me-5">
-                                                            <span class="symbol-label">
-                                                                <i
-                                                                    class="ki-outline ki-magnifier fs-3 text-gray-600"></i>
-                                                            </span>
-                                                        </div>
-                                                        <!--end::Symbol-->
-
-                                                        <!--begin::Content-->
-                                                        <div class="me-5">
-                                                            <!--begin::Title-->
-                                                            <a href="#"
-                                                                class="text-gray-800 fw-bold text-hover-primary fs-6">Search
-                                                                Retargeting</a>
-                                                            <!--end::Title-->
-
-                                                            <!--begin::Desc-->
-                                                            <span
-                                                                class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Direct
-                                                                link clicks</span>
-                                                            <!--end::Desc-->
-                                                        </div>
-                                                        <!--end::Content-->
-                                                    </div>
-                                                    <!--end::Section-->
-
-                                                    <!--begin::Wrapper-->
-                                                    <div class="d-flex align-items-center">
-                                                        <!--begin::Number-->
-                                                        <span class="text-gray-800 fw-bold fs-6 me-3">0.24%</span>
-                                                        <!--end::Number-->
-
-                                                        <!--begin::Info-->
-                                                        <div class="d-flex flex-center">
-                                                            <!--begin::label-->
-                                                            <span class="badge badge-light-success fs-base">
-                                                                <i
-                                                                    class="ki-outline ki-arrow-up fs-5 text-success ms-n1"></i>
-                                                                2.4%
-                                                            </span>
-                                                            <!--end::label-->
-
-                                                        </div>
-                                                        <!--end::Info-->
-                                                    </div>
-                                                    <!--end::Wrapper-->
-                                                </div>
-                                                <!--end::Item-->
-
-                                                <!--begin::Separator-->
-                                                <div class="separator separator-dashed my-3"></div>
-                                                <!--end::Separator-->
-                                                <!--begin::Item-->
-                                                <div class="d-flex flex-stack">
-                                                    <!--begin::Section-->
-                                                    <div class="d-flex align-items-center me-5">
-                                                        <!--begin::Symbol-->
-                                                        <div class="symbol symbol-30px me-5">
-                                                            <span class="symbol-label">
-                                                                <i
-                                                                    class="ki-outline ki-tiktok fs-3 text-gray-600"></i>
-                                                            </span>
-                                                        </div>
-                                                        <!--end::Symbol-->
-
-                                                        <!--begin::Content-->
-                                                        <div class="me-5">
-                                                            <!--begin::Title-->
-                                                            <a href="#"
-                                                                class="text-gray-800 fw-bold text-hover-primary fs-6">Social
-                                                                Retargeting</a>
-                                                            <!--end::Title-->
-
-                                                            <!--begin::Desc-->
-                                                            <span
-                                                                class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Direct
-                                                                link clicks</span>
-                                                            <!--end::Desc-->
-                                                        </div>
-                                                        <!--end::Content-->
-                                                    </div>
-                                                    <!--end::Section-->
-
-                                                    <!--begin::Wrapper-->
-                                                    <div class="d-flex align-items-center">
-                                                        <!--begin::Number-->
-                                                        <span class="text-gray-800 fw-bold fs-6 me-3">0.94%</span>
-                                                        <!--end::Number-->
-
-                                                        <!--begin::Info-->
-                                                        <div class="d-flex flex-center">
-                                                            <!--begin::label-->
-                                                            <span class="badge badge-light-danger fs-base">
-                                                                <i
-                                                                    class="ki-outline ki-arrow-down fs-5 text-danger ms-n1"></i>
-                                                                9.4%
-                                                            </span>
-                                                            <!--end::label-->
-
-                                                        </div>
-                                                        <!--end::Info-->
-                                                    </div>
-                                                    <!--end::Wrapper-->
-                                                </div>
-                                                <!--end::Item-->
-
-                                                <!--begin::Separator-->
-                                                <div class="separator separator-dashed my-3"></div>
-                                                <!--end::Separator-->
-                                                <!--begin::Item-->
-                                                <div class="d-flex flex-stack">
-                                                    <!--begin::Section-->
-                                                    <div class="d-flex align-items-center me-5">
-                                                        <!--begin::Symbol-->
-                                                        <div class="symbol symbol-30px me-5">
-                                                            <span class="symbol-label">
-                                                                <i class="ki-outline ki-sms fs-3 text-gray-600"></i>
-                                                            </span>
-                                                        </div>
-                                                        <!--end::Symbol-->
-
-                                                        <!--begin::Content-->
-                                                        <div class="me-5">
-                                                            <!--begin::Title-->
-                                                            <a href="#"
-                                                                class="text-gray-800 fw-bold text-hover-primary fs-6">Email
-                                                                Retargeting</a>
-                                                            <!--end::Title-->
-
-                                                            <!--begin::Desc-->
-                                                            <span
-                                                                class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Direct
-                                                                link clicks</span>
-                                                            <!--end::Desc-->
-                                                        </div>
-                                                        <!--end::Content-->
-                                                    </div>
-                                                    <!--end::Section-->
-
-                                                    <!--begin::Wrapper-->
-                                                    <div class="d-flex align-items-center">
-                                                        <!--begin::Number-->
-                                                        <span class="text-gray-800 fw-bold fs-6 me-3">1.23%</span>
-                                                        <!--end::Number-->
-
-                                                        <!--begin::Info-->
-                                                        <div class="d-flex flex-center">
-                                                            <!--begin::label-->
-                                                            <span class="badge badge-light-success fs-base">
-                                                                <i
-                                                                    class="ki-outline ki-arrow-up fs-5 text-success ms-n1"></i>
-                                                                0.2%
-                                                            </span>
-                                                            <!--end::label-->
-
-                                                        </div>
-                                                        <!--end::Info-->
-                                                    </div>
-                                                    <!--end::Wrapper-->
-                                                </div>
-                                                <!--end::Item-->
-
-                                                <!--begin::Separator-->
-                                                <div class="separator separator-dashed my-3"></div>
-                                                <!--end::Separator-->
-                                                <!--begin::Item-->
-                                                <div class="d-flex flex-stack">
-                                                    <!--begin::Section-->
-                                                    <div class="d-flex align-items-center me-5">
-                                                        <!--begin::Symbol-->
-                                                        <div class="symbol symbol-30px me-5">
-                                                            <span class="symbol-label">
-                                                                <i class="ki-outline ki-icon fs-3 text-gray-600"></i>
-                                                            </span>
-                                                        </div>
-                                                        <!--end::Symbol-->
-
-                                                        <!--begin::Content-->
-                                                        <div class="me-5">
-                                                            <!--begin::Title-->
-                                                            <a href="#"
-                                                                class="text-gray-800 fw-bold text-hover-primary fs-6">Referrals
-                                                                Customers</a>
-                                                            <!--end::Title-->
-
-                                                            <!--begin::Desc-->
-                                                            <span
-                                                                class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Direct
-                                                                link clicks</span>
-                                                            <!--end::Desc-->
-                                                        </div>
-                                                        <!--end::Content-->
-                                                    </div>
-                                                    <!--end::Section-->
-
-                                                    <!--begin::Wrapper-->
-                                                    <div class="d-flex align-items-center">
-                                                        <!--begin::Number-->
-                                                        <span class="text-gray-800 fw-bold fs-6 me-3">0.08%</span>
-                                                        <!--end::Number-->
-
-                                                        <!--begin::Info-->
-                                                        <div class="d-flex flex-center">
-                                                            <!--begin::label-->
-                                                            <span class="badge badge-light-danger fs-base">
-                                                                <i
-                                                                    class="ki-outline ki-arrow-down fs-5 text-danger ms-n1"></i>
-                                                                0.4%
-                                                            </span>
-                                                            <!--end::label-->
-
-                                                        </div>
-                                                        <!--end::Info-->
-                                                    </div>
-                                                    <!--end::Wrapper-->
-                                                </div>
-                                                <!--end::Item-->
-
-                                                <!--begin::Separator-->
-                                                <div class="separator separator-dashed my-3"></div>
-                                                <!--end::Separator-->
-                                                <!--begin::Item-->
-                                                <div class="d-flex flex-stack">
-                                                    <!--begin::Section-->
-                                                    <div class="d-flex align-items-center me-5">
-                                                        <!--begin::Symbol-->
-                                                        <div class="symbol symbol-30px me-5">
-                                                            <span class="symbol-label">
-                                                                <i
-                                                                    class="ki-outline ki-abstract-25 fs-3 text-gray-600"></i>
-                                                            </span>
-                                                        </div>
-                                                        <!--end::Symbol-->
-
-                                                        <!--begin::Content-->
-                                                        <div class="me-5">
-                                                            <!--begin::Title-->
-                                                            <a href="#"
-                                                                class="text-gray-800 fw-bold text-hover-primary fs-6">Other</a>
-                                                            <!--end::Title-->
-
-                                                            <!--begin::Desc-->
-                                                            <span
-                                                                class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Direct
-                                                                link clicks</span>
-                                                            <!--end::Desc-->
-                                                        </div>
-                                                        <!--end::Content-->
-                                                    </div>
-                                                    <!--end::Section-->
-
-                                                    <!--begin::Wrapper-->
-                                                    <div class="d-flex align-items-center">
-                                                        <!--begin::Number-->
-                                                        <span class="text-gray-800 fw-bold fs-6 me-3">0.46%</span>
-                                                        <!--end::Number-->
-
-                                                        <!--begin::Info-->
-                                                        <div class="d-flex flex-center">
-                                                            <!--begin::label-->
-                                                            <span class="badge badge-light-success fs-base">
-                                                                <i
-                                                                    class="ki-outline ki-arrow-up fs-5 text-success ms-n1"></i>
-                                                                8.3%
-                                                            </span>
-                                                            <!--end::label-->
-
-                                                        </div>
-                                                        <!--end::Info-->
-                                                    </div>
-                                                    <!--end::Wrapper-->
-                                                </div>
-                                                <!--end::Item-->
-
-
-                                            </div>
-                                            <!--end::Items-->
-
-                                        </div>
-                                        <!--end::Body-->
-                                    </div>
-                                    <!--end::List widget 7-->
-                                </div>
-                                <!--end::Col-->
-
-                                <!--begin::Col-->
-                                <div class="col-xl-8 ps-xl-12">
-                                    <!--begin::Engage widget 1-->
-                                    <div class="card bgi-position-y-bottom bgi-position-x-end bgi-no-repeat bgi-size-cover min-h-250px bg-body mb-5 mb-xl-8"
-                                        style="background-position: 100% 50px;background-size: 500px auto;background-image:url('../assets/media/misc/city.png')"
-                                        dir="ltr">
-                                        <!--begin::Body-->
-                                        <div class="card-body d-flex flex-column justify-content-center ps-lg-12">
-                                            <!--begin::Title-->
-                                            <h3 class="text-dark fs-2qx fw-bold mb-7">
-                                                We are working <br />
-                                                to boost lovely mood
-                                            </h3>
-                                            <!--end::Title-->
-
-                                            <!--begin::Action-->
-                                            <div class="m-0">
-                                                <a href='#' class="btn btn-dark fw-semibold px-6 py-3"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#kt_modal_create_app">Create a Store</a>
-                                            </div>
-                                            <!--begin::Action-->
-                                        </div>
-                                        <!--end::Body-->
-                                    </div>
-                                    <!--end::Engage widget 1-->
-                                    <!--begin::Row-->
-                                    <div class="row g-5 g-xl-8 mb-5 mb-xl-8">
-                                        <!--begin::Col-->
-                                        <div class="col-xl-6">
-
-                                            <!--begin::Chart widget 45-->
-                                            <div class="card card-flush h-xl-100 mb-xl-8">
-                                                <!--begin::Header-->
-                                                <div class="card-header pt-5">
-                                                    <!--begin::Title-->
-                                                    <h3 class="card-title fw-bold text-dark">Trends</h3>
-                                                    <!--end::Title-->
-
-                                                    <!--begin::Toolbar-->
-                                                    <div class="card-toolbar">
-                                                        <!--begin::Menu-->
-                                                        <button type="button"
-                                                            class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-                                                            data-kt-menu-trigger="click"
-                                                            data-kt-menu-placement="bottom-end">
-                                                            <i class="ki-outline ki-element-plus fs-2"></i> </button>
-
-                                                        <!--begin::Menu 3-->
-                                                        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px py-3"
-                                                            data-kt-menu="true">
-                                                            <!--begin::Heading-->
-                                                            <div class="menu-item px-3">
-                                                                <div
-                                                                    class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">
-                                                                    Payments
-                                                                </div>
-                                                            </div>
-                                                            <!--end::Heading-->
-
-                                                            <!--begin::Menu item-->
-                                                            <div class="menu-item px-3">
-                                                                <a href="#" class="menu-link px-3">
-                                                                    Create Invoice
-                                                                </a>
-                                                            </div>
-                                                            <!--end::Menu item-->
-
-                                                            <!--begin::Menu item-->
-                                                            <div class="menu-item px-3">
-                                                                <a href="#" class="menu-link flex-stack px-3">
-                                                                    Create Payment
-
-                                                                    <span class="ms-2" data-bs-toggle="tooltip"
-                                                                        title="Specify a target name for future usage and reference">
-                                                                        <i class="ki-outline ki-information fs-6"></i>
-                                                                    </span>
-                                                                </a>
-                                                            </div>
-                                                            <!--end::Menu item-->
-
-                                                            <!--begin::Menu item-->
-                                                            <div class="menu-item px-3">
-                                                                <a href="#" class="menu-link px-3">
-                                                                    Generate Bill
-                                                                </a>
-                                                            </div>
-                                                            <!--end::Menu item-->
-
-                                                            <!--begin::Menu item-->
-                                                            <div class="menu-item px-3" data-kt-menu-trigger="hover"
-                                                                data-kt-menu-placement="right-end">
-                                                                <a href="#" class="menu-link px-3">
-                                                                    <span class="menu-title">Subscription</span>
-                                                                    <span class="menu-arrow"></span>
-                                                                </a>
-
-                                                                <!--begin::Menu sub-->
-                                                                <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                                                    <!--begin::Menu item-->
-                                                                    <div class="menu-item px-3">
-                                                                        <a href="#" class="menu-link px-3">
-                                                                            Plans
-                                                                        </a>
-                                                                    </div>
-                                                                    <!--end::Menu item-->
-
-                                                                    <!--begin::Menu item-->
-                                                                    <div class="menu-item px-3">
-                                                                        <a href="#" class="menu-link px-3">
-                                                                            Billing
-                                                                        </a>
-                                                                    </div>
-                                                                    <!--end::Menu item-->
-
-                                                                    <!--begin::Menu item-->
-                                                                    <div class="menu-item px-3">
-                                                                        <a href="#" class="menu-link px-3">
-                                                                            Statements
-                                                                        </a>
-                                                                    </div>
-                                                                    <!--end::Menu item-->
-
-                                                                    <!--begin::Menu separator-->
-                                                                    <div class="separator my-2"></div>
-                                                                    <!--end::Menu separator-->
-
-                                                                    <!--begin::Menu item-->
-                                                                    <div class="menu-item px-3">
-                                                                        <div class="menu-content px-3">
-                                                                            <!--begin::Switch-->
-                                                                            <label
-                                                                                class="form-check form-switch form-check-custom form-check-solid">
-                                                                                <!--begin::Input-->
-                                                                                <input
-                                                                                    class="form-check-input w-30px h-20px"
-                                                                                    type="checkbox" value="1"
-                                                                                    checked="checked"
-                                                                                    name="notifications" />
-                                                                                <!--end::Input-->
-
-                                                                                <!--end::Label-->
-                                                                                <span
-                                                                                    class="form-check-label text-muted fs-6">
-                                                                                    Recuring
-                                                                                </span>
-                                                                                <!--end::Label-->
-                                                                            </label>
-                                                                            <!--end::Switch-->
-                                                                        </div>
-                                                                    </div>
-                                                                    <!--end::Menu item-->
-                                                                </div>
-                                                                <!--end::Menu sub-->
-                                                            </div>
-                                                            <!--end::Menu item-->
-
-                                                            <!--begin::Menu item-->
-                                                            <div class="menu-item px-3 my-1">
-                                                                <a href="#" class="menu-link px-3">
-                                                                    Settings
-                                                                </a>
-                                                            </div>
-                                                            <!--end::Menu item-->
-                                                        </div>
-                                                        <!--end::Menu 3-->
-                                                        <!--end::Menu-->
-                                                    </div>
-                                                    <!--end::Toolbar-->
-                                                </div>
-                                                <!--end::Header-->
-
-                                                <!--begin::Body-->
-                                                <div
-                                                    class="card-body d-flex justify-content-between flex-column pt-0">
-                                                    <!--begin::Chart-->
-                                                    <div class="m-0" id="kt_charts_widget_45"
-                                                        data-kt-chart-color="dark" style="height: 90px"></div>
-                                                    <!--end::Chart-->
-
-                                                    <!--begin::Items-->
-                                                    <div class="m-0">
-                                                        <!--begin::Item-->
-                                                        <div class="d-flex flex-stack mb-9">
-                                                            <!--begin::Section-->
-                                                            <div class="d-flex align-items-center me-2">
-                                                                <!--begin::Symbol-->
-                                                                <div class="symbol symbol-50px me-5">
-                                                                    <div class="symbol-label bg-light">
-                                                                        <img src="../../../assets/media/svg/brand-logos/plurk.svg"
-                                                                            alt="" class="h-50"
-                                                                            alt="" />
-                                                                    </div>
-                                                                </div>
-                                                                <!--end::Symbol-->
-
-                                                                <!--begin::Title-->
-                                                                <div>
-                                                                    <a href="#"
-                                                                        class="fs-6 text-gray-800 text-hover-primary fw-bold">Top
-                                                                        Authors</a>
-                                                                    <div class="fs-7 text-muted fw-semibold mt-1">
-                                                                        Successful Fellas</div>
-                                                                </div>
-                                                                <!--end::Title-->
-                                                            </div>
-                                                            <!--end::Section-->
-
-                                                            <!--begin::Label-->
-                                                            <div
-                                                                class="badge badge-light badge-lg fw-bold p-2 text-gray-600">
-                                                                +82$</div>
-                                                            <!--end::Label-->
-                                                        </div>
-                                                        <!--end::Item-->
-                                                        <!--begin::Item-->
-                                                        <div class="d-flex flex-stack mb-9">
-                                                            <!--begin::Section-->
-                                                            <div class="d-flex align-items-center me-2">
-                                                                <!--begin::Symbol-->
-                                                                <div class="symbol symbol-50px me-5">
-                                                                    <div class="symbol-label bg-light">
-                                                                        <img src="../../../assets/media/svg/brand-logos/telegram-2.svg"
-                                                                            alt="" class="h-50"
-                                                                            alt="" />
-                                                                    </div>
-                                                                </div>
-                                                                <!--end::Symbol-->
-
-                                                                <!--begin::Title-->
-                                                                <div>
-                                                                    <a href="#"
-                                                                        class="fs-6 text-gray-800 text-hover-primary fw-bold">Binford
-                                                                        Ltd.</a>
-                                                                    <div class="fs-7 text-muted fw-semibold mt-1">Most
-                                                                        Successful </div>
-                                                                </div>
-                                                                <!--end::Title-->
-                                                            </div>
-                                                            <!--end::Section-->
-
-                                                            <!--begin::Label-->
-                                                            <div
-                                                                class="badge badge-light badge-lg fw-bold p-2 text-gray-600">
-                                                                +280$</div>
-                                                            <!--end::Label-->
-                                                        </div>
-                                                        <!--end::Item-->
-                                                        <!--begin::Item-->
-                                                        <div class="d-flex flex-stack ">
-                                                            <!--begin::Section-->
-                                                            <div class="d-flex align-items-center me-2">
-                                                                <!--begin::Symbol-->
-                                                                <div class="symbol symbol-50px me-5">
-                                                                    <div class="symbol-label bg-light">
-                                                                        <img src="../../../assets/media/svg/brand-logos/vimeo.svg"
-                                                                            alt="" class="h-50"
-                                                                            alt="" />
-                                                                    </div>
-                                                                </div>
-                                                                <!--end::Symbol-->
-
-                                                                <!--begin::Title-->
-                                                                <div>
-                                                                    <a href="#"
-                                                                        class="fs-6 text-gray-800 text-hover-primary fw-bold">Biffco
-                                                                        Enterprises</a>
-                                                                    <div class="fs-7 text-muted fw-semibold mt-1">Most
-                                                                        Successful Fellas</div>
-                                                                </div>
-                                                                <!--end::Title-->
-                                                            </div>
-                                                            <!--end::Section-->
-
-                                                            <!--begin::Label-->
-                                                            <div
-                                                                class="badge badge-light badge-lg fw-bold p-2 text-gray-600">
-                                                                +4500$</div>
-                                                            <!--end::Label-->
-                                                        </div>
-                                                        <!--end::Item-->
-
-                                                    </div>
-                                                    <!--end::Items-->
-                                                </div>
-                                                <!--end::Body-->
-                                            </div>
-                                            <!--end::Chart widget 45-->
-
-
-
-                                        </div>
-                                        <!--end::Col-->
-
-                                        <!--begin::Col-->
-                                        <div class="col-xl-6">
-
-                                            <!--begin::List widget 7-->
-                                            <div class="card card-flush h-xl-100 mb-xl-8">
-                                                <!--begin::Header-->
-                                                <div class="card-header py-7">
-                                                    <!--begin::Statistics-->
-                                                    <div class="m-0">
-                                                        <!--begin::Heading-->
-                                                        <div class="d-flex align-items-center mb-2">
-                                                            <!--begin::Title-->
-                                                            <span
-                                                                class="fs-2hx fw-bold text-gray-800 me-2 lh-1 ls-n2">0.37%</span>
-                                                            <!--end::Title-->
-
-                                                            <!--begin::Badge-->
-                                                            <span class="badge badge-light-danger fs-base">
-                                                                <i
-                                                                    class="ki-outline ki-arrow-up fs-5 text-danger ms-n1"></i>
-                                                                8.02%
-                                                            </span>
-                                                            <!--end::Badge-->
-                                                        </div>
-                                                        <!--end::Heading-->
-
-                                                        <!--begin::Description-->
-                                                        <span class="fs-6 fw-semibold text-gray-400">Online store
-                                                            convertion rate</span>
-                                                        <!--end::Description-->
-                                                    </div>
-                                                    <!--end::Statistics-->
-
-                                                    <!--begin::Toolbar-->
-                                                    <div class="card-toolbar">
-                                                        <!--begin::Menu-->
-                                                        <button
-                                                            class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
-                                                            data-kt-menu-trigger="click"
-                                                            data-kt-menu-placement="bottom-end"
-                                                            data-kt-menu-overflow="true">
-                                                            <i
-                                                                class="ki-outline ki-dots-square fs-1 text-gray-400 me-n1"></i>
-                                                        </button>
-
-
-                                                        <!--begin::Menu 2-->
-                                                        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
-                                                            data-kt-menu="true">
-                                                            <!--begin::Menu item-->
-                                                            <div class="menu-item px-3">
-                                                                <div
-                                                                    class="menu-content fs-6 text-dark fw-bold px-3 py-4">
-                                                                    Quick Actions</div>
-                                                            </div>
-                                                            <!--end::Menu item-->
-
-                                                            <!--begin::Menu separator-->
-                                                            <div class="separator mb-3 opacity-75"></div>
-                                                            <!--end::Menu separator-->
-
-                                                            <!--begin::Menu item-->
-                                                            <div class="menu-item px-3">
-                                                                <a href="#" class="menu-link px-3">
-                                                                    New Ticket
-                                                                </a>
-                                                            </div>
-                                                            <!--end::Menu item-->
-
-                                                            <!--begin::Menu item-->
-                                                            <div class="menu-item px-3">
-                                                                <a href="#" class="menu-link px-3">
-                                                                    New Customer
-                                                                </a>
-                                                            </div>
-                                                            <!--end::Menu item-->
-
-                                                            <!--begin::Menu item-->
-                                                            <div class="menu-item px-3" data-kt-menu-trigger="hover"
-                                                                data-kt-menu-placement="right-start">
-                                                                <!--begin::Menu item-->
-                                                                <a href="#" class="menu-link px-3">
-                                                                    <span class="menu-title">New Group</span>
-                                                                    <span class="menu-arrow"></span>
-                                                                </a>
-                                                                <!--end::Menu item-->
-
-                                                                <!--begin::Menu sub-->
-                                                                <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                                                    <!--begin::Menu item-->
-                                                                    <div class="menu-item px-3">
-                                                                        <a href="#" class="menu-link px-3">
-                                                                            Admin Group
-                                                                        </a>
-                                                                    </div>
-                                                                    <!--end::Menu item-->
-
-                                                                    <!--begin::Menu item-->
-                                                                    <div class="menu-item px-3">
-                                                                        <a href="#" class="menu-link px-3">
-                                                                            Staff Group
-                                                                        </a>
-                                                                    </div>
-                                                                    <!--end::Menu item-->
-
-                                                                    <!--begin::Menu item-->
-                                                                    <div class="menu-item px-3">
-                                                                        <a href="#" class="menu-link px-3">
-                                                                            Member Group
-                                                                        </a>
-                                                                    </div>
-                                                                    <!--end::Menu item-->
-                                                                </div>
-                                                                <!--end::Menu sub-->
-                                                            </div>
-                                                            <!--end::Menu item-->
-
-                                                            <!--begin::Menu item-->
-                                                            <div class="menu-item px-3">
-                                                                <a href="#" class="menu-link px-3">
-                                                                    New Contact
-                                                                </a>
-                                                            </div>
-                                                            <!--end::Menu item-->
-
-                                                            <!--begin::Menu separator-->
-                                                            <div class="separator mt-3 opacity-75"></div>
-                                                            <!--end::Menu separator-->
-
-                                                            <!--begin::Menu item-->
-                                                            <div class="menu-item px-3">
-                                                                <div class="menu-content px-3 py-3">
-                                                                    <a class="btn btn-primary  btn-sm px-4"
-                                                                        href="#">
-                                                                        Generate Reports
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <!--end::Menu item-->
-                                                        </div>
-                                                        <!--end::Menu 2-->
-
-                                                        <!--end::Menu-->
-                                                    </div>
-                                                    <!--end::Toolbar-->
-                                                </div>
-                                                <!--end::Header-->
-
-                                                <!--begin::Body-->
-                                                <div class="card-body pt-0">
-                                                    <!--begin::Items-->
-                                                    <div class="mb-0">
-                                                        <!--begin::Item-->
-                                                        <div class="d-flex flex-stack">
-                                                            <!--begin::Section-->
-                                                            <div class="d-flex align-items-center me-5">
-                                                                <!--begin::Symbol-->
-                                                                <div class="symbol symbol-30px me-5">
-                                                                    <span class="symbol-label">
-                                                                        <i
-                                                                            class="ki-outline ki-magnifier fs-3 text-gray-600"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <!--end::Symbol-->
-
-                                                                <!--begin::Content-->
-                                                                <div class="me-5">
-                                                                    <!--begin::Title-->
-                                                                    <a href="#"
-                                                                        class="text-gray-800 fw-bold text-hover-primary fs-6">Search
-                                                                        Retargeting</a>
-                                                                    <!--end::Title-->
-
-                                                                    <!--begin::Desc-->
-                                                                    <span
-                                                                        class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Direct
-                                                                        link clicks</span>
-                                                                    <!--end::Desc-->
-                                                                </div>
-                                                                <!--end::Content-->
-                                                            </div>
-                                                            <!--end::Section-->
-
-                                                            <!--begin::Wrapper-->
-                                                            <div class="d-flex align-items-center">
-                                                                <!--begin::Number-->
-                                                                <span
-                                                                    class="text-gray-800 fw-bold fs-6 me-3">0.24%</span>
-                                                                <!--end::Number-->
-
-                                                                <!--begin::Info-->
-                                                                <div class="d-flex flex-center">
-                                                                    <!--begin::label-->
-                                                                    <span class="badge badge-light-success fs-base">
-                                                                        <i
-                                                                            class="ki-outline ki-arrow-up fs-5 text-success ms-n1"></i>
-                                                                        2.4%
-                                                                    </span>
-                                                                    <!--end::label-->
-
-                                                                </div>
-                                                                <!--end::Info-->
-                                                            </div>
-                                                            <!--end::Wrapper-->
-                                                        </div>
-                                                        <!--end::Item-->
-
-                                                        <!--begin::Separator-->
-                                                        <div class="separator separator-dashed my-3"></div>
-                                                        <!--end::Separator-->
-                                                        <!--begin::Item-->
-                                                        <div class="d-flex flex-stack">
-                                                            <!--begin::Section-->
-                                                            <div class="d-flex align-items-center me-5">
-                                                                <!--begin::Symbol-->
-                                                                <div class="symbol symbol-30px me-5">
-                                                                    <span class="symbol-label">
-                                                                        <i
-                                                                            class="ki-outline ki-tiktok fs-3 text-gray-600"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <!--end::Symbol-->
-
-                                                                <!--begin::Content-->
-                                                                <div class="me-5">
-                                                                    <!--begin::Title-->
-                                                                    <a href="#"
-                                                                        class="text-gray-800 fw-bold text-hover-primary fs-6">Social
-                                                                        Retargeting</a>
-                                                                    <!--end::Title-->
-
-                                                                    <!--begin::Desc-->
-                                                                    <span
-                                                                        class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Direct
-                                                                        link clicks</span>
-                                                                    <!--end::Desc-->
-                                                                </div>
-                                                                <!--end::Content-->
-                                                            </div>
-                                                            <!--end::Section-->
-
-                                                            <!--begin::Wrapper-->
-                                                            <div class="d-flex align-items-center">
-                                                                <!--begin::Number-->
-                                                                <span
-                                                                    class="text-gray-800 fw-bold fs-6 me-3">0.94%</span>
-                                                                <!--end::Number-->
-
-                                                                <!--begin::Info-->
-                                                                <div class="d-flex flex-center">
-                                                                    <!--begin::label-->
-                                                                    <span class="badge badge-light-danger fs-base">
-                                                                        <i
-                                                                            class="ki-outline ki-arrow-down fs-5 text-danger ms-n1"></i>
-                                                                        9.4%
-                                                                    </span>
-                                                                    <!--end::label-->
-
-                                                                </div>
-                                                                <!--end::Info-->
-                                                            </div>
-                                                            <!--end::Wrapper-->
-                                                        </div>
-                                                        <!--end::Item-->
-
-                                                        <!--begin::Separator-->
-                                                        <div class="separator separator-dashed my-3"></div>
-                                                        <!--end::Separator-->
-                                                        <!--begin::Item-->
-                                                        <div class="d-flex flex-stack">
-                                                            <!--begin::Section-->
-                                                            <div class="d-flex align-items-center me-5">
-                                                                <!--begin::Symbol-->
-                                                                <div class="symbol symbol-30px me-5">
-                                                                    <span class="symbol-label">
-                                                                        <i
-                                                                            class="ki-outline ki-sms fs-3 text-gray-600"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <!--end::Symbol-->
-
-                                                                <!--begin::Content-->
-                                                                <div class="me-5">
-                                                                    <!--begin::Title-->
-                                                                    <a href="#"
-                                                                        class="text-gray-800 fw-bold text-hover-primary fs-6">Email
-                                                                        Retargeting</a>
-                                                                    <!--end::Title-->
-
-                                                                    <!--begin::Desc-->
-                                                                    <span
-                                                                        class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Direct
-                                                                        link clicks</span>
-                                                                    <!--end::Desc-->
-                                                                </div>
-                                                                <!--end::Content-->
-                                                            </div>
-                                                            <!--end::Section-->
-
-                                                            <!--begin::Wrapper-->
-                                                            <div class="d-flex align-items-center">
-                                                                <!--begin::Number-->
-                                                                <span
-                                                                    class="text-gray-800 fw-bold fs-6 me-3">1.23%</span>
-                                                                <!--end::Number-->
-
-                                                                <!--begin::Info-->
-                                                                <div class="d-flex flex-center">
-                                                                    <!--begin::label-->
-                                                                    <span class="badge badge-light-success fs-base">
-                                                                        <i
-                                                                            class="ki-outline ki-arrow-up fs-5 text-success ms-n1"></i>
-                                                                        0.2%
-                                                                    </span>
-                                                                    <!--end::label-->
-
-                                                                </div>
-                                                                <!--end::Info-->
-                                                            </div>
-                                                            <!--end::Wrapper-->
-                                                        </div>
-                                                        <!--end::Item-->
-
-                                                        <!--begin::Separator-->
-                                                        <div class="separator separator-dashed my-3"></div>
-                                                        <!--end::Separator-->
-                                                        <!--begin::Item-->
-                                                        <div class="d-flex flex-stack">
-                                                            <!--begin::Section-->
-                                                            <div class="d-flex align-items-center me-5">
-                                                                <!--begin::Symbol-->
-                                                                <div class="symbol symbol-30px me-5">
-                                                                    <span class="symbol-label">
-                                                                        <i
-                                                                            class="ki-outline ki-icon fs-3 text-gray-600"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <!--end::Symbol-->
-
-                                                                <!--begin::Content-->
-                                                                <div class="me-5">
-                                                                    <!--begin::Title-->
-                                                                    <a href="#"
-                                                                        class="text-gray-800 fw-bold text-hover-primary fs-6">Referrals
-                                                                        Customers</a>
-                                                                    <!--end::Title-->
-
-                                                                    <!--begin::Desc-->
-                                                                    <span
-                                                                        class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Direct
-                                                                        link clicks</span>
-                                                                    <!--end::Desc-->
-                                                                </div>
-                                                                <!--end::Content-->
-                                                            </div>
-                                                            <!--end::Section-->
-
-                                                            <!--begin::Wrapper-->
-                                                            <div class="d-flex align-items-center">
-                                                                <!--begin::Number-->
-                                                                <span
-                                                                    class="text-gray-800 fw-bold fs-6 me-3">0.08%</span>
-                                                                <!--end::Number-->
-
-                                                                <!--begin::Info-->
-                                                                <div class="d-flex flex-center">
-                                                                    <!--begin::label-->
-                                                                    <span class="badge badge-light-danger fs-base">
-                                                                        <i
-                                                                            class="ki-outline ki-arrow-down fs-5 text-danger ms-n1"></i>
-                                                                        0.4%
-                                                                    </span>
-                                                                    <!--end::label-->
-
-                                                                </div>
-                                                                <!--end::Info-->
-                                                            </div>
-                                                            <!--end::Wrapper-->
-                                                        </div>
-                                                        <!--end::Item-->
-
-                                                        <!--begin::Separator-->
-                                                        <div class="separator separator-dashed my-3"></div>
-                                                        <!--end::Separator-->
-                                                        <!--begin::Item-->
-                                                        <div class="d-flex flex-stack">
-                                                            <!--begin::Section-->
-                                                            <div class="d-flex align-items-center me-5">
-                                                                <!--begin::Symbol-->
-                                                                <div class="symbol symbol-30px me-5">
-                                                                    <span class="symbol-label">
-                                                                        <i
-                                                                            class="ki-outline ki-abstract-25 fs-3 text-gray-600"></i>
-                                                                    </span>
-                                                                </div>
-                                                                <!--end::Symbol-->
-
-                                                                <!--begin::Content-->
-                                                                <div class="me-5">
-                                                                    <!--begin::Title-->
-                                                                    <a href="#"
-                                                                        class="text-gray-800 fw-bold text-hover-primary fs-6">Other</a>
-                                                                    <!--end::Title-->
-
-                                                                    <!--begin::Desc-->
-                                                                    <span
-                                                                        class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Direct
-                                                                        link clicks</span>
-                                                                    <!--end::Desc-->
-                                                                </div>
-                                                                <!--end::Content-->
-                                                            </div>
-                                                            <!--end::Section-->
-
-                                                            <!--begin::Wrapper-->
-                                                            <div class="d-flex align-items-center">
-                                                                <!--begin::Number-->
-                                                                <span
-                                                                    class="text-gray-800 fw-bold fs-6 me-3">0.46%</span>
-                                                                <!--end::Number-->
-
-                                                                <!--begin::Info-->
-                                                                <div class="d-flex flex-center">
-                                                                    <!--begin::label-->
-                                                                    <span class="badge badge-light-success fs-base">
-                                                                        <i
-                                                                            class="ki-outline ki-arrow-up fs-5 text-success ms-n1"></i>
-                                                                        8.3%
-                                                                    </span>
-                                                                    <!--end::label-->
-
-                                                                </div>
-                                                                <!--end::Info-->
-                                                            </div>
-                                                            <!--end::Wrapper-->
-                                                        </div>
-                                                        <!--end::Item-->
-
-
-                                                    </div>
-                                                    <!--end::Items-->
-
-                                                </div>
-                                                <!--end::Body-->
-                                            </div>
-                                            <!--end::List widget 7-->
-                                        </div>
-                                        <!--end::Col-->
-                                    </div>
-                                    <!--end::Row-->
-
-
-                                    <!--begin::Tables Widget 5-->
-                                    <div class="card mb-5 mb-xl-8">
-                                        <!--begin::Header-->
-                                        <div class="card-header border-0 pt-5">
-                                            <h3 class="card-title align-items-start flex-column">
-                                                <span class="card-label fw-bold fs-3 mb-1">Latest Products</span>
-
-                                                <span class="text-muted mt-1 fw-semibold fs-7">More than 400 new
-                                                    products</span>
-                                            </h3>
-                                            <div class="card-toolbar">
-                                                <ul class="nav">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-secondary fw-bold px-4 me-1 active"
-                                                            data-bs-toggle="tab"
-                                                            href="#kt_table_widget_5_tab_1">Month</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-secondary fw-bold px-4 me-1"
-                                                            data-bs-toggle="tab"
-                                                            href="#kt_table_widget_5_tab_2">Week</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-secondary fw-bold px-4"
-                                                            data-bs-toggle="tab"
-                                                            href="#kt_table_widget_5_tab_3">Day</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!--end::Header-->
-
-                                        <!--begin::Body-->
-                                        <div class="card-body py-3">
-                                            <div class="tab-content">
-
-                                                <!--begin::Tap pane-->
-                                                <div class="tab-pane fade show active" id="kt_table_widget_5_tab_1">
-                                                    <!--begin::Table container-->
-                                                    <div class="table-responsive">
-                                                        <!--begin::Table-->
-                                                        <table
-                                                            class="table table-row-dashed table-row-gray-200 align-middle gs-0 gy-4">
-                                                            <!--begin::Table head-->
-                                                            <thead>
-                                                                <tr class="border-0">
-                                                                    <th class="p-0 w-50px"></th>
-                                                                    <th class="p-0 min-w-150px"></th>
-                                                                    <th class="p-0 min-w-140px"></th>
-                                                                    <th class="p-0 min-w-110px"></th>
-                                                                    <th class="p-0 min-w-50px"></th>
-                                                                </tr>
-                                                            </thead>
-                                                            <!--end::Table head-->
-
-                                                            <!--begin::Table body-->
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="symbol symbol-45px me-2">
-                                                                            <span class="symbol-label">
-                                                                                <img src="../../../assets/media/svg/brand-logos/plurk.svg"
-                                                                                    class="h-50 align-self-center"
-                                                                                    alt="" />
-                                                                            </span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <a href="#"
-                                                                            class="text-dark fw-bold text-hover-primary mb-1 fs-6">Brad
-                                                                            Simmons</a>
-                                                                        <span
-                                                                            class="text-muted fw-semibold d-block">Movie
-                                                                            Creator</span>
-                                                                    </td>
-                                                                    <td class="text-end text-muted fw-bold">
-                                                                        React, HTML </td>
-                                                                    <td class="text-end">
-                                                                        <span
-                                                                            class="badge badge-light-success">Approved</span>
-                                                                    </td>
-                                                                    <td class="text-end">
-                                                                        <a href="#"
-                                                                            class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                                            <i
-                                                                                class="ki-outline ki-arrow-right fs-2"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="symbol symbol-45px me-2">
-                                                                            <span class="symbol-label">
-                                                                                <img src="../../../assets/media/svg/brand-logos/telegram.svg"
-                                                                                    class="h-50 align-self-center"
-                                                                                    alt="" />
-                                                                            </span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <a href="#"
-                                                                            class="text-dark fw-bold text-hover-primary mb-1 fs-6">Popular
-                                                                            Authors</a>
-                                                                        <span
-                                                                            class="text-muted fw-semibold d-block">Most
-                                                                            Successful</span>
-                                                                    </td>
-                                                                    <td class="text-end text-muted fw-bold">
-                                                                        Python, MySQL </td>
-                                                                    <td class="text-end">
-                                                                        <span class="badge badge-light-warning">In
-                                                                            Progress</span>
-                                                                    </td>
-                                                                    <td class="text-end">
-                                                                        <a href="#"
-                                                                            class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                                            <i
-                                                                                class="ki-outline ki-arrow-right fs-2"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="symbol symbol-45px me-2">
-                                                                            <span class="symbol-label">
-                                                                                <img src="../../../assets/media/svg/brand-logos/vimeo.svg"
-                                                                                    class="h-50 align-self-center"
-                                                                                    alt="" />
-                                                                            </span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <a href="#"
-                                                                            class="text-dark fw-bold text-hover-primary mb-1 fs-6">New
-                                                                            Users</a>
-                                                                        <span
-                                                                            class="text-muted fw-semibold d-block">Awesome
-                                                                            Users</span>
-                                                                    </td>
-                                                                    <td class="text-end text-muted fw-bold">
-                                                                        Laravel,Metronic </td>
-                                                                    <td class="text-end">
-                                                                        <span
-                                                                            class="badge badge-light-primary">Success</span>
-                                                                    </td>
-                                                                    <td class="text-end">
-                                                                        <a href="#"
-                                                                            class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                                            <i
-                                                                                class="ki-outline ki-arrow-right fs-2"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="symbol symbol-45px me-2">
-                                                                            <span class="symbol-label">
-                                                                                <img src="../../../assets/media/svg/brand-logos/bebo.svg"
-                                                                                    class="h-50 align-self-center"
-                                                                                    alt="" />
-                                                                            </span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <a href="#"
-                                                                            class="text-dark fw-bold text-hover-primary mb-1 fs-6">Active
-                                                                            Customers</a>
-                                                                        <span
-                                                                            class="text-muted fw-semibold d-block">Movie
-                                                                            Creator</span>
-                                                                    </td>
-                                                                    <td class="text-end text-muted fw-bold">
-                                                                        AngularJS, C# </td>
-                                                                    <td class="text-end">
-                                                                        <span
-                                                                            class="badge badge-light-danger">Rejected</span>
-                                                                    </td>
-                                                                    <td class="text-end">
-                                                                        <a href="#"
-                                                                            class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                                            <i
-                                                                                class="ki-outline ki-arrow-right fs-2"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="symbol symbol-45px me-2">
-                                                                            <span class="symbol-label">
-                                                                                <img src="../../../assets/media/svg/brand-logos/kickstarter.svg"
-                                                                                    class="h-50 align-self-center"
-                                                                                    alt="" />
-                                                                            </span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <a href="#"
-                                                                            class="text-dark fw-bold text-hover-primary mb-1 fs-6">Bestseller
-                                                                            Theme</a>
-                                                                        <span
-                                                                            class="text-muted fw-semibold d-block">Best
-                                                                            Customers</span>
-                                                                    </td>
-                                                                    <td class="text-end text-muted fw-bold">
-                                                                        ReactJS, Ruby </td>
-                                                                    <td class="text-end">
-                                                                        <span class="badge badge-light-warning">In
-                                                                            Progress</span>
-                                                                    </td>
-                                                                    <td class="text-end">
-                                                                        <a href="#"
-                                                                            class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                                            <i
-                                                                                class="ki-outline ki-arrow-right fs-2"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                            <!--end::Table body-->
-                                                        </table>
-                                                    </div>
-                                                    <!--end::Table-->
-                                                </div>
-                                                <!--end::Tap pane-->
-
-                                                <!--begin::Tap pane-->
-                                                <div class="tab-pane fade " id="kt_table_widget_5_tab_2">
-                                                    <!--begin::Table container-->
-                                                    <div class="table-responsive">
-                                                        <!--begin::Table-->
-                                                        <table
-                                                            class="table table-row-dashed table-row-gray-200 align-middle gs-0 gy-4">
-                                                            <!--begin::Table head-->
-                                                            <thead>
-                                                                <tr class="border-0">
-                                                                    <th class="p-0 w-50px"></th>
-                                                                    <th class="p-0 min-w-150px"></th>
-                                                                    <th class="p-0 min-w-140px"></th>
-                                                                    <th class="p-0 min-w-110px"></th>
-                                                                    <th class="p-0 min-w-50px"></th>
-                                                                </tr>
-                                                            </thead>
-                                                            <!--end::Table head-->
-
-                                                            <!--begin::Table body-->
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="symbol symbol-45px me-2">
-                                                                            <span class="symbol-label">
-                                                                                <img src="../../../assets/media/svg/brand-logos/plurk.svg"
-                                                                                    class="h-50 align-self-center"
-                                                                                    alt="" />
-                                                                            </span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <a href="#"
-                                                                            class="text-dark fw-bold text-hover-primary mb-1 fs-6">Brad
-                                                                            Simmons</a>
-                                                                        <span
-                                                                            class="text-muted fw-semibold d-block">Movie
-                                                                            Creator</span>
-                                                                    </td>
-                                                                    <td class="text-end text-muted fw-bold">
-                                                                        React, HTML </td>
-                                                                    <td class="text-end">
-                                                                        <span
-                                                                            class="badge badge-light-success">Approved</span>
-                                                                    </td>
-                                                                    <td class="text-end">
-                                                                        <a href="#"
-                                                                            class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                                            <i
-                                                                                class="ki-outline ki-arrow-right fs-2"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="symbol symbol-45px me-2">
-                                                                            <span class="symbol-label">
-                                                                                <img src="../../../assets/media/svg/brand-logos/telegram.svg"
-                                                                                    class="h-50 align-self-center"
-                                                                                    alt="" />
-                                                                            </span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <a href="#"
-                                                                            class="text-dark fw-bold text-hover-primary mb-1 fs-6">Popular
-                                                                            Authors</a>
-                                                                        <span
-                                                                            class="text-muted fw-semibold d-block">Most
-                                                                            Successful</span>
-                                                                    </td>
-                                                                    <td class="text-end text-muted fw-bold">
-                                                                        Python, MySQL </td>
-                                                                    <td class="text-end">
-                                                                        <span class="badge badge-light-warning">In
-                                                                            Progress</span>
-                                                                    </td>
-                                                                    <td class="text-end">
-                                                                        <a href="#"
-                                                                            class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                                            <i
-                                                                                class="ki-outline ki-arrow-right fs-2"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="symbol symbol-45px me-2">
-                                                                            <span class="symbol-label">
-                                                                                <img src="../../../assets/media/svg/brand-logos/bebo.svg"
-                                                                                    class="h-50 align-self-center"
-                                                                                    alt="" />
-                                                                            </span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <a href="#"
-                                                                            class="text-dark fw-bold text-hover-primary mb-1 fs-6">Active
-                                                                            Customers</a>
-                                                                        <span
-                                                                            class="text-muted fw-semibold d-block">Movie
-                                                                            Creator</span>
-                                                                    </td>
-                                                                    <td class="text-end text-muted fw-bold">
-                                                                        AngularJS, C# </td>
-                                                                    <td class="text-end">
-                                                                        <span
-                                                                            class="badge badge-light-danger">Rejected</span>
-                                                                    </td>
-                                                                    <td class="text-end">
-                                                                        <a href="#"
-                                                                            class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                                            <i
-                                                                                class="ki-outline ki-arrow-right fs-2"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                            <!--end::Table body-->
-                                                        </table>
-                                                    </div>
-                                                    <!--end::Table-->
-                                                </div>
-                                                <!--end::Tap pane-->
-
-                                                <!--begin::Tap pane-->
-                                                <div class="tab-pane fade " id="kt_table_widget_5_tab_3">
-                                                    <!--begin::Table container-->
-                                                    <div class="table-responsive">
-                                                        <!--begin::Table-->
-                                                        <table
-                                                            class="table table-row-dashed table-row-gray-200 align-middle gs-0 gy-4">
-                                                            <!--begin::Table head-->
-                                                            <thead>
-                                                                <tr class="border-0">
-                                                                    <th class="p-0 w-50px"></th>
-                                                                    <th class="p-0 min-w-150px"></th>
-                                                                    <th class="p-0 min-w-140px"></th>
-                                                                    <th class="p-0 min-w-110px"></th>
-                                                                    <th class="p-0 min-w-50px"></th>
-                                                                </tr>
-                                                            </thead>
-                                                            <!--end::Table head-->
-
-                                                            <!--begin::Table body-->
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="symbol symbol-45px me-2">
-                                                                            <span class="symbol-label">
-                                                                                <img src="../../../assets/media/svg/brand-logos/kickstarter.svg"
-                                                                                    class="h-50 align-self-center"
-                                                                                    alt="" />
-                                                                            </span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <a href="#"
-                                                                            class="text-dark fw-bold text-hover-primary mb-1 fs-6">Bestseller
-                                                                            Theme</a>
-                                                                        <span
-                                                                            class="text-muted fw-semibold d-block">Best
-                                                                            Customers</span>
-                                                                    </td>
-                                                                    <td class="text-end text-muted fw-bold">
-                                                                        ReactJS, Ruby </td>
-                                                                    <td class="text-end">
-                                                                        <span class="badge badge-light-warning">In
-                                                                            Progress</span>
-                                                                    </td>
-                                                                    <td class="text-end">
-                                                                        <a href="#"
-                                                                            class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                                            <i
-                                                                                class="ki-outline ki-arrow-right fs-2"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="symbol symbol-45px me-2">
-                                                                            <span class="symbol-label">
-                                                                                <img src="../../../assets/media/svg/brand-logos/bebo.svg"
-                                                                                    class="h-50 align-self-center"
-                                                                                    alt="" />
-                                                                            </span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <a href="#"
-                                                                            class="text-dark fw-bold text-hover-primary mb-1 fs-6">Active
-                                                                            Customers</a>
-                                                                        <span
-                                                                            class="text-muted fw-semibold d-block">Movie
-                                                                            Creator</span>
-                                                                    </td>
-                                                                    <td class="text-end text-muted fw-bold">
-                                                                        AngularJS, C# </td>
-                                                                    <td class="text-end">
-                                                                        <span
-                                                                            class="badge badge-light-danger">Rejected</span>
-                                                                    </td>
-                                                                    <td class="text-end">
-                                                                        <a href="#"
-                                                                            class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                                            <i
-                                                                                class="ki-outline ki-arrow-right fs-2"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="symbol symbol-45px me-2">
-                                                                            <span class="symbol-label">
-                                                                                <img src="../../../assets/media/svg/brand-logos/vimeo.svg"
-                                                                                    class="h-50 align-self-center"
-                                                                                    alt="" />
-                                                                            </span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <a href="#"
-                                                                            class="text-dark fw-bold text-hover-primary mb-1 fs-6">New
-                                                                            Users</a>
-                                                                        <span
-                                                                            class="text-muted fw-semibold d-block">Awesome
-                                                                            Users</span>
-                                                                    </td>
-                                                                    <td class="text-end text-muted fw-bold">
-                                                                        Laravel,Metronic </td>
-                                                                    <td class="text-end">
-                                                                        <span
-                                                                            class="badge badge-light-primary">Success</span>
-                                                                    </td>
-                                                                    <td class="text-end">
-                                                                        <a href="#"
-                                                                            class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                                            <i
-                                                                                class="ki-outline ki-arrow-right fs-2"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="symbol symbol-45px me-2">
-                                                                            <span class="symbol-label">
-                                                                                <img src="../../../assets/media/svg/brand-logos/telegram.svg"
-                                                                                    class="h-50 align-self-center"
-                                                                                    alt="" />
-                                                                            </span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <a href="#"
-                                                                            class="text-dark fw-bold text-hover-primary mb-1 fs-6">Popular
-                                                                            Authors</a>
-                                                                        <span
-                                                                            class="text-muted fw-semibold d-block">Most
-                                                                            Successful</span>
-                                                                    </td>
-                                                                    <td class="text-end text-muted fw-bold">
-                                                                        Python, MySQL </td>
-                                                                    <td class="text-end">
-                                                                        <span class="badge badge-light-warning">In
-                                                                            Progress</span>
-                                                                    </td>
-                                                                    <td class="text-end">
-                                                                        <a href="#"
-                                                                            class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
-                                                                            <i
-                                                                                class="ki-outline ki-arrow-right fs-2"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                            <!--end::Table body-->
-                                                        </table>
-                                                    </div>
-                                                    <!--end::Table-->
-                                                </div>
-                                                <!--end::Tap pane-->
-                                            </div>
-                                        </div>
-                                        <!--end::Body-->
-                                    </div>
-                                    <!--end::Tables Widget 5-->
-
-                                </div>
-                                <!--end::Col-->
-                            </div>
-                            <!--end::Row-->
-                        </div>
-                        <!--end::Content-->
+        </nav>
+        <div class="nav-scroller bg-body shadow-sm">
+            <div class="container-fluid">
+                <nav class="nav nav-underline" aria-label="Secondary navigation">
+                    <ul class="iq-nav-menu list-unstyled flex-row">
+                        <li class="nav-item active"><a class="nav-link "
+                                href="../dashboard/index-dual-compact.html">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link "
+                                href="../dashboard/analytics-dashboard.html">Analytics</a></li>
+                        <li class="nav-item"><a class="nav-link "
+                                href="../dashboard/ecommerce-dashboard.html">E-Commerce</a></li>
+                        <li class="nav-item"><a class="nav-link "
+                                href="../dashboard/crypto-dashboard.html">Crypto</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div> <!--Nav End-->
+        <div class="container-fluid content-inner pb-0" id="page_layout">
+            <div class="d-flex justify-content-between align-items-center flex-wrap mb-5 gap-3">
+                <div class="d-flex flex-column">
+                    <h3>Quick Insights</h3>
+                    <p class="mb-0">Financial Dashboard</p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center rounded flex-wrap gap-3">
+                    <div class="form-group mb-0">
+                        <select class="select2-basic-single js-states form-control" name="state"
+                            style="width: 100%;">
+                            <option>Past 30 Days</option>
+                            <option>Past 60 Days</option>
+                            <option>Past 90 Days</option>
+                            <option>Past 1 year</option>
+                            <option>Past 2 year</option>
+                        </select>
                     </div>
-                    <!--end::Content wrapper-->
-
-
-
-
-                    @include('components.dashboard.foote')
+                    <div class="form-group mb-0">
+                        <input type="text" name="start"
+                            class="form-control range_flatpicker flatpickr-input active"
+                            placeholder="24 Jan 2022 to 23 Feb 2022" readonly="readonly">
+                    </div>
+                    <button type="button" class="btn btn-primary">Analytics</button>
                 </div>
-                <!--end:::Main-->
-
-
             </div>
-            <!--end::Wrapper container-->
+            <div class="row">
+                <div class="col-lg-8 col-xl-8">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card card-block card-stretch card-height">
+                                <div class="flex-wrap card-header d-flex justify-content-between align-items-center">
+                                    <div class="header-title">
+                                        <h4>Sales Stastics</h4>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="me-3">
+                                            <p class="mb-0"><svg class="text-primary" width="10"
+                                                    height="10" viewBox="0 0 10 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="5" cy="5" r="5"
+                                                        fill="currentColor" />
+                                                </svg> Total Sales </p>
+                                        </div>
+                                        <div class="me-3">
+                                            <p class="mb-0"><svg class="text-secondary" width="10"
+                                                    height="10" viewBox="0 0 10 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="5" cy="5" r="5"
+                                                        fill="currentColor" />
+                                                </svg> Total Expense</p>
+                                        </div>
+                                        <div class="">
+                                            <p class="mb-0"><svg class="text-tertiray" width="10"
+                                                    height="10" viewBox="0 0 10 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="5" cy="5" r="5"
+                                                        fill="currentColor" />
+                                                </svg> Total Profit</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div id="sales-chart-02" class="sales-chart-02"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="header-title">
+                                <h4 class=" card-title">Date</h4>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="course-picker">
+                                <input type="hidden" name="inline" class="d-none inline_flatpickr">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card card-block card-stretch card-height">
+                        <div class="card-body">
+                            <div class="mb-5">
+                                <div class="mb-2 d-flex justify-content-between align-items-center">
+                                    <span class="text-dark">Last Transaction</span>
+                                    <a class="badge rounded-pill bg-soft-primary" href="javascript:void(0);">
+                                        View Report
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <h2 class="counter mb-2" style="visibility: visible;">$46,996</h2>
+                                    <p>This Month</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="d-flex gap flex-column">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="bg-soft-primary avatar-60 rounded">
+                                            <svg class="icon-35" width="35" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M21.9964 8.37513H17.7618C15.7911 8.37859 14.1947 9.93514 14.1911 11.8566C14.1884 13.7823 15.7867 15.3458 17.7618 15.3484H22V15.6543C22 19.0136 19.9636 21 16.5173 21H7.48356C4.03644 21 2 19.0136 2 15.6543V8.33786C2 4.97862 4.03644 3 7.48356 3H16.5138C19.96 3 21.9964 4.97862 21.9964 8.33786V8.37513ZM6.73956 8.36733H12.3796H12.3831H12.3902C12.8124 8.36559 13.1538 8.03019 13.152 7.61765C13.1502 7.20598 12.8053 6.87318 12.3831 6.87491H6.73956C6.32 6.87664 5.97956 7.20858 5.97778 7.61852C5.976 8.03019 6.31733 8.36559 6.73956 8.36733Z"
+                                                    fill="currentColor"></path>
+                                                <path opacity="0.4"
+                                                    d="M16.0374 12.2966C16.2465 13.2478 17.0805 13.917 18.0326 13.8996H21.2825C21.6787 13.8996 22 13.5715 22 13.166V10.6344C21.9991 10.2297 21.6787 9.90077 21.2825 9.8999H17.9561C16.8731 9.90338 15.9983 10.8024 16 11.9102C16 12.0398 16.0128 12.1695 16.0374 12.2966Z"
+                                                    fill="currentColor"></path>
+                                                <circle cx="18" cy="11.8999" r="1"
+                                                    fill="currentColor"></circle>
+                                            </svg>
+                                        </div>
+                                        <div style="width: 100%;">
+                                            <div class="d-flex justify-content-between  ">
+                                                <h6 class="mb-2">Balance</h6>
+                                                <h6 class="text-body">$2,386</h6>
+                                            </div>
+                                            <div class="progress bg-soft-primary shadow-none w-100"
+                                                style="height: 6px">
+                                                <div class="progress-bar bg-primary" data-toggle="progress-bar"
+                                                    role="progressbar" aria-valuenow="23" aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    style="width: 23%;transition: width 2s ease 0s;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="bg-soft-info avatar-60 rounded">
+                                            <svg class="icon-35" width="35" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity="0.4"
+                                                    d="M6.447 22C3.996 22 2 19.9698 2 17.4755V12.5144C2 10.0252 3.99 8 6.437 8L17.553 8C20.005 8 22 10.0302 22 12.5256V17.4846C22 19.9748 20.01 22 17.563 22H16.623H6.447Z"
+                                                    fill="currentColor"></path>
+                                                <path
+                                                    d="M11.455 2.22103L8.54604 5.06682C8.24604 5.36094 8.24604 5.83427 8.54804 6.12742C8.85004 6.41959 9.33704 6.41862 9.63704 6.12547L11.23 4.56623V6.06119V14.4515C11.23 14.8654 11.575 15.2014 12 15.2014C12.426 15.2014 12.77 14.8654 12.77 14.4515V4.56623L14.363 6.12547C14.663 6.41862 15.15 6.41959 15.452 6.12742C15.603 5.98036 15.679 5.78849 15.679 5.59566C15.679 5.40477 15.603 5.21291 15.454 5.06682L12.546 2.22103C12.401 2.07981 12.205 1.99995 12 1.99995C11.796 1.99995 11.6 2.07981 11.455 2.22103Z"
+                                                    fill="currentColor"></path>
+                                            </svg>
+                                        </div>
+                                        <div style="width: 100%;">
+                                            <div class="d-flex justify-content-between  ">
+                                                <h6 class="mb-2">Transfer</h6>
+                                                <h6 class="text-body">$4,765</h6>
+                                            </div>
+                                            <div class="progress bg-soft-info shadow-none w-100" style="height: 6px">
+                                                <div class="progress-bar bg-info" data-toggle="progress-bar"
+                                                    role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    style="width: 40%;transition: width 2s ease 0s;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="bg-soft-success avatar-60 rounded">
+                                            <svg class="icon-35" width="35" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity="0.4"
+                                                    d="M17.554 7.29614C20.005 7.29614 22 9.35594 22 11.8876V16.9199C22 19.4453 20.01 21.5 17.564 21.5L6.448 21.5C3.996 21.5 2 19.4412 2 16.9096V11.8773C2 9.35181 3.991 7.29614 6.438 7.29614H7.378L17.554 7.29614Z"
+                                                    fill="currentColor"></path>
+                                                <path
+                                                    d="M12.5464 16.0374L15.4554 13.0695C15.7554 12.7627 15.7554 12.2691 15.4534 11.9634C15.1514 11.6587 14.6644 11.6597 14.3644 11.9654L12.7714 13.5905L12.7714 3.2821C12.7714 2.85042 12.4264 2.5 12.0004 2.5C11.5754 2.5 11.2314 2.85042 11.2314 3.2821L11.2314 13.5905L9.63742 11.9654C9.33742 11.6597 8.85043 11.6587 8.54843 11.9634C8.39743 12.1168 8.32142 12.3168 8.32142 12.518C8.32142 12.717 8.39743 12.9171 8.54643 13.0695L11.4554 16.0374C11.6004 16.1847 11.7964 16.268 12.0004 16.268C12.2054 16.268 12.4014 16.1847 12.5464 16.0374Z"
+                                                    fill="currentColor"></path>
+                                            </svg>
+                                        </div>
+                                        <div style="width: 100%;">
+                                            <div class="d-flex justify-content-between  ">
+                                                <h6 class="mb-2">Recived</h6>
+                                                <h6 class="text-body">$8,224</h6>
+                                            </div>
+                                            <div class="progress bg-soft-success shadow-none w-100"
+                                                style="height: 6px">
+                                                <div class="progress-bar bg-success" data-toggle="progress-bar"
+                                                    role="progressbar" aria-valuenow="82" aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    style="width: 82%;transition: width 2s ease 0s;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="bg-soft-danger avatar-60 rounded">
+                                            <svg class="icon-35" width="35" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M21.9964 8.37513H17.7618C15.7911 8.37859 14.1947 9.93514 14.1911 11.8566C14.1884 13.7823 15.7867 15.3458 17.7618 15.3484H22V15.6543C22 19.0136 19.9636 21 16.5173 21H7.48356C4.03644 21 2 19.0136 2 15.6543V8.33786C2 4.97862 4.03644 3 7.48356 3H16.5138C19.96 3 21.9964 4.97862 21.9964 8.33786V8.37513ZM6.73956 8.36733H12.3796H12.3831H12.3902C12.8124 8.36559 13.1538 8.03019 13.152 7.61765C13.1502 7.20598 12.8053 6.87318 12.3831 6.87491H6.73956C6.32 6.87664 5.97956 7.20858 5.97778 7.61852C5.976 8.03019 6.31733 8.36559 6.73956 8.36733Z"
+                                                    fill="currentColor"></path>
+                                                <path opacity="0.4"
+                                                    d="M16.0374 12.2966C16.2465 13.2478 17.0805 13.917 18.0326 13.8996H21.2825C21.6787 13.8996 22 13.5715 22 13.166V10.6344C21.9991 10.2297 21.6787 9.90077 21.2825 9.8999H17.9561C16.8731 9.90338 15.9983 10.8024 16 11.9102C16 12.0398 16.0128 12.1695 16.0374 12.2966Z"
+                                                    fill="currentColor"></path>
+                                                <circle cx="18" cy="11.8999" r="1"
+                                                    fill="currentColor"></circle>
+                                            </svg>
+                                        </div>
+                                        <div style="width: 100%;">
+                                            <div class="d-flex justify-content-between  ">
+                                                <h6 class="mb-2">Outstanding</h6>
+                                                <h6 class="text-body">$1,224</h6>
+                                            </div>
+                                            <div class="progress bg-soft-danger shadow-none w-100"
+                                                style="height: 6px">
+                                                <div class="progress-bar bg-danger" data-toggle="progress-bar"
+                                                    role="progressbar" aria-valuenow="15" aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    style="width: 10%;transition: width 2s ease 0s;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card card-block card-stretch card-height">
+                        <div class="flex-wrap card-header d-flex justify-content-between border-0">
+                            <div class="header-title">
+                                <h4 class=" card-title">Sales Order</h4>
+                            </div>
+                            <div class="dropdown">
+                                <span class="dropdown-toggle" id="dropdownMenuButton7" data-bs-toggle="dropdown"
+                                    aria-expanded="false" role="button"> Monthly
+                                </span>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton7">
+                                    <a class="dropdown-item " href="javascript:void(0);">This Week</a>
+                                    <a class="dropdown-item " href="javascript:void(0);">This Month</a>
+                                    <a class="dropdown-item " href="javascript:void(0);">This Year</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body pt-0">
+                            <div class=" table-responsive border rounded">
+                                <table id="basic-table" class="table mb-0 table-striped" role="grid">
+                                    <thead>
+                                        <tr>
+                                            <th>COMPANIES</th>
+                                            <th>CONTACTS</th>
+                                            <th>ORDER</th>
+                                            <th>COMPLETION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img class="rounded bg-soft-primary img-fluid avatar-40 me-3"
+                                                        src="../assets/images/shapes/01.png" alt="profile">
+                                                    <h6>Addidis Sportwear</h6>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="iq-media-group iq-media-group-1">
+                                                    <a href="#" class="iq-media-1">
+                                                        <div class="icon iq-icon-box-3 rounded-pill">SP</div>
+                                                    </a>
+                                                    <a href="#" class="iq-media-1">
+                                                        <div class="icon iq-icon-box-3 rounded-pill">PP</div>
+                                                    </a>
+                                                    <a href="#" class="iq-media-1">
+                                                        <div class="icon iq-icon-box-3 rounded-pill">MM</div>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td>$14,000</td>
+                                            <td>
+                                                <div class="mb-2 d-flex align-items-center">
+                                                    <h6>60%</h6>
+                                                </div>
+                                                <div class="shadow-none progress bg-soft-primary w-100"
+                                                    style="height: 4px">
+                                                    <div class="progress-bar bg-primary" data-toggle="progress-bar"
+                                                        role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img class="rounded bg-soft-primary img-fluid avatar-40 me-3"
+                                                        src="../assets/images/shapes/05.png" alt="profile">
+                                                    <h6>Netflixer Platforms</h6>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="iq-media-group iq-media-group-1">
+                                                    <a href="#" class="iq-media-1">
+                                                        <div class="icon iq-icon-box-3 rounded-pill">SP</div>
+                                                    </a>
+                                                    <a href="#" class="iq-media-1">
+                                                        <div class="icon iq-icon-box-3 rounded-pill">PP</div>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td>$30,000</td>
+                                            <td>
+                                                <div class="mb-2 d-flex align-items-center">
+                                                    <h6>25%</h6>
+                                                </div>
+                                                <div class="shadow-none progress bg-soft-primary w-100"
+                                                    style="height: 4px">
+                                                    <div class="progress-bar bg-primary" data-toggle="progress-bar"
+                                                        role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img class="rounded bg-soft-primary img-fluid avatar-40 me-3"
+                                                        src="../assets/images/shapes/02.png" alt="profile">
+                                                    <h6>Shopifi Stores</h6>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="iq-media-group iq-media-group-1">
+                                                    <a href="#" class="iq-media-1">
+                                                        <div class="icon iq-icon-box-3 rounded-pill">PP</div>
+                                                    </a>
+                                                    <a href="#" class="iq-media-1">
+                                                        <div class="icon iq-icon-box-3 rounded-pill">TP</div>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td>$8,500</td>
+                                            <td>
+                                                <div class="mb-2 d-flex align-items-center">
+                                                    <h6>100%</h6>
+                                                </div>
+                                                <div class="shadow-none progress bg-soft-success w-100"
+                                                    style="height: 4px">
+                                                    <div class="progress-bar bg-success" data-toggle="progress-bar"
+                                                        role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img class="rounded bg-soft-primary img-fluid avatar-40 me-3"
+                                                        src="../assets/images/shapes/03.png" alt="profile">
+                                                    <h6>Bootstrap Technologies</h6>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="iq-media-group iq-media-group-1">
+                                                    <a href="#" class="iq-media-1">
+                                                        <div class="icon iq-icon-box-3 rounded-pill">SP</div>
+                                                    </a>
+                                                    <a href="#" class="iq-media-1">
+                                                        <div class="icon iq-icon-box-3 rounded-pill">PP</div>
+                                                    </a>
+                                                    <a href="#" class="iq-media-1">
+                                                        <div class="icon iq-icon-box-3 rounded-pill">MM</div>
+                                                    </a>
+                                                    <a href="#" class="iq-media-1">
+                                                        <div class="icon iq-icon-box-3 rounded-pill">TP</div>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td>$20,500</td>
+                                            <td>
+                                                <div class="mb-2 d-flex align-items-center">
+                                                    <h6>100%</h6>
+                                                </div>
+                                                <div class="shadow-none progress bg-soft-success w-100"
+                                                    style="height: 4px">
+                                                    <div class="progress-bar bg-success" data-toggle="progress-bar"
+                                                        role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img class="rounded bg-soft-primary img-fluid avatar-40 me-3"
+                                                        src="../assets/images/shapes/04.png" alt="profile">
+                                                    <h6>Community First</h6>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="iq-media-group iq-media-group-1">
+                                                    <a href="#" class="iq-media-1">
+                                                        <div class="icon iq-icon-box-3 rounded-pill">MM</div>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td>$9,800</td>
+                                            <td>
+                                                <div class="mb-2 d-flex align-items-center">
+                                                    <h6>75%</h6>
+                                                </div>
+                                                <div class="shadow-none progress bg-soft-primary w-100"
+                                                    style="height: 4px">
+                                                    <div class="progress-bar bg-primary" data-toggle="progress-bar"
+                                                        role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card card-block card-stretch card-height">
+                        <div class="flex-wrap card-header d-flex justify-content-between align-items-center">
+                            <div class="header-title">
+                                <h4>Sales Anylsis</h4>
+                            </div>
+                            <div class="dropdown">
+                                <a href="#" class="text-gray dropdown-toggle" id="dropdownMenuButton29"
+                                    data-bs-toggle="dropdown" aria-expanded="false">All Tasks</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton29"
+                                    style="">
+                                    <li><a class="dropdown-item" href="#">This Week</a></li>
+                                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="sales-chart-04" class="sales-chart-04"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card card-block card-stretch card-height">
+                        <div class="flex-wrap card-header d-flex justify-content-between align-items-center">
+                            <div class="header-title">
+                                <h4>To-Do List</h4>
+                            </div>
+                            <div class="dropdown">
+                                <a href="#" class="text-gray dropdown-toggle" id="dropdownMenuButton24"
+                                    data-bs-toggle="dropdown" aria-expanded="false">All Tasks</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton24"
+                                    style="">
+                                    <li><a class="dropdown-item" href="#">This Week</a></li>
+                                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between  mb-3">
+                                <div class="w-100">
+                                    <h6>School Dashboard</h6>
+                                    <div class="d-flex align-items-center">
+                                        <div class="progress bg-soft-success shadow-none w-50" style="height: 6px">
+                                            <div class="progress-bar bg-success" data-toggle="progress-bar"
+                                                role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <small class="ms-2">80% completed</small>
+                                    </div>
+                                    <small>Due in 3 Days</small>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="#" class="text-gray" id="dropdownMenuButton25"
+                                        data-bs-toggle="dropdown" aria-expanded="false"><svg width="22"
+                                            height="5" viewBox="0 0 22 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M19.6788 5C20.9595 5 22 3.96222 22 2.68866C22 1.41318 20.9595 0.373465 19.6788 0.373465C18.3981 0.373465 17.3576 1.41318 17.3576 2.68866C17.3576 3.96222 18.3981 5 19.6788 5ZM11.0005 5C12.2812 5 13.3217 3.96222 13.3217 2.68866C13.3217 1.41318 12.2812 0.373465 11.0005 0.373465C9.71976 0.373465 8.67929 1.41318 8.67929 2.68866C8.67929 3.96222 9.71976 5 11.0005 5ZM4.64239 2.68866C4.64239 3.96222 3.60192 5 2.3212 5C1.04047 5 0 3.96222 0 2.68866C0 1.41318 1.04047 0.373465 2.3212 0.373465C3.60192 0.373465 4.64239 1.41318 4.64239 2.68866Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton25"
+                                        style="">
+                                        <li><a class="dropdown-item" href="#">This Week</a></li>
+                                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between  mb-3">
+                                <div class="w-100">
+                                    <h6>Fashion Theme</h6>
+                                    <div class="d-flex align-items-center">
+                                        <div class="progress bg-soft-danger shadow-none w-50" style="height: 6px">
+                                            <div class="progress-bar bg-danger" data-toggle="progress-bar"
+                                                role="progressbar" aria-valuenow="18" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <small class="ms-2">15% completed</small>
+                                    </div>
+                                    <small>Due in 4 Days</small>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="#" class="text-gray" id="dropdownMenuButton61"
+                                        data-bs-toggle="dropdown" aria-expanded="false"><svg width="22"
+                                            height="5" viewBox="0 0 22 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M19.6788 5C20.9595 5 22 3.96222 22 2.68866C22 1.41318 20.9595 0.373465 19.6788 0.373465C18.3981 0.373465 17.3576 1.41318 17.3576 2.68866C17.3576 3.96222 18.3981 5 19.6788 5ZM11.0005 5C12.2812 5 13.3217 3.96222 13.3217 2.68866C13.3217 1.41318 12.2812 0.373465 11.0005 0.373465C9.71976 0.373465 8.67929 1.41318 8.67929 2.68866C8.67929 3.96222 9.71976 5 11.0005 5ZM4.64239 2.68866C4.64239 3.96222 3.60192 5 2.3212 5C1.04047 5 0 3.96222 0 2.68866C0 1.41318 1.04047 0.373465 2.3212 0.373465C3.60192 0.373465 4.64239 1.41318 4.64239 2.68866Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton61"
+                                        style="">
+                                        <li><a class="dropdown-item" href="#">This Week</a></li>
+                                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between  mb-3">
+                                <div class="w-100">
+                                    <h6>Sidebar Patterns</h6>
+                                    <div class="d-flex align-items-center">
+                                        <div class="progress bg-soft-primary shadow-none w-50" style="height: 6px">
+                                            <div class="progress-bar bg-primary" data-toggle="progress-bar"
+                                                role="progressbar" aria-valuenow="18" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <small class="ms-2">50% completed</small>
+                                    </div>
+                                    <small>Due in 2 Days</small>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="#" class="text-gray" id="dropdownMenuButton62"
+                                        data-bs-toggle="dropdown" aria-expanded="false"><svg width="22"
+                                            height="5" viewBox="0 0 22 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M19.6788 5C20.9595 5 22 3.96222 22 2.68866C22 1.41318 20.9595 0.373465 19.6788 0.373465C18.3981 0.373465 17.3576 1.41318 17.3576 2.68866C17.3576 3.96222 18.3981 5 19.6788 5ZM11.0005 5C12.2812 5 13.3217 3.96222 13.3217 2.68866C13.3217 1.41318 12.2812 0.373465 11.0005 0.373465C9.71976 0.373465 8.67929 1.41318 8.67929 2.68866C8.67929 3.96222 9.71976 5 11.0005 5ZM4.64239 2.68866C4.64239 3.96222 3.60192 5 2.3212 5C1.04047 5 0 3.96222 0 2.68866C0 1.41318 1.04047 0.373465 2.3212 0.373465C3.60192 0.373465 4.64239 1.41318 4.64239 2.68866Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton62"
+                                        style="">
+                                        <li><a class="dropdown-item" href="#">This Week</a></li>
+                                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between  mb-3">
+                                <div class="w-100">
+                                    <h6>Menu Bar Update</h6>
+                                    <div class="d-flex align-items-center">
+                                        <div class="progress bg-soft-gray shadow-none w-50" style="height: 6px">
+                                            <div class="progress-bar bg-secondary" data-toggle="progress-bar"
+                                                role="progressbar" aria-valuenow="35" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <small class="ms-2">35% completed</small>
+                                    </div>
+                                    <small>Due in 5 Days</small>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="#" class="text-gray" id="dropdownMenuButton63"
+                                        data-bs-toggle="dropdown" aria-expanded="false"><svg width="22"
+                                            height="5" viewBox="0 0 22 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M19.6788 5C20.9595 5 22 3.96222 22 2.68866C22 1.41318 20.9595 0.373465 19.6788 0.373465C18.3981 0.373465 17.3576 1.41318 17.3576 2.68866C17.3576 3.96222 18.3981 5 19.6788 5ZM11.0005 5C12.2812 5 13.3217 3.96222 13.3217 2.68866C13.3217 1.41318 12.2812 0.373465 11.0005 0.373465C9.71976 0.373465 8.67929 1.41318 8.67929 2.68866C8.67929 3.96222 9.71976 5 11.0005 5ZM4.64239 2.68866C4.64239 3.96222 3.60192 5 2.3212 5C1.04047 5 0 3.96222 0 2.68866C0 1.41318 1.04047 0.373465 2.3212 0.373465C3.60192 0.373465 4.64239 1.41318 4.64239 2.68866Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end"
+                                        aria-labelledby="dropdownMenuButton63" style="">
+                                        <li><a class="dropdown-item" href="#">This Week</a></li>
+                                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="w-100">
+                                    <h6>Blog Theme</h6>
+                                    <div class="d-flex align-items-center">
+                                        <div class="progress bg-soft-success shadow-none w-50" style="height: 6px">
+                                            <div class="progress-bar bg-success" data-toggle="progress-bar"
+                                                role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <small class="ms-2">100% completed</small>
+                                    </div>
+                                    <small>Due in 1 Days</small>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="#" class="text-gray" id="dropdownMenuButton64"
+                                        data-bs-toggle="dropdown" aria-expanded="false"><svg width="22"
+                                            height="5" viewBox="0 0 22 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M19.6788 5C20.9595 5 22 3.96222 22 2.68866C22 1.41318 20.9595 0.373465 19.6788 0.373465C18.3981 0.373465 17.3576 1.41318 17.3576 2.68866C17.3576 3.96222 18.3981 5 19.6788 5ZM11.0005 5C12.2812 5 13.3217 3.96222 13.3217 2.68866C13.3217 1.41318 12.2812 0.373465 11.0005 0.373465C9.71976 0.373465 8.67929 1.41318 8.67929 2.68866C8.67929 3.96222 9.71976 5 11.0005 5ZM4.64239 2.68866C4.64239 3.96222 3.60192 5 2.3212 5C1.04047 5 0 3.96222 0 2.68866C0 1.41318 1.04047 0.373465 2.3212 0.373465C3.60192 0.373465 4.64239 1.41318 4.64239 2.68866Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end"
+                                        aria-labelledby="dropdownMenuButton64" style="">
+                                        <li><a class="dropdown-item" href="#">This Week</a></li>
+                                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="flex-wrap card-header d-flex justify-content-between">
+                            <div class="header-title">
+                                <h4>Actvity Overview</h4>
+
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class=" text-success mb-4">
+                                <svg class="me-2" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="#17904b"
+                                        d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+                                </svg>
+                                16% this month
+                            </p>
+                            <div class="d-flex align-items-top">
+                                <h6 class="mb-0 text-left">07:45</h6>
+                                <div class="profile-media ms-3 d-flex">
+                                    <div class="profile-dots-pills border-success"></div>
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">$2400, Purchased a Wordpress Theme</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-top">
+                                <h6 class="mb-0 text-left">08:50</h6>
+                                <div class="profile-media ms-3 d-flex">
+                                    <div class="profile-dots-pills border-warning"></div>
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">New order placed #8744152 of 3D Icons</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-top">
+                                <h6 class="mb-0 text-left">10:00</h6>
+                                <div class="profile-media ms-3 d-flex">
+                                    <div class="profile-dots-pills border-info"></div>
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">Affilate Payout</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-top">
+                                <h6 class="mb-0 text-left">13:15</h6>
+                                <div class="profile-media ms-3 d-flex">
+                                    <div class="profile-dots-pills border-dark"></div>
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">New user added in Qompac UI</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-top">
+                                <h6 class="mb-0 text-left">15:30</h6>
+                                <div class="profile-media ms-3 d-flex">
+                                    <div class="profile-dots-pills border-success"></div>
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">Product added in Wish List</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-top">
+                                <h6 class="mb-0 text-left">18:40</h6>
+                                <div class="profile-media ms-3 d-flex pb-0">
+                                    <div class="profile-dots-pills border-warning"></div>
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">New order Placed <span
+                                                class="text-primary">#87444892</span> of Dashboard</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!--end::Wrapper-->
+        <!-- Footer Section Start -->
+        <footer class="footer">
+            <div class="footer-body">
+                <ul class="left-panel list-inline mb-0 p-0">
+                    <li class="list-inline-item"><a href="javascript:void(0);">Privacy Policy</a></li>
+                    <li class="list-inline-item"><a href="javascript:void(0);">Terms of Use</a></li>
+                </ul>
+                <div class="right-panel">
+                    ©
+                    <script>
+                        2022
+                    </script> <span data-setting="app_name">Qompac UI</span>, Made with
+                    <span class="text-gray">
+                        <svg class="icon-16" width="15" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M15.85 2.50065C16.481 2.50065 17.111 2.58965 17.71 2.79065C21.401 3.99065 22.731 8.04065 21.62 11.5806C20.99 13.3896 19.96 15.0406 18.611 16.3896C16.68 18.2596 14.561 19.9196 12.28 21.3496L12.03 21.5006L11.77 21.3396C9.48102 19.9196 7.35002 18.2596 5.40102 16.3796C4.06102 15.0306 3.03002 13.3896 2.39002 11.5806C1.26002 8.04065 2.59002 3.99065 6.32102 2.76965C6.61102 2.66965 6.91002 2.59965 7.21002 2.56065H7.33002C7.61102 2.51965 7.89002 2.50065 8.17002 2.50065H8.28002C8.91002 2.51965 9.52002 2.62965 10.111 2.83065H10.17C10.21 2.84965 10.24 2.87065 10.26 2.88965C10.481 2.96065 10.69 3.04065 10.89 3.15065L11.27 3.32065C11.3618 3.36962 11.4649 3.44445 11.554 3.50912C11.6104 3.55009 11.6612 3.58699 11.7 3.61065C11.7163 3.62028 11.7329 3.62996 11.7496 3.63972C11.8354 3.68977 11.9247 3.74191 12 3.79965C13.111 2.95065 14.46 2.49065 15.85 2.50065ZM18.51 9.70065C18.92 9.68965 19.27 9.36065 19.3 8.93965V8.82065C19.33 7.41965 18.481 6.15065 17.19 5.66065C16.78 5.51965 16.33 5.74065 16.18 6.16065C16.04 6.58065 16.26 7.04065 16.68 7.18965C17.321 7.42965 17.75 8.06065 17.75 8.75965V8.79065C17.731 9.01965 17.8 9.24065 17.94 9.41065C18.08 9.58065 18.29 9.67965 18.51 9.70065Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </span> by <a href="https://iqonic.design/" target="_blank">IQONIC Design</a>.
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+    </main>
+    <!-- Wrapper End-->
+    <!-- Live Customizer start -->
+    <!-- Setting offcanvas start here -->
+    <div class="offcanvas offcanvas-end live-customizer" tabindex="-1" id="live-customizer"
+        data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="live-customizer-label" aria-modal="true"
+        role="dialog">
+        <div class="offcanvas-header pb-0">
+            <div class="d-flex align-items-center">
+                <h4 class="offcanvas-title" id="live-customizer-label">Setting Pannel</h4>
+            </div>
+            <div class="close-icon" data-bs-dismiss="offcanvas">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" class="h-5 w-5" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="offcanvas-body data-scrollbar">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div>
+                        <div class="text-center mb-4">
+                            <h5 class="d-inline-block">Style Setting</h5>
+                        </div>
+                        <div>
+                            <!-- Theme start here -->
+                            <div class="mb-4">
+                                <h5 class="mb-3">Theme</h5>
+                                <div class=" mb-3" data-setting="radio">
+                                    <div class="form-check mb-0 w-100">
+                                        <input class="form-check-input custom-redio-btn" type="radio"
+                                            value="light" name="theme_scheme" id="color-mode-light"
+                                            checked="">
+                                        <label
+                                            class="form-check-label d-flex align-items-center justify-content-between"
+                                            for="color-mode-light">
+                                            <span>Light Theme</span>
+                                            <div class="text-primary ">
+                                                <svg width="60" height="27" viewBox="0 0 60 27"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="0.375" y="0.375" width="59.25"
+                                                        height="26.25" rx="4.125" fill="white"></rect>
+                                                    <circle cx="9.75" cy="9.75" r="3.75"
+                                                        fill="#80868B"></circle>
+                                                    <rect x="16.5" y="8.25" width="37.5"
+                                                        height="3" rx="1.5" fill="#DADCE0"></rect>
+                                                    <rect x="6" y="18" width="48"
+                                                        height="3" rx="1.5" fill="currentColor"></rect>
+                                                    <rect x="0.375" y="0.375" width="59.25"
+                                                        height="26.25" rx="4.125" stroke="#DADCE0"
+                                                        stroke-width="0.75"></rect>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class=" mb-3" data-setting="radio">
+                                    <div class="form-check mb-0 w-100 ">
+                                        <input class="form-check-input custom-redio-btn" type="radio"
+                                            value="dark" name="theme_scheme" id="color-mode-dark">
+                                        <label
+                                            class="form-check-label d-flex align-items-center justify-content-between"
+                                            for="color-mode-dark">
+                                            <span>Dark Theme</span>
+                                            <div class="text-primary ">
+                                                <svg width="60" height="27" viewBox="0 0 60 27"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="0.375" y="0.375" width="59.25"
+                                                        height="26.25" rx="4.125" fill="#1E2745"></rect>
+                                                    <circle cx="9.75" cy="9.75" r="3.75"
+                                                        fill="#80868B"></circle>
+                                                    <rect x="16.5" y="8.25" width="37.5"
+                                                        height="3" rx="1.5" fill="#DADCE0"></rect>
+                                                    <rect x="6" y="18" width="48"
+                                                        height="3" rx="1.5" fill="currentColor"></rect>
+                                                    <rect x="0.375" y="0.375" width="59.25"
+                                                        height="26.25" rx="4.125" stroke="currentColor"
+                                                        stroke-width="0.75"></rect>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between" data-setting="radio">
+                                    <div class="form-check mb-0 w-100">
+                                        <input class="form-check-input custom-redio-btn" type="radio"
+                                            value="auto" name="theme_scheme" id="color-mode-auto">
+                                        <label
+                                            class="form-check-label d-flex align-items-center justify-content-between"
+                                            for="color-mode-auto">
+                                            <span>Device Default</span>
+                                            <div class="text-primary ">
+                                                <svg class="rounded" width="60" height="27"
+                                                    viewBox="0 0 60 27" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="0.375" y="0.375" width="59.25"
+                                                        height="26.25" rx="4.125" fill="#1E2745"></rect>
+                                                    <circle cx="9.75" cy="9.75" r="3.75"
+                                                        fill="#80868B"></circle>
+                                                    <rect x="16.5" y="8.25" width="37.5"
+                                                        height="3" rx="1.5" fill="#DADCE0"></rect>
+                                                    <rect x="6" y="18" width="48"
+                                                        height="3" rx="1.5" fill="currentColor"></rect>
+                                                    <g clip-path="url(#clip0_507_92)">
+                                                        <rect width="30" height="27" fill="white"></rect>
+                                                        <circle cx="9.75" cy="9.75" r="3.75"
+                                                            fill="#80868B"></circle>
+                                                        <rect x="16.5" y="8.25" width="37.5"
+                                                            height="3" rx="1.5" fill="#DADCE0"></rect>
+                                                        <rect x="6" y="18" width="48"
+                                                            height="3" rx="1.5" fill="currentColor">
+                                                        </rect>
+                                                    </g>
+                                                    <rect x="0.375" y="0.375" width="59.25"
+                                                        height="26.25" rx="4.125" stroke="#DADCE0"
+                                                        stroke-width="0.75"></rect>
+                                                    <defs>
+                                                        <clipPath id="clip0_507_92">
+                                                            <rect width="30" height="27" fill="white">
+                                                            </rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
 
+                                </div>
+                            </div>
+                            <!-- Color customizer end here -->
+                            <hr class="hr-horizontal">
+                            <!-- Menu start here -->
+                            <div>
+                                <h6 class="mt-4 mb-3">Menu Color</h6>
+                                <div class="d-grid gap-3 grid-cols-3 mb-3">
+                                    <div data-setting="radio">
+                                        <input type="radio" value="sidebar-white" class="btn-check"
+                                            name="sidebar_color" id="sidebar-white" checked="">
+                                        <label class="btn btn-border d-block" for="sidebar-white"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-original-title="White Menu">
+                                            Light
+                                        </label>
+                                    </div>
+                                    <div data-setting="radio">
+                                        <input type="radio" value="sidebar-dark" class="btn-check"
+                                            name="sidebar_color" id="sidebar-dark">
+                                        <label class="btn btn-border d-block" for="sidebar-dark"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-original-title="Dark Menu">
+                                            Dark
+                                        </label>
+                                    </div>
+                                    <div data-setting="radio">
+                                        <input type="radio" value="sidebar-color" class="btn-check"
+                                            name="sidebar_color" id="sidebar-color">
+                                        <label class="btn btn-border d-block" for="sidebar-color"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-original-title="Colored Menu">
+                                            Color
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="hr-horizontal">
+                            <!-- Menu Style start here -->
+                            <div>
+                                <h5 class="mt-4 mb-3">Menu Style</h5>
+                                <div class="d-grid gap-3 grid-cols-3 mb-4">
+                                    <div data-setting="checkbox" class="text-center">
+                                        <input type="checkbox" value="sidebar-mini" class="btn-check"
+                                            name="sidebar_type" id="sidebar-mini">
+                                        <label class="btn btn-border btn-setting-panel d-block overflow-hidden"
+                                            for="sidebar-mini">
+                                            Mini
+                                        </label>
+                                    </div>
+                                    <div data-setting="checkbox" class="text-center">
+                                        <input type="checkbox" value="sidebar-hover"
+                                            data-extra="{target: '.sidebar', ClassListAdd: 'sidebar-mini'}"
+                                            class="btn-check" name="sidebar_type" id="sidebar-hover">
+                                        <label class="btn btn-border btn-setting-panel d-block overflow-hidden"
+                                            for="sidebar-hover">
+                                            Hover
+                                        </label>
+                                    </div>
+                                    <div data-setting="checkbox" class="text-center">
+                                        <input type="checkbox" value="sidebar-soft" class="btn-check"
+                                            name="sidebar_type" id="sidebar-soft">
+                                        <label class="btn btn-border btn-setting-panel d-block overflow-hidden"
+                                            for="sidebar-soft">
+                                            Soft
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <!-- Menu Style end here -->
+
+                            <hr class="hr-horizontal">
+
+                            <!-- Active Menu Style start here -->
+
+                            <div class="mb-4">
+                                <h5 class="mt-4 mb-3">Active Menu Style</h5>
+                                <div class="d-grid gap-3 grid-cols-2">
+                                    <div data-setting="radio" class="text-center">
+                                        <input type="radio" value="sidebar-default navs-rounded"
+                                            class="btn-check" name="sidebar_menu_style" id="navs-rounded">
+                                        <label class="btn btn-border btn-setting-panel d-block overflow-hidden"
+                                            for="navs-rounded">
+                                            Rounded One
+                                        </label>
+                                    </div>
+                                    <div data-setting="radio" class="text-center">
+                                        <input type="radio" value="sidebar-default navs-rounded-all"
+                                            class="btn-check" name="sidebar_menu_style" id="navs-rounded-all">
+                                        <label class="btn btn-border btn-setting-panel d-block overflow-hidden"
+                                            for="navs-rounded-all">
+                                            Rounded All
+                                        </label>
+                                    </div>
+                                    <div data-setting="radio" class="text-center">
+                                        <input type="radio" value="sidebar-default navs-pill" class="btn-check"
+                                            name="sidebar_menu_style" id="navs-pill">
+                                        <label class="btn btn-border btn-setting-panel d-block overflow-hidden"
+                                            for="navs-pill">
+                                            Pill One Side
+                                        </label>
+                                    </div>
+                                    <div data-setting="radio" class="text-center">
+                                        <input type="radio" value="sidebar-default navs-pill-all"
+                                            class="btn-check" name="sidebar_menu_style" id="navs-pill-all">
+                                        <label class="btn btn-border btn-setting-panel d-block overflow-hidden"
+                                            for="navs-pill-all">
+                                            Pill All
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="hr-horizontal">
+                            <!-- Color customizer start here -->
+                            <div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h6 class="mt-4 mb-3">Color Customizer</h6>
+                                    <div class="d-flex align-items-center">
+                                        <a href="#custom-color" data-bs-toggle="collapse" role="button"
+                                            aria-expanded="false" aria-controls="custom-color">Custom</a>
+                                        <div data-setting="radio">
+                                            <input type="radio" value="theme-color-default" class="btn-check"
+                                                name="theme_color" id="theme-color-default"
+                                                data-colors="{&quot;primary&quot;: &quot;#7016d0&quot;, &quot;secondary&quot;: &quot;#aca4bc&quot;}">
+                                            <label class="btn bg-transparent px-2 border-0"
+                                                for="theme-color-default" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" data-bs-original-title="Reset Color"
+                                                aria-label="Reset Color">
+                                                <svg width="18" height="18" viewBox="0 0 24 24"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M21.4799 12.2424C21.7557 12.2326 21.9886 12.4482 21.9852 12.7241C21.9595 14.8075 21.2975 16.8392 20.0799 18.5506C18.7652 20.3986 16.8748 21.7718 14.6964 22.4612C12.518 23.1505 10.1711 23.1183 8.01299 22.3694C5.85488 21.6205 4.00382 20.196 2.74167 18.3126C1.47952 16.4293 0.875433 14.1905 1.02139 11.937C1.16734 9.68346 2.05534 7.53876 3.55018 5.82945C5.04501 4.12014 7.06478 2.93987 9.30193 2.46835C11.5391 1.99683 13.8711 2.2599 15.9428 3.2175L16.7558 1.91838C16.9822 1.55679 17.5282 1.62643 17.6565 2.03324L18.8635 5.85986C18.945 6.11851 18.8055 6.39505 18.549 6.48314L14.6564 7.82007C14.2314 7.96603 13.8445 7.52091 14.0483 7.12042L14.6828 5.87345C13.1977 5.18699 11.526 4.9984 9.92231 5.33642C8.31859 5.67443 6.8707 6.52052 5.79911 7.74586C4.72753 8.97119 4.09095 10.5086 3.98633 12.1241C3.8817 13.7395 4.31474 15.3445 5.21953 16.6945C6.12431 18.0446 7.45126 19.0658 8.99832 19.6027C10.5454 20.1395 12.2278 20.1626 13.7894 19.6684C15.351 19.1743 16.7062 18.1899 17.6486 16.8652C18.4937 15.6773 18.9654 14.2742 19.0113 12.8307C19.0201 12.5545 19.2341 12.3223 19.5103 12.3125L21.4799 12.2424Z"
+                                                        fill="#31BAF1"></path>
+                                                    <path
+                                                        d="M20.0941 18.5594C21.3117 16.848 21.9736 14.8163 21.9993 12.7329C22.0027 12.4569 21.7699 12.2413 21.4941 12.2512L19.5244 12.3213C19.2482 12.3311 19.0342 12.5633 19.0254 12.8395C18.9796 14.283 18.5078 15.6861 17.6628 16.8739C16.7203 18.1986 15.3651 19.183 13.8035 19.6772C12.2419 20.1714 10.5595 20.1483 9.01246 19.6114C7.4654 19.0746 6.13845 18.0534 5.23367 16.7033C4.66562 15.8557 4.28352 14.9076 4.10367 13.9196C4.00935 18.0934 6.49194 21.37 10.008 22.6416C10.697 22.8908 11.4336 22.9852 12.1652 22.9465C13.075 22.8983 13.8508 22.742 14.7105 22.4699C16.8889 21.7805 18.7794 20.4073 20.0941 18.5594Z"
+                                                        fill="#0169CA"></path>
+                                                </svg>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="custom-color">
+                                    <div class="form-group d-flex justify-content-between align-items-center">
+                                        <label class="" for="custom-primary-color">Primary</label>
+                                        <input class="" name="theme_color" data-extra="primary"
+                                            type="color" id="custom-primary-color" value="#7016d0"
+                                            data-setting="color">
+                                    </div>
+                                    <div class="form-group d-flex d-flex justify-content-between align-items-center">
+                                        <label class="" for="custom-secondary-color">Secondary</label>
+                                        <input class="" name="theme_color" data-extra="secondary"
+                                            type="color" id="custom-secondary-color" value="#08B1BA"
+                                            data-setting="color">
+                                    </div>
+                                </div>
+                                <div class="grid-cols-5 mb-4 d-grid gap-3">
+                                    <div data-setting="radio">
+                                        <input type="radio" value="theme-color-blue" class="btn-check"
+                                            name="theme_color" id="theme-color-1"
+                                            data-colors="{&quot;primary&quot;: &quot;#2185F4&quot;, &quot;secondary&quot;: &quot;#B1BBC6&quot;, &quot;tertiray&quot;: &quot;#FF8000&quot;}">
+                                        <label class="btn btn-border d-block bg-transparent" for="theme-color-1"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-original-title="Theme-1" aria-label="Theme-1">
+                                            <svg class="customizer-btn" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24" width="26" height="26">
+                                                <circle cx="12" cy="12" r="10"
+                                                    fill="#2185F4"></circle>
+                                                <path d="M2,12 a1,1 1 1,0 20,0" fill="#B1BBC6"></path>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                    <div data-setting="radio">
+                                        <input type="radio" value="theme-color-gray" class="btn-check"
+                                            name="theme_color" id="theme-color-2"
+                                            data-colors="{&quot;primary&quot;: &quot;#34A853&quot;, &quot;secondary&quot;: &quot;#B1C6B7&quot;, &quot;tertiray&quot;: &quot;#EA4335&quot;}">
+                                        <label class="btn btn-border d-block bg-transparent" for="theme-color-2"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-original-title="Theme-2" aria-label="Theme-2">
+                                            <svg class="customizer-btn" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24" width="26" height="26">
+                                                <circle cx="12" cy="12" r="10"
+                                                    fill="#34A853"></circle>
+                                                <path d="M2,12 a1,1 1 1,0 20,0" fill="#B1C6B7"></path>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                    <div data-setting="radio">
+                                        <input type="radio" value="theme-color-red" class="btn-check"
+                                            name="theme_color" id="theme-color-3"
+                                            data-colors="{&quot;primary&quot;: &quot;#553AF9&quot;, &quot;secondary&quot;: &quot;#B4B1C6&quot;, &quot;tertiray&quot;: &quot;#89F425&quot;}">
+                                        <label class="btn btn-border d-block bg-transparent" for="theme-color-3"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-original-title="Theme-3" aria-label="Theme-3">
+                                            <svg class="customizer-btn" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24" width="26" height="26">
+                                                <circle cx="12" cy="12" r="10"
+                                                    fill="#553AF9"></circle>
+                                                <path d="M2,12 a1,1 1 1,0 20,0" fill="#B4B1C6"></path>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                    <div data-setting="radio">
+                                        <input type="radio" value="theme-color-yellow" class="btn-check"
+                                            name="theme_color" id="theme-color-4"
+                                            data-colors="{&quot;primary&quot;: &quot;#FF3003&quot;, &quot;secondary&quot;: &quot;#C6B5B1&quot;, &quot;tertiray&quot;: &quot;#0E0E0E&quot;}">
+                                        <label class="btn btn-border d-block bg-transparent" for="theme-color-4"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-original-title="Theme-4" aria-label="Theme-4">
+                                            <svg class="customizer-btn" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24" width="26" height="26">
+                                                <circle cx="12" cy="12" r="10"
+                                                    fill="#FF3003"></circle>
+                                                <path d="M2,12 a1,1 1 1,0 20,0" fill="#C6B5B1"></path>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                    <div data-setting="radio">
+                                        <input type="radio" value="theme-color-pink" class="btn-check"
+                                            name="theme_color" id="theme-color-5"
+                                            data-colors="{&quot;primary&quot;: &quot;#fa6aae&quot;, &quot;secondary&quot;: &quot;#cfc6c6&quot;, &quot;tertiray&quot;: &quot;#25C799&quot;}">
+                                        <label class="btn btn-border d-block bg-transparent" for="theme-color-5"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-original-title="Theme-5" aria-label="Theme-5">
+                                            <svg class="customizer-btn" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24" width="26" height="26">
+                                                <circle cx="12" cy="12" r="10"
+                                                    fill="#fa6aae"></circle>
+                                                <path d="M2,12 a1,1 1 1,0 20,0" fill="#cfc6c6"></path>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Color customizer end here -->
+                            <hr class="hr-horizontal">
+                            <div>
+                                <h6 class="d-inline-block mb-3 me-2">Page Style </h6>
+                                <div class="d-grid gap-3 grid-cols-2 mb-4">
+                                    <div data-setting="radio">
+                                        <input type="radio" value="container" class="btn-check"
+                                            name="page_layout" id="page-layout-boxed">
+                                        <label class="btn btn-border d-block" for="page-layout-boxed">Boxed</label>
+                                    </div>
+                                    <div data-setting="radio">
+                                        <input type="radio" value="container-fluid" class="btn-check"
+                                            name="page_layout" id="page-layout-full-width" checked="">
+                                        <label class="btn btn-border d-block" for="page-layout-full-width">Full
+                                            Width</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="hr-horizontal">
+                            <!-- Direction customizer start here -->
+                            <div>
+                                <h5 class="mb-3 mt-4">Direction</h5>
+                                <div class=" mb-3" data-setting="radio">
+                                    <div class="form-check mb-0 w-100">
+                                        <input class="form-check-input custom-redio-btn" type="radio"
+                                            value="ltr" name="theme_scheme_direction" data-prop="dir"
+                                            id="theme-scheme-direction-ltr" checked="">
+                                        <label
+                                            class="form-check-label d-flex align-items-center justify-content-between"
+                                            for="theme-scheme-direction-ltr">
+                                            <span>LTR</span>
+                                            <svg class="text-primary" width="60" height="27"
+                                                viewBox="0 0 60 27" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="11.5" cy="13.5002" r="6.5"
+                                                    fill="currentColor"></circle>
+                                                <rect x="21" y="7.70026" width="34"
+                                                    height="5" rx="2" fill="#80868B"></rect>
+                                                <rect opacity="0.5" x="21" y="16.1003"
+                                                    width="25.6281" height="3.2" rx="1.6"
+                                                    fill="#80868B"></rect>
+                                                <rect x="0.375" y="0.375244" width="59.25"
+                                                    height="26.25" rx="4.125" stroke="currentColor"
+                                                    stroke-width="0.75"></rect>
+                                            </svg>
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <div class="mb-3" data-setting="radio">
+                                    <div class="form-check mb-0 w-100">
+                                        <input class="form-check-input custom-redio-btn" type="radio"
+                                            value="rtl" name="theme_scheme_direction" data-prop="dir"
+                                            id="theme-scheme-direction-rtl">
+                                        <label
+                                            class="form-check-label d-flex align-items-center justify-content-between "
+                                            for="theme-scheme-direction-rtl">
+                                            <span>RTL</span>
+                                            <svg class="text-primary" width="60" height="27"
+                                                viewBox="0 0 60 27" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle r="6.5" transform="matrix(-1 0 0 1 48.5 13.5002)"
+                                                    fill="currentColor"></circle>
+                                                <rect width="34" height="5" rx="2"
+                                                    transform="matrix(-1 0 0 1 39 7.70026)" fill="#80868B"></rect>
+                                                <rect opacity="0.5" width="25.6281" height="3.2"
+                                                    rx="1.6" transform="matrix(-1 0 0 1 39 16.1003)"
+                                                    fill="#80868B"></rect>
+                                                <rect x="-0.375" y="0.375" width="59.25"
+                                                    height="26.25" rx="4.125"
+                                                    transform="matrix(-1 0 0 1 59.25 0.000244141)"
+                                                    stroke="currentColor" stroke-width="0.75"></rect>
+                                            </svg>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Direction customizer end here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!--end::Page-->
-</div>
+    <!-- Settings sidebar end here -->
 
-@include('components.dashboard.dashjs')
+    <a class="btn btn-fixed-end btn-warning btn-icon btn-setting" id="settingbutton" data-bs-toggle="offcanvas"
+        data-bs-target="#live-customizer" role="button" aria-controls="live-customizer">
+        <svg class="icon-24 animated-rotate" width="24" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M20.8064 7.62361L20.184 6.54352C19.6574 5.6296 18.4905 5.31432 17.5753 5.83872V5.83872C17.1397 6.09534 16.6198 6.16815 16.1305 6.04109C15.6411 5.91402 15.2224 5.59752 14.9666 5.16137C14.8021 4.88415 14.7137 4.56839 14.7103 4.24604V4.24604C14.7251 3.72922 14.5302 3.2284 14.1698 2.85767C13.8094 2.48694 13.3143 2.27786 12.7973 2.27808H11.5433C11.0367 2.27807 10.5511 2.47991 10.1938 2.83895C9.83644 3.19798 9.63693 3.68459 9.63937 4.19112V4.19112C9.62435 5.23693 8.77224 6.07681 7.72632 6.0767C7.40397 6.07336 7.08821 5.98494 6.81099 5.82041V5.82041C5.89582 5.29601 4.72887 5.61129 4.20229 6.52522L3.5341 7.62361C3.00817 8.53639 3.31916 9.70261 4.22975 10.2323V10.2323C4.82166 10.574 5.18629 11.2056 5.18629 11.8891C5.18629 12.5725 4.82166 13.2041 4.22975 13.5458V13.5458C3.32031 14.0719 3.00898 15.2353 3.5341 16.1454V16.1454L4.16568 17.2346C4.4124 17.6798 4.82636 18.0083 5.31595 18.1474C5.80554 18.2866 6.3304 18.2249 6.77438 17.976V17.976C7.21084 17.7213 7.73094 17.6516 8.2191 17.7822C8.70725 17.9128 9.12299 18.233 9.37392 18.6717C9.53845 18.9489 9.62686 19.2646 9.63021 19.587V19.587C9.63021 20.6435 10.4867 21.5 11.5433 21.5H12.7973C13.8502 21.5001 14.7053 20.6491 14.7103 19.5962V19.5962C14.7079 19.088 14.9086 18.6 15.2679 18.2407C15.6272 17.8814 16.1152 17.6807 16.6233 17.6831C16.9449 17.6917 17.2594 17.7798 17.5387 17.9394V17.9394C18.4515 18.4653 19.6177 18.1544 20.1474 17.2438V17.2438L20.8064 16.1454C21.0615 15.7075 21.1315 15.186 21.001 14.6964C20.8704 14.2067 20.55 13.7894 20.1108 13.5367V13.5367C19.6715 13.284 19.3511 12.8666 19.2206 12.3769C19.09 11.8873 19.16 11.3658 19.4151 10.928C19.581 10.6383 19.8211 10.3982 20.1108 10.2323V10.2323C21.0159 9.70289 21.3262 8.54349 20.8064 7.63277V7.63277V7.62361Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="12.1747" cy="11.8891" r="2.63616" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round"></circle>
+        </svg>
+    </a>
+    <!-- Live Customizer end -->
+
+    @include('components.dashboard.dashjs')

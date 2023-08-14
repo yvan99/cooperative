@@ -43,7 +43,7 @@ Route::prefix('owner')->group(function () {
     Route::post('/login', [OwnerAuthController::class, 'login']);
     Route::get('/register', [OwnerAuthController::class, 'showRegistrationForm'])->name('owner.register');
     Route::post('/register', [OwnerAuthController::class, 'register']);
-    Route::post('/logout', [OwnerAuthController::class, 'logout'])->name('owner.logout');
+    Route::get('/logout', [OwnerAuthController::class, 'logout'])->name('owner.logout');
 });
 
 
