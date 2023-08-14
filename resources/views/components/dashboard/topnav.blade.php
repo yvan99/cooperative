@@ -209,19 +209,12 @@
                                             class="theme-color-pink-img img-fluid avatar avatar-50 avatar-rounded"
                                             loading="lazy">
                                         <div class="caption ms-3 d-none d-md-block ">
-                                            <h6 class="mb-0 caption-title text-white">Austin Robertson</h6>
-                                            <p class="mb-0 caption-sub-title">Marketing Administrator</p>
+                                            <h6 class="mb-0 caption-title text-white">{{ Auth::user()->names }}</h6>
+                                            <p class="mb-0 caption-sub-title">{{ Auth::getDefaultDriver() }}</p>
                                         </div>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item"
-                                                href="../dashboard/app/user-profile.html">Profile</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="../dashboard/app/user-privacy-setting.html">Privacy Setting</a>
-                                        </li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
+
                                         <li><a class="dropdown-item" href="../dashboard/auth/sign-in.html">Logout</a>
                                         </li>
                                     </ul>
