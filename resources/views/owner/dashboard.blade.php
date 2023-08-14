@@ -4,29 +4,15 @@
     <span class="screen-darken"></span>
     <main class="main-content">
         @include('components.dashboard.topnav')
-        @include('components.owner.navbar')
+        @include('owner.components.navbar')
 
         <div class="container-fluid content-inner pb-0" id="page_layout">
             <div class="d-flex justify-content-between align-items-center flex-wrap mb-5 gap-3">
                 <div class="d-flex flex-column">
-                    <h3>Quick Insights</h3>
+                    <h3>Dashboard</h3>
                     <p class="mb-0">Financial Dashboard</p>
                 </div>
                 <div class="d-flex justify-content-between align-items-center rounded flex-wrap gap-3">
-                    <div class="form-group mb-0">
-                        <select class="select2-basic-single js-states form-control" name="state" style="width: 100%;">
-                            <option>Past 30 Days</option>
-                            <option>Past 60 Days</option>
-                            <option>Past 90 Days</option>
-                            <option>Past 1 year</option>
-                            <option>Past 2 year</option>
-                        </select>
-                    </div>
-                    <div class="form-group mb-0">
-                        <input type="text" name="start"
-                            class="form-control range_flatpicker flatpickr-input active"
-                            placeholder="24 Jan 2022 to 23 Feb 2022" readonly="readonly">
-                    </div>
                     <button type="button" class="btn btn-primary">Analytics</button>
                 </div>
             </div>
