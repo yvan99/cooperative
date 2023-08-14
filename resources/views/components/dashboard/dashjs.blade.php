@@ -2,6 +2,11 @@
 
  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
  <script src="{{ asset('dashboarde/js/core/libs.min.js') }}"></script>
+
+ <script src="{{asset('dashboarde/vendor/flatpickr/dist/flatpickr.min.js')}}"></script>
+ <script src="{{asset('dashboarde/js/plugins/flatpickr.js')}}" defer></script>
+
+
  <script src="{{ asset('dashboarde/js/plugins/select2.js') }}" defer></script>
  <!-- Plugin Scripts -->
  <!-- Slider-tab Script -->
