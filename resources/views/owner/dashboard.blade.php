@@ -13,7 +13,7 @@
                     <p class="mb-0">Financial Dashboard</p>
                 </div>
                 <div class="d-flex justify-content-between align-items-center rounded flex-wrap gap-3">
-                    <button type="button" class="btn btn-primary">Create Cooperative</button>
+                    <button type="button" class="btn btn-primary">Urujana Cooperative</button>
                 </div>
             </div>
             <div class="row">
