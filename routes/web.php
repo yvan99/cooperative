@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaffAuthController;
 use App\Http\Controllers\AuditorAuthController;
+use App\Http\Controllers\CooperativeController;
 use App\Http\Controllers\OwnerAuthController;
 
 /*
