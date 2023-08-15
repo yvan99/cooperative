@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Cooperative;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -10,10 +11,11 @@ class CooperativeController extends Controller
 {
 
     public function index()
-{
-    $cooperatives = Cooperative::all();
-    return view('cooperatives.index', compact('cooperatives'));
-}
+    {
+        $cooperatives = Cooperative::all();
+        $categories = Category::all();
+        return view('cooperatives.index', compact('cooperatives', 'categories'));
+    }
 
     public function store(Request $request)
     {
@@ -24,7 +26,6 @@ class CooperativeController extends Controller
             'category_id' => 'required|exists:categories,id',
             'currency' => 'required|string',
             'address' => 'required|string',
-            'status' => 'required|in:active,inactive',
             'members' => 'required|integer|min:1',
         ]);
 
@@ -37,7 +38,7 @@ class CooperativeController extends Controller
             'category_id' => $request->input('category_id'),
             'currency' => $request->input('currency'),
             'address' => $request->input('address'),
-            'status' => $request->input('status'),
+            'status' => 'pending',
             'members' => $request->input('members'),
         ]);
         $cooperative->save();
