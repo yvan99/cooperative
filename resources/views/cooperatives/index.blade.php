@@ -47,7 +47,7 @@
                                                 <td>
                                                     @if ($cooperative->certificate)
                                                         <a href="{{ Storage::url($cooperative->certificate) }}"
-                                                            target="_blank">Certificate</a>
+                                                            target="_blank">Download Certificate</a>
                                                     @else
                                                         No Certificate
                                                     @endif
@@ -75,22 +75,22 @@
                                                     aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <form action="{{ route('cooperatives.store') }}" method="POST"
-                                                    enctype="multipart/form-data">
+                                                <form action="{{ route('cooperatives.store') }}" class="row"
+                                                    method="POST" enctype="multipart/form-data">
                                                     @csrf
-                                                    <div class="form-group">
+                                                    <div class="form-group col-6">
                                                         <label class="mb-3" for="name">Cooperative Name</label>
                                                         <input type="text" class="form-control" id="name"
                                                             name="name" required>
                                                     </div>
 
-                                                    <div class="form-group">
+                                                    <div class="form-group col-6">
                                                         <label class="mb-3" for="certificate">Certificate
                                                             (PDF)</label>
                                                         <input type="file" class="form-control" id="certificate"
                                                             name="certificate" accept=".pdf" required>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group col-6">
                                                         <label class="mb-3" for="category_id">Category</label>
                                                         <select class="form-control form-select" id="category_id"
                                                             name="category_id" required>
@@ -100,29 +100,33 @@
                                                             @endforeach
                                                         </select>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group col-6">
                                                         <label class="mb-3" for="currency">Currency</label>
                                                         <input type="text" class="form-control" id="currency"
                                                             name="currency" required>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group col-6">
                                                         <label class="mb-3" for="address">Address</label>
                                                         <input type="text" class="form-control" id="address"
                                                             name="address" required>
                                                     </div>
 
-                                                    <div class="form-group">
+                                                    <div class="form-group col-6">
                                                         <label class="mb-3" for="members">Members</label>
                                                         <input type="number" class="form-control" id="members"
                                                             name="members" required>
                                                     </div>
 
-                                                    <div class="form-group">
+                                                    <div class="form-group col-12">
                                                         <label class="mb-3" for="description">Description</label>
                                                         <textarea class="form-control" id="description" name="description" required></textarea>
                                                     </div>
 
-                                                    <button type="submit" class="btn btn-primary">Create</button>
+                                                    <div class="form-group col-12">
+                                                        <button type="submit" class="btn btn-primary">Create</button>
+                                                    </div>
+
+
                                                 </form>
                                             </div>
                                         </div>
