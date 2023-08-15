@@ -20,7 +20,7 @@ class CreateAccountsTable extends Migration
             $table->unsignedBigInteger('cooperative_id');
             $table->foreign('cooperative_id')->references('id')->on('cooperatives');
             $table->text('description')->nullable();
-            $table->text('amount')->default(0);
+            $table->text('amount');
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
