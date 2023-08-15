@@ -29,7 +29,7 @@
                 "value": "theme-fs-sm"
             },
             "page_layout": {
-                "value": "container"
+                "value": "container-fluid"
             },
             "sidebar_color": {
                 "value": "sidebar-white"
