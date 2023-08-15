@@ -3,9 +3,10 @@
         <h3>Dashboard</h3>
         <p class="mb-0">Financial Dashboard</p>
     </div>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#setDefaultCooperativeModal">
-        Default cooperative
+    <button type="button" class="btn btn-primary default-cooperative-button" data-bs-toggle="modal" data-bs-target="#setDefaultCooperativeModal">
+        Set Default Cooperative
     </button>
+    
 </div>
 
 <div class="modal fade" id="setDefaultCooperativeModal" tabindex="-1" role="dialog"
@@ -19,17 +20,18 @@
             <div class="modal-body">
                 <form>
                     @foreach ($ownerCooperatives as $cooperative)
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="defaultCooperative"
-                                value="{{ $cooperative->id }}" id="defaultCooperative{{ $cooperative->id }}">
-                            <label class="form-check-label" for="defaultCooperative{{ $cooperative->id }}">
-                                {{ $cooperative->name }}
-                            </label>
-                        </div>
-                    @endforeach
+                    <div class="form-check">
+                        <input class="form-check-input form-check-input-lg" type="radio" name="defaultCooperative"
+                               value="{{ $cooperative->id }}" id="defaultCooperative{{ $cooperative->id }}">
+                        <label class="form-check-label fs-5 mb-3" for="defaultCooperative{{ $cooperative->id }}">
+                            {{ $cooperative->name }}
+                        </label>
+                    </div>
+                @endforeach
+                
 
 
-                    <button type="button" class="btn btn-primary" id="saveDefaultCooperative">Save</button>
+                    <button type="button" class="btn btn-primary mt-3" id="saveDefaultCooperative">Save</button>
                 </form>
             </div>
         </div>
@@ -44,6 +46,13 @@
             if (radioInput) {
                 radioInput.checked = true;
             }
+        }
+
+        const defaultCooperativeButton = document.querySelector('.default-cooperative-button');
+        const storedDefaultCooperativeName = localStorage.getItem('defaultCooperativeName');
+
+        if (storedDefaultCooperativeName) {
+            defaultCooperativeButton.textContent = storedDefaultCooperativeName;
         }
 
         const saveButton = document.getElementById('saveDefaultCooperative');
