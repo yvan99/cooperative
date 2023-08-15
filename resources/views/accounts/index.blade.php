@@ -36,7 +36,7 @@
                                     <tbody>
                                         @foreach ($accounts as $account)
                                             <tr>
-                                                <td>{{ $account->code }}</td>
+                                                <td> <button class="btn btn-sm btn-secondary text-white">{{ $account->code }}</button> </td>
                                                 <td>{{ $account->name }}</td>
                                                 <td>{{ $account->cooperative->name }}</td>
                                                 <td>{{ $account->description }}</td>
@@ -79,7 +79,7 @@
                                                         </select>
                                                     </div>
                                                     <div class="form-group col-6">
-                                                        <label class="mb-3" for="amount">Amount</label>
+                                                        <label class="mb-3" for="amount">Initial Amount</label>
                                                         <input type="number" class="form-control" id="amount"
                                                             name="amount" required>
                                                     </div>
