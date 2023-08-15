@@ -45,6 +45,6 @@ class CooperativeController extends Controller
         $cooperative->owners()->attach(Auth::user()->id);
 
         return redirect()->back()
-            ->with('success', 'Cooperative registered successfully.');
+            ->with('success', 'Cooperative registered successfully. Wait for the Approval');
     }
 }
