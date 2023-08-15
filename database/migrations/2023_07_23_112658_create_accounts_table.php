@@ -21,6 +21,7 @@ class CreateAccountsTable extends Migration
             $table->foreign('cooperative_id')->references('id')->on('cooperatives');
             $table->text('description')->nullable();
             $table->text('amount');
+            $table->text('currency');
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });

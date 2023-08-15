@@ -32,6 +32,7 @@ class AccountController extends Controller
             'name' => 'required',
             'description' => 'required',
             'status' => 'required',
+            'currency' => 'required',
             'amount' => 'required|numeric',
             'cooperative_id' => 'required|exists:cooperatives,id',
         ]);
