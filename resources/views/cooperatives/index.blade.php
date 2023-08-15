@@ -61,7 +61,7 @@
                                                 <td>{{ $cooperative->created_at }}</td>
                                                 <td>
                                                     @if ($cooperative->certificate)
-                                                        <a href="{{ Storage::url($cooperative->certificate) }}"
+                                                        <a href="{{ Storage::url($cooperative->certificate) }}" class="btn btn-primary btn-sm"
                                                             target="_blank">Download Certificate</a>
                                                     @else
                                                         No Certificate
