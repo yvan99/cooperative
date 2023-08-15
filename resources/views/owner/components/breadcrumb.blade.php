@@ -8,7 +8,8 @@
     </button>
 </div>
 
-<div class="modal fade" id="setDefaultCooperativeModal" tabindex="-1" role="dialog" aria-labelledby="setDefaultCooperativeModalLabel" aria-hidden="true">
+<div class="modal fade" id="setDefaultCooperativeModal" tabindex="-1" role="dialog"
+    aria-labelledby="setDefaultCooperativeModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -19,7 +20,8 @@
                 <form>
                     @foreach ($cooperatives as $cooperative)
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="defaultCooperative" value="{{ $cooperative->id }}" id="defaultCooperative{{ $cooperative->id }}">
+                            <input class="form-check-input" type="radio" name="defaultCooperative"
+                                value="{{ $cooperative->id }}" id="defaultCooperative{{ $cooperative->id }}">
                             <label class="form-check-label" for="defaultCooperative{{ $cooperative->id }}">
                                 {{ $cooperative->name }}
                             </label>
@@ -32,3 +34,24 @@
     </div>
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const saveButton = document.getElementById('saveDefaultCooperative');
+        saveButton.addEventListener('click', function() {
+            const selectedCooperative = document.querySelector(
+                'input[name="defaultCooperative"]:checked');
+            if (selectedCooperative) {
+                const cooperativeId = selectedCooperative.value;
+                const cooperativeName = selectedCooperative.nextElementSibling.textContent.trim();
+
+                localStorage.setItem('defaultCooperativeId', cooperativeId);
+                localStorage.setItem('defaultCooperativeName', cooperativeName);
+
+                alert('Default cooperative set.');
+                location.reload();
+            } else {
+                alert('Please select a default cooperative.');
+            }
+        });
+    });
+</script>
