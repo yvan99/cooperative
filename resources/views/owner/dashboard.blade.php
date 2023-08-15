@@ -7,15 +7,7 @@
         @include('owner.components.navbar')
 
         <div class="container-fluid content-inner pb-0" id="page_layout">
-            <div class="d-flex justify-content-between align-items-center flex-wrap mb-5 gap-3">
-                <div class="d-flex flex-column">
-                    <h3>Dashboard</h3>
-                    <p class="mb-0">Financial Dashboard</p>
-                </div>
-                <div class="d-flex justify-content-between align-items-center rounded flex-wrap gap-3">
-                    <button type="button" class="btn btn-primary">Urujana Cooperative</button>
-                </div>
-            </div>
+            @include('owner.components.breadcrumb')
             <div class="row">
                 <div class="col-lg-8 col-xl-8">
                     <div class="row">

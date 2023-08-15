@@ -18,7 +18,7 @@
             </div>
             <div class="modal-body">
                 <form>
-                    @foreach ($cooperatives as $cooperative)
+                    @foreach ($ownerCooperatives as $cooperative)
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="defaultCooperative"
                                 value="{{ $cooperative->id }}" id="defaultCooperative{{ $cooperative->id }}">
