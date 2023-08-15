@@ -13,7 +13,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between">
-                         
+
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                 data-bs-target="#createCategoryModal">
                                 Register Cooperative
@@ -28,13 +28,14 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Description</th>
-                                            <th>Certificate</th>
+
                                             <th>Category</th>
                                             <th>Currency</th>
                                             <th>Address</th>
                                             <th>Status</th>
                                             <th>Members</th>
                                             <th>Created At</th>
+                                            <th>Certificate</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -42,6 +43,22 @@
                                             <tr>
                                                 <td>{{ $cooperative->name }}</td>
                                                 <td>{{ $cooperative->description }}</td>
+
+                                                <td>{{ $cooperative->category->name }}</td>
+                                                <td>{{ $cooperative->currency }}</td>
+                                                <td>{{ $cooperative->address }}</td>
+                                                <td><button
+                                                        class="
+                                                    @if ($cooperative->status === 'pending') btn-sm btn btn-warning
+                                                    @elseif ($cooperative->status === 'cancelled')
+                                                        btn-sm btn btn-danger
+                                                    @elseif ($cooperative->status === 'approved')
+                                                        btn-sm btn btn-success @endif
+                                                ">
+                                                        {{ $cooperative->status }}
+                                                    </button></td>
+                                                <td>{{ $cooperative->members }}</td>
+                                                <td>{{ $cooperative->created_at }}</td>
                                                 <td>
                                                     @if ($cooperative->certificate)
                                                         <a href="{{ Storage::url($cooperative->certificate) }}"
@@ -50,12 +67,6 @@
                                                         No Certificate
                                                     @endif
                                                 </td>
-                                                <td>{{ $cooperative->category->name }}</td>
-                                                <td>{{ $cooperative->currency }}</td>
-                                                <td>{{ $cooperative->address }}</td>
-                                                <td>{{ $cooperative->status }}</td>
-                                                <td>{{ $cooperative->members }}</td>
-                                                <td>{{ $cooperative->created_at }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -101,7 +112,8 @@
                                                     <div class="form-group col-6">
                                                         <label class="mb-3" for="currency">Currency</label>
 
-                                                        <select class="form-select form-control" id="currency" name="currency">
+                                                        <select class="form-select form-control" id="currency"
+                                                            name="currency">
                                                             <option>select currency</option>
                                                             <option value="AFN">Afghan Afghani</option>
                                                             <option value="ALL">Albanian Lek</option>
@@ -123,7 +135,8 @@
                                                             <option value="BTN">Bhutanese Ngultrum</option>
                                                             <option value="BTC">Bitcoin</option>
                                                             <option value="BOB">Bolivian Boliviano</option>
-                                                            <option value="BAM">Bosnia-Herzegovina Convertible Mark</option>
+                                                            <option value="BAM">Bosnia-Herzegovina Convertible Mark
+                                                            </option>
                                                             <option value="BWP">Botswanan Pula</option>
                                                             <option value="BRL">Brazilian Real</option>
                                                             <option value="GBP">British Pound Sterling</option>
@@ -207,7 +220,8 @@
                                                             <option value="MMK">Myanmar Kyat</option>
                                                             <option value="NAD">Namibian Dollar</option>
                                                             <option value="NPR">Nepalese Rupee</option>
-                                                            <option value="ANG">Netherlands Antillean Guilder</option>
+                                                            <option value="ANG">Netherlands Antillean Guilder
+                                                            </option>
                                                             <option value="TWD">New Taiwan Dollar</option>
                                                             <option value="NZD">New Zealand Dollar</option>
                                                             <option value="NIO">Nicaraguan CÃ³rdoba</option>
