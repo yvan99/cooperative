@@ -13,8 +13,8 @@
                         <div class="card-header d-flex justify-content-between">
 
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#createAccountModal">
-                                Add an account
+                                data-bs-target="#createFinanceCategoryModal">
+                                Add Category
                             </button>
                         </div>
                         <div class="card-body">
@@ -24,81 +24,72 @@
                                 <table id="datatable" class="table" data-toggle="data-table">
                                     <thead>
                                         <tr>
-                                            <th>Code</th>
                                             <th>Name</th>
-                                            <th>Cooperative</th>
-                                            <th>Description</th>
+                                            <th>Code</th>
+                                            <th>Type</th>
                                             <th>Status</th>
-                                            <th>Amount</th>
+                                            <th>Cooperative</th>
                                             <th>Created At</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($accounts as $account)
+                                        @foreach ($financeCategories as $financeCategory)
                                             <tr>
-                                                <td> <button
-                                                        class="btn btn-sm btn-secondary text-white">{{ $account->code }}</button>
+                                                <td><button
+                                                        class="btn btn-sm btn-secondary text-white">{{ $financeCategory->code }}</button>
                                                 </td>
-                                                <td>{{ $account->name }}</td>
-                                                <td>{{ $account->cooperative->name }}</td>
-                                                <td>{{ $account->description }}</td>
-                                                <td>{{ $account->status }}</td>
-                                                <td>{{ $account->amount }} {{ $account->currency }}</td>
-                                                <td>{{ $account->created_at }}</td>
+                                                <td>{{ $financeCategory->name }}</td>
+                                                <td>{{ $financeCategory->type }}</td>
+                                                <td>{{ $financeCategory->status }}</td>
+                                                <td>{{ $financeCategory->cooperative->name }}</td>
+                                                <td>{{ $financeCategory->created_at }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
-                                <div class="modal fade" id="createAccountModal" tabindex="-1" role="dialog"
-                                    aria-labelledby="createAccountModalLabel" aria-hidden="true">
+
+
+                                <div class="modal fade" id="createFinanceCategoryModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="createFinanceCategoryModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="createAccountModalLabel">Create Account
-                                                </h5>
+                                                <h5 class="modal-title" id="createFinanceCategoryModalLabel">Register
+                                                    Finance Category</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <form action="{{ route('accounts.store') }}" class="row"
-                                                    method="POST" enctype="multipart/form-data">
+                                                <form action="{{ route('categories.store') }}" class="row"
+                                                    method="POST">
                                                     @csrf
-                                                    <input type="hidden" name="cooperative_id"
-                                                        id="accountCooperativeId">
                                                     <div class="form-group col-6">
-                                                        <label class="mb-3" for="name">Account Name</label>
+                                                        <label class="mb-3" for="name">Category Name</label>
                                                         <input type="text" class="form-control" id="name"
                                                             name="name" required>
                                                     </div>
 
                                                     <div class="form-group col-6">
-                                                        <label class="mb-3" for="status">Status</label>
-                                                        <select class="form-control form-select" id="status"
-                                                            name="status" required>
-                                                            <option value="active">Active</option>
-                                                            <option value="inactive">Inactive</option>
-
+                                                        <label class="mb-3" for="type">Category Type</label>
+                                                        <select class="form-control form-select" id="type" name="type"
+                                                            required>
+                                                            <option value="income">Income</option>
+                                                            <option value="expense">Expense</option>
                                                         </select>
                                                     </div>
                                                     <div class="form-group col-6">
-                                                        <label class="mb-3" for="amount">Initial Amount</label>
-                                                        <input type="number" class="form-control" id="amount"
-                                                            name="amount" required>
+                                                        <label class="mb-3" for="status">Status</label>
+                                                        <select class="form-control form-select" id="status" name="status"
+                                                            required>
+                                                            <option value="active">Active</option>
+                                                            <option value="inactive">Inactive</option>
+                                                        </select>
                                                     </div>
-
-                                                    <div class="form-group col-6">
-                                                        <label class="mb-3" for="currency">Currency</label>
-
-
-                                                    </div>
+                                                    <input type="hidden" name="cooperative_id"
+                                                        id="accountCooperativeId">
 
                                                     <div class="form-group col-12">
-                                                        <label class="mb-3" for="description">Description</label>
-                                                        <textarea class="form-control" id="description" name="description" required></textarea>
-                                                    </div>
-                                                    <div class="form-group col-12">
-                                                        <button type="submit" class="btn btn-primary">Create
-                                                        </button>
+                                                        <button type="submit" class="btn btn-primary">Create</button>
                                                     </div>
                                                 </form>
                                             </div>

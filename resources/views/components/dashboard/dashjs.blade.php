@@ -29,3 +29,16 @@
  <script src="{{ asset('dashboarde/js/qompac-uif700.js?v=1.0.1') }}" defer></script>
  <script src="{{ asset('dashboarde/js/sidebarf700.js?v=1.0.1') }}" defer></script>
 
+
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const cooperativeIdInput = document.getElementById('accountCooperativeId');
+
+        // Get the selected cooperative ID from localStorage and populate the hidden input
+        const storedCooperativeId = localStorage.getItem('defaultCooperativeId');
+        if (cooperativeIdInput && storedCooperativeId) {
+            cooperativeIdInput.value = storedCooperativeId;
+        }
+    });
+</script>
+

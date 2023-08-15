@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaffAuthController;
 use App\Http\Controllers\AuditorAuthController;
 use App\Http\Controllers\CooperativeController;
+use App\Http\Controllers\FinanceCategoryController;
 use App\Http\Controllers\OwnerAuthController;
 
 /*
@@ -73,4 +74,6 @@ Route::middleware('auth:owner')->prefix('owner')->group(function () {
     Route::post('/cooperatives', [CooperativeController::class, 'store'])->name('cooperatives.store');
     Route::get('/accounts', [AccountController::class, 'index'])->name('accounts.index');
     Route::post('/accounts', [AccountController::class, 'store'])->name('accounts.store');
+    Route::get('/categories', [FinanceCategoryController::class, 'index'])->name('categories.index');
+    Route::post('/categories', [FinanceCategoryController::class, 'store'])->name('categories.store');
 });
