@@ -70,4 +70,6 @@ Route::middleware('auth:owner')->prefix('owner')->group(function () {
 
     Route::get('/cooperatives', [CooperativeController::class, 'index'])->name('cooperatives.index');
     Route::post('/cooperatives', [CooperativeController::class, 'store'])->name('cooperatives.store');
+    Route::get('/accounts', [AccountController::class, 'index'])->name('accounts.index');
+    Route::post('/accounts', [AccountController::class, 'store'])->name('accounts.store');
 });
