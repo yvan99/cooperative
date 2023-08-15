@@ -52,7 +52,7 @@
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="createAccountModalLabel">Register Account
+                                                <h5 class="modal-title" id="createAccountModalLabel">Create Account
                                                 </h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
@@ -68,14 +68,11 @@
                                                         <input type="text" class="form-control" id="name"
                                                             name="name" required>
                                                     </div>
-                                                    <div class="form-group col-6">
-                                                        <label class="mb-3" for="description">Description</label>
-                                                        <textarea class="form-control" id="description" name="description" required></textarea>
-                                                    </div>
+
                                                     <div class="form-group col-6">
                                                         <label class="mb-3" for="status">Status</label>
-                                                        <select class="form-control form-select" id="status" name="status"
-                                                            required>
+                                                        <select class="form-control form-select" id="status"
+                                                            name="status" required>
                                                             <option value="active">Active</option>
                                                             <option value="inactive">Inactive</option>
 
@@ -86,9 +83,14 @@
                                                         <input type="number" class="form-control" id="amount"
                                                             name="amount" required>
                                                     </div>
+
+                                                    <div class="form-group col-12">
+                                                        <label class="mb-3" for="description">Description</label>
+                                                        <textarea class="form-control" id="description" name="description" required></textarea>
+                                                    </div>
                                                     <div class="form-group col-12">
                                                         <button type="submit" class="btn btn-primary">Create
-                                                            Account</button>
+                                                        </button>
                                                     </div>
                                                 </form>
                                             </div>
