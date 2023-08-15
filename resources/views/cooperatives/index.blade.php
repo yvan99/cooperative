@@ -9,7 +9,7 @@
 
             @include('owner.components.breadcrumb')
 
-            
+
 
             <div class="row">
                 <div class="col-12">
@@ -59,8 +59,9 @@
                                                 <td>{{ $cooperative->created_at }}</td>
                                                 <td>
                                                     @if ($cooperative->certificate)
-                                                        <a href="{{ Storage::url($cooperative->certificate) }}" class="btn btn-primary btn-sm"
-                                                            target="_blank">Download Certificate</a>
+                                                        <a href="{{ Storage::url($cooperative->certificate) }}"
+                                                            class="btn btn-primary btn-sm" target="_blank">Download
+                                                            Certificate</a>
                                                     @else
                                                         No Certificate
                                                     @endif
@@ -237,7 +238,7 @@
                                                             <option value="QAR">Qatari Rial</option>
                                                             <option value="RON">Romanian Leu</option>
                                                             <option value="RUB">Russian Ruble</option>
-                                                            <option value="RWF">Rwandan Franc</option>
+                                                            <option value="RWF" selected>Rwandan Franc</option>
                                                             <option value="SVC">Salvadoran ColÃ³n</option>
                                                             <option value="WST">Samoan Tala</option>
                                                             <option value="SAR">Saudi Riyal</option>
