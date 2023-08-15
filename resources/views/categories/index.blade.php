@@ -71,16 +71,16 @@
 
                                                     <div class="form-group col-6">
                                                         <label class="mb-3" for="type">Category Type</label>
-                                                        <select class="form-control form-select" id="type" name="type"
-                                                            required>
+                                                        <select class="form-control form-select" id="type"
+                                                            name="type" required>
                                                             <option value="income">Income</option>
                                                             <option value="expense">Expense</option>
                                                         </select>
                                                     </div>
-                                                    <div class="form-group col-6">
+                                                    <div class="form-group col-6 d-none">
                                                         <label class="mb-3" for="status">Status</label>
-                                                        <select class="form-control form-select" id="status" name="status"
-                                                            required>
+                                                        <select class="form-control form-select" id="status"
+                                                            name="status" required>
                                                             <option value="active">Active</option>
                                                             <option value="inactive">Inactive</option>
                                                         </select>
