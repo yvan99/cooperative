@@ -19,16 +19,16 @@
             <div class="modal-body">
                 <form>
                     @foreach ($ownerCooperatives as $cooperative)
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="defaultCooperative"
-                               value="{{ $cooperative->id }}" id="defaultCooperative{{ $cooperative->id }}">
-                        <label class="form-check-label" for="defaultCooperative{{ $cooperative->id }}">
-                            {{ $cooperative->name }}
-                        </label>
-                    </div>
-                @endforeach
-                
-                   
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="defaultCooperative"
+                                value="{{ $cooperative->id }}" id="defaultCooperative{{ $cooperative->id }}">
+                            <label class="form-check-label" for="defaultCooperative{{ $cooperative->id }}">
+                                {{ $cooperative->name }}
+                            </label>
+                        </div>
+                    @endforeach
+
+
                     <button type="button" class="btn btn-primary" id="saveDefaultCooperative">Save</button>
                 </form>
             </div>
@@ -48,8 +48,8 @@
 
         const saveButton = document.getElementById('saveDefaultCooperative');
         saveButton.addEventListener('click', function() {
-            // Replace this with the logic for saving the default cooperative
-            const selectedCooperative = document.querySelector('input[name="defaultCooperative"]:checked');
+            const selectedCooperative = document.querySelector(
+                'input[name="defaultCooperative"]:checked');
             if (selectedCooperative) {
                 const cooperativeId = selectedCooperative.value;
                 const cooperativeName = selectedCooperative.nextElementSibling.textContent.trim();
@@ -58,11 +58,10 @@
                 localStorage.setItem('defaultCooperativeName', cooperativeName);
 
                 alert('Default cooperative set.');
-                location.reload(); // You can refresh the page or perform other actions
+                location.reload();
             } else {
                 alert('Please select a default cooperative.');
             }
         });
     });
 </script>
-
