@@ -29,8 +29,6 @@
                                     <thead>
                                         <tr>
                                             <th>Name</th>
-                                            <th>Description</th>
-
                                             <th>Category</th>
                                             <th>Currency</th>
                                             <th>Address</th>
@@ -44,8 +42,6 @@
                                         @foreach ($cooperatives as $cooperative)
                                             <tr>
                                                 <td>{{ $cooperative->name }}</td>
-                                                <td>{{ $cooperative->description }}</td>
-
                                                 <td>{{ $cooperative->category->name }}</td>
                                                 <td>{{ $cooperative->currency }}</td>
                                                 <td>{{ $cooperative->address }}</td>

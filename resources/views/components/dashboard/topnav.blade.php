@@ -215,7 +215,7 @@
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
-                                        <li><a class="dropdown-item" href="../dashboard/auth/sign-in.html">Logout</a>
+                                        <li><a class="dropdown-item" href="/{{ Auth::getDefaultDriver() }}/logout">Logout</a>
                                         </li>
                                     </ul>
                                 </li>
