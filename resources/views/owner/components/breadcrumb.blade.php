@@ -19,27 +19,37 @@
             <div class="modal-body">
                 <form>
                     @foreach ($ownerCooperatives as $cooperative)
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="defaultCooperative"
-                                value="{{ $cooperative->id }}" id="defaultCooperative{{ $cooperative->id }}">
-                            <label class="form-check-label" for="defaultCooperative{{ $cooperative->id }}">
-                                {{ $cooperative->name }}
-                            </label>
-                        </div>
-                    @endforeach
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="defaultCooperative"
+                               value="{{ $cooperative->id }}" id="defaultCooperative{{ $cooperative->id }}">
+                        <label class="form-check-label" for="defaultCooperative{{ $cooperative->id }}">
+                            {{ $cooperative->name }}
+                        </label>
+                    </div>
+                @endforeach
+                
+                   
                     <button type="button" class="btn btn-primary" id="saveDefaultCooperative">Save</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        const storedDefaultCooperativeId = localStorage.getItem('defaultCooperativeId');
+
+        if (storedDefaultCooperativeId) {
+            const radioInput = document.getElementById(`defaultCooperative${storedDefaultCooperativeId}`);
+            if (radioInput) {
+                radioInput.checked = true;
+            }
+        }
+
         const saveButton = document.getElementById('saveDefaultCooperative');
         saveButton.addEventListener('click', function() {
-            const selectedCooperative = document.querySelector(
-                'input[name="defaultCooperative"]:checked');
+            // Replace this with the logic for saving the default cooperative
+            const selectedCooperative = document.querySelector('input[name="defaultCooperative"]:checked');
             if (selectedCooperative) {
                 const cooperativeId = selectedCooperative.value;
                 const cooperativeName = selectedCooperative.nextElementSibling.textContent.trim();
@@ -48,10 +58,11 @@
                 localStorage.setItem('defaultCooperativeName', cooperativeName);
 
                 alert('Default cooperative set.');
-                location.reload();
+                location.reload(); // You can refresh the page or perform other actions
             } else {
                 alert('Please select a default cooperative.');
             }
         });
     });
 </script>
+
