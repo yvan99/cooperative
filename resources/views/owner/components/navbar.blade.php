@@ -8,6 +8,10 @@
                 </li>
                 <li class="nav-item {{ Request::is('owner/accounts') ? 'active' : '' }}"><a class="nav-link " href="/owner/accounts">Accounts</a>
                 </li>
+
+                <li class="nav-item {{ Request::is('owner/categories') ? 'active' : '' }}"><a class="nav-link " href="/owner/categories">Categories</a>
+                </li>
+
                 <li class="nav-item {{ Request::is('owner/transactions') ? 'active' : '' }}"><a class="nav-link " href="/owner/transactions">Transactions</a>
                 </li>
 
