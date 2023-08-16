@@ -8,10 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Account extends Model
 {
     use HasFactory;
-    protected $fillable = ['code', 'name', 'cooperative_id', 'description', 'status','currency','amount'];
-    
+    protected $fillable = ['code', 'name', 'cooperative_id', 'description', 'status', 'currency', 'amount'];
+
     public function cooperative()
     {
         return $this->belongsTo(Cooperative::class);
+    }
+    public function account()
+    {
+        return $this->belongsTo(Account::class);
     }
 }

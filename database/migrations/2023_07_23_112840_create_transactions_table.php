@@ -20,11 +20,14 @@ class CreateTransactionsTable extends Migration
             $table->foreign('finance_category_id')->references('id')->on('finance_categories');
             $table->unsignedBigInteger('cooperative_id');
             $table->foreign('cooperative_id')->references('id')->on('cooperatives');
+            $table->unsignedBigInteger('account_id')->nullable();
+            $table->foreign('account_id')->references('id')->on('accounts');
             $table->year('year');
             $table->string('month');
             $table->date('date');
             $table->double('amount');
             $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
+            $table->enum('type', ['regular', 'transfer'])->default('regular');
             $table->text('description')->nullable();
             $table->boolean('flag')->default(false);
             $table->timestamps();
