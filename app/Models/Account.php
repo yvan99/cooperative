@@ -14,8 +14,5 @@ class Account extends Model
     {
         return $this->belongsTo(Cooperative::class);
     }
-    public function account()
-    {
-        return $this->belongsTo(Account::class);
-    }
+
 }
