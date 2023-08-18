@@ -29,7 +29,6 @@ class CreateTransactionsTable extends Migration
             $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
             $table->enum('type', ['regular', 'transfer'])->default('regular');
             $table->text('description')->nullable();
-            $table->boolean('flag')->default(false);
             $table->timestamps();
         });
     }

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Transaction extends Model
 {
     use HasFactory;
-    protected $fillable = ['code', 'finance_category_id', 'cooperative_id', 'year', 'month', 'date', 'amount', 'status', 'description', 'flag'];
+    protected $fillable = ['code', 'finance_category_id', 'cooperative_id', 'year', 'month', 'date', 'amount', 'status', 'description'];
 
     public function financeCategory()
     {
