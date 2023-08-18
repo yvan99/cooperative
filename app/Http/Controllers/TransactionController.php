@@ -13,7 +13,7 @@ class TransactionController extends Controller
         $transactions = Transaction::with(['financeCategory', 'cooperative', 'account'])->get();
         $accounts = Account::all();
 
-        return view('transactions.index', compact('transactions', 'accounts'));
+        return view('transaction.index', compact('transactions', 'accounts'));
     }
 
     public function store(Request $request)
@@ -57,6 +57,6 @@ class TransactionController extends Controller
         }
         $transaction->save();
 
-        return redirect()->route('transactions.index')->with('success', 'Transaction created successfully.');
+        return redirect()->route('transaction.index')->with('success', 'Transaction created successfully.');
     }
 }
