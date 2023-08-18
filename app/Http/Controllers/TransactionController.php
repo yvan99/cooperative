@@ -80,7 +80,7 @@ class TransactionController extends Controller
             })
             ->get();
 
-        $view = view('transactions.report', compact('transactions', 'year', 'month'));
-        return response($view)->header('Content-Type', 'application/pdf');
+        $view = view('transaction.report', compact('transactions', 'year', 'month'));
+        return response($view);
     }
 }
