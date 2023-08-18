@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Account;
+use App\Models\Cooperative;
+use App\Models\FinanceCategory;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 
@@ -10,10 +12,12 @@ class TransactionController extends Controller
 {
     public function index()
     {
-        $transactions = Transaction::with(['financeCategory', 'cooperative', 'account'])->get();
+        $transactions = Transaction::all();
+        $financeCategories = FinanceCategory::all();
+        $cooperatives = Cooperative::all();
         $accounts = Account::all();
 
-        return view('transaction.index', compact('transactions', 'accounts'));
+        return view('Transaction.index', compact('transactions', 'financeCategories', 'cooperatives', 'accounts'));
     }
 
     public function store(Request $request)
