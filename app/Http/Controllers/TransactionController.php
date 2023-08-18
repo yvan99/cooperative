@@ -32,7 +32,7 @@ class TransactionController extends Controller
             'account_id' => 'nullable|exists:accounts,id',
         ]);
 
-        
+
         $transaction = new Transaction([
             'code' => $getGeneratedCode->generateRandomAccountCode('TX-'),
             'finance_category_id' => $request->finance_category_id,
@@ -48,13 +48,12 @@ class TransactionController extends Controller
 
         if ($transaction->financeCategory->type === 'income') {
             $account = Account::find($request->account_id);
-           
+
             if ($account) {
                 $account->amount += $transaction->amount;
 
-               
+
                 $account->save();
-                
             }
         } elseif ($transaction->financeCategory->type === 'expense') {
             $account = Account::find($request->account_id);
@@ -66,5 +65,22 @@ class TransactionController extends Controller
         $transaction->save();
 
         return redirect()->back()->with('success', 'Transaction created successfully.');
+    }
+
+    public function generateReports(Request $request)
+    {
+        $year = $request->input('year');
+        $month = $request->input('month');
+
+        // You can customize the logic to generate reports based on the selected year and month
+        // Example: Fetch transactions based on year and month
+        $transactions = Transaction::whereYear('date', $year)
+            ->when($month, function ($query, $month) {
+                return $query->whereMonth('date', $month);
+            })
+            ->get();
+
+        $view = view('transactions.report', compact('transactions', 'year', 'month'));
+        return response($view)->header('Content-Type', 'application/pdf');
     }
 }
