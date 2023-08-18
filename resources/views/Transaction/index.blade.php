@@ -10,6 +10,33 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
+                        <div class="card-body">
+                            <form action="{{ route('transactions.reports') }}" method="get" target="_blank"
+                                class="row">
+                                <div class="col-md-2">
+                                    <label for="year">Year:</label>
+                                    <input type="number" id="year" class="form-control" name="year" required>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="month">Month:</label>
+                                    <select id="month" class="form-control form-select" name="month">
+                                        <option value="">Select Month</option>
+                                        @foreach (range(1, 12) as $month)
+                                            <option value="{{ $month }}">
+                                                {{ date('F', mktime(0, 0, 0, $month, 1)) }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+
+                                    <button type="submit" class="btn btn-primary mt-4">Generate Report</button>
+                                </div>
+                            </form>
+                        </div>
+
+
+                    </div>
+                    <div class="card">
                         <div class="card-header d-flex justify-content-between">
 
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"

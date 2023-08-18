@@ -79,4 +79,6 @@ Route::middleware('auth:owner')->prefix('owner')->group(function () {
     Route::post('/categories', [FinanceCategoryController::class, 'store'])->name('categories.store');
     Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
     Route::post('/transactions', [TransactionController::class, 'store'])->name('transactions.store');
+    Route::get('/transactions/reports', [TransactionController::class,'generateReports'])->name('transactions.reports');
+
 });
