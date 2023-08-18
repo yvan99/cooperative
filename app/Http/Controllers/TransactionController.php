@@ -23,6 +23,8 @@ class TransactionController extends Controller
     public function store(Request $request)
     {
 
+        $getGeneratedCode = new AccountController;
+
         $request->validate([
             'finance_category_id' => 'required|exists:finance_categories,id',
             'cooperative_id' => 'required|exists:cooperatives,id',
@@ -30,7 +32,7 @@ class TransactionController extends Controller
             'account_id' => 'nullable|exists:accounts,id',
         ]);
 
-        $getGeneratedCode = new AccountController;
+        
         $transaction = new Transaction([
             'code' => $getGeneratedCode->generateRandomAccountCode('TX-'),
             'finance_category_id' => $request->finance_category_id,
@@ -44,16 +46,18 @@ class TransactionController extends Controller
             'description' => $request->description,
         ]);
 
-        $transaction->save();
-
         if ($transaction->financeCategory->type === 'income') {
-            $account = Account::find($transaction->account_id);
+            $account = Account::find($request->account_id);
+           
             if ($account) {
                 $account->amount += $transaction->amount;
+
+               
                 $account->save();
+                
             }
         } elseif ($transaction->financeCategory->type === 'expense') {
-            $account = Account::find($transaction->account_id);
+            $account = Account::find($request->account_id);
             if ($account) {
                 $account->amount -= $transaction->amount;
                 $account->save();
@@ -61,6 +65,6 @@ class TransactionController extends Controller
         }
         $transaction->save();
 
-        return redirect()->route('transaction.index')->with('success', 'Transaction created successfully.');
+        return redirect()->back()->with('success', 'Transaction created successfully.');
     }
 }

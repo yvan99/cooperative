@@ -20,7 +20,7 @@ class CreateTransactionsTable extends Migration
             $table->foreign('finance_category_id')->references('id')->on('finance_categories');
             $table->unsignedBigInteger('cooperative_id');
             $table->foreign('cooperative_id')->references('id')->on('cooperatives');
-            $table->unsignedBigInteger('account_id')->nullable();
+            $table->unsignedBigInteger('account_id');
             $table->foreign('account_id')->references('id')->on('accounts');
             $table->year('year');
             $table->string('month');
