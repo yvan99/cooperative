@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Cooperative;
+use App\Models\Owner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -12,10 +13,13 @@ class CooperativeController extends Controller
 
     public function index()
     {
-        $cooperatives = Cooperative::all();
+        $loggedInOwnerId = auth()->user()->id; // Get the logged-in user's ID
+        $cooperatives = Owner::find($loggedInOwnerId)->cooperatives; // Fetch cooperatives belonging to the owner
         $categories = Category::all();
+    
         return view('cooperatives.index', compact('cooperatives', 'categories'));
     }
+    
 
     public function cooperativeStaff()
     {
