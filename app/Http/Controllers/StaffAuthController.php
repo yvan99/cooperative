@@ -23,7 +23,7 @@ class StaffAuthController extends Controller
     {
         $credentials = $request->validated();
 
-        if (Auth::guard('owner')->attempt($credentials)) {
+        if (Auth::guard('staff')->attempt($credentials)) {
             return response()->json(['status' => 'success', 'redirectTo' => $this->redirectTo]);
         }
 
