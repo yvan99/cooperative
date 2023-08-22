@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="d-grid mb-10">
-                            <button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
+                            <button type="submit" id="kt_sign_in_submit" class="btn btn-dark">
 
 
                                 <span class="indicator-label">

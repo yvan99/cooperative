@@ -87,7 +87,7 @@
 
 
                         <div class="d-grid mb-10">
-                            <button type="submit" id="kt_sign_up_submit" class="btn btn-primary">
+                            <button type="submit" id="kt_sign_up_submit" class="btn btn-dark">
                                 <span class="indicator-label">Create Account</span>
                                 <span class="indicator-progress">Please wait... <span
                                         class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
