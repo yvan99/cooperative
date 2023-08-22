@@ -45,7 +45,7 @@
                         <a class="btn btn-sm btn-secondary" href="/auditor/login">Auditor Portal</a>
                     </li> &nbsp;
                     <li class="nav-item">
-                        <a class="btn btn-sm btn-dark" href="/admin/login">Admin Portal</a>
+                        <a class="btn btn-sm btn-dark" href="/staff/login">Admin Portal</a>
                     </li>
                 </ul>
             </div>
