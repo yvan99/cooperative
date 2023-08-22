@@ -51,9 +51,7 @@ Route::prefix('owner')->group(function () {
 
 // Staff dashboard
 Route::middleware('auth:staff')->prefix('staff')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('staff.dashboard');
-    })->name('staff.dashboard');
+    Route::get('/dashboard', [CooperativeController::class, 'cooperativeStaff']);
 });
 
 // Auditor dashboard

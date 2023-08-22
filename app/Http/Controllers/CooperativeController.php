@@ -17,6 +17,13 @@ class CooperativeController extends Controller
         return view('cooperatives.index', compact('cooperatives', 'categories'));
     }
 
+    public function cooperativeStaff()
+    {
+        $cooperatives = Cooperative::all();
+        $categories = Category::all();
+        return view('staff.dashboard', compact('cooperatives', 'categories'));
+    }
+
     public function store(Request $request)
     {
         $request->validate([
