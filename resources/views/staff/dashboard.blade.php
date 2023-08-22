@@ -4,18 +4,11 @@
     <span class="screen-darken"></span>
     <main class="main-content">
         @include('components.dashboard.topnav')
-        @include('owner.components.navbar')
+        @include('staff.components.navbar')
         <div class="container-fluid content-inner pb-0" id="page_layout">
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-header d-flex justify-content-between">
-
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#createCategoryModal">
-                                Register Cooperative
-                            </button>
-                        </div>
                         <div class="card-body">
                             @include('components.dashboard.alert')
                             <div class="table-responsive border rounded">
