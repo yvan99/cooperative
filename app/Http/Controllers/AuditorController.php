@@ -14,7 +14,7 @@ class AuditorController extends Controller
         $randomPassword = bin2hex(random_bytes(6));
 
         $auditor = Auditor::create([
-            'names' => $validatedData['name'],
+            'names' => $validatedData['names'],
             'email' => $validatedData['email'],
             'telephone' => $validatedData['telephone'],
             'password' => bcrypt($randomPassword),
@@ -27,7 +27,7 @@ class AuditorController extends Controller
 
         Auth::guard('auditor')->login($auditor);
 
-        return redirect('/auditor/dashboard');
+        return redirect()->back()->with('success', 'Auditor Registered successfully.');
     }
 
     public function index()

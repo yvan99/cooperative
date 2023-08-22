@@ -29,7 +29,9 @@
                         <div class="collapse navbar-collapse  bg-dark" id="navbarSupportedContent">
                             <ul class="mb-2 navbar-nav ms-auto align-items-center navbar-list mb-xl-0">
 
-                                <li class="nav-item theme-scheme-dropdown">
+
+
+                                {{-- <li class="nav-item theme-scheme-dropdown">
                                     <a href="#" class="nav-link" id="mode-drop">
                                         <svg class="icon-24" width="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -146,6 +148,8 @@
                                         </li>
                                     </ul>
                                 </li>
+
+
                                 <li class="nav-item iq-full-screen d-none  d-xl-block border-end"
                                     id="fullscreen-item">
                                     <a href="#" class="nav-link pe-3" id="btnFullscreen"
@@ -185,7 +189,9 @@
                                             </svg>
                                         </span>
                                     </a>
-                                </li>
+                                </li> --}}
+
+
                                 <li class="nav-item dropdown">
                                     <a class="py-0 nav-link d-flex align-items-center ps-3" href="#"
                                         id="navbarDropdown" role="button" data-bs-toggle="dropdown"
