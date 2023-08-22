@@ -10,8 +10,8 @@
                 <div class="w-lg-500px p-10">
 
 
-                    <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form"
-                        action="{{ route('owner.login') }}" method="POST">
+                    <form class="form w-100" novalidate="novalidate" id="staff_sign_in_form"
+                        action="{{ route('staff.login') }}" method="POST">
                         @csrf
                         <div class="text-left mb-11">
 
@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="d-grid mb-10">
-                            <button type="submit" id="kt_sign_in_submit" class="btn btn-dark">
+                            <button type="submit" id="staff_sign_in_submit" class="btn btn-dark">
 
 
                                 <span class="indicator-label">

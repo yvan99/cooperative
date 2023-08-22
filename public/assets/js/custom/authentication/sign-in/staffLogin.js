@@ -2,8 +2,8 @@
 
 class KTSigninGeneral {
     constructor() {
-        this.form = document.querySelector("#kt_sign_in_form");
-        this.submitButton = document.querySelector("#kt_sign_in_submit");
+        this.form = document.querySelector("#staff_sign_in_form");
+        this.submitButton = document.querySelector("#staff_sign_in_submit");
         this.validator = null;
         
         this.init();
