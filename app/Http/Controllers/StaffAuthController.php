@@ -30,30 +30,6 @@ class StaffAuthController extends Controller
         return response()->json(['status' => 'error']);
     }
 
-    public function showRegistrationForm()
-    {
-        return view('staff.register');
-    }
-
-    public function register(StaffRegisterRequest $request)
-    {
-        $validatedData = $request->validated();
-
-        $staff = Staff::create([
-            'name' => $validatedData['name'],
-            'email' => $validatedData['email'],
-            'password' => bcrypt($validatedData['password']),
-            'telephone' => $validatedData['telephone'],
-        ]);
-
-        $smsApi = new SmsApiController();
-        $message = "Dear " . $validatedData['name'] . " , your staff account registration is successful.";
-        $smsApi->sendSms($staff->telephone, $message);
-
-        Auth::guard('staff')->login($staff);
-
-        return redirect('/staff/dashboard');
-    }
 
     public function logout()
     {
