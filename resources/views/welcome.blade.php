@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{env("APP_NAME")}}</title>
+    <title>{{ env('APP_NAME') }}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 
@@ -12,12 +12,11 @@
 
     <style>
         .hero-section {
-            background-image: url('your-image.jpg');
-            /* Replace 'your-image.jpg' with your actual image path */
+            background-image: url('homepage/hero.jpg');
             background-size: cover;
-            background-position: center;
             position: relative;
             color: #fff;
+            height: 500px;
         }
 
         .overlay {
@@ -26,20 +25,19 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            /* Adjust the opacity as needed */
+            background-color: rgba(0, 0, 0, 0.7);
         }
     </style>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Your Brand</a>
+            <a class="navbar-brand" href="#">{{ env('APP_NAME') }}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home</a>
                     </li>
@@ -56,14 +54,15 @@
 
     <section class="hero-section text-center text-white py-5">
         <div class="overlay"></div>
-        <div class="container">
-            <h1 class="display-4">Welcome to Our Website</h1>
-            <p class="lead">This is a simple landing page built with Bootstrap.</p>
-            <a href="#features" class="btn btn-primary">Learn More</a>
+        <div class="container position-relative mt-5">
+            <h1 class="display-4">{{env("APP_TITLE")}}</h1>
+            <p class="lead">{{env("APP_DESCRIPTION")}}</p>
+            <a href="#features" class="btn btn-primary">Create Account</a>
+            <a href="#features" class="btn btn-primary">Login</a>
         </div>
     </section>
 
-    <section id="features" class="py-5">
+    {{-- <section id="features" class="py-5">
         <div class="container text-center">
             <h2 class="display-4">Features</h2>
             <div class="row">
@@ -81,11 +80,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
-    <footer class="text-center py-3">
-        <p>&copy; {{ date('Y') }} Powered by {{ env('APP_OWNER') }}</p>
+    <footer class="text-left py-3 container">
+        <p>&copy; {{ date('Y') }} All rights reserved , Developed by {{ env('APP_OWNER') }}</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
