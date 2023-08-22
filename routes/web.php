@@ -27,9 +27,7 @@ Route::get('/', function () {
 Route::prefix('staff')->group(function () {
     Route::get('/login', [StaffAuthController::class, 'showLoginForm'])->name('staff.login');
     Route::post('/login', [StaffAuthController::class, 'login']);
-    Route::get('/register', [StaffAuthController::class, 'showRegistrationForm'])->name('staff.register');
-    Route::post('/register', [StaffAuthController::class, 'register']);
-    Route::post('/logout', [StaffAuthController::class, 'logout'])->name('staff.logout');
+    Route::get('/logout', [StaffAuthController::class, 'logout'])->name('staff.logout');
 });
 
 // Auditor routes
