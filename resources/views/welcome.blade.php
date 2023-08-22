@@ -57,8 +57,8 @@
         <div class="container position-relative mt-5">
             <h1 class="display-4">{{env("APP_TITLE")}}</h1>
             <p class="lead">{{env("APP_DESCRIPTION")}}</p>
-            <a href="#features" class="btn btn-primary">Create Account</a>
-            <a href="#features" class="btn btn-primary">Login</a>
+            <a href="#features" class="btn btn-dark">Create Account</a>
+            <a href="#features" class="btn btn-secondary">Login</a>
         </div>
     </section>
 
