@@ -52,6 +52,8 @@ Route::prefix('owner')->group(function () {
 // Staff dashboard
 Route::middleware('auth:staff')->prefix('staff')->group(function () {
     Route::get('/dashboard', [CooperativeController::class, 'cooperativeStaff']);
+    Route::get('/{cooperative}/approve', [CooperativeController::class,'approveCooperative'])->name('staff.cooperative.approve');
+
 });
 
 // Auditor dashboard
