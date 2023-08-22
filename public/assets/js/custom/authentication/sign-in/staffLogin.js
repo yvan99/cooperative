@@ -50,7 +50,7 @@ class KTSigninGeneral {
                     this.submitButton.disabled = true;
 
                     axios
-                        .post("/owner/login", {
+                        .post("/staff/login", {
                             email: this.form.querySelector('[name="email"]').value,
                             password: this.form.querySelector('[name="password"]').value,
                         })

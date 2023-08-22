@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Auth;
 
 class StaffAuthController extends Controller
 {
+
+    protected $redirectTo = '/staff/dashboard';
+    protected $redirectToLogout = '/staff/login';
+
     public function showLoginForm()
     {
         return view('staff.login');
@@ -19,11 +23,11 @@ class StaffAuthController extends Controller
     {
         $credentials = $request->validated();
 
-        if (Auth::guard('staff')->attempt($credentials)) {
-            return redirect()->intended('/staff/dashboard');
+        if (Auth::guard('owner')->attempt($credentials)) {
+            return response()->json(['status' => 'success', 'redirectTo' => $this->redirectTo]);
         }
 
-        return back()->withErrors(['email' => 'Invalid credentials']);
+        return response()->json(['status' => 'error']);
     }
 
     public function showRegistrationForm()
