@@ -24,6 +24,7 @@
                                             <th>Members</th>
                                             <th>Created At</th>
                                             <th>Certificate</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -54,6 +55,9 @@
                                                         No Certificate
                                                     @endif
                                                 </td>
+
+                                                <td><a href="/staff/cooperative/approve"
+                                                        class="btn btn-sm btn-success">Approve</a></td>
                                             </tr>
                                         @endforeach
                                     </tbody>
