@@ -49,15 +49,19 @@
                                                 <td>
                                                     @if ($cooperative->certificate)
                                                         <a href="{{ Storage::url($cooperative->certificate) }}"
-                                                            class="btn btn-primary btn-sm" target="_blank">Download
+                                                            class="btn btn-primary btn-sm" target="_blank">View
                                                             Certificate</a>
                                                     @else
                                                         No Certificate
                                                     @endif
                                                 </td>
 
-                                                <td><a href="/staff/cooperative/approve"
-                                                        class="btn btn-sm btn-success">Approve</a></td>
+                                                <td>
+                                                    @if ($cooperative->status !== 'approved')
+                                                        <a href="{{ route('staff.cooperative.approve', $cooperative) }}" class="btn btn-sm btn-success">Approve</a>
+                                                    @endif
+                                                </td>
+                                                
                                             </tr>
                                         @endforeach
                                     </tbody>

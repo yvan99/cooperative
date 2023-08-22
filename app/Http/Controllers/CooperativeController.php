@@ -13,19 +13,36 @@ class CooperativeController extends Controller
 
     public function index()
     {
-        $loggedInOwnerId = auth()->user()->id; // Get the logged-in user's ID
-        $cooperatives = Owner::find($loggedInOwnerId)->cooperatives; // Fetch cooperatives belonging to the owner
+        $loggedInOwnerId = auth()->user()->id; 
+        $cooperatives = Owner::find($loggedInOwnerId)->cooperatives;
         $categories = Category::all();
-    
+
         return view('cooperatives.index', compact('cooperatives', 'categories'));
     }
-    
+
 
     public function cooperativeStaff()
     {
         $cooperatives = Cooperative::all();
         $categories = Category::all();
         return view('staff.dashboard', compact('cooperatives', 'categories'));
+    }
+
+    public function approveCooperative(Cooperative $cooperative)
+    {
+        if ($cooperative->status === 'pending') {
+            $cooperative->update(['status' => 'approved']);
+            $owner = $cooperative->owners->first();
+            if ($owner) {
+                $smsApi = new SmsApiController();
+                $message = "Dear " . $owner->names . ", your cooperative '" . $cooperative->name . "' is now approved.";
+                $smsApi->sendSms($owner->telephone, $message);
+            }
+
+            return redirect()->back()->with('success', 'Cooperative approved successfully.');
+        } else {
+            return redirect()->back()->with('error', 'Cooperative cannot be approved.');
+        }
     }
 
     public function store(Request $request)
