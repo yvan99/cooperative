@@ -101,3 +101,4 @@
     </div>
 </div>
 @include('components.dashboard.js')
+@include('components.dashboard.authowner')
