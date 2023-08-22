@@ -35,7 +35,7 @@ Route::prefix('staff')->group(function () {
 Route::prefix('auditor')->group(function () {
     Route::get('/login', [AuditorAuthController::class, 'showLoginForm'])->name('auditor.login');
     Route::post('/login', [AuditorAuthController::class, 'login']);
-    Route::post('/logout', [AuditorAuthController::class, 'logout'])->name('auditor.logout');
+    Route::get('/logout', [AuditorAuthController::class, 'logout'])->name('auditor.logout');
 });
 
 // Owner routes
