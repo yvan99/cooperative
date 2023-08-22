@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Auth;
 
 class AuditorAuthController extends Controller
 {
+
+    protected $redirectTo = '/auditor/dashboard';
+    protected $redirectToLogout = '/auditor/login';
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
@@ -30,10 +34,10 @@ class AuditorAuthController extends Controller
         $credentials = $request->validated();
 
         if (Auth::guard('auditor')->attempt($credentials)) {
-            return redirect()->intended('/auditor/dashboard');
+            return response()->json(['status' => 'success', 'redirectTo' => $this->redirectTo]);
         }
 
-        return back()->withErrors(['email' => 'Invalid credentials']);
+        return response()->json(['status' => 'error']);
     }
 
     public function showRegistrationForm()
