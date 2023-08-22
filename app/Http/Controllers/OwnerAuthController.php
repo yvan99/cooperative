@@ -31,11 +31,11 @@ class OwnerAuthController extends Controller
     public function login(OwnerLoginRequest $request)
     {
         $credentials = $request->validated();
-
+    
         if (Auth::guard('owner')->attempt($credentials)) {
             return response()->json(['status' => 'success', 'redirectTo' => $this->redirectTo]);
         }
-
+    
         return response()->json(['status' => 'error']);
     }
 
@@ -69,6 +69,6 @@ class OwnerAuthController extends Controller
     public function logout()
     {
         Auth::guard('owner')->logout();
-        return view('logout');
+         return view('owner.logout');
     }
 }

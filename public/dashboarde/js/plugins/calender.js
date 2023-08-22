@@ -55,10 +55,10 @@ if (document.querySelectorAll('#calendar1').length) {
             groupId: '999',
             title: 'All day Event',
             start: moment(new Date(), 'YYYY-MM-DD').add(-14, 'days').format('YYYY-MM-DD') + 'T05:30:00.000Z',
-            color: '#161D2B',
+            color: '#111722',
             backgroundColor: '#E1E6EF',
-            textColor: '#161D2B',
-            borderColor: '#161D2B'
+            textColor: '#111722',
+            borderColor: '#111722'
         },
         {
             groupId: '999',
@@ -72,10 +72,10 @@ if (document.querySelectorAll('#calendar1').length) {
         {
             title: 'Birthday Party',
             start: moment(new Date(), 'YYYY-MM-DD').add(-8, 'days').format('YYYY-MM-DD') + 'T05:30:00.000Z',
-            color: '#161D2B',
+            color: '#111722',
             backgroundColor: '#E1E6EF',
-            textColor: '#161D2B',
-            borderColor: '#161D2B'
+            textColor: '#111722',
+            borderColor: '#111722'
         },
         {
             title: 'Reporting Event',
@@ -96,10 +96,10 @@ if (document.querySelectorAll('#calendar1').length) {
         {
             title: 'Birthday Party',
             start: moment(new Date(), 'YYYY-MM-DD').add(-3, 'days').format('YYYY-MM-DD') + 'T05:30:00.000Z',
-            color: '#161D2B',
+            color: '#111722',
             backgroundColor: '#E1E6EF',
-            textColor: '#161D2B',
-            borderColor: '#161D2B'
+            textColor: '#111722',
+            borderColor: '#111722'
         },
 
         {
@@ -136,28 +136,28 @@ if (document.querySelectorAll('#calendar1').length) {
             groupId: '999',
             title: 'click for Google',
             start: moment(new Date(), 'YYYY-MM-DD').add(5, 'days').format('YYYY-MM-DD') + 'T05:30:00.000Z',
-            color: '#161D2B',
+            color: '#111722',
             backgroundColor: '#E1E6EF',
-            textColor: '#161D2B',
-            borderColor: '#161D2B'
+            textColor: '#111722',
+            borderColor: '#111722'
         },
         {
             groupId: '999',
             title: 'All day Event',
             start: moment(new Date(), 'YYYY-MM-DD').add(6, 'days').format('YYYY-MM-DD') + 'T05:30:00.000Z',
-            color: '#161D2B',
+            color: '#111722',
             backgroundColor: '#E1E6EF',
-            textColor: '#161D2B',
-            borderColor: '#161D2B'
+            textColor: '#111722',
+            borderColor: '#111722'
         },
         {
             groupId: '999',
             title: 'Repeating Event',
             start: moment(new Date(), 'YYYY-MM-DD').add(13, 'days').format('YYYY-MM-DD') + 'T05:30:00.000Z',
-            color: '#161D2B',
+            color: '#111722',
             backgroundColor: '#E1E6EF',
-            textColor: '#161D2B',
-            borderColor: '#161D2B'
+            textColor: '#111722',
+            borderColor: '#111722'
         },
         {
             groupId: '999',
