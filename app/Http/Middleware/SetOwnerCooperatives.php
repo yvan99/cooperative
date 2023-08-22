@@ -22,10 +22,11 @@ class SetOwnerCooperatives
         $loggedInOwnerId = Auth::id();
         $ownerCooperatives = Cooperative::whereHas('owners', function ($query) use ($loggedInOwnerId) {
             $query->where('owner_id', $loggedInOwnerId);
-        })->get();
-    
+        })->where('status', 'approved')
+            ->get();
+
         Session::put('ownerCooperatives', $ownerCooperatives);
-    
+
         return $next($request);
     }
 }
