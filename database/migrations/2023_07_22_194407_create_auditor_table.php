@@ -13,7 +13,7 @@ class CreateAuditorTable extends Migration
      */
     public function up()
     {
-        Schema::create('auditor', function (Blueprint $table) {
+        Schema::create('auditors', function (Blueprint $table) {
             $table->id();
             $table->string('names');
             $table->string('telephone');
