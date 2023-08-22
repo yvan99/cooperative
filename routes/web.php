@@ -4,6 +4,7 @@ use App\Http\Controllers\AccountController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaffAuthController;
 use App\Http\Controllers\AuditorAuthController;
+use App\Http\Controllers\AuditorController;
 use App\Http\Controllers\CooperativeController;
 use App\Http\Controllers\FinanceCategoryController;
 use App\Http\Controllers\OwnerAuthController;
@@ -34,8 +35,6 @@ Route::prefix('staff')->group(function () {
 Route::prefix('auditor')->group(function () {
     Route::get('/login', [AuditorAuthController::class, 'showLoginForm'])->name('auditor.login');
     Route::post('/login', [AuditorAuthController::class, 'login']);
-    Route::get('/register', [AuditorAuthController::class, 'showRegistrationForm'])->name('auditor.register');
-    Route::post('/register', [AuditorAuthController::class, 'register']);
     Route::post('/logout', [AuditorAuthController::class, 'logout'])->name('auditor.logout');
 });
 
@@ -52,8 +51,9 @@ Route::prefix('owner')->group(function () {
 // Staff dashboard
 Route::middleware('auth:staff')->prefix('staff')->group(function () {
     Route::get('/dashboard', [CooperativeController::class, 'cooperativeStaff']);
-    Route::get('/{cooperative}/approve', [CooperativeController::class,'approveCooperative'])->name('staff.cooperative.approve');
-
+    Route::get('/{cooperative}/approve', [CooperativeController::class, 'approveCooperative'])->name('staff.cooperative.approve');
+    Route::get('/auditors', [AuditorController::class, 'index']);
+    Route::post('/auditors/register', [AuditorController::class, 'register'])->name('staff.auditors.register');
 });
 
 // Auditor dashboard
@@ -77,6 +77,5 @@ Route::middleware('auth:owner')->prefix('owner')->group(function () {
     Route::post('/categories', [FinanceCategoryController::class, 'store'])->name('categories.store');
     Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
     Route::post('/transactions', [TransactionController::class, 'store'])->name('transactions.store');
-    Route::get('/transactions/reports', [TransactionController::class,'generateReports'])->name('transactions.reports');
-
+    Route::get('/transactions/reports', [TransactionController::class, 'generateReports'])->name('transactions.reports');
 });
