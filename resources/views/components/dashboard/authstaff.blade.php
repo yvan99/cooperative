@@ -1,1 +1,1 @@
-<script src="../../../assets/js/custom/authentication/sign-in/stafflogin.js"></script>
+<script src="../../../assets/js/custom/authentication/sign-in/staffLogin.js"></script>
