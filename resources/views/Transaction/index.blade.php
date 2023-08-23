@@ -28,7 +28,6 @@
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-
                                     <button type="submit" class="btn btn-primary mt-4">Generate Report</button>
                                 </div>
                             </form>
