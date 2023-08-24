@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7d82912ab320186215e617aabcac0ed",
+    "content-hash": "d5dafa1007f0181848ddbd0731fcde69",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1095,6 +1095,106 @@
             "time": "2023-08-03T15:06:02+00:00"
         },
         {
+            "name": "kakaprodo/custom-data",
+            "version": "v1.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kakaprodo/custom-data.git",
+                "reference": "a1c209a36056094d6a9d173b5d178e132cbaf645"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kakaprodo/custom-data/zipball/a1c209a36056094d6a9d173b5d178e132cbaf645",
+                "reference": "a1c209a36056094d6a9d173b5d178e132cbaf645",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Kakaprodo\\CustomData\\CustomDataServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kakaprodo\\CustomData\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "kakaprodo",
+                    "email": "promskakaprodo45@gmail.com"
+                }
+            ],
+            "description": "A package that minimize mixed arguments of functions or methods",
+            "support": {
+                "issues": "https://github.com/kakaprodo/custom-data/issues",
+                "source": "https://github.com/kakaprodo/custom-data/tree/v1.9.1"
+            },
+            "time": "2023-07-04T12:34:02+00:00"
+        },
+        {
+            "name": "kakaprodo/system-analytic",
+            "version": "v1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kakaprodo/system-analytic.git",
+                "reference": "21a506f411f0de9a8a70d1442920b3aa90177000"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kakaprodo/system-analytic/zipball/21a506f411f0de9a8a70d1442920b3aa90177000",
+                "reference": "21a506f411f0de9a8a70d1442920b3aa90177000",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=7.0",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Kakaprodo\\SystemAnalytic\\SystemAnalyticServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kakaprodo\\SystemAnalytic\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "kakaprodo",
+                    "email": "promskakaprodo45@gmail.com"
+                }
+            ],
+            "description": "A package that simplifies the development of the analytic of a laravel system based on the data the system has in database",
+            "keywords": [
+                "analytic",
+                "kakaprodo",
+                "laravel analytic",
+                "package",
+                "php",
+                "system analytic"
+            ],
+            "support": {
+                "issues": "https://github.com/kakaprodo/system-analytic/issues",
+                "source": "https://github.com/kakaprodo/system-analytic/tree/v1.1.4"
+            },
+            "time": "2023-08-21T13:08:35+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v8.83.27",
             "source": {
@@ -1459,6 +1559,67 @@
                 "source": "https://github.com/laravel/tinker/tree/v2.8.1"
             },
             "time": "2023-02-15T16:40:09+00:00"
+        },
+        {
+            "name": "laravel/ui",
+            "version": "v3.4.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "65ec5c03f7fee2c8ecae785795b829a15be48c2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/65ec5c03f7fee2c8ecae785795b829a15be48c2c",
+                "reference": "65ec5c03f7fee2c8ecae785795b829a15be48c2c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^8.42|^9.0",
+                "illuminate/filesystem": "^8.42|^9.0",
+                "illuminate/support": "^8.82|^9.0",
+                "illuminate/validation": "^8.42|^9.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.23|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "support": {
+                "source": "https://github.com/laravel/ui/tree/v3.4.6"
+            },
+            "time": "2022-05-20T13:38:08+00:00"
         },
         {
             "name": "league/commonmark",

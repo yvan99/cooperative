@@ -6,7 +6,6 @@
     <button type="button" class="btn btn-primary default-cooperative-button" data-bs-toggle="modal" data-bs-target="#setDefaultCooperativeModal">
         Set Default Cooperative
     </button>
-    
 </div>
 
 <div class="modal fade" id="setDefaultCooperativeModal" tabindex="-1" role="dialog"
@@ -28,7 +27,7 @@
                         </label>
                     </div>
                 @endforeach
-                
+
 
 
                     <button type="button" class="btn btn-primary mt-3" id="saveDefaultCooperative">Save</button>

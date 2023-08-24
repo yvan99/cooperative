@@ -6,6 +6,7 @@ use App\Http\Controllers\StaffAuthController;
 use App\Http\Controllers\AuditorAuthController;
 use App\Http\Controllers\AuditorController;
 use App\Http\Controllers\CooperativeController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FinanceCategoryController;
 use App\Http\Controllers\OwnerAuthController;
 use App\Http\Controllers\TransactionController;
@@ -65,10 +66,7 @@ Route::middleware('auth:auditor')->prefix('auditor')->group(function () {
 
 // Owner dashboard
 Route::middleware('auth:owner')->prefix('owner')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('owner.dashboard');
-    })->name('owner.dashboard');
-
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('owner.dashboard');
     Route::get('/cooperatives', [CooperativeController::class, 'index'])->name('cooperatives.index');
     Route::post('/cooperatives', [CooperativeController::class, 'store'])->name('cooperatives.store');
     Route::get('/accounts', [AccountController::class, 'index'])->name('accounts.index');
