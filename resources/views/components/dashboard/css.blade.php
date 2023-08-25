@@ -15,7 +15,7 @@
 
     <link href="../../../assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="../../../assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 
 <body id="kt_app_body" data-kt-app-header-fixed-mobile="true" data-kt-app-toolbar-enabled="true"  class="app-default">

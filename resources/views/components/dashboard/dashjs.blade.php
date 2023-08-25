@@ -1,5 +1,5 @@
  {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  --}}
-
+ <script src="{{ mix('js/app.js') }}" defer></script>
  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
  <script src="{{ asset('dashboarde/js/core/libs.min.js') }}"></script>
 
@@ -28,7 +28,6 @@
  <!-- qompacui Script -->
  <script src="{{ asset('dashboarde/js/qompac-uif700.js?v=1.0.1') }}" defer></script>
  <script src="{{ asset('dashboarde/js/sidebarf700.js?v=1.0.1') }}" defer></script>
-
 
  <script>
     document.addEventListener('DOMContentLoaded', function() {
