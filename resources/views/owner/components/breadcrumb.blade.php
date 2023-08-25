@@ -38,48 +38,52 @@
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const storedDefaultCooperativeIdSession = sessionStorage.getItem('defaultCooperativeId');
-        const storedDefaultCooperativeIdLocal = localStorage.getItem('defaultCooperativeId');
+    const defaultCooperativeButton = document.querySelector('.default-cooperative-button');
+    const saveButton = document.getElementById('saveDefaultCooperative');
 
-        const storedDefaultCooperativeId = storedDefaultCooperativeIdSession || storedDefaultCooperativeIdLocal;
-
-        if (storedDefaultCooperativeId) {
-            const radioInput = document.getElementById(`defaultCooperative${storedDefaultCooperativeId}`);
-            if (radioInput) {
-                radioInput.checked = true;
+    // Load default cooperative data on page load
+    fetch('/owner/default-cooperative/get')
+        .then(response => response.json())
+        .then(data => {
+            if (data.defaultCooperativeId) {
+                const radioInput = document.getElementById(`defaultCooperative${data.defaultCooperativeId}`);
+                if (radioInput) {
+                    radioInput.checked = true;
+                }
             }
-        }
 
-        const defaultCooperativeButton = document.querySelector('.default-cooperative-button');
-        const storedDefaultCooperativeNameSession = sessionStorage.getItem('defaultCooperativeName');
-        const storedDefaultCooperativeNameLocal = localStorage.getItem('defaultCooperativeName');
-
-        const storedDefaultCooperativeName = storedDefaultCooperativeNameSession || storedDefaultCooperativeNameLocal;
-
-        if (storedDefaultCooperativeName) {
-            defaultCooperativeButton.textContent = storedDefaultCooperativeName;
-        }
-
-        const saveButton = document.getElementById('saveDefaultCooperative');
-        saveButton.addEventListener('click', function() {
-            const selectedCooperative = document.querySelector(
-                'input[name="defaultCooperative"]:checked');
-            if (selectedCooperative) {
-                const cooperativeId = selectedCooperative.value;
-                const cooperativeName = selectedCooperative.nextElementSibling.textContent.trim();
-
-                sessionStorage.setItem('defaultCooperativeId', cooperativeId);
-                localStorage.setItem('defaultCooperativeId', cooperativeId);
-
-                sessionStorage.setItem('defaultCooperativeName', cooperativeName);
-                localStorage.setItem('defaultCooperativeName', cooperativeName);
-
-                alert('Default cooperative set.');
-                location.reload();
-            } else {
-                alert('Please select a default cooperative.');
+            if (data.defaultCooperativeName) {
+                defaultCooperativeButton.textContent = data.defaultCooperativeName;
             }
         });
+
+    // Set default cooperative on button click
+    saveButton.addEventListener('click', function() {
+        const selectedCooperative = document.querySelector('input[name="defaultCooperative"]:checked');
+        if (selectedCooperative) {
+            const cooperativeId = selectedCooperative.value;
+            const cooperativeName = selectedCooperative.nextElementSibling.textContent.trim();
+
+            fetch('/owner/default-cooperative/set', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                },
+                body: JSON.stringify({ cooperativeId, cooperativeName }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                localStorage.setItem('defaultCooperativeId', cooperativeId);
+                localStorage.setItem('defaultCooperativeName', cooperativeName);
+                location.reload();
+            });
+        } else {
+            alert('Please select a default cooperative.');
+        }
     });
+});
+
 </script>
 
