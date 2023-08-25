@@ -38,7 +38,10 @@
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const storedDefaultCooperativeId = localStorage.getItem('defaultCooperativeId');
+        const storedDefaultCooperativeIdSession = sessionStorage.getItem('defaultCooperativeId');
+        const storedDefaultCooperativeIdLocal = localStorage.getItem('defaultCooperativeId');
+
+        const storedDefaultCooperativeId = storedDefaultCooperativeIdSession || storedDefaultCooperativeIdLocal;
 
         if (storedDefaultCooperativeId) {
             const radioInput = document.getElementById(`defaultCooperative${storedDefaultCooperativeId}`);
@@ -48,7 +51,10 @@
         }
 
         const defaultCooperativeButton = document.querySelector('.default-cooperative-button');
-        const storedDefaultCooperativeName = localStorage.getItem('defaultCooperativeName');
+        const storedDefaultCooperativeNameSession = sessionStorage.getItem('defaultCooperativeName');
+        const storedDefaultCooperativeNameLocal = localStorage.getItem('defaultCooperativeName');
+
+        const storedDefaultCooperativeName = storedDefaultCooperativeNameSession || storedDefaultCooperativeNameLocal;
 
         if (storedDefaultCooperativeName) {
             defaultCooperativeButton.textContent = storedDefaultCooperativeName;
@@ -62,7 +68,10 @@
                 const cooperativeId = selectedCooperative.value;
                 const cooperativeName = selectedCooperative.nextElementSibling.textContent.trim();
 
+                sessionStorage.setItem('defaultCooperativeId', cooperativeId);
                 localStorage.setItem('defaultCooperativeId', cooperativeId);
+
+                sessionStorage.setItem('defaultCooperativeName', cooperativeName);
                 localStorage.setItem('defaultCooperativeName', cooperativeName);
 
                 alert('Default cooperative set.');
@@ -73,3 +82,4 @@
         });
     });
 </script>
+

@@ -14,10 +14,7 @@
 
                 <li class="nav-item {{ Request::is('owner/transactions') ? 'active' : '' }}"><a class="nav-link " href="/owner/transactions">Transactions</a>
                 </li>
-
-                {{-- <li class="nav-item {{ Request::is('owner/analytics') ? 'active' : '' }}"><a class="nav-link " href="/owner/analytics">Analytics</a>
-                </li> --}}
-
+                
                 <li class="nav-item {{ Request::is('owner/audit') ? 'active' : '' }}"><a class="nav-link " href="/owner/audit">Financial Audit</a>
                 </li>
 
