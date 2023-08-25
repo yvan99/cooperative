@@ -13,7 +13,7 @@ class AccountController extends Controller
         $defaultCooperativeId = Session::get('defaultCooperativeId');
         
         if (!$defaultCooperativeId) {
-            return redirect()->route('owner.dashboard')->with('error', 'Please set a default cooperative first.');
+            return redirect()->route('cooperatives.index')->with('no-cooperative', 'Please set a default cooperative first.');
         }
     
         $accounts = Account::where('cooperative_id', $defaultCooperativeId)->get();
