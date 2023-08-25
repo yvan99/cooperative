@@ -2,11 +2,11 @@
     <div class="container-fluid">
         <nav class="nav nav-underline" aria-label="Secondary navigation">
             <ul class="iq-nav-menu list-unstyled flex-row">
-                <li class="nav-item {{ Request::is('staff/dashboard') ? 'active' : '' }}"><a class="nav-link " href="/staff/dashboard">Manage Cooperatives</a>
+                <li class="nav-item {{ Request::is('auditor/dashboard') ? 'active' : '' }}"><a class="nav-link " href="/auditor/dashboard">Dashboard</a>
                 </li>
-                <li class="nav-item {{ Request::is('staff/auditors') ? 'active' : '' }}"><a class="nav-link " href="/staff/auditors">Manage Auditors</a>
+                <li class="nav-item {{ Request::is('auditor/auditors') ? 'active' : '' }}"><a class="nav-link " href="/auditor/auditors">Financial Audit</a>
                 </li>
-                <li class="nav-item {{ Request::is('staff/logout') ? 'active' : '' }}"><a class="nav-link " href="/staff/logout">Logout</a>
+                <li class="nav-item {{ Request::is('auditor/logout') ? 'active' : '' }}"><a class="nav-link bg-danger text-white " href="/auditor/logout">Logout</a>
                 </li>
             </ul>
         </nav>
