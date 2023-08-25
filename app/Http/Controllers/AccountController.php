@@ -4,14 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Models\Account;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class AccountController extends Controller
 {
     public function index()
     {
-        $accounts = Account::all();
+        $defaultCooperativeId = Session::get('defaultCooperativeId');
+        
+        if (!$defaultCooperativeId) {
+            return redirect()->route('owner.dashboard')->with('error', 'Please set a default cooperative first.');
+        }
+    
+        $accounts = Account::where('cooperative_id', $defaultCooperativeId)->get();
         return view('accounts.index', compact('accounts'));
     }
+    
 
     public function generateRandomAccountCode($prefix)
     {
