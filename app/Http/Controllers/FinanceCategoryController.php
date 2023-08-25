@@ -4,14 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Models\FinanceCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class FinanceCategoryController extends Controller
 {
     public function index()
     {
-        $financeCategories = FinanceCategory::all();
+        $defaultCooperativeId = Session::get('defaultCooperativeId');
+        
+        if (!$defaultCooperativeId) {
+            return redirect()->route('cooperatives.index')->with('no-cooperative', 'Please set a default cooperative first.');
+        }
+    
+        $financeCategories = FinanceCategory::where('cooperative_id', $defaultCooperativeId)->get();
         return view('categories.index', compact('financeCategories'));
     }
+    
 
     public function store(Request $request)
     {

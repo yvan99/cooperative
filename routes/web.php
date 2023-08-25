@@ -7,6 +7,7 @@ use App\Http\Controllers\AuditorAuthController;
 use App\Http\Controllers\AuditorController;
 use App\Http\Controllers\CooperativeController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DefaultCooperativeController;
 use App\Http\Controllers\FinanceCategoryController;
 use App\Http\Controllers\OwnerAuthController;
 use App\Http\Controllers\TransactionController;
@@ -76,4 +77,6 @@ Route::middleware('auth:owner')->prefix('owner')->group(function () {
     Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
     Route::post('/transactions', [TransactionController::class, 'store'])->name('transactions.store');
     Route::get('/transactions/reports', [TransactionController::class, 'generateReports'])->name('transactions.reports');
+    Route::post('/default-cooperative/set', [DefaultCooperativeController::class, 'set']);
+    Route::get('/default-cooperative/get', [DefaultCooperativeController::class, 'get']);
 });

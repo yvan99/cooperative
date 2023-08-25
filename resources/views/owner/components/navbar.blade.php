@@ -1,6 +1,7 @@
 <div class="nav-scroller bg-body shadow-sm">
     <div class="container-fluid">
         <nav class="nav nav-underline" aria-label="Secondary navigation">
+            {{-- {{ dd(Session::get('defaultCooperativeId')) }} --}}
             <ul class="iq-nav-menu list-unstyled flex-row">
                 <li class="nav-item {{ Request::is('owner/dashboard') ? 'active' : '' }}"><a class="nav-link " href="/owner/dashboard">Dashboard</a>
                 </li>
@@ -14,11 +15,11 @@
 
                 <li class="nav-item {{ Request::is('owner/transactions') ? 'active' : '' }}"><a class="nav-link " href="/owner/transactions">Transactions</a>
                 </li>
-
-                <li class="nav-item {{ Request::is('owner/analytics') ? 'active' : '' }}"><a class="nav-link " href="/owner/analytics">Analytics</a>
+                
+                <li class="nav-item {{ Request::is('owner/audit') ? 'active' : '' }}"><a class="nav-link " href="/owner/audit">Financial Audit</a>
                 </li>
 
-                <li class="nav-item {{ Request::is('owner/audit') ? 'active' : '' }}"><a class="nav-link " href="/owner/audit">Financial Audit</a>
+                <li class="nav-item {{ Request::is('owner/logout') ? 'active' : '' }}"><a class="nav-link text-white bg-danger" href="/owner/logout">Logout</a>
                 </li>
             </ul>
         </nav>

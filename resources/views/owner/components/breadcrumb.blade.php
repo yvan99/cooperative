@@ -3,10 +3,20 @@
         <h3>Dashboard</h3>
         <p class="mb-0">Financial Dashboard</p>
     </div>
-    <button type="button" class="btn btn-primary default-cooperative-button" data-bs-toggle="modal" data-bs-target="#setDefaultCooperativeModal">
+    <button type="button" class="btn btn-danger default-cooperative-button" data-bs-toggle="modal"
+        data-bs-target="#setDefaultCooperativeModal">
         Set Default Cooperative
     </button>
+
+ 
+
+
 </div>
+@if (session('no-cooperative'))
+<div class="alert alert-warning">
+    {{ session('no-cooperative') }}
+</div>
+@endif
 
 <div class="modal fade" id="setDefaultCooperativeModal" tabindex="-1" role="dialog"
     aria-labelledby="setDefaultCooperativeModalLabel" aria-hidden="true">
@@ -19,14 +29,14 @@
             <div class="modal-body">
                 <form>
                     @foreach ($ownerCooperatives as $cooperative)
-                    <div class="form-check">
-                        <input class="form-check-input form-check-input-lg" type="radio" name="defaultCooperative"
-                               value="{{ $cooperative->id }}" id="defaultCooperative{{ $cooperative->id }}">
-                        <label class="form-check-label fs-5 mb-3" for="defaultCooperative{{ $cooperative->id }}">
-                            {{ $cooperative->name }}
-                        </label>
-                    </div>
-                @endforeach
+                        <div class="form-check">
+                            <input class="form-check-input form-check-input-lg" type="radio" name="defaultCooperative"
+                                value="{{ $cooperative->id }}" id="defaultCooperative{{ $cooperative->id }}">
+                            <label class="form-check-label fs-5 mb-3" for="defaultCooperative{{ $cooperative->id }}">
+                                {{ $cooperative->name }}
+                            </label>
+                        </div>
+                    @endforeach
 
 
 
@@ -38,23 +48,27 @@
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const storedDefaultCooperativeId = localStorage.getItem('defaultCooperativeId');
-
-        if (storedDefaultCooperativeId) {
-            const radioInput = document.getElementById(`defaultCooperative${storedDefaultCooperativeId}`);
-            if (radioInput) {
-                radioInput.checked = true;
-            }
-        }
-
         const defaultCooperativeButton = document.querySelector('.default-cooperative-button');
-        const storedDefaultCooperativeName = localStorage.getItem('defaultCooperativeName');
-
-        if (storedDefaultCooperativeName) {
-            defaultCooperativeButton.textContent = storedDefaultCooperativeName;
-        }
-
         const saveButton = document.getElementById('saveDefaultCooperative');
+
+        // Load default cooperative data on page load
+        fetch('/owner/default-cooperative/get')
+            .then(response => response.json())
+            .then(data => {
+                if (data.defaultCooperativeId) {
+                    const radioInput = document.getElementById(
+                        `defaultCooperative${data.defaultCooperativeId}`);
+                    if (radioInput) {
+                        radioInput.checked = true;
+                    }
+                }
+
+                if (data.defaultCooperativeName) {
+                    defaultCooperativeButton.textContent = data.defaultCooperativeName;
+                }
+            });
+
+        // Set default cooperative on button click
         saveButton.addEventListener('click', function() {
             const selectedCooperative = document.querySelector(
                 'input[name="defaultCooperative"]:checked');
@@ -62,11 +76,24 @@
                 const cooperativeId = selectedCooperative.value;
                 const cooperativeName = selectedCooperative.nextElementSibling.textContent.trim();
 
-                localStorage.setItem('defaultCooperativeId', cooperativeId);
-                localStorage.setItem('defaultCooperativeName', cooperativeName);
-
-                alert('Default cooperative set.');
-                location.reload();
+                fetch('/owner/default-cooperative/set', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                        },
+                        body: JSON.stringify({
+                            cooperativeId,
+                            cooperativeName
+                        }),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert(data.message);
+                        localStorage.setItem('defaultCooperativeId', cooperativeId);
+                        localStorage.setItem('defaultCooperativeName', cooperativeName);
+                        location.reload();
+                    });
             } else {
                 alert('Please select a default cooperative.');
             }

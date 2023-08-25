@@ -69,6 +69,9 @@ class OwnerAuthController extends Controller
     public function logout()
     {
         Auth::guard('owner')->logout();
+        session()->forget('defaultCooperativeId');
+        session()->forget('defaultCooperativeName');
         return view('logout');
     }
+    
 }
