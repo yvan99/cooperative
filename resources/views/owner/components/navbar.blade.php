@@ -21,7 +21,7 @@
                 <li class="nav-item {{ Request::is('owner/audit') ? 'active' : '' }}"><a class="nav-link " href="/owner/audit">Financial Audit</a>
                 </li>
 
-                <li class="nav-item {{ Request::is('owner/logout') ? 'active' : '' }}"><a class="nav-link " href="/owner/logout">Logout</a>
+                <li class="nav-item {{ Request::is('owner/logout') ? 'active' : '' }}"><a class="nav-link text-white bg-danger" href="/owner/logout">Logout</a>
                 </li>
             </ul>
         </nav>
