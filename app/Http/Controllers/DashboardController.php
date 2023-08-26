@@ -6,13 +6,13 @@
     use App\Models\Cooperative;
     use App\Models\FinanceCategory;
     use App\Models\Transaction;
+    use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Auth;
     use Illuminate\Support\Facades\DB;
     use Illuminate\Support\Facades\Session;
     use Kakaprodo\SystemAnalytic\AnalyticGate;
 
     class DashboardController extends Controller {
-
         public function owner() {
             $incomeVsExpence = AnalyticGate::process(['analytic_type' => 'income_vs_expence'])['result'];
 
@@ -145,76 +145,81 @@
             }, $transaction->all());
         }
 
-        public function auditorReviews() {
-            $cooperatives = Cooperative::with('transactions')->get();
+        public function auditorReviews(Request $request) {
+            $cooperativeId = $request->input('cooperativeId');
+            $year = ($request->input('year')) ? $request->input('year') : date('Y');
+            $year = ($request->input('month')) ? $request->input('month') : date('n');
+
+            $transactions = ($cooperativeId)
+                ? Transaction::where('cooperative_id', $cooperativeId)->get()
+                : Transaction::all();
+
             $financeCategories = FinanceCategory::all();
             $accounts = Account::all();
+            $cooperatives = Cooperative::all();
 
-            $financialStats = collect();
+            $totalIncome = 0;
+            $totalExpenses = 0;
 
-            foreach ($cooperatives as $cooperative) {
-                $totalIncome = 0;
-                $totalExpenses = 0;
-
-                foreach ($cooperative->transactions as $transaction) {
-                    if ($transaction->financeCategory->type === 'income') {
-                        $totalIncome += $transaction->amount;
-                    } elseif ($transaction->financeCategory->type === 'expense') {
-                        $totalExpenses += $transaction->amount;
-                    }
+            foreach ($transactions as $transaction) {
+                if ($transaction->financeCategory->type === 'income') {
+                    $totalIncome += $transaction->amount;
+                } elseif ($transaction->financeCategory->type === 'expense') {
+                    $totalExpenses += $transaction->amount;
                 }
-
-                $netIncome = $totalIncome - $totalExpenses;
-                $financialStatus = ($netIncome >= 0) ? 'Profit' : 'Loss';
-
-                $financialStats->push([
-                    'cooperative' => $cooperative,
-                    'totalIncome' => $totalIncome,
-                    'totalExpenses' => $totalExpenses,
-                    'netIncome' => $netIncome,
-                    'financialStatus' => $financialStatus,
-                ]);
             }
 
-            $finStats = $financialStats->all();
+            $netIncome = $totalIncome - $totalExpenses;
+            $financialStatus = ($netIncome >= 0) ? 'Profit' : 'Loss';
 
-            return view('auditor.financial-audit', compact('finStats', 'financeCategories', 'accounts'));
+            $transactionAudit = [
+                'totalIncome' => $totalIncome,
+                'totalExpenses' => $totalExpenses,
+                'netIncome' => $netIncome,
+                'financialStatus' => $financialStatus,
+            ];
+
+            return view('auditor.financial-audit', compact('transactions', 'financeCategories',  'accounts', 'cooperatives', 'transactionAudit', 'cooperativeId'));
         }
 
-        public function ownerReviews() {
-            $cooperatives = Cooperative::with('transactions')->whereHas('owners', fn ($query) => $query->where('owner_id', Auth::user()->id))->get();
+        public function ownerReviews(Request $request) {
+            $defaultCooperativeId = Session::get('defaultCooperativeId');
+
+            $cooperativeId = $defaultCooperativeId;
+
+            $year = ($request->input('year')) ? $request->input('year') : date('Y');
+            $month = ($request->input('month')) ? $request->input('month') : date('n');
+
+            $transactions = ($cooperativeId)
+                ? Transaction::where('cooperative_id', $cooperativeId)->get()
+                : Transaction::all();
+
             $financeCategories = FinanceCategory::all();
             $accounts = Account::all();
+            $cooperatives = Cooperative::all();
 
-            $financialStats = collect();
+            $totalIncome = 0;
+            $totalExpenses = 0;
 
-            foreach ($cooperatives as $cooperative) {
-                $totalIncome = 0;
-                $totalExpenses = 0;
-
-                foreach ($cooperative->transactions as $transaction) {
-                    if ($transaction->financeCategory->type === 'income') {
-                        $totalIncome += $transaction->amount;
-                    } elseif ($transaction->financeCategory->type === 'expense') {
-                        $totalExpenses += $transaction->amount;
-                    }
+            foreach ($transactions as $transaction) {
+                if ($transaction->financeCategory->type === 'income') {
+                    $totalIncome += $transaction->amount;
+                } elseif ($transaction->financeCategory->type === 'expense') {
+                    $totalExpenses += $transaction->amount;
                 }
-
-                $netIncome = $totalIncome - $totalExpenses;
-                $financialStatus = ($netIncome >= 0) ? 'Profit' : 'Loss';
-
-                $financialStats->push([
-                    'cooperative' => $cooperative,
-                    'totalIncome' => $totalIncome,
-                    'totalExpenses' => $totalExpenses,
-                    'netIncome' => $netIncome,
-                    'financialStatus' => $financialStatus,
-                ]);
             }
 
-            $finStats = $financialStats->all();
+            $netIncome = $totalIncome - $totalExpenses;
+            $financialStatus = ($netIncome >= 0) ? 'Profit' : 'Loss';
 
-            return view('owner.financial-audit', compact('finStats', 'financeCategories', 'accounts'));
+            $transactionAudit = [
+                'totalIncome' => $totalIncome,
+                'totalExpenses' => $totalExpenses,
+                'netIncome' => $netIncome,
+                'financialStatus' => $financialStatus,
+            ];
+
+            return view('owner.financial-audit', compact('transactions', 'financeCategories',  'accounts', 'cooperatives', 'transactionAudit', 'cooperativeId'));
         }
 
     }

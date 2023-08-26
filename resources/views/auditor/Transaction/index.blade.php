@@ -8,14 +8,21 @@
         @include('auditor.components.navbar')
 
         <div class="container-fluid content-inner pb-0" id="page_layout">
-            @include('auditor.components.breadcrumb')
 
             <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <form action="{{ route('audito.transactions.reports') }}" method="get" target="_blank"
-                                class="row">
+                            <form action="{{ route('auditor.transactions.reports') }}" method="get" target="_blank" class="row">
+                                <div class="col-md-2">
+                                    <label for="year">Cooperative:</label>
+                                    <select id="cooperative" class="form-control form-select" name="cooperative">
+                                        <option value="">Select Cooperative</option>
+                                        @foreach ($cooperatives as $coop)
+                                            <option value="{{ $coop->id }}"> {{ $coop->name }} </option>
+                                        @endforeach
+                                    </select>
+                                </div>
                                 <div class="col-md-2">
                                     <label for="year">Year:</label>
                                     <input type="number" id="year" class="form-control" name="year" required>
@@ -36,6 +43,7 @@
                             </form>
                         </div>
                     </div>
+                    
                     <div class="card">
                         <div class="card-body">
                             @include('components.dashboard.alert')
@@ -45,6 +53,7 @@
                                     <thead>
                                         <tr>
                                             <th>Code</th>
+                                            <th>Cooperative</th>
                                             <th>Finance Category</th>
                                             <th>Amount</th>
                                             <th>Account</th>
@@ -55,11 +64,8 @@
                                     <tbody>
                                         @foreach ($transactions as $transaction)
                                             <tr>
-                                                <td>
-                                                    <button
-                                                        class="btn btn-sm btn-secondary text-white">{{ $transaction->code }}</button>
-
-                                                </td>
+                                                <td> <button class="btn btn-sm btn-secondary text-white">{{ $transaction->code }}</button></td>
+                                                <td>{{ $transaction->cooperative->name }}</td>
                                                 <td>{{ $transaction->financeCategory->name }}</td>
                                                 <td>{{ $transaction->amount }}</td>
                                                 <td>{{ $transaction->account ? $transaction->account->name : 'None' }}

@@ -3,7 +3,8 @@
     namespace App\Http\Controllers;
 
     use App\Models\Account;
-    use App\Models\FinanceCategory;
+use App\Models\Cooperative;
+use App\Models\FinanceCategory;
     use App\Models\Transaction;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Session;
@@ -29,8 +30,9 @@
             $transactions = Transaction::all();
             $financeCategories = FinanceCategory::all();
             $accounts = Account::all();
+            $cooperatives = Cooperative::all();
 
-            return view('auditor.transaction.index', compact('transactions', 'financeCategories', 'accounts'));
+            return view('auditor.transaction.index', compact('transactions', 'financeCategories', 'accounts','cooperatives'));
         }
 
 
@@ -123,16 +125,11 @@
         public function generateAuditorTransReports(Request $request) {
             $year = $request->input('year');
             $month = $request->input('month');
-
-            $defaultCooperativeId = Session::get('defaultCooperativeId');
-
-            if (!$defaultCooperativeId) {
-                return redirect()->route('cooperatives.index')->with('no-cooperative', 'Please set a default cooperative first.');
-            }
+            $cooperative = $request->input('cooperative');
 
             $transactions = ($month == "annually")
-                ? Transaction::where('cooperative_id', $defaultCooperativeId)->whereYear('date', $year)->get()
-                : Transaction::where('cooperative_id', $defaultCooperativeId)->whereYear('date', $year)->whereMonth('date', $month)->get();
+                ? Transaction::where('cooperative_id', $cooperative)->whereYear('date', $year)->get()
+                : Transaction::where('cooperative_id', $cooperative)->whereYear('date', $year)->whereMonth('date', $month)->get();
 
             $report = ['year' => $year, 'month' => $month, 'transactions' => $transactions];
 

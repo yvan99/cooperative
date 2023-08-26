@@ -61,7 +61,7 @@
     Route::middleware('auth:auditor')->prefix('auditor')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'auditor'])->name('auditor.dashboard');
         Route::get('/transactions', [TransactionController::class, 'auditorTrans'])->name('auditor.transactions.index');
-        Route::get('/transactions/reports', [TransactionController::class, 'generateAuditorTransReports'])->name('audito.transactions.reports');
+        Route::get('/transactions/reports', [TransactionController::class, 'generateAuditorTransReports'])->name('auditor.transactions.reports');
         Route::get('/audits', [DashboardController::class, 'auditorReviews'])->name('auditor.financial.audits');
         Route::get('/add/comment', [AuditorController::class, 'addComment'])->name('auditor.comment');
     });
@@ -80,5 +80,5 @@
         Route::get('/transactions/reports', [TransactionController::class, 'generateReports'])->name('transactions.reports');
         Route::post('/default-cooperative/set', [DefaultCooperativeController::class, 'set']);
         Route::get('/default-cooperative/get', [DefaultCooperativeController::class, 'get']);
-        Route::get('/audits', [DashboardController::class, 'ownerReviews']);
+        Route::get('/audits', [DashboardController::class, 'ownerReviews'])->name('owner.audits');
     });

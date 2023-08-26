@@ -2,7 +2,7 @@
 @section('main-content')
 <span class="screen-darken"></span>
 <main class="main-content">
-    
+
     @include('components.dashboard.topnav')
     @include('auditor.components.navbar')
 
@@ -28,8 +28,8 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 col-12">
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
                 <div class="card">
                   <div class="card-content">
                     <div class="card-body">

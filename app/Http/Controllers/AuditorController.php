@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\AuditorRegisterRequest;
 use App\Models\Auditor;
+use App\Models\AuditorComment;
 use App\Models\Cooperative;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -48,6 +49,11 @@ class AuditorController extends Controller
         $smsApi = new SmsApiController();
         $message = "Dear Cooperation Owner, there are comment from auditor as '$coopComment', check you account";
         $smsApi->sendSms($owner->telephone, $message);
+
+        AuditorComment::create([
+            'cooperative_id' => $cooperativeId,
+            'message' => $message
+        ]);
 
         return redirect()->back()->with('success', 'Comment Sent successfully');
     }
