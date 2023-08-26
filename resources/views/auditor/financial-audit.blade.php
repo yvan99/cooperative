@@ -183,7 +183,7 @@
                                 </div>
                                 <div class="">
                                     <button type="button" class="btn btn-dark default-cooperative-button" data-bs-toggle="modal" data-bs-target="#addCommentToCoops">
-                                        Add Comment
+                                        Make audit review
                                     </button>
                                     <div class="modal fade" id="addCommentToCoops" tabindex="-1" role="dialog" aria-labelledby="setDefaultCooperativeModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
