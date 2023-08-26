@@ -8,7 +8,7 @@
                 </li>
                 <li class="nav-item {{ Request::is('auditor/audits') ? 'active' : '' }}"><a class="nav-link " href="/auditor/audits">Financial Audit</a>
                 </li>
-                <li class="nav-item {{ Request::is('auditor/logout') ? 'active' : '' }}"><a class="nav-link bg-danger text-white " href="/auditor/logout">Logout</a>
+                <li class="nav-item {{ Request::is('auditor/logout') ? 'active' : '' }}"><a class="nav-link bg-danger text-white" href="/auditor/logout">Logout</a>
                 </li>
             </ul>
         </nav>

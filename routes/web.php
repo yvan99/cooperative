@@ -25,7 +25,7 @@
 
     Route::get('/', function () {
         return view('welcome');
-    });
+    })->name('homepage');
 
     Route::prefix('staff')->group(function () {
         Route::get('/login', [StaffAuthController::class, 'showLoginForm'])->name('staff.login');
