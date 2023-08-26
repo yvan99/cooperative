@@ -14,10 +14,6 @@
         protected function result(): AnalyticResponse {
             $defaultCooperativeId = Session::get('defaultCooperativeId');
 
-            if (!$defaultCooperativeId) {
-                return redirect()->route('cooperatives.index')->with('no-cooperative', 'Please set a default cooperative first.');
-            }
-
             $result = [
                 'expences' => Transaction::where('cooperative_id', $defaultCooperativeId)->whereHas('financeCategory', fn($query) => $query->where('type', 'expense'))->avg('amount'),
                 'incomes' => Transaction::where('cooperative_id', $defaultCooperativeId)->whereHas('financeCategory', fn($query) => $query->where('type', 'income'))->avg('amount'),

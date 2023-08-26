@@ -16,10 +16,6 @@
         protected function result(): AnalyticResponse {
             $defaultCooperativeId = Session::get('defaultCooperativeId');
 
-            if (!$defaultCooperativeId) {
-                return redirect()->route('cooperatives.index')->with('no-cooperative', 'Please set a default cooperative first.');
-            }
-
             $transaction = Transaction::where('cooperative_id', $defaultCooperativeId)
                                 ->groupBy('finance_category_id')
                                 ->select('finance_category_id', DB::raw('SUM(amount) as total_amount'))

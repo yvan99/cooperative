@@ -15,10 +15,6 @@
         protected function result(): AnalyticResponse {
             $defaultCooperativeId = Session::get('defaultCooperativeId');
 
-            if (!$defaultCooperativeId) {
-                return redirect()->route('cooperatives.index')->with('no-cooperative', 'Please set a default cooperative first.');
-            }
-
             $statistics = Transaction::where('cooperative_id', $defaultCooperativeId)->whereBetween('date', ['2023-01-01', '2023-11-30'])
                                 ->whereHas('financeCategory', fn($query) => $query->where('type', 'expense'))
                                 ->groupBy(DB::raw('MONTH(date)'))
