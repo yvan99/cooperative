@@ -176,6 +176,34 @@
                     </div>
                 </div>
 
+
+                <div class="card">
+                    <div class="p-5"><h3>Auditor Comments</h3></div>
+                    <div class="card-body">
+                        <div class="row mt-3">
+                            @forelse ($comments as $comment)
+                                <div class="col-xl-3 col-sm-6 col-12">
+                                    <div class="card shadow-none border border-1 ml-2">
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <div class="media d-flex justify-content-between">
+                                                    <div class="media-body text-left" style="text-align: left">
+                                                        <h3 class="mb-3">{{ $comment->auditor->names }}</h3>
+                                                        <p>{{ $comment->message }}</p>
+                                                        <span class="text-bold">{{ $comment->created_at }}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @empty
+                                <div class="text-center">No comment founds</div>
+                            @endforelse
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 

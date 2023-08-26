@@ -34,8 +34,7 @@ class AuditorController extends Controller
         return redirect()->back()->with('success', 'Auditor Registered successfully.');
     }
 
-    public function index()
-    {
+    public function index() {
         $auditors = Auditor::all();
         return view('auditor.index', compact('auditors'));
     }
@@ -62,6 +61,7 @@ class AuditorController extends Controller
         $smsApi->sendSms($owner->telephone, $message);
     
         AuditorComment::create([
+            'auditor_id' => Auth::user()->id,
             'cooperative_id' => $cooperativeId,
             'message' => $coopComment
         ]);

@@ -13,6 +13,7 @@
         public function up() {
             Schema::create('auditor_comments', function (Blueprint $table) {
                 $table->id();
+                $table->unsignedBigInteger('auditor_id');
                 $table->unsignedBigInteger('cooperative_id');
                 $table->longText('message');
                 $table->timestamps();

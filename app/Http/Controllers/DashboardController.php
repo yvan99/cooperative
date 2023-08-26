@@ -3,7 +3,8 @@
     namespace App\Http\Controllers;
 
     use App\Models\Account;
-    use App\Models\Cooperative;
+use App\Models\AuditorComment;
+use App\Models\Cooperative;
     use App\Models\FinanceCategory;
     use App\Models\Transaction;
     use Illuminate\Http\Request;
@@ -219,7 +220,9 @@
                 'financialStatus' => $financialStatus,
             ];
 
-            return view('owner.financial-audit', compact('transactions', 'financeCategories',  'accounts', 'cooperatives', 'transactionAudit', 'cooperativeId'));
+            $comments = AuditorComment::where('cooperative_id', $defaultCooperativeId)->orderBy('created_at', 'desc')->get();
+
+            return view('owner.financial-audit', compact('transactions', 'financeCategories',  'accounts', 'cooperatives', 'transactionAudit', 'cooperativeId', 'comments'));
         }
 
     }
