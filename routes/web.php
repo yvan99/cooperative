@@ -80,4 +80,5 @@
         Route::get('/transactions/reports', [TransactionController::class, 'generateReports'])->name('transactions.reports');
         Route::post('/default-cooperative/set', [DefaultCooperativeController::class, 'set']);
         Route::get('/default-cooperative/get', [DefaultCooperativeController::class, 'get']);
+        Route::get('/audits', [DashboardController::class, 'ownerReviews']);
     });

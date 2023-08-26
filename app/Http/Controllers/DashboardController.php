@@ -7,8 +7,8 @@
     use App\Models\FinanceCategory;
     use App\Models\Transaction;
     use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Session;
+    use Illuminate\Support\Facades\DB;
+    use Illuminate\Support\Facades\Session;
     use Kakaprodo\SystemAnalytic\AnalyticGate;
 
     class DashboardController extends Controller {
@@ -179,6 +179,42 @@ use Illuminate\Support\Facades\Session;
             $finStats = $financialStats->all();
 
             return view('auditor.financial-audit', compact('finStats', 'financeCategories', 'accounts'));
+        }
+
+        public function ownerReviews() {
+            $cooperatives = Cooperative::with('transactions')->whereHas('owners', fn ($query) => $query->where('owner_id', Auth::user()->id))->get();
+            $financeCategories = FinanceCategory::all();
+            $accounts = Account::all();
+
+            $financialStats = collect();
+
+            foreach ($cooperatives as $cooperative) {
+                $totalIncome = 0;
+                $totalExpenses = 0;
+
+                foreach ($cooperative->transactions as $transaction) {
+                    if ($transaction->financeCategory->type === 'income') {
+                        $totalIncome += $transaction->amount;
+                    } elseif ($transaction->financeCategory->type === 'expense') {
+                        $totalExpenses += $transaction->amount;
+                    }
+                }
+
+                $netIncome = $totalIncome - $totalExpenses;
+                $financialStatus = ($netIncome >= 0) ? 'Profit' : 'Loss';
+
+                $financialStats->push([
+                    'cooperative' => $cooperative,
+                    'totalIncome' => $totalIncome,
+                    'totalExpenses' => $totalExpenses,
+                    'netIncome' => $netIncome,
+                    'financialStatus' => $financialStatus,
+                ]);
+            }
+
+            $finStats = $financialStats->all();
+
+            return view('owner.financial-audit', compact('finStats', 'financeCategories', 'accounts'));
         }
 
     }
