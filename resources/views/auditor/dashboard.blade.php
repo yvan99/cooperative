@@ -2,10 +2,13 @@
 @section('main-content')
 <span class="screen-darken"></span>
 <main class="main-content">
+    
     @include('components.dashboard.topnav')
     @include('auditor.components.navbar')
 
     <div class="container-fluid content-inner pb-0" id="page_layout">
+        @include('auditor.components.breadcrumb')
+
         <div class="row">
             <div class="col-xl-3 col-sm-6 col-12">
                 <div class="card">
@@ -18,7 +21,7 @@
                             </svg>
                         </div>
                         <div class="media-body text-right" style="text-align: right">
-                          <h3>N/A</h3>
+                          <h3>{{ $computedAnalytics['coops'] }}</h3>
                           <span>Total cooperatives</span>
                         </div>
                       </div>
@@ -37,7 +40,7 @@
                             </svg>
                         </div>
                         <div class="media-body text-right" style="text-align: right">
-                          <h3>N/A</h3>
+                          <h3>{{ number_format($computedAnalytics['incomes'], $decimals = 2) }}</h3>
                           <span>Total income</span>
                         </div>
                       </div>
@@ -56,7 +59,7 @@
                             </svg>
                         </div>
                         <div class="media-body text-right" style="text-align: right">
-                          <h3>N/A</h3>
+                          <h3>{{ number_format($computedAnalytics['expences'], $decimals = 2) }}</h3>
                           <span>Total expenses</span>
                         </div>
                       </div>
@@ -75,7 +78,7 @@
                             </svg>
                         </div>
                         <div class="media-body text-right" style="text-align: right">
-                          <h3>N/A</h3>
+                          <h3>{{ $computedAnalytics['transactions'] }}</h3>
                           <span>Number of transactions</span>
                         </div>
                       </div>
@@ -91,7 +94,7 @@
                     <div class="col-lg-12">
                         <div class="card card-block card-stretch card-height">
                             <div class="card-body">
-                               
+                                <datatable-chart :entries="{{ $analytics->get('transactions') }}" title="Transactions Histogram" />
                             </div>
                         </div>
                     </div>
@@ -101,7 +104,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card card-block card-stretch card-height">
                     <div class="card-body">
-                        
+                        <pie-chart title="Financial Categories" :entries="{{ $analytics->get('categories') }}" />
                     </div>
                 </div>
             </div>
@@ -109,13 +112,13 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card card-block card-stretch card-height">
                     <div class="card-body">
-                       
+                        <pie-chart title="Income vs Expense" :entries="{{ $analytics->get('incone_vs_expences') }}" />
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+
     @include('components.dashboard.dashfooter')
 </main>
 @endsection

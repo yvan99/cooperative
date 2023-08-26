@@ -3,15 +3,18 @@
 <body class="  dual-compact">
     <span class="screen-darken"></span>
     <main class="main-content">
+
         @include('components.dashboard.topnav')
-        @include('owner.components.navbar')
+        @include('auditor.components.navbar')
+
         <div class="container-fluid content-inner pb-0" id="page_layout">
-            @include('owner.components.breadcrumb')
+            @include('auditor.components.breadcrumb')
+
             <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <form action="{{ route('transactions.reports') }}" method="get" target="_blank"
+                            <form action="{{ route('audito.transactions.reports') }}" method="get" target="_blank"
                                 class="row">
                                 <div class="col-md-2">
                                     <label for="year">Year:</label>
@@ -23,8 +26,7 @@
                                         <option value="">Select Month</option>
                                         <option value="annually">Annually</option>
                                         @foreach (range(1, 12) as $month)
-                                            <option value="{{ $month }}">
-                                                {{ date('F', mktime(0, 0, 0, $month, 1)) }}</option>
+                                            <option value="{{ $month }}"> {{ date('F', mktime(0, 0, 0, $month, 1)) }} </option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -35,13 +37,6 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header d-flex justify-content-between">
-
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#createTransactionModal">
-                                Add transaction
-                            </button>
-                        </div>
                         <div class="card-body">
                             @include('components.dashboard.alert')
                             <div class="table-responsive border rounded">
@@ -152,6 +147,7 @@
                 </div>
             </div>
         </div>
+
         @include('components.dashboard.dashfooter')
     </main>
     @include('components.dashboard.dashjs')

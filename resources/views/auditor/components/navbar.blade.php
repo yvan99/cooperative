@@ -4,7 +4,9 @@
             <ul class="iq-nav-menu list-unstyled flex-row">
                 <li class="nav-item {{ Request::is('auditor/dashboard') ? 'active' : '' }}"><a class="nav-link " href="/auditor/dashboard">Dashboard</a>
                 </li>
-                <li class="nav-item {{ Request::is('auditor/auditors') ? 'active' : '' }}"><a class="nav-link " href="/auditor/auditors">Financial Audit</a>
+                <li class="nav-item {{ Request::is('auditor/transactions') ? 'active' : '' }}"><a class="nav-link " href="/auditor/transactions">Transactions</a>
+                </li>
+                <li class="nav-item {{ Request::is('auditor/audits') ? 'active' : '' }}"><a class="nav-link " href="/auditor/audits">Financial Audit</a>
                 </li>
                 <li class="nav-item {{ Request::is('auditor/logout') ? 'active' : '' }}"><a class="nav-link bg-danger text-white " href="/auditor/logout">Logout</a>
                 </li>

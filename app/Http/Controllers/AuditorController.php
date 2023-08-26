@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\AuditorRegisterRequest;
 use App\Models\Auditor;
+use App\Models\Cooperative;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class AuditorController extends Controller
@@ -34,5 +36,19 @@ class AuditorController extends Controller
     {
         $auditors = Auditor::all();
         return view('auditor.index', compact('auditors'));
+    }
+
+    public function addComment(Request $request) {
+        $cooperativeId = $request->input('cooperativeId');
+        $coopComment = $request->input('comment');
+
+        $cooperative = Cooperative::where('id', $cooperativeId)->first();
+        $owner = $cooperative->owners->first()->first();
+
+        $smsApi = new SmsApiController();
+        $message = "Dear Cooperation Owner, there are comment from auditor as '$coopComment', check you account";
+        $smsApi->sendSms($owner->telephone, $message);
+
+        return redirect()->back()->with('success', 'Comment Sent successfully');
     }
 }

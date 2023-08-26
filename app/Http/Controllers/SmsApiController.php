@@ -15,7 +15,7 @@ class SmsApiController extends Controller
             "message"    => $message,
         );
 
-        $url = env("INTOUCH_API");
+        $url = env("INTOUCH_udoAPI");
         $username = env("INTOUCH_USERNAME");
         $password = env("INTOUCH_PASSWORD");
 

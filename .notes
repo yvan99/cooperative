@@ -1,0 +1,8 @@
+ - generate monthly,annual financial transactions report both on owner auditor - (done)
+ - generate financial transaction charts owner  auditor - (done)
+
+ - Auditor make audit, referring to the reports and charts data showing the transactions done , we will display the total income and expenses and display an alert yerekana current status ya cooperative , niba yarungutse , yarahombye cg bingana .
+ - Then an auditor will make a comment on the audit made then we send it to the cooperative owner.
+ - Send an sms notification kumu owner tumubwira ko hari comment yavuye kumu auditor ya checking his account.
+
+ - On dashboard page kumu cooperative owner , we can add few cards showing ( total cooperatives , total income , total expenses, number of transactions) - (done)
