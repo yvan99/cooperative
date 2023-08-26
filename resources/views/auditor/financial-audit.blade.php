@@ -194,7 +194,7 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <form action="{{ route('auditor.comment') }}" method="get">
-                                                        <input type="text" name="cooperativeId" value="{{ $cooperativeId }}">
+                                                        <input type="hidden" name="cooperativeId" value="{{ $cooperativeId }}">
                                                         <div class="form-group">
                                                             <label for="exampleFormControlTextarea1">Write your comment</label>
                                                             <textarea name="comment" class="form-control" id="coopComment" rows="3"></textarea>
