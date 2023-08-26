@@ -39,7 +39,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <button type="submit" class="btn btn-info mt-4">Review Audits</button>
+                                    <button type="submit" class="btn btn-dark mt-4">Review Audits</button>
                                 </div>
                             </form>
                         </div>
@@ -182,7 +182,7 @@
                                     </div>
                                 </div>
                                 <div class="">
-                                    <button type="button" class="btn btn-info default-cooperative-button" data-bs-toggle="modal" data-bs-target="#addCommentToCoops">
+                                    <button type="button" class="btn btn-dark default-cooperative-button" data-bs-toggle="modal" data-bs-target="#addCommentToCoops">
                                         Add Comment
                                     </button>
                                     <div class="modal fade" id="addCommentToCoops" tabindex="-1" role="dialog" aria-labelledby="setDefaultCooperativeModalLabel" aria-hidden="true">

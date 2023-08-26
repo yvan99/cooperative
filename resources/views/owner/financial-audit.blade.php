@@ -30,7 +30,7 @@
                                 </select>
                             </div>
                             <div class="col-md-3">
-                                <button type="submit" class="btn btn-info mt-4">Review Audits</button>
+                                <button type="submit" class="btn btn-dark mt-4">Review Audits</button>
                             </div>
                         </form>
                     </div>
