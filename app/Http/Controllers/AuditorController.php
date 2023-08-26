@@ -58,12 +58,12 @@ class AuditorController extends Controller
         $owner = $cooperative->owners->first();
     
         $smsApi = new SmsApiController();
-        $message = "Dear Cooperation Owner, there are comments from the auditor: '$coopComment'. Please check your account.";
+        $message = "Dear " .$owner->names. " You have received a comment from RCA auditor Please check your account.";
         $smsApi->sendSms($owner->telephone, $message);
     
         AuditorComment::create([
             'cooperative_id' => $cooperativeId,
-            'message' => $message
+            'message' => $coopComment
         ]);
     
         return redirect()->back()->with('success', 'Comment sent successfully');
