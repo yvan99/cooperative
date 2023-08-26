@@ -26,16 +26,9 @@
         }
 
         public function auditorTrans() {
-            $defaultCooperativeId = Session::get('defaultCooperativeId');
-
-            if (!$defaultCooperativeId) {
-                return redirect()->route('cooperatives.index')->with('no-cooperative', 'Please set a default cooperative first.');
-            }
-
-            $transactions = Transaction::where('cooperative_id', $defaultCooperativeId)->get();
-            $financeCategories = FinanceCategory::where('cooperative_id', $defaultCooperativeId)->get();
-            $accounts = Account::where('cooperative_id', $defaultCooperativeId)->get();
-            // $cooperatives = Cooperative::all();
+            $transactions = Transaction::all();
+            $financeCategories = FinanceCategory::all();
+            $accounts = Account::all();
 
             return view('auditor.transaction.index', compact('transactions', 'financeCategories', 'accounts'));
         }
