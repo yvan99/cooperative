@@ -182,12 +182,12 @@
                     <div class="card-body">
                         <div class="row mt-3">
                             @forelse ($comments as $comment)
-                                <div class="col-xl-3 col-sm-6 col-12">
+                                <div class="col-12">
                                     <div class="card shadow-none border border-1 ml-2">
                                         <div class="card-content">
                                             <div class="card-body">
                                                 <div class="media d-flex justify-content-between">
-                                                    <div class="media-body text-left" style="text-align: left">
+                                                    <div class="media-body text-left">
                                                         <h3 class="mb-3">{{ $comment->auditor->names }}</h3>
                                                         <p>{{ $comment->message }}</p>
                                                         <span class="text-bold">{{ $comment->created_at }}</span>
