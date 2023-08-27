@@ -19,13 +19,17 @@
                                 Connect With Your Account
                             </h1>
 
+                        
+
                             <div class="text-gray-500 fw-semibold fs-6">
                                 Sign in to your cooperative account
                             </div>
 
                         </div>
 
-                        <div class="fv-row mb-8">
+                    
+
+                        <div class="fv-row mb-8 mt-2">
 
                             <input type="text" placeholder="Email" name="email" autocomplete="off"
                                 class="form-control bg-transparent" />
@@ -69,6 +73,12 @@
 
                             <a href="/owner/register" class="link-primary">
                                 Create an account
+                            </a>
+
+                            |
+
+                            <a href="/" class="link-primary mb-3">
+                                Back to homepage
                             </a>
                         </div>
 

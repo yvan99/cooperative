@@ -97,6 +97,11 @@
                         <div class="text-gray-500 text-left fw-semibold fs-6">
                             Already a member?
                             <a href="/owner/login" class="link-primary">Log In</a>
+                            |
+
+                            <a href="/" class="link-primary mb-3">
+                                Back to homepage
+                            </a>
                         </div>
                     </form>
 

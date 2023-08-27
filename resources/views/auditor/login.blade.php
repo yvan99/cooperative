@@ -63,13 +63,11 @@
                             </button>
                         </div>
 
-                        {{-- <div class="text-gray-500 text-left fw-semibold fs-6">
-                            Not a Member yet?
-
-                            <a href="/owner/register" class="link-primary">
-                                Create an account
+                        <div class="text-gray-500 text-left fw-semibold fs-6">
+                            <a href="/" class="link-primary mb-3">
+                                Back to homepage
                             </a>
-                        </div> --}}
+                        </div> 
 
                     </form>
 
