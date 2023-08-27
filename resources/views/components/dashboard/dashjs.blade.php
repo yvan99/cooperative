@@ -1,5 +1,5 @@
  {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  --}}
- <script src="{{ mix('js/app.js') }}" defer></script>
+ {{-- <script src="{{ mix('js/app.js') }}" defer></script> --}}
  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
  <script src="{{ asset('dashboarde/js/core/libs.min.js') }}"></script>
 
@@ -32,7 +32,6 @@
  <script>
     document.addEventListener('DOMContentLoaded', function() {
         const cooperativeIdInput = document.getElementById('accountCooperativeId');
-
         // Get the selected cooperative ID from localStorage and populate the hidden input
         const storedCooperativeId = localStorage.getItem('defaultCooperativeId');
         if (cooperativeIdInput && storedCooperativeId) {

@@ -3,16 +3,27 @@
 <body class="  dual-compact">
     <span class="screen-darken"></span>
     <main class="main-content">
+
         @include('components.dashboard.topnav')
-        @include('owner.components.navbar')
+        @include('auditor.components.navbar')
+
         <div class="container-fluid content-inner pb-0" id="page_layout">
-            @include('owner.components.breadcrumb')
+
             <div class="row">
                 <div class="col-12">
+
                     <div class="card">
                         <div class="card-body">
-                            <form action="{{ route('transactions.reports') }}" method="get" target="_blank"
-                                class="row">
+                            <form action="{{ route('auditor.financial.audits') }}" method="get" class="row">
+                                <div class="col-md-2">
+                                    <label for="year">Cooperative:</label>
+                                    <select id="cooperativeId" class="form-control form-select" name="cooperativeId">
+                                        <option value="">Select Cooperative</option>
+                                        @foreach ($cooperatives as $coop)
+                                            <option value="{{ $coop->id }}"> {{ $coop->name }} </option>
+                                        @endforeach
+                                    </select>
+                                </div>
                                 <div class="col-md-2">
                                     <label for="year">Year:</label>
                                     <input type="number" id="year" class="form-control" name="year" required>
@@ -23,25 +34,18 @@
                                         <option value="">Select Month</option>
                                         <option value="annually">Annually</option>
                                         @foreach (range(1, 12) as $month)
-                                            <option value="{{ $month }}">
-                                                {{ date('F', mktime(0, 0, 0, $month, 1)) }}</option>
+                                            <option value="{{ $month }}"> {{ date('F', mktime(0, 0, 0, $month, 1)) }} </option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <button type="submit" class="btn btn-primary mt-4">Generate Report</button>
+                                    <button type="submit" class="btn btn-dark mt-4">Review Audits</button>
                                 </div>
                             </form>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header d-flex justify-content-between">
 
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#createTransactionModal">
-                                Add transaction
-                            </button>
-                        </div>
+                    <div class="card">
                         <div class="card-body">
                             @include('components.dashboard.alert')
                             <div class="table-responsive border rounded">
@@ -50,6 +54,7 @@
                                     <thead>
                                         <tr>
                                             <th>Code</th>
+                                            <th>Cooperative</th>
                                             <th>Finance Category</th>
                                             <th>Amount</th>
                                             <th>Account</th>
@@ -60,11 +65,8 @@
                                     <tbody>
                                         @foreach ($transactions as $transaction)
                                             <tr>
-                                                <td>
-                                                    <button
-                                                        class="btn btn-sm btn-secondary text-white">{{ $transaction->code }}</button>
-
-                                                </td>
+                                                <td> <button class="btn btn-sm btn-secondary text-white">{{ $transaction->code }}</button></td>
+                                                <td>{{ $transaction->cooperative->name }}</td>
                                                 <td>{{ $transaction->financeCategory->name }}</td>
                                                 <td>{{ $transaction->amount }}</td>
                                                 <td>{{ $transaction->account ? $transaction->account->name : 'None' }}
@@ -147,11 +149,102 @@
                                 </div>
 
                             </div>
+
+                            <div class="">
+                                <div class="row mt-3">
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <div class="card shadow-none border border-1 ml-2">
+                                          <div class="card-content">
+                                            <div class="card-body">
+                                              <div class="media d-flex justify-content-between">
+                                                <div class="media-body text-left" style="text-align: left">
+                                                  <h3>{{ number_format($transactionAudit['totalIncome'], 2) }}</h3>
+                                                  <span>Total Income</span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <div class="card shadow-none border border-1">
+                                          <div class="card-content">
+                                            <div class="card-body">
+                                              <div class="media d-flex justify-content-between">
+                                                <div class="media-body text-left" style="text-align: left">
+                                                  <h3> {{ number_format($transactionAudit['totalExpenses'], 2) }}</h3>
+                                                  <span>Total Expences</span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <button type="button" class="btn btn-dark default-cooperative-button" data-bs-toggle="modal" data-bs-target="#addCommentToCoops">
+                                        Make audit review
+                                    </button>
+                                    <div class="modal fade" id="addCommentToCoops" tabindex="-1" role="dialog" aria-labelledby="setDefaultCooperativeModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="coopeLabel">Add Comment</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="{{ route('auditor.comment') }}" method="get">
+                                                        <input type="hidden" name="cooperativeId" value="{{ $cooperativeId }}">
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Write your comment</label>
+                                                            <textarea name="comment" class="form-control" id="coopComment" rows="3"></textarea>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary mt-3" id="saveCooperativeComment">Save</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Set default cooperative on button click
+                let saveComment = document.getElementById('saveCooperativeComment');
+
+                console.log(this)
+
+                saveComment.addEventListener('click', function() {
+                    const coopId = this.getAttribute('activeCoop');
+
+                    if (coopId) {
+                        const coopComment = document.getElementById('coopComment').value;
+
+                        fetch('/auditor/add/comment', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                            },
+                            body: JSON.stringify({
+                                coopId
+                                coopComment
+                            }),
+                        }).then(response => response.json())
+                    } else {
+                        alert('Adding Comment Failed');
+                    }
+                });
+            });
+        </script>
+
         @include('components.dashboard.dashfooter')
     </main>
     @include('components.dashboard.dashjs')

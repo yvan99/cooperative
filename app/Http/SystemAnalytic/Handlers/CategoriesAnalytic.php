@@ -5,6 +5,7 @@
     use App\Models\FinanceCategory;
     use App\Models\Transaction;
     use Illuminate\Support\Facades\DB;
+    use Illuminate\Support\Facades\Session;
     use Kakaprodo\SystemAnalytic\Lib\AnalyticResponse;
     use Kakaprodo\SystemAnalytic\Lib\ChartBase\Computed;
 
@@ -13,7 +14,10 @@
          * Implement the logic of handler
          */
         protected function result(): AnalyticResponse {
-            $transaction = Transaction::groupBy('finance_category_id')
+            $defaultCooperativeId = Session::get('defaultCooperativeId');
+
+            $transaction = Transaction::where('cooperative_id', $defaultCooperativeId)
+                                ->groupBy('finance_category_id')
                                 ->select('finance_category_id', DB::raw('SUM(amount) as total_amount'))
                                 ->get();
 

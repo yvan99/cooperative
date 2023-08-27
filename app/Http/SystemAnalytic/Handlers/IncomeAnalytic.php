@@ -4,6 +4,7 @@
 
     use App\Models\Transaction;
     use Illuminate\Support\Facades\DB;
+    use Illuminate\Support\Facades\Session;
     use Kakaprodo\SystemAnalytic\Lib\AnalyticResponse;
     use Kakaprodo\SystemAnalytic\Lib\ChartBase\Computed;
 
@@ -12,7 +13,9 @@
          * Implement the logic of handler
          */
         protected function result(): AnalyticResponse {
-            $statistics = Transaction::whereBetween('date', ['2023-01-01', '2023-11-30'])
+            $defaultCooperativeId = Session::get('defaultCooperativeId');
+
+            $statistics = Transaction::where('cooperative_id', $defaultCooperativeId)->whereBetween('date', ['2023-01-01', '2023-11-30'])
                                 ->whereHas('financeCategory', fn($query) => $query->where('type', 'income'))
                                 ->groupBy(DB::raw('MONTH(date)'))
                                 ->select(DB::raw('MONTH(date) as month'), DB::raw('SUM(amount) as total_income'))

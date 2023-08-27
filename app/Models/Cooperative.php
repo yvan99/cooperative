@@ -20,4 +20,9 @@ class Cooperative extends Model
         return $this->belongsToMany(Owner::class, 'cooperative_owners', 'cooperative_id', 'owner_id')
             ->withTimestamps();
     }
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
 }
