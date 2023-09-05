@@ -198,7 +198,7 @@
                                     <a class="py-0 nav-link d-flex align-items-center ps-3" style="background: #0c4926 !important" href="#"
                                         id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">
-                                        <img src="{{asset('dashboarde/images/avatars/01.png')}}" alt="User-Profile"
+                                        <img src="{{asset('homepage/logo-main.png')}}" alt="User-Profile"
                                             class="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded"
                                             loading="lazy">
                                         <img src="{{asset('dashboarde/images/avatars/avtar_1.png')}}" alt="User-Profile"
