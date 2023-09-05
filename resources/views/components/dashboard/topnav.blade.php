@@ -2,7 +2,7 @@
         <nav class="nav navbar navbar-expand-xl fixed-top navbar-dark bg-success iq-navbar iq-dual-compact ">
             <div class="container-fluid navbar-inner">
                 <div class="d-flex justify-content-between w-100 align-items-center">
-                    <button data-trigger="navbar_main" class="d-xl-none btn btn-primary rounded-pill p-1 pt-0 col-auto"
+                    <button data-trigger="navbar_main" class="d-xl-none btn btn-success rounded-pill p-1 pt-0 col-auto"
                         type="button">
                         <svg width="24px" viewBox="0 0 24 24">
                             <path fill="currentColor"

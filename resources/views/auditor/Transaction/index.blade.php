@@ -38,7 +38,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <button type="submit" class="btn btn-primary mt-4">Generate Report</button>
+                                    <button type="submit" class="btn btn-success mt-4">Generate Report</button>
                                 </div>
                             </form>
                         </div>
@@ -139,7 +139,7 @@
                                                         id="accountCooperativeId">
 
                                                     <div class="form-group col-12">
-                                                        <button type="submit" class="btn btn-primary">Create</button>
+                                                        <button type="submit" class="btn btn-success">Create</button>
                                                     </div>
                                                 </form>
                                             </div>

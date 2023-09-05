@@ -11,7 +11,7 @@
                     <div class="card">
                         <div class="card-header d-flex justify-content-between">
 
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerAuditorModal">
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registerAuditorModal">
                                 Register Auditor
                             </button>
                             
@@ -66,7 +66,7 @@
                                                         <input type="tel" class="form-control" id="telephone" name="telephone" required>
                                                     </div>
                                                     <!-- Add more fields as needed -->
-                                                    <button type="submit" class="btn btn-primary">Register</button>
+                                                    <button type="submit" class="btn btn-success">Register</button>
                                                 </form>
                                             </div>
                                         </div>

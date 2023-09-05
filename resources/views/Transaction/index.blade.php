@@ -29,7 +29,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <button type="submit" class="btn btn-primary mt-4">Generate Report</button>
+                                    <button type="submit" class="btn btn-success mt-4">Generate Report</button>
                                 </div>
                             </form>
                         </div>
@@ -37,7 +37,7 @@
                     <div class="card">
                         <div class="card-header d-flex justify-content-between">
 
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal"
                                 data-bs-target="#createTransactionModal">
                                 Add transaction
                             </button>
@@ -138,7 +138,7 @@
                                                         id="accountCooperativeId">
 
                                                     <div class="form-group col-12">
-                                                        <button type="submit" class="btn btn-primary">Create</button>
+                                                        <button type="submit" class="btn btn-success">Create</button>
                                                     </div>
                                                 </form>
                                             </div>

@@ -49,7 +49,7 @@
                                                 <td>
                                                     @if ($cooperative->certificate)
                                                         <a href="{{ Storage::url($cooperative->certificate) }}"
-                                                            class="btn btn-primary btn-sm" target="_blank">View
+                                                            class="btn btn-success btn-sm" target="_blank">View
                                                             Certificate</a>
                                                     @else
                                                         No Certificate
