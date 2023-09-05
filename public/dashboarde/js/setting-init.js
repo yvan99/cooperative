@@ -19,7 +19,7 @@
                     "--{{prefix}}primary": "#111722",
                     "--{{prefix}}secondary": "#aca4bc",
                     "--{{prefix}}tertiray": "#3FF0B9",
-                    "--{{prefix}}success": "#1AA053",
+                    "--{{prefix}}success": "#0c4926",
                     "--{{prefix}}danger": "#C03221",
                     "--{{prefix}}warning": "#F16A1B"
                 },
