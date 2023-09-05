@@ -1,21 +1,29 @@
 <div class="d-flex justify-content-between align-items-center flex-wrap mb-5 gap-3">
     <div class="d-flex flex-column">
-        <h3>Dashboard</h3>
-        <p class="mb-0">Financial Dashboard</p>
+        @if (request()->is('owner/dashboard'))
+            <h3>Dashboard</h3>
+            <p class="mb-0">View cooperative analytical information</p>
+        @elseif(request()->is('owner/cooperatives'))
+            <h3>Cooperatives</h3>
+            <p class="mb-0">Register and view your cooperatives information</p>
+        @else
+            <h3>Default Title</h3>
+            <p class="mb-0">Default Description</p>
+        @endif
     </div>
     <button type="button" class="btn btn-warning default-cooperative-button" data-bs-toggle="modal"
         data-bs-target="#setDefaultCooperativeModal">
         Set Default Cooperative
     </button>
 
- 
+
 
 
 </div>
 @if (session('no-cooperative'))
-<div class="alert alert-warning">
-    {{ session('no-cooperative') }}
-</div>
+    <div class="alert alert-warning">
+        {{ session('no-cooperative') }}
+    </div>
 @endif
 
 <div class="modal fade" id="setDefaultCooperativeModal" tabindex="-1" role="dialog"
