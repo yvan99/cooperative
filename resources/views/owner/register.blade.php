@@ -13,7 +13,7 @@
                     src="../../../assets/media/misc/auth-screens.png" alt="" />
 
                 <h1 class="d-none d-lg-block text-white fs-2qx fw-bolder text-center mb-7">
-                    Fast, Efficient and Productive
+                    Create an account , its fast
                 </h1>
             </div>
         </div>
@@ -23,7 +23,6 @@
             <div class="d-flex flex-center flex-column flex-lg-row-fluid">
 
                 <div class="w-lg-500px p-10">
-
 
                     <form class="form w-100" novalidate="novalidate" id="kt_sign_up_form"
                         action="{{ route('owner.register') }}" method="POST">
