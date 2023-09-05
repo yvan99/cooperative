@@ -7,8 +7,8 @@
             <div class="d-flex flex-column flex-center py-7 py-lg-15 px-5 px-md-15 w-100">
 
 
-                <img class="d-none d-lg-block mx-auto w-275px w-md-50 w-xl-500px mb-10 mb-lg-20"
-                    src="../../../assets/media/misc/auth-screens.png" alt="" />
+                <img class="d-none d-lg-block mx-auto w-275px w-md-50 w-xl-300px mb-10 mb-lg-20"
+                    src="../homepage/mockuping.png" alt="" />
 
                 <h1 class="d-none d-lg-block text-white fs-2qx fw-bolder text-center mb-7">
                     Login to your CFTAS Staff Portal
@@ -97,8 +97,8 @@
             <div class="d-flex flex-column flex-center py-7 py-lg-15 px-5 px-md-15 w-100">
 
 
-                <img class="d-none d-lg-block mx-auto w-275px w-md-50 w-xl-500px mb-10 mb-lg-20"
-                    src="../../../assets/media/misc/auth-screens.png" alt="" />
+                <img class="d-none d-lg-block mx-auto w-275px w-md-50 w-xl-300px mb-10 mb-lg-20"
+                    src="../homepage/mockuping.png" alt="" />
 
                 <h1 class="d-none d-lg-block text-white fs-2qx fw-bolder text-center mb-7">
                     Fast, Efficient and Productive
