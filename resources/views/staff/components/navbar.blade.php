@@ -6,7 +6,7 @@
                 </li>
                 <li class="nav-item {{ Request::is('staff/auditors') ? 'active' : '' }}"><a class="nav-link " href="/staff/auditors">Manage Auditors</a>
                 </li>
-                <li class="nav-item {{ Request::is('staff/logout') ? 'active' : '' }}"><a class="nav-link bg-danger text-white" href="/staff/logout">Logout</a>
+                <li class="nav-item {{ Request::is('staff/logout') ? 'active' : '' }}"><a class="nav-link bg-secondary text-white" href="/staff/logout">Logout</a>
                 </li>
             </ul>
         </nav>

@@ -19,7 +19,7 @@
                 <li class="nav-item {{ Request::is('owner/audits') ? 'active' : '' }}"><a class="nav-link " href="/owner/audits">Financial Audit</a>
                 </li>
 
-                <li class="nav-item {{ Request::is('owner/logout') ? 'active' : '' }}"><a class="nav-link text-white bg-danger" href="/owner/logout">Logout</a>
+                <li class="nav-item {{ Request::is('owner/logout') ? 'active' : '' }}"><a class="nav-link text-white bg-secondary" href="/owner/logout">Logout</a>
                 </li>
             </ul>
         </nav>
