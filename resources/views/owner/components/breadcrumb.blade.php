@@ -6,9 +6,21 @@
         @elseif(request()->is('owner/cooperatives'))
             <h3>Cooperatives</h3>
             <p class="mb-0">Register and view your cooperatives information</p>
+        @elseif(request()->is('owner/accounts'))
+            <h3>Accounts</h3>
+            <p class="mb-0">Register and manage your accounts</p>
+        @elseif(request()->is('owner/categories'))
+            <h3>Finance Categories</h3>
+            <p class="mb-0">Register and manage your financial categories</p>
+        @elseif(request()->is('owner/transactions'))
+            <h3>Transactions</h3>
+            <p class="mb-0">Record and manage your financial transactions in real-time</p>
+        @elseif(request()->is('owner/audits'))
+            <h3>Audit Report</h3>
+            <p class="mb-0">View the audit report from RCA auditors</p>
         @else
-            <h3>Default Title</h3>
-            <p class="mb-0">Default Description</p>
+            <h3>Dashboard</h3>
+            <p class="mb-0">Manage the account</p>
         @endif
     </div>
     <button type="button" class="btn btn-warning default-cooperative-button" data-bs-toggle="modal"
