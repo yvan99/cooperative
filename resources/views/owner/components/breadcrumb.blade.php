@@ -3,7 +3,7 @@
         <h3>Dashboard</h3>
         <p class="mb-0">Financial Dashboard</p>
     </div>
-    <button type="button" class="btn btn-danger default-cooperative-button" data-bs-toggle="modal"
+    <button type="button" class="btn btn-warning default-cooperative-button" data-bs-toggle="modal"
         data-bs-target="#setDefaultCooperativeModal">
         Set Default Cooperative
     </button>
