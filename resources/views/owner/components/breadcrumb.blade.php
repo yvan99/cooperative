@@ -28,9 +28,6 @@
         Set Default Cooperative
     </button>
 
-
-
-
 </div>
 @if (session('no-cooperative'))
     <div class="alert alert-warning">

@@ -53,6 +53,8 @@
                                             <th>Finance Category</th>
                                             <th>Amount</th>
                                             <th>Account</th>
+                                            <th>Doc. Type</th>
+                                            <th>Document</th>
                                             <th>Status</th>
                                             <th>Date</th>
                                         </tr>
@@ -70,6 +72,16 @@
                                                 <td>{{ $transaction->account ? $transaction->account->name : 'None' }}
                                                 </td>
 
+                                                <td>{{ $transaction->document_type }}</td>
+                                                <td>
+                                                    @if ($transaction->document_path)
+                                                        <a href="{{ Storage::url($transaction->document_path) }}"
+                                                            class="btn btn-success btn-sm" target="_blank">View
+                                                            Document</a>
+                                                    @else
+                                                        No Document
+                                                    @endif
+                                                </td>
                                                 <td>
                                                     <button
                                                         class="
@@ -128,6 +140,23 @@
                                                                 <option value="{{ $account->id }}">
                                                                     {{ $account->name }}</option>
                                                             @endforeach
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-6">
+                                                        <label class="mb-3" for="certificate">Supporting
+                                                            Document</label>
+                                                        <input type="file" class="form-control" id="document_path"
+                                                            name="document_path" accept=".pdf" required>
+                                                    </div>
+
+                                                    <div class="form-group col-6">
+                                                        <label class="mb-3" for="certificate">Supporting Document
+                                                            Type</label>
+                                                        <select name="document_type" class="form-control form-select"
+                                                            id="">
+                                                            <option value="proforma">proforma</option>
+                                                            <option value="invoice">invoice</option>
+                                                            <option value="other">other</option>
                                                         </select>
                                                     </div>
                                                     <div class="form-group col-12">

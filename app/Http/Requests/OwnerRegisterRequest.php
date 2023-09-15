@@ -15,7 +15,7 @@ class OwnerRegisterRequest extends FormRequest
     {
         return [
             'names' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:owners',
+            'email' => 'required|string|email|max:255|unique:leaders',
             'password' => 'required|string|min:8',
             'telephone' => 'required|string|max:15',
         ];

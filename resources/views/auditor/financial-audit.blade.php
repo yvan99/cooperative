@@ -58,6 +58,8 @@
                                             <th>Finance Category</th>
                                             <th>Amount</th>
                                             <th>Account</th>
+                                            <th>Doc. Type</th>
+                                            <th>Document</th>
                                             <th>Status</th>
                                             <th>Date</th>
                                         </tr>
@@ -70,6 +72,17 @@
                                                 <td>{{ $transaction->financeCategory->name }}</td>
                                                 <td>{{ $transaction->amount }}</td>
                                                 <td>{{ $transaction->account ? $transaction->account->name : 'None' }}
+                                                </td>
+
+                                                <td>{{ $transaction->document_type }}</td>
+                                                <td>
+                                                    @if ($transaction->document_path)
+                                                        <a href="{{ Storage::url($transaction->document_path) }}"
+                                                            class="btn btn-success btn-sm" target="_blank">View
+                                                            Document</a>
+                                                    @else
+                                                        No Document
+                                                    @endif
                                                 </td>
 
                                                 <td>
@@ -173,7 +186,7 @@
                                               <div class="media d-flex justify-content-between">
                                                 <div class="media-body text-left" style="text-align: left">
                                                   <h3> {{ number_format($transactionAudit['totalExpenses'], 2) }}</h3>
-                                                  <span>Total Expences</span>
+                                                  <span>Total Expenses</span>
                                                 </div>
                                               </div>
                                             </div>
@@ -189,17 +202,17 @@
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="coopeLabel">Add Comment</h5>
+                                                    <h5 class="modal-title" id="coopeLabel">Add Review</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     <form action="{{ route('auditor.comment') }}" method="get">
                                                         <input type="hidden" name="cooperativeId" value="{{ $cooperativeId }}">
                                                         <div class="form-group">
-                                                            <label for="exampleFormControlTextarea1">Write your comment</label>
+                                                            <label for="exampleFormControlTextarea1">Write your review</label>
                                                             <textarea name="comment" class="form-control" id="coopComment" rows="3"></textarea>
                                                         </div>
-                                                        <button type="submit" class="btn btn-primary mt-3" id="saveCooperativeComment">Save</button>
+                                                        <button type="submit" class="btn btn-primary mt-3" id="saveCooperativeComment">Send audit review</button>
                                                     </form>
                                                 </div>
                                             </div>
