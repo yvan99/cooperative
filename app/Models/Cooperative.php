@@ -17,7 +17,7 @@ class Cooperative extends Model
 
     public function owners()
     {
-        return $this->belongsToMany(Owner::class, 'cooperative_owners', 'cooperative_id', 'owner_id')
+        return $this->belongsToMany(Owner::class, 'cooperative_owners', 'cooperative_id', 'leader_id')
             ->withTimestamps();
     }
 

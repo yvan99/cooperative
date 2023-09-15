@@ -29,7 +29,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <button type="submit" class="btn btn-primary mt-4">Generate Report</button>
+                                    <button type="submit" class="btn btn-success mt-4">Generate Report</button>
                                 </div>
                             </form>
                         </div>
@@ -37,7 +37,7 @@
                     <div class="card">
                         <div class="card-header d-flex justify-content-between">
 
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal"
                                 data-bs-target="#createTransactionModal">
                                 Add transaction
                             </button>
@@ -53,6 +53,8 @@
                                             <th>Finance Category</th>
                                             <th>Amount</th>
                                             <th>Account</th>
+                                            <th>Doc. Type</th>
+                                            <th>Document</th>
                                             <th>Status</th>
                                             <th>Date</th>
                                         </tr>
@@ -70,6 +72,16 @@
                                                 <td>{{ $transaction->account ? $transaction->account->name : 'None' }}
                                                 </td>
 
+                                                <td>{{ $transaction->document_type }}</td>
+                                                <td>
+                                                    @if ($transaction->document_path)
+                                                        <a href="{{ Storage::url($transaction->document_path) }}"
+                                                            class="btn btn-success btn-sm" target="_blank">View
+                                                            Document</a>
+                                                    @else
+                                                        No Document
+                                                    @endif
+                                                </td>
                                                 <td>
                                                     <button
                                                         class="
@@ -130,6 +142,23 @@
                                                             @endforeach
                                                         </select>
                                                     </div>
+                                                    <div class="form-group col-6">
+                                                        <label class="mb-3" for="certificate">Supporting
+                                                            Document</label>
+                                                        <input type="file" class="form-control" id="document_path"
+                                                            name="document_path" accept=".pdf" required>
+                                                    </div>
+
+                                                    <div class="form-group col-6">
+                                                        <label class="mb-3" for="certificate">Supporting Document
+                                                            Type</label>
+                                                        <select name="document_type" class="form-control form-select"
+                                                            id="">
+                                                            <option value="proforma">proforma</option>
+                                                            <option value="invoice">invoice</option>
+                                                            <option value="other">other</option>
+                                                        </select>
+                                                    </div>
                                                     <div class="form-group col-12">
                                                         <label class="mb-3" for="description">Description</label>
                                                         <textarea class="form-control" id="description" name="description" rows="3"></textarea>
@@ -138,7 +167,7 @@
                                                         id="accountCooperativeId">
 
                                                     <div class="form-group col-12">
-                                                        <button type="submit" class="btn btn-primary">Create</button>
+                                                        <button type="submit" class="btn btn-success">Create</button>
                                                     </div>
                                                 </form>
                                             </div>

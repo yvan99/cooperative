@@ -17,7 +17,7 @@ class CooperativeOwnerFactory extends Factory
             'cooperative_id' => function () {
                 return Cooperative::factory()->create()->id;
             },
-            'owner_id' => function () {
+            'leader_id' => function () {
                 return Owner::factory()->create()->id;
             },
         ];

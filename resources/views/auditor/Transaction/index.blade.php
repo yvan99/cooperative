@@ -13,7 +13,8 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <form action="{{ route('auditor.transactions.reports') }}" method="get" target="_blank" class="row">
+                            <form action="{{ route('auditor.transactions.reports') }}" method="get" target="_blank"
+                                class="row">
                                 <div class="col-md-2">
                                     <label for="year">Cooperative:</label>
                                     <select id="cooperative" class="form-control form-select" name="cooperative">
@@ -33,17 +34,18 @@
                                         <option value="">Select Month</option>
                                         <option value="annually">Annually</option>
                                         @foreach (range(1, 12) as $month)
-                                            <option value="{{ $month }}"> {{ date('F', mktime(0, 0, 0, $month, 1)) }} </option>
+                                            <option value="{{ $month }}">
+                                                {{ date('F', mktime(0, 0, 0, $month, 1)) }} </option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <button type="submit" class="btn btn-primary mt-4">Generate Report</button>
+                                    <button type="submit" class="btn btn-success mt-4">Generate Report</button>
                                 </div>
                             </form>
                         </div>
                     </div>
-                    
+
                     <div class="card">
                         <div class="card-body">
                             @include('components.dashboard.alert')
@@ -57,6 +59,8 @@
                                             <th>Finance Category</th>
                                             <th>Amount</th>
                                             <th>Account</th>
+                                            <th>Doc. Type</th>
+                                            <th>Document</th>
                                             <th>Status</th>
                                             <th>Date</th>
                                         </tr>
@@ -64,13 +68,24 @@
                                     <tbody>
                                         @foreach ($transactions as $transaction)
                                             <tr>
-                                                <td> <button class="btn btn-sm btn-secondary text-white">{{ $transaction->code }}</button></td>
+                                                <td> <button
+                                                        class="btn btn-sm btn-secondary text-white">{{ $transaction->code }}</button>
+                                                </td>
                                                 <td>{{ $transaction->cooperative->name }}</td>
                                                 <td>{{ $transaction->financeCategory->name }}</td>
                                                 <td>{{ $transaction->amount }}</td>
                                                 <td>{{ $transaction->account ? $transaction->account->name : 'None' }}
                                                 </td>
-
+                                                <td>{{ $transaction->document_type }}</td>
+                                                <td>
+                                                    @if ($transaction->document_path)
+                                                        <a href="{{ Storage::url($transaction->document_path) }}"
+                                                            class="btn btn-success btn-sm" target="_blank">View
+                                                            Document</a>
+                                                    @else
+                                                        No Document
+                                                    @endif
+                                                </td>
                                                 <td>
                                                     <button
                                                         class="
@@ -139,7 +154,7 @@
                                                         id="accountCooperativeId">
 
                                                     <div class="form-group col-12">
-                                                        <button type="submit" class="btn btn-primary">Create</button>
+                                                        <button type="submit" class="btn btn-success">Create</button>
                                                     </div>
                                                 </form>
                                             </div>

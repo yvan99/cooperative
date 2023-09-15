@@ -30,7 +30,7 @@
                                 </select>
                             </div>
                             <div class="col-md-3">
-                                <button type="submit" class="btn btn-dark mt-4">Review Audits</button>
+                                <button type="submit" class="btn btn-success mt-4">Review Audits</button>
                             </div>
                         </form>
                     </div>
@@ -131,7 +131,7 @@
                                                     id="accountCooperativeId">
 
                                                 <div class="form-group col-12">
-                                                    <button type="submit" class="btn btn-primary">Create</button>
+                                                    <button type="submit" class="btn btn-success">Create</button>
                                                 </div>
                                             </form>
                                         </div>
@@ -164,7 +164,7 @@
                                           <div class="media d-flex justify-content-between">
                                             <div class="media-body text-left" style="text-align: left">
                                               <h3> {{ number_format($transactionAudit['totalExpenses'], 2) }}</h3>
-                                              <span>Total Expences</span>
+                                              <span>Total Expenses</span>
                                             </div>
                                           </div>
                                         </div>
@@ -178,7 +178,7 @@
 
 
                 <div class="card">
-                    <div class="p-5"><h3>Auditor Comments</h3></div>
+                    <div class="p-5"><h3>RCA auditor reviews</h3></div>
                     <div class="card-body">
                         <div class="row mt-3">
                             @forelse ($comments as $comment)
@@ -198,7 +198,11 @@
                                     </div>
                                 </div>
                             @empty
-                                <div class="text-center">No comment founds</div>
+                                <div class="text-center">
+                                    <img src="https://res.cloudinary.com/ziramba/image/upload/v1687191217/icons/speech-bubble_b5ffcx.png" width="100" alt=""><br>
+                                    
+                                    No reviews from RCA auditors founds at the moment
+                                </div>
                             @endforelse
                         </div>
                     </div>

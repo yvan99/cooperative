@@ -39,7 +39,7 @@ use App\Models\Cooperative;
             ]);
 
             // Computed anaytics
-            $coops = Cooperative::whereHas('owners', fn ($query) => $query->where('owner_id', Auth::user()->id))->count();
+            $coops = Cooperative::whereHas('owners', fn ($query) => $query->where('leader_id', Auth::user()->id))->count();
             $trans = Transaction::where('cooperative_id', $defaultCooperativeId)->whereHas('cooperative', fn ($query) => $query->where('id', $defaultCooperativeId))->count();
             $expences = Transaction::where('cooperative_id', $defaultCooperativeId)->whereHas('financeCategory', fn ($query) => $query->where('type', 'expense'))->avg('amount');
             $incomes = Transaction::where('cooperative_id', $defaultCooperativeId)->whereHas('financeCategory', fn ($query) => $query->where('type', 'income'))->avg('amount');

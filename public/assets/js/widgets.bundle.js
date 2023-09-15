@@ -14022,7 +14022,7 @@ var KTChartsWidget27 = function () {
             legend: {
                 show: false
             },                               
-            colors: ['#3E97FF', '#F1416C', '#50CD89', '#FFC700', '#7239EA'],                                                                      
+            colors: ['#3E97FF', '#F1416C', '#0c4926', '#FFC700', '#7239EA'],                                                                      
             xaxis: {
                 categories: ["USA", "India", 'Canada', 'Brasil', 'France'],
                 labels: {
@@ -18564,7 +18564,7 @@ var KTChartsWidget5 = function () {
             legend: {
                 show: false
             },                               
-            colors: ['#3E97FF', '#F1416C', '#50CD89', '#FFC700', '#7239EA', '#50CDCD', '#3F4254'],                                                                      
+            colors: ['#3E97FF', '#F1416C', '#0c4926', '#FFC700', '#7239EA', '#50CDCD', '#3F4254'],                                                                      
             xaxis: {
                 categories: ['Phones', 'Laptops', 'Headsets', 'Games', 'Keyboardsy', 'Monitors', 'Speakers'],
                 labels: {
@@ -18715,7 +18715,7 @@ var KTChartsWidget6 = function () {
             legend: {
                 show: false
             },                               
-            colors: ['#3E97FF', '#F1416C', '#50CD89', '#FFC700', '#7239EA'],                                                                      
+            colors: ['#3E97FF', '#F1416C', '#0c4926', '#FFC700', '#7239EA'],                                                                      
             xaxis: {
                 categories: ["ECR - 90%", "FGI - 82%", 'EOQ - 75%', 'FMG - 60%', 'PLG - 50%'],
                 labels: {

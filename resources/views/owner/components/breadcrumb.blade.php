@@ -1,21 +1,38 @@
 <div class="d-flex justify-content-between align-items-center flex-wrap mb-5 gap-3">
     <div class="d-flex flex-column">
-        <h3>Dashboard</h3>
-        <p class="mb-0">Financial Dashboard</p>
+        @if (request()->is('owner/dashboard'))
+            <h3>Dashboard</h3>
+            <p class="mb-0">View cooperative analytical information</p>
+        @elseif(request()->is('owner/cooperatives'))
+            <h3>Cooperatives</h3>
+            <p class="mb-0">Register and view your cooperatives information</p>
+        @elseif(request()->is('owner/accounts'))
+            <h3>Accounts</h3>
+            <p class="mb-0">Register and manage your accounts</p>
+        @elseif(request()->is('owner/categories'))
+            <h3>Finance Categories</h3>
+            <p class="mb-0">Register and manage your financial categories</p>
+        @elseif(request()->is('owner/transactions'))
+            <h3>Transactions</h3>
+            <p class="mb-0">Record and manage your financial transactions in real-time</p>
+        @elseif(request()->is('owner/audits'))
+            <h3>Audit Report</h3>
+            <p class="mb-0">View the audit report from RCA auditors</p>
+        @else
+            <h3>Dashboard</h3>
+            <p class="mb-0">Manage the account</p>
+        @endif
     </div>
-    <button type="button" class="btn btn-danger default-cooperative-button" data-bs-toggle="modal"
+    <button type="button" class="btn btn-warning default-cooperative-button" data-bs-toggle="modal"
         data-bs-target="#setDefaultCooperativeModal">
         Set Default Cooperative
     </button>
 
- 
-
-
 </div>
 @if (session('no-cooperative'))
-<div class="alert alert-warning">
-    {{ session('no-cooperative') }}
-</div>
+    <div class="alert alert-warning">
+        {{ session('no-cooperative') }}
+    </div>
 @endif
 
 <div class="modal fade" id="setDefaultCooperativeModal" tabindex="-1" role="dialog"
@@ -40,7 +57,7 @@
 
 
 
-                    <button type="button" class="btn btn-primary mt-3" id="saveDefaultCooperative">Save</button>
+                    <button type="button" class="btn btn-success mt-3" id="saveDefaultCooperative">Save</button>
                 </form>
             </div>
         </div>

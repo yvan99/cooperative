@@ -1,14 +1,16 @@
         <!--Nav Start-->
-        <nav class="nav navbar navbar-expand-xl fixed-top navbar-dark bg-dark iq-navbar iq-dual-compact ">
+        <nav class="nav navbar navbar-expand-xl fixed-top navbar-dark bg-success iq-navbar iq-dual-compact ">
             <div class="container-fluid navbar-inner">
                 <div class="d-flex justify-content-between w-100 align-items-center">
-                    <button data-trigger="navbar_main" class="d-xl-none btn btn-primary rounded-pill p-1 pt-0 col-auto"
+                    <button data-trigger="navbar_main" class="d-xl-none btn btn-success rounded-pill p-1 pt-0 col-auto"
                         type="button">
                         <svg width="24px" viewBox="0 0 24 24">
                             <path fill="currentColor"
                                 d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
                         </svg>
                     </button>
+
+                    <h5 class="text-white">{{env('APP_NAME')}} Portal</h5>
 
                     <nav id="navbar_main"
                         class="mobile-offcanvas nav navbar navbar-expand-xl  horizontal-nav col-auto bg-dark">
@@ -193,10 +195,10 @@
 
 
                                 <li class="nav-item dropdown">
-                                    <a class="py-0 nav-link d-flex align-items-center ps-3" href="#"
+                                    <a class="py-0 nav-link d-flex align-items-center ps-3" style="background: #0c4926 !important" href="#"
                                         id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">
-                                        <img src="{{asset('dashboarde/images/avatars/01.png')}}" alt="User-Profile"
+                                        <img src="{{asset('homepage/logo-main.png')}}" alt="User-Profile"
                                             class="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded"
                                             loading="lazy">
                                         <img src="{{asset('dashboarde/images/avatars/avtar_1.png')}}" alt="User-Profile"

@@ -1079,7 +1079,7 @@ if (jQuery("#crypto-chart-01").length) {
   legend: {
     show: false
   },
-  colors:['#1AA053'],
+  colors:['#0c4926'],
   grid: {
     show:false,
   },
@@ -1168,7 +1168,7 @@ if (jQuery("#crypto-chart-02").length) {
   legend: {
     show: false
   },
-  colors:['#1AA053'],
+  colors:['#0c4926'],
   grid: {
     show:false,
   },

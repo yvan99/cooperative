@@ -21,7 +21,7 @@ class SetOwnerCooperatives
     {
         $loggedInOwnerId = Auth::id();
         $ownerCooperatives = Cooperative::whereHas('owners', function ($query) use ($loggedInOwnerId) {
-            $query->where('owner_id', $loggedInOwnerId);
+            $query->where('leader_id', $loggedInOwnerId);
         })->where('status', 'approved')
             ->get();
 

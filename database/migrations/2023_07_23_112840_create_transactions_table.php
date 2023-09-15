@@ -21,6 +21,8 @@ class CreateTransactionsTable extends Migration
             $table->unsignedBigInteger('cooperative_id');
             $table->foreign('cooperative_id')->references('id')->on('cooperatives');
             $table->unsignedBigInteger('account_id');
+            $table->string('document_type')->nullable();
+            $table->string('document_path')->nullable();
             $table->foreign('account_id')->references('id')->on('accounts');
             $table->year('year');
             $table->string('month');

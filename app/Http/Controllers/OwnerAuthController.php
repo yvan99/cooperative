@@ -26,7 +26,7 @@ class OwnerAuthController extends Controller
     public function showLoginForm()
     {
         return view('owner.login');
-    }
+    } 
 
     public function login(OwnerLoginRequest $request)
     {

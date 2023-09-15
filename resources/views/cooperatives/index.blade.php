@@ -16,7 +16,7 @@
                     <div class="card">
                         <div class="card-header d-flex justify-content-between">
 
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal"
                                 data-bs-target="#createCategoryModal">
                                 Register Cooperative
                             </button>
@@ -60,7 +60,7 @@
                                                 <td>
                                                     @if ($cooperative->certificate)
                                                         <a href="{{ Storage::url($cooperative->certificate) }}"
-                                                            class="btn btn-primary btn-sm" target="_blank">Download
+                                                            class="btn btn-success btn-sm" target="_blank">Download
                                                             Certificate</a>
                                                     @else
                                                         No Certificate
@@ -300,7 +300,7 @@
                                                     </div>
 
                                                     <div class="form-group col-12">
-                                                        <button type="submit" class="btn btn-primary">Create</button>
+                                                        <button type="submit" class="btn btn-success">Create</button>
                                                     </div>
 
 

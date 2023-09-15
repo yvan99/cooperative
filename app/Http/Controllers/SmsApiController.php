@@ -25,7 +25,7 @@ class SmsApiController extends Controller
             $response = $client->post($url, [
                 'auth' => [$username, $password],
                 'form_params' => $data,
-                'verify' => false // Only use this if you want to disable SSL verification
+                'verify' => false
             ]);
 
             $httpResponse = $response->getStatusCode();
