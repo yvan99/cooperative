@@ -5,7 +5,7 @@ class KTSigninGeneral {
         this.form = document.querySelector("#kt_sign_in_form");
         this.submitButton = document.querySelector("#kt_sign_in_submit");
         this.validator = null;
-        
+
         this.init();
     }
 
@@ -50,9 +50,12 @@ class KTSigninGeneral {
                     this.submitButton.disabled = true;
 
                     axios
-                        .post("/owner/login", {
-                            email: this.form.querySelector('[name="email"]').value,
-                            password: this.form.querySelector('[name="password"]').value,
+                        .post("/leader/login", {
+                            email: this.form.querySelector('[name="email"]')
+                                .value,
+                            password:
+                                this.form.querySelector('[name="password"]')
+                                    .value,
                         })
                         .then((response) => {
                             if (response.data.status === "success") {
@@ -61,7 +64,8 @@ class KTSigninGeneral {
                                     icon: "success",
                                 }).then((result) => {
                                     if (result.isConfirmed) {
-                                        window.location.href = response.data.redirectTo;
+                                        window.location.href =
+                                            response.data.redirectTo;
                                     }
                                 });
                             } else {
@@ -71,15 +75,26 @@ class KTSigninGeneral {
                                 });
                             }
 
-                            this.submitButton.removeAttribute("data-kt-indicator");
+                            this.submitButton.removeAttribute(
+                                "data-kt-indicator"
+                            );
                             this.submitButton.disabled = false;
                         })
                         .catch((error) => {
+                            let errorMessage = "An error occurred. Please try again.";
+                        
+                            if (error.response && error.response.data && error.response.data.errors) {
+                                const errors = error.response.data.errors;
+                                errorMessage = Object.values(errors)
+                                    .map(errorArray => errorArray.join('<br>'))
+                                    .join('<br>');
+                            }
+                            
                             Swal.fire({
-                                text: "An error occurred. Please try again.",
+                                html: errorMessage,
                                 icon: "error",
                             });
-
+                        
                             this.submitButton.removeAttribute("data-kt-indicator");
                             this.submitButton.disabled = false;
                         });

@@ -69,7 +69,7 @@
         const saveButton = document.getElementById('saveDefaultCooperative');
 
         // Load default cooperative data on page load
-        fetch('/owner/default-cooperative/get')
+        fetch('/leader/default-cooperative/get')
             .then(response => response.json())
             .then(data => {
                 if (data.defaultCooperativeId) {
@@ -93,7 +93,7 @@
                 const cooperativeId = selectedCooperative.value;
                 const cooperativeName = selectedCooperative.nextElementSibling.textContent.trim();
 
-                fetch('/owner/default-cooperative/set', {
+                fetch('/leader/default-cooperative/set', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

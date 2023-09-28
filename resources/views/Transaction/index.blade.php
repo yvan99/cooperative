@@ -76,7 +76,7 @@
                                                 <td>
                                                     @if ($transaction->document_path)
                                                         <a href="{{ Storage::url($transaction->document_path) }}"
-                                                            class="btn btn-success btn-sm" target="_blank">View
+                                                            class="btn btn-warning btn-sm" target="_blank">View
                                                             Document</a>
                                                     @else
                                                         No Document
@@ -156,6 +156,16 @@
                                                             id="">
                                                             <option value="proforma">proforma</option>
                                                             <option value="invoice">invoice</option>
+                                                            <option value="receipt">receipt</option>
+                                                            <option value="contract">contract</option>
+                                                            <option value="estimate">estimate</option>
+                                                            <option value="purchase_order">purchase order</option>
+                                                            <option value="delivery_note">delivery note</option>
+                                                            <option value="quote">quote</option>
+                                                            <option value="report">report</option>
+                                                            <option value="agreement">agreement</option>
+                                                            <option value="proposal">proposal</option>
+                                                            <option value="agreement">agreement</option>
                                                             <option value="other">other</option>
                                                         </select>
                                                     </div>

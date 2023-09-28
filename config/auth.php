@@ -24,9 +24,9 @@ return [
             'provider' => 'auditor',
         ],
 
-        'owner' => [
+        'leader' => [
             'driver' => 'session',
-            'provider' => 'owners',
+            'provider' => 'leaders',
         ],
     ],
 
@@ -47,7 +47,7 @@ return [
             'model' => App\Models\Auditor::class,
         ],
 
-        'owners' => [
+        'leaders' => [
             'driver' => 'eloquent',
             'model' => App\Models\Owner::class,
         ],
@@ -78,7 +78,7 @@ return [
             'throttle' => 60,
         ],
 
-        'owners' => [
+        'leaders' => [
             'provider' => 'owner',
             'table' => 'password_resets',
             'expire' => 60,

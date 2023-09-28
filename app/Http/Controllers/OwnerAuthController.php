@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Auth;
 class OwnerAuthController extends Controller
 {
 
-    protected $redirectTo = '/owner/dashboard';
-    protected $redirectToLogout = '/owner/login';
+    protected $redirectTo = '/leader/dashboard';
+    protected $redirectToLogout = '/leader/login';
 
     public function __construct()
     {
@@ -20,7 +20,7 @@ class OwnerAuthController extends Controller
 
     protected function guard()
     {
-        return Auth::guard('owner');
+        return Auth::guard('leader');
     }
 
     public function showLoginForm()
@@ -32,7 +32,7 @@ class OwnerAuthController extends Controller
     {
         $credentials = $request->validated();
 
-        if (Auth::guard('owner')->attempt($credentials)) {
+        if (Auth::guard('leader')->attempt($credentials)) {
             return response()->json(['status' => 'success', 'redirectTo' => $this->redirectTo]);
         }
 
@@ -60,15 +60,15 @@ class OwnerAuthController extends Controller
         $message = "Dear " . $validatedData['names'] . " , your registration is successful.  Login to your account to create and manage your cooperatives";
         $smsApi->sendSms($owner->telephone, $message);
 
-        Auth::guard('owner')->login($owner);
+        Auth::guard('leader')->login($owner);
 
-        return response()->json(['status' => 'success', 'redirectTo' => '/owner/dashboard']);
+        return response()->json(['status' => 'success', 'redirectTo' => '/leader/dashboard']);
     }
 
 
     public function logout()
     {
-        Auth::guard('owner')->logout();
+        Auth::guard('leader')->logout();
         session()->forget('defaultCooperativeId');
         session()->forget('defaultCooperativeName');
         return view('logout');
