@@ -74,7 +74,7 @@
                                                         <select class="form-control form-select" id="status"
                                                             name="status" required>
                                                             <option value="active">Active</option>
-                                                            <option value="inactive">Inactive</option>
+                                                            {{-- <option value="inactive" disabled>Inactive</option> --}}
 
                                                         </select>
                                                     </div>

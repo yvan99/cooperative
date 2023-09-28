@@ -47,7 +47,7 @@
                         </div>
 
                         <div class="fv-row mb-3">
-                            <input type="text" placeholder="Telephone" name="telephone" autocomplete="off"
+                            <input type="tel" placeholder="Telephone" name="telephone" autocomplete="off"
                                 class="form-control bg-transparent" />
                         </div>
 
@@ -110,7 +110,7 @@
 
                         <div class="text-gray-500 text-left fw-semibold fs-6">
                             Already a member?
-                            <a href="/owner/login" class="link-primary">Log In</a>
+                            <a href="/leader/login" class="link-primary">Log In</a>
                             |
 
                             <a href="/" class="link-primary mb-3">

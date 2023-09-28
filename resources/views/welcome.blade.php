@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="https://www.rca.gov.rw/typo3conf/ext/risa_base/Resources/Public/Images/Coat.png" type="image/png">
+    <link rel="shortcut icon" href="https://www.rca.gov.rw/typo3conf/ext/risa_base/Resources/Public/Images/Coat.png"
+        type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ env('APP_NAME') }}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -28,7 +29,8 @@
             height: 100%;
             background-color: rgba(5, 35, 13, 0.6);
         }
-        .hero-container{
+
+        .hero-container {
             margin-top: 100px;
         }
     </style>
@@ -56,10 +58,10 @@
     <section class="hero-section text-center text-white py-5">
         <div class="overlay"></div>
         <div class="container position-relative hero-container">
-            <h1 class="display-5" style="font-weight: 500;text-transform:capitalize">{{env("APP_TITLE")}}</h1>
-            <p class="lead">{{env("APP_DESCRIPTION")}}</p>
-            <a href="/owner/register" class="btn btn-light">Create Account</a>
-            <a href="/owner/login" class="btn btn-warning">Login</a>
+            <h1 class="display-5" style="font-weight: 500;text-transform:capitalize">{{ env('APP_TITLE') }}</h1>
+            <p class="lead">{{ env('APP_DESCRIPTION') }}</p>
+            <a href="/leader/register" class="btn btn-light">Create Account</a>
+            <a href="/leader/login" class="btn btn-warning">Login</a>
         </div>
     </section>
 
@@ -67,7 +69,7 @@
         <div class="container">
             <p>&copy; {{ date('Y') }} All rights reserved , Developed by {{ env('APP_OWNER') }}</p>
         </div>
-       
+
     </footer>
 </body>
 

@@ -83,7 +83,7 @@
                         <div class="text-gray-500 text-left fw-semibold fs-6">
                             Not a Member yet?
 
-                            <a href="/owner/register" class="link-primary">
+                            <a href="/leader/register" class="link-primary">
                                 Create an account
                             </a>
 
